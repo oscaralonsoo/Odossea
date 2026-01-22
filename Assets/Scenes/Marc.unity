@@ -301,8 +301,8 @@ MonoBehaviour:
   force: 0
   downForce: 0
   jumpForce: 0
-  notGroundedJumpForce: 0
-  maxSpeed: 0
+  maxXSpeed: 0
+  maxYSpeed: 0
 --- !u!1 &943988484
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,8 +1024,8 @@ MonoBehaviour:
   force: 0
   downForce: 0
   jumpForce: 0
-  notGroundedJumpForce: 0
-  maxSpeed: 0
+  maxXSpeed: 0
+  maxYSpeed: 0
 --- !u!1001 &1708614752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1040,11 +1040,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4738345608153419373, guid: e7b1918f3464e0641bb38596b64a614c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.59
+      value: 9.19
       objectReference: {fileID: 0}
     - target: {fileID: 4738345608153419373, guid: e7b1918f3464e0641bb38596b64a614c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.64
+      value: 4.16
       objectReference: {fileID: 0}
     - target: {fileID: 4738345608153419373, guid: e7b1918f3464e0641bb38596b64a614c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1478,8 +1478,8 @@ MonoBehaviour:
   force: 0
   downForce: 0
   jumpForce: 0
-  notGroundedJumpForce: 0
-  maxSpeed: 0
+  maxXSpeed: 0
+  maxYSpeed: 0
 --- !u!1 &2124692026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1662,8 +1662,8 @@ MonoBehaviour:
   force: 0
   downForce: 0
   jumpForce: 0
-  notGroundedJumpForce: 0
-  maxSpeed: 0
+  maxXSpeed: 0
+  maxYSpeed: 0
 --- !u!1 &2147245269
 GameObject:
   m_ObjectHideFlags: 0
