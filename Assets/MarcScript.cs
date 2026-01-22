@@ -1,7 +1,7 @@
-using System;
+Ôªøusing System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem; // Necesario para el nuevo sistema
+using UnityEngine.InputSystem;
 
 public class MarcScript : MonoBehaviour
 {
@@ -24,7 +24,7 @@ public class MarcScript : MonoBehaviour
     private Vector2 inputDirection;
     private bool jumpRequested = false;
 
-    // MÈtodos que llamar· el PlayerInput por "Broadcast Messages" o "Player Input Events"
+    // M√©todos que llamar√° el PlayerInput por "Broadcast Messages" o "Player Input Events"
     public void OnMove(InputValue value)
     {
         inputDirection = value.Get<Vector2>();
@@ -49,11 +49,11 @@ public class MarcScript : MonoBehaviour
 
         foreach (Bone bone in bones)
         {
-            if (bone.grounded && groundedNum < 3) bone.rigidbody2D.AddForce(Vector2.down * downForce);
+            if (bone.grounded && groundedNum < 3)
+                bone.rigidbody2D.AddForce(Vector2.down * downForce);
 
             if (bone.grounded || groundedNum == 0)
             {
-                // Movimiento horizontal usando la variable inputDirection
                 if (inputDirection.x != 0)
                 {
                     bone.rigidbody2D.AddForce(Vector2.right * inputDirection.x * force);
@@ -68,8 +68,10 @@ public class MarcScript : MonoBehaviour
 
             if (groundedNum != 0 && jumpRequested)
             {
-                if (bone.grounded) bone.rigidbody2D.AddForce(Vector2.up * jumpForce);
-                else bone.rigidbody2D.AddForce(Vector2.up * notGroundedJumpForce);
+                if (bone.grounded)
+                    bone.rigidbody2D.AddForce(Vector2.up * jumpForce);
+                else
+                    bone.rigidbody2D.AddForce(Vector2.up * notGroundedJumpForce);
             }
         }
 

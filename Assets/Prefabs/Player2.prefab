@@ -689,6 +689,7 @@ MonoBehaviour:
   downForce: 300
   jumpForce: 1300
   notGroundedJumpForce: 600
+  crouchForce: 170
   maxSpeed: 10
 --- !u!114 &106186037020309989
 MonoBehaviour:
@@ -715,7 +716,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
+  m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Teclado 2
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
