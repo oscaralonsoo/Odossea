@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem; // Necesario para el nuevo sistema
 
 public class MarcScript : MonoBehaviour
 {
-    [Serializable] public class Bone
+    [Serializable]
+    public class Bone
     {
         public Rigidbody2D rigidbody2D;
         public Collider2D collider2D;
@@ -19,22 +21,18 @@ public class MarcScript : MonoBehaviour
     [SerializeField] float notGroundedJumpForce;
     [SerializeField] float maxSpeed;
 
-    bool jumpRequested = false;
-    int horizontalInput = 0;
+    private Vector2 inputDirection;
+    private bool jumpRequested = false;
 
-    private void Update()
+    // Métodos que llamará el PlayerInput por "Broadcast Messages" o "Player Input Events"
+    public void OnMove(InputValue value)
     {
-        if (Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
-        {
-            horizontalInput = -1;
-        }
+        inputDirection = value.Get<Vector2>();
+    }
 
-        if (Input.GetKey(KeyCode.D) && !Input.GetKey(KeyCode.A))
-        {
-            horizontalInput = 1;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))
+    public void OnJump(InputValue value)
+    {
+        if (value.isPressed)
         {
             jumpRequested = true;
         }
@@ -46,10 +44,7 @@ public class MarcScript : MonoBehaviour
         foreach (Bone bone in bones)
         {
             bone.grounded = bone.collider2D.IsTouchingLayers(groundLayer);
-            if(bone.grounded)
-            {
-                groundedNum++;
-            }
+            if (bone.grounded) groundedNum++;
         }
 
         foreach (Bone bone in bones)
@@ -58,36 +53,26 @@ public class MarcScript : MonoBehaviour
 
             if (bone.grounded || groundedNum == 0)
             {
-                //HORIZONTAL
-                if (horizontalInput < 0)
+                // Movimiento horizontal usando la variable inputDirection
+                if (inputDirection.x != 0)
                 {
-                    bone.rigidbody2D.AddForce(Vector2.left * force);
-                }
-                if (horizontalInput > 0)
-                {
-                    bone.rigidbody2D.AddForce(Vector2.right * force);
+                    bone.rigidbody2D.AddForce(Vector2.right * inputDirection.x * force);
                 }
 
                 if (Mathf.Abs(bone.rigidbody2D.linearVelocity.x) > maxSpeed)
                 {
                     float limitedX = Mathf.Sign(bone.rigidbody2D.linearVelocity.x) * maxSpeed;
                     bone.rigidbody2D.linearVelocity = new Vector2(limitedX, bone.rigidbody2D.linearVelocity.y);
-                    
                 }
             }
 
-           
-            if (groundedNum != 0)
+            if (groundedNum != 0 && jumpRequested)
             {
-                if (jumpRequested)
-                {
-                    if (bone.grounded) bone.rigidbody2D.AddForce(Vector2.up * jumpForce);
-                    else bone.rigidbody2D.AddForce(Vector2.up * notGroundedJumpForce);
-                }
+                if (bone.grounded) bone.rigidbody2D.AddForce(Vector2.up * jumpForce);
+                else bone.rigidbody2D.AddForce(Vector2.up * notGroundedJumpForce);
             }
         }
 
         jumpRequested = false;
-        horizontalInput = 0;
     }
 }
