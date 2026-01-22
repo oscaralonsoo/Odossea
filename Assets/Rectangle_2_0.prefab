@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2772318279254955002}
   - component: {fileID: 1278543033773985633}
   - component: {fileID: 1312086141304256859}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Rectangle_2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1900001197296291627}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.37868226, w: 0.92552674}
+  m_LocalRotation: {x: 0, y: 0, z: -0.37868097, w: 0.9255273}
   m_LocalPosition: {x: 0.87, y: 7.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -144,10 +144,10 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 1
-  force: 100
-  downForce: 100
-  jumpForce: 1000
-  notGroundedJumpForce: 400
+  force: 300
+  downForce: 300
+  jumpForce: 1300
+  notGroundedJumpForce: 600
   maxSpeed: 10
 --- !u!1 &3213980269699208691
 GameObject:
@@ -163,7 +163,8 @@ GameObject:
   - component: {fileID: 850970583114830558}
   - component: {fileID: 2099124420692159353}
   - component: {fileID: 793569987565333294}
-  m_Layer: 0
+  - component: {fileID: 8858412058051193188}
+  m_Layer: 6
   m_Name: bone_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,11 +263,11 @@ RelativeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
-  m_MaxForce: 25
+  m_MaxForce: 50
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -1.3000002, y: 0.000000059604645}
+  m_LinearOffset: {x: -1.3000002, y: -0.00000011920929}
   m_AngularOffset: 0
 --- !u!254 &2099124420692159353
 RelativeJoint2D:
@@ -282,7 +283,7 @@ RelativeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
-  m_MaxForce: 25
+  m_MaxForce: 50
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
@@ -302,12 +303,32 @@ RelativeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
-  m_MaxForce: 25
+  m_MaxForce: 50
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -1.3000004, y: 1.3000004}
+  m_LinearOffset: {x: -1.3000001, y: 1.3000001}
   m_AngularOffset: 0
+--- !u!232 &8858412058051193188
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3213980269699208691}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 9126917544737137832}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 0
+  m_Distance: 3
+  m_MaxDistanceOnly: 1
 --- !u!1 &3877531817623682740
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +343,8 @@ GameObject:
   - component: {fileID: 1043086363288033735}
   - component: {fileID: 834501802397245126}
   - component: {fileID: 628907095689341722}
-  m_Layer: 0
+  - component: {fileID: 6020917584210128184}
+  m_Layer: 6
   m_Name: bone_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -421,11 +443,11 @@ RelativeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
-  m_MaxForce: 25
+  m_MaxForce: 50
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 1.3000004, y: -1.3000004}
+  m_LinearOffset: {x: 1.3000001, y: -1.3000001}
   m_AngularOffset: 0
 --- !u!254 &834501802397245126
 RelativeJoint2D:
@@ -441,11 +463,11 @@ RelativeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
-  m_MaxForce: 25
+  m_MaxForce: 50
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 1.3000004, y: -0.00000047683716}
+  m_LinearOffset: {x: 1.3000001, y: -0.000000059604645}
   m_AngularOffset: 0
 --- !u!254 &628907095689341722
 RelativeJoint2D:
@@ -461,12 +483,32 @@ RelativeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
-  m_MaxForce: 25
+  m_MaxForce: 50
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.00000023841858, y: -1.3000004}
+  m_LinearOffset: {x: -0.000000059604645, y: -1.3000002}
   m_AngularOffset: 0
+--- !u!232 &6020917584210128184
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3877531817623682740}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 6188683027352314021}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 0
+  m_Distance: 3
+  m_MaxDistanceOnly: 1
 --- !u!1 &5549651361157176394
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,7 +523,8 @@ GameObject:
   - component: {fileID: 4905523596054631238}
   - component: {fileID: 1581597245337435011}
   - component: {fileID: 8721091291405553175}
-  m_Layer: 0
+  - component: {fileID: 6819519086070596454}
+  m_Layer: 6
   m_Name: bone_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -580,11 +623,11 @@ RelativeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
-  m_MaxForce: 25
+  m_MaxForce: 50
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 1.3000002, y: -0.000000059604645}
+  m_LinearOffset: {x: 1.3000002, y: 0.00000011920929}
   m_AngularOffset: 0
 --- !u!254 &1581597245337435011
 RelativeJoint2D:
@@ -600,11 +643,11 @@ RelativeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
-  m_MaxForce: 25
+  m_MaxForce: 50
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 1.3000002, y: 1.3}
+  m_LinearOffset: {x: 1.3000001, y: 1.3000001}
   m_AngularOffset: 0
 --- !u!254 &8721091291405553175
 RelativeJoint2D:
@@ -620,12 +663,32 @@ RelativeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
-  m_MaxForce: 25
+  m_MaxForce: 50
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.00000023841858, y: 1.3000004}
+  m_LinearOffset: {x: 0.000000059604645, y: 1.3000002}
   m_AngularOffset: 0
+--- !u!232 &6819519086070596454
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5549651361157176394}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 6091750038060797080}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 0
+  m_Distance: 3
+  m_MaxDistanceOnly: 1
 --- !u!1 &7834715096295042771
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,7 +703,8 @@ GameObject:
   - component: {fileID: 2252777604407761913}
   - component: {fileID: 1164844785453631904}
   - component: {fileID: 2586092202111665009}
-  m_Layer: 0
+  - component: {fileID: 142821762203555317}
+  m_Layer: 6
   m_Name: bone_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -739,7 +803,7 @@ RelativeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
-  m_MaxForce: 25
+  m_MaxForce: 50
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
@@ -759,11 +823,11 @@ RelativeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
-  m_MaxForce: 25
+  m_MaxForce: 50
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -1.3000004, y: 0.00000047683716}
+  m_LinearOffset: {x: -1.3000001, y: 0.000000059604645}
   m_AngularOffset: 0
 --- !u!254 &2586092202111665009
 RelativeJoint2D:
@@ -779,9 +843,29 @@ RelativeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
-  m_MaxForce: 25
+  m_MaxForce: 50
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -1.3000002, y: -1.3}
+  m_LinearOffset: {x: -1.3000001, y: -1.3000001}
   m_AngularOffset: 0
+--- !u!232 &142821762203555317
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7834715096295042771}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 5545000377635043818}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 0
+  m_Distance: 3
+  m_MaxDistanceOnly: 1
