@@ -18,8 +18,8 @@ public class MarcScript : MonoBehaviour
     [SerializeField] float force;
     [SerializeField] float downForce;
     [SerializeField] float jumpForce;
-    [SerializeField] float notGroundedJumpForce;
-    [SerializeField] float maxSpeed;
+    [SerializeField] float maxXSpeed;
+    [SerializeField] float maxYSpeed;
 
     private Vector2 inputDirection;
     private bool jumpRequested = false;
@@ -58,20 +58,27 @@ public class MarcScript : MonoBehaviour
                 {
                     bone.rigidbody2D.AddForce(Vector2.right * inputDirection.x * force);
                 }
+            }
 
-                if (Mathf.Abs(bone.rigidbody2D.linearVelocity.x) > maxSpeed)
+
+            if (groundedNum != 0)
+            {
+                if (jumpRequested)
                 {
-                    float limitedX = Mathf.Sign(bone.rigidbody2D.linearVelocity.x) * maxSpeed;
-                    bone.rigidbody2D.linearVelocity = new Vector2(limitedX, bone.rigidbody2D.linearVelocity.y);
+                    bone.rigidbody2D.AddForce(Vector2.up * jumpForce);
                 }
             }
 
-            if (groundedNum != 0 && jumpRequested)
+            if (Mathf.Abs(bone.rigidbody2D.linearVelocity.x) > maxXSpeed)
             {
-                if (bone.grounded)
-                    bone.rigidbody2D.AddForce(Vector2.up * jumpForce);
-                else
-                    bone.rigidbody2D.AddForce(Vector2.up * notGroundedJumpForce);
+                float limitedX = Mathf.Sign(bone.rigidbody2D.linearVelocity.x) * maxXSpeed;
+                bone.rigidbody2D.linearVelocity = new Vector2(limitedX, bone.rigidbody2D.linearVelocity.y);
+            }
+
+            if (Mathf.Abs(bone.rigidbody2D.linearVelocity.y) > maxYSpeed)
+            {
+                float limitedY = Mathf.Sign(bone.rigidbody2D.linearVelocity.y) * maxYSpeed;
+                bone.rigidbody2D.linearVelocity = new Vector2(bone.rigidbody2D.linearVelocity.x, limitedY);
             }
         }
 
