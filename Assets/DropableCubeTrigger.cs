@@ -1,5 +1,5 @@
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class DropableCubeTrigger : MonoBehaviour
 {
@@ -12,10 +12,10 @@ public class DropableCubeTrigger : MonoBehaviour
         rigidbody = dropableCube.GetComponent<Rigidbody2D>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (!dropableCube || !rigidbody) return;
-        
+
         if (collision.gameObject.tag == "CubeTrigger")
         {
             DropableCube otherDropableCube = collision.transform.parent.GetComponent<DropableCube>();
@@ -23,15 +23,20 @@ public class DropableCubeTrigger : MonoBehaviour
 
             if (!dropableCube || !rigidbody || !otherDropableCube || !otherRigidbody) return;
 
-            if (dropableCube.growNum > otherDropableCube.growNum)
+            if (!otherDropableCube.collided)
             {
-                dropableCube.Grow(otherDropableCube.growNum);
-                Destroy(collision.transform.parent.gameObject);
-            }
-            else if (dropableCube.growNum == otherDropableCube.growNum && rigidbody.linearVelocity.magnitude < otherRigidbody.linearVelocity.magnitude)
-            {
-                dropableCube.Grow(otherDropableCube.growNum);
-                Destroy(collision.transform.parent.gameObject);
+                if (dropableCube.growNum > otherDropableCube.growNum)
+                {
+                    dropableCube.Grow(otherDropableCube.growNum);
+                    otherDropableCube.collided = true;
+                    Destroy(otherDropableCube.gameObject);
+                }
+                else if (dropableCube.growNum == otherDropableCube.growNum && rigidbody.linearVelocity.magnitude < otherRigidbody.linearVelocity.magnitude)
+                {
+                    dropableCube.Grow(otherDropableCube.growNum);
+                    otherDropableCube.collided = true;
+                    Destroy(otherDropableCube.gameObject);
+                }
             }
         }
     }

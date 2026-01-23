@@ -30,6 +30,7 @@ public class DropableCube : MonoBehaviour
     DistanceJoint2D[] distanceJoints2D;
 
     public int growNum;
+    [NonSerialized] public bool collided;
 
     private void Awake()
     {
@@ -37,6 +38,7 @@ public class DropableCube : MonoBehaviour
         distanceJoints2D = transform.GetComponentsInChildren<DistanceJoint2D>();
         targetScale = transform.localScale;
         growNum = 1;
+        collided = false;
     }
 
     public void Grow(int growNumber)

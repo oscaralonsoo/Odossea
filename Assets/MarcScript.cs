@@ -29,6 +29,7 @@ public class MarcScript : MonoBehaviour
     [Header("Scaling")]
     [SerializeField] float scaleFactor = 1.2f;
     [SerializeField] float scaleSpeed = 5f;
+    public int growNum = 1;
 
     [Header("Animator (child)")]
     [SerializeField] private Animator faceAnimator; // arrastra aquí tu Face Animator o se buscará automáticamente
@@ -47,6 +48,8 @@ public class MarcScript : MonoBehaviour
 
         if (faceAnimator == null)
             faceAnimator = GetComponentInChildren<Animator>();
+
+        growNum = 1;
     }
 
     public void OnMove(InputValue value) => inputDirection = value.Get<Vector2>();
@@ -58,10 +61,13 @@ public class MarcScript : MonoBehaviour
         blockRightMove = right;
     }
 
-    private void Update()
+    public void Grow(int growNumber)
     {
-        if (Input.GetMouseButtonDown(0)) targetScale *= scaleFactor;
-        if (Input.GetMouseButtonDown(1)) targetScale /= scaleFactor;
+        for (int i = 0; i < growNumber; i++)
+        {
+            targetScale = targetScale * scaleFactor;
+            growNum++;
+        }
     }
 
     private void FixedUpdate()
