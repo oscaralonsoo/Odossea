@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 7353025759616808759}
   m_Layer: 6
   m_Name: bone_3
-  m_TagString: Untagged
+  m_TagString: Bone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -327,7 +327,7 @@ GameObject:
   - component: {fileID: 1025564105249780401}
   m_Layer: 6
   m_Name: bone_5
-  m_TagString: Untagged
+  m_TagString: Bone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -507,7 +507,7 @@ GameObject:
   - component: {fileID: 1639696628502108984}
   m_Layer: 6
   m_Name: bone_4
-  m_TagString: Untagged
+  m_TagString: Bone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -687,7 +687,7 @@ GameObject:
   - component: {fileID: 14263800122113378}
   m_Layer: 6
   m_Name: bone_2
-  m_TagString: Untagged
+  m_TagString: Bone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -863,11 +863,12 @@ GameObject:
   - component: {fileID: 263470664615356037}
   - component: {fileID: 9219503086819003767}
   - component: {fileID: 2041360831739594141}
-  - component: {fileID: 1128744370919338737}
   - component: {fileID: 6395782483711919136}
+  - component: {fileID: 941137263772884788}
+  - component: {fileID: 2011483924794864348}
   m_Layer: 6
   m_Name: Player2
-  m_TagString: Untagged
+  m_TagString: Bone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -978,7 +979,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8857285389558704231}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -1034,47 +1035,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1128744370919338737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8857285389558704231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 411633e12cd43384ebb3fd2fe8e35395, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bones:
-  - rigidbody2D: {fileID: 3029616261360175888}
-    collider2D: {fileID: 123504337697248499}
-    grounded: 0
-  - rigidbody2D: {fileID: 1377635011729255586}
-    collider2D: {fileID: 1112947884265433783}
-    grounded: 0
-  - rigidbody2D: {fileID: 1153941585066011410}
-    collider2D: {fileID: 8358929352479274709}
-    grounded: 0
-  - rigidbody2D: {fileID: 3357284472569338298}
-    collider2D: {fileID: 54107438689767354}
-    grounded: 0
-  - rigidbody2D: {fileID: 2041360831739594141}
-    collider2D: {fileID: 9219503086819003767}
-    grounded: 0
-  relativesJoints2D: []
-  distanceJoints2D: []
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 1
-  force: 300
-  downForce: 300
-  jumpForce: 1500
-  maxXSpeed: 10
-  maxYSpeed: 15
-  scaleFactor: 1.2
-  scaleSpeed: 30
-  faceAnimator: {fileID: 0}
 --- !u!114 &6395782483711919136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1105,3 +1065,72 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &941137263772884788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8857285389558704231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1458cc37f92326b4da187e2ad3402606, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bones:
+  - rigidbody2D: {fileID: 3029616261360175888}
+    collider2D: {fileID: 123504337697248499}
+    distanceJoint: {fileID: 14263800122113378}
+    relativeJoints:
+    - {fileID: 2282157395218421893}
+    - {fileID: 5702208445306524897}
+    - {fileID: 5800811674404370334}
+    grounded: 0
+  - rigidbody2D: {fileID: 1377635011729255586}
+    collider2D: {fileID: 1112947884265433783}
+    distanceJoint: {fileID: 7353025759616808759}
+    relativeJoints:
+    - {fileID: 23556772222443053}
+    - {fileID: 1233304871451548866}
+    - {fileID: 1722812623860982482}
+    grounded: 0
+  - rigidbody2D: {fileID: 1153941585066011410}
+    collider2D: {fileID: 8358929352479274709}
+    distanceJoint: {fileID: 1639696628502108984}
+    relativeJoints:
+    - {fileID: 1050871447632578394}
+    - {fileID: 21669841765754427}
+    - {fileID: 1254551339804839403}
+    grounded: 0
+  - rigidbody2D: {fileID: 3357284472569338298}
+    collider2D: {fileID: 54107438689767354}
+    distanceJoint: {fileID: 1025564105249780401}
+    relativeJoints:
+    - {fileID: 3241550668425749906}
+    - {fileID: 410912802737070529}
+    - {fileID: 1627544380053850952}
+    grounded: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  force: 300
+  downForce: 300
+  jumpForce: 1500
+  maxXSpeed: 10
+  maxYSpeed: 15
+--- !u!114 &2011483924794864348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8857285389558704231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a61038a1fc3ea1441bbdf5750fc537c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 941137263772884788}
+  otherPlayer: {fileID: 0}
+  boneAttractionSpeed: 14
+  relativeJointMaxForce: 130
