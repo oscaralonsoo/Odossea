@@ -4,65 +4,97 @@ using UnityEngine.InputSystem.Users;
 
 public class ManualInputAssigner : MonoBehaviour
 {
+    [Header("Players")]
     public PlayerInput player1;
     public PlayerInput player2;
 
-    void OnEnable()
+    private void OnEnable()
     {
         InputSystem.onDeviceChange += OnDeviceChange;
     }
 
-    void OnDisable()
+    private void OnDisable()
     {
         InputSystem.onDeviceChange -= OnDeviceChange;
     }
 
-    void Start()
+    private void Start()
     {
-        AsignarControles();
+        // Esperamos un frame para asegurarnos
+        // de que PlayerInput haya creado su InputUser
+        Invoke(nameof(AsignarControles), 0.1f);
     }
 
     private void OnDeviceChange(InputDevice device, InputDeviceChange change)
     {
-        // Si se conecta o reconecta un mando, reasignamos todo
-        if (change == InputDeviceChange.Added || change == InputDeviceChange.Reconnected)
+        if (change == InputDeviceChange.Added ||
+            change == InputDeviceChange.Reconnected)
         {
-            Debug.Log($"Nuevo dispositivo detectado: {device.displayName}. Reasignando...");
+            Debug.Log($"Dispositivo detectado: {device.displayName}");
             AsignarControles();
         }
     }
 
     public void AsignarControles()
     {
-        //Limpiar emparejamientos actuales
-        player1.user.UnpairDevices();
-        player2.user.UnpairDevices();
+        if (player1 == null || player2 == null)
+            return;
 
-        //Teclado para ambos
+        // ---------- LIMPIAR SOLO SI ES VÁLIDO ----------
+        ClearUser(player1);
+        ClearUser(player2);
+
+        // ---------- TECLADO ----------
         if (Keyboard.current != null)
         {
-            InputUser.PerformPairingWithDevice(Keyboard.current, player1.user);
-            InputUser.PerformPairingWithDevice(Keyboard.current, player2.user);
+            PairDevice(player1, Keyboard.current);
+            PairDevice(player2, Keyboard.current);
         }
 
-        //Mandos
+        // ---------- GAMEPADS ----------
         var gamepads = Gamepad.all;
+
         if (gamepads.Count > 0)
         {
-            InputUser.PerformPairingWithDevice(gamepads[0], player1.user);
-            Debug.Log("Mando 1 asignado al Jugador 1");
-        }
-        if (gamepads.Count > 1)
-        {
-            InputUser.PerformPairingWithDevice(gamepads[1], player2.user);
-            Debug.Log("Mando 2 asignado al Jugador 2");
+            PairDevice(player1, gamepads[0]);
+            Debug.Log("Mando 1 ? Jugador 1");
         }
 
-        //Forzar esquemas de control
-        player1.user.ActivateControlScheme("Teclado 1");
-        player2.user.ActivateControlScheme("Teclado 2");
+        if (gamepads.Count > 1)
+        {
+            PairDevice(player2, gamepads[1]);
+            Debug.Log("Mando 2 ? Jugador 2");
+        }
+
+        // ---------- ESQUEMAS ----------
+        ActivateScheme(player1, "Teclado 1");
+        ActivateScheme(player2, "Teclado 2");
 
         player1.neverAutoSwitchControlSchemes = true;
         player2.neverAutoSwitchControlSchemes = true;
+    }
+
+    // ===================== HELPERS =====================
+
+    private void ClearUser(PlayerInput player)
+    {
+        if (player.user.valid)
+            player.user.UnpairDevices();
+    }
+
+    private void PairDevice(PlayerInput player, InputDevice device)
+    {
+        if (!player.user.valid)
+            return;
+
+        InputUser.PerformPairingWithDevice(device, player.user);
+    }
+
+    private void ActivateScheme(PlayerInput player, string scheme)
+    {
+        if (!player.user.valid)
+            return;
+
+        player.user.ActivateControlScheme(scheme);
     }
 }
