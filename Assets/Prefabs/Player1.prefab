@@ -226,7 +226,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 222496283260769689}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1458cc37f92326b4da187e2ad3402606, type: 3}
+  m_Script: {fileID: 11500000, guid: 63ac0c413e2b8804180a7996daa1cf71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bones:
@@ -254,14 +254,6 @@ MonoBehaviour:
     - {fileID: 387137844415917189}
     - {fileID: 8373658955312589881}
     grounded: 0
-  - rigidbody2D: {fileID: 3002518039030041595}
-    collider2D: {fileID: 4351340030188054888}
-    distanceJoint: {fileID: 8357816300821027030}
-    relativeJoints:
-    - {fileID: 4095168724975700121}
-    - {fileID: 7646196438413453517}
-    - {fileID: 6702517497252714655}
-    grounded: 0
   - rigidbody2D: {fileID: 4043161070439341910}
     collider2D: {fileID: 0}
     distanceJoint: {fileID: 0}
@@ -269,12 +261,12 @@ MonoBehaviour:
     grounded: 0
   groundLayer:
     serializedVersion: 2
-    m_Bits: 1
-  force: 300
-  downForce: 300
-  jumpForce: 1000
-  maxXSpeed: 10
-  maxYSpeed: 50
+    m_Bits: 0
+  force: 0
+  downForce: 0
+  jumpForce: 0
+  maxXSpeed: 0
+  maxYSpeed: 0
 --- !u!114 &2770691861005270222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -530,7 +522,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.6499996, y: -0.6499996}
+  m_LinearOffset: {x: 0.6500001, y: -0.6499996}
   m_AngularOffset: 0
 --- !u!254 &6795351407980129519
 RelativeJoint2D:
@@ -550,7 +542,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 1.2999992, y: 0}
+  m_LinearOffset: {x: 1.2999997, y: 0}
   m_AngularOffset: 0
 --- !u!254 &6484321339860985411
 RelativeJoint2D:
@@ -750,7 +742,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -1.2999992, y: 0}
+  m_LinearOffset: {x: -1.2999997, y: 0}
   m_AngularOffset: 0
 --- !u!232 &8071351450716993090
 DistanceJoint2D:
@@ -1040,7 +1032,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -1.2999992, y: 0}
+  m_LinearOffset: {x: -1.2999997, y: 0}
   m_AngularOffset: 0
 --- !u!254 &6702517497252714655
 RelativeJoint2D:
@@ -1200,7 +1192,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.6499996, y: 0.6499996}
+  m_LinearOffset: {x: 0.6500001, y: 0.6499996}
   m_AngularOffset: 0
 --- !u!254 &387137844415917189
 RelativeJoint2D:
@@ -1240,7 +1232,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 1.2999992, y: 0}
+  m_LinearOffset: {x: 1.2999997, y: 0}
   m_AngularOffset: 0
 --- !u!232 &3680372967480949781
 DistanceJoint2D:
