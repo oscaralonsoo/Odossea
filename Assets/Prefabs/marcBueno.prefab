@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 6031103907538762707}
   - component: {fileID: 6272575641182319960}
   - component: {fileID: 2508498479487615610}
-  m_Layer: 6
+  - component: {fileID: 3211586913541987693}
+  m_Layer: 0
   m_Name: bone_5
-  m_TagString: Untagged
+  m_TagString: CubeTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +119,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.6499996, y: 0.65}
+  m_LinearOffset: {x: -0.6499996, y: 0.6500001}
   m_AngularOffset: 0
 --- !u!254 &6031103907538762707
 RelativeJoint2D:
@@ -158,7 +159,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: 1.3}
+  m_LinearOffset: {x: 0, y: 1.3000002}
   m_AngularOffset: 0
 --- !u!232 &2508498479487615610
 DistanceJoint2D:
@@ -180,6 +181,18 @@ DistanceJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 2.5
   m_MaxDistanceOnly: 1
+--- !u!114 &3211586913541987693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447679201125196316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b7712419340d945ac9bd45b544884e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3869324984545107470
 GameObject:
   m_ObjectHideFlags: 0
@@ -195,7 +208,7 @@ GameObject:
   - component: {fileID: 7291960566985904617}
   - component: {fileID: 2925191107497484824}
   - component: {fileID: 3079926095284879952}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: marcBueno
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3869324984545107470}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.2, y: 0.19000001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -403,6 +416,8 @@ MonoBehaviour:
   maxYSpeed: 15
   scaleFactor: 1.2
   scaleSpeed: 30
+  growNum: 1
+  faceAnimator: {fileID: 0}
 --- !u!114 &3079926095284879952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,9 +463,10 @@ GameObject:
   - component: {fileID: 1806842226078645393}
   - component: {fileID: 2922973775974257485}
   - component: {fileID: 2639847110472932740}
-  m_Layer: 6
+  - component: {fileID: 7919938893599092194}
+  m_Layer: 0
   m_Name: bone_2
-  m_TagString: Untagged
+  m_TagString: CubeTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -551,7 +567,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.6499996, y: -0.65}
+  m_LinearOffset: {x: -0.6499996, y: -0.6500001}
   m_AngularOffset: 0
 --- !u!254 &1806842226078645393
 RelativeJoint2D:
@@ -571,7 +587,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: -1.3}
+  m_LinearOffset: {x: 0, y: -1.3000002}
   m_AngularOffset: 0
 --- !u!254 &2922973775974257485
 RelativeJoint2D:
@@ -613,6 +629,18 @@ DistanceJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 2.5
   m_MaxDistanceOnly: 1
+--- !u!114 &7919938893599092194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4716935810020557364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b7712419340d945ac9bd45b544884e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5388220203959115668
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,9 +656,10 @@ GameObject:
   - component: {fileID: 1953040341558597055}
   - component: {fileID: 7627294569747638751}
   - component: {fileID: 5510543671287423000}
-  m_Layer: 6
+  - component: {fileID: 5027517502627846167}
+  m_Layer: 0
   m_Name: bone_3
-  m_TagString: Untagged
+  m_TagString: CubeTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -731,7 +760,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.6499996, y: -0.65}
+  m_LinearOffset: {x: 0.6499996, y: -0.6500001}
   m_AngularOffset: 0
 --- !u!254 &1953040341558597055
 RelativeJoint2D:
@@ -771,7 +800,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: -1.3}
+  m_LinearOffset: {x: 0, y: -1.3000002}
   m_AngularOffset: 0
 --- !u!232 &5510543671287423000
 DistanceJoint2D:
@@ -793,6 +822,18 @@ DistanceJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 2.5
   m_MaxDistanceOnly: 1
+--- !u!114 &5027517502627846167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5388220203959115668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b7712419340d945ac9bd45b544884e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8926620771722852601
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,9 +849,10 @@ GameObject:
   - component: {fileID: 5221907397583051029}
   - component: {fileID: 3050643902786663124}
   - component: {fileID: 488520577996887964}
-  m_Layer: 6
+  - component: {fileID: 4128735782705804455}
+  m_Layer: 0
   m_Name: bone_4
-  m_TagString: Untagged
+  m_TagString: CubeTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -911,7 +953,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.6499996, y: 0.65}
+  m_LinearOffset: {x: 0.6499996, y: 0.6500001}
   m_AngularOffset: 0
 --- !u!254 &5221907397583051029
 RelativeJoint2D:
@@ -931,7 +973,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: 1.3}
+  m_LinearOffset: {x: 0, y: 1.3000002}
   m_AngularOffset: 0
 --- !u!254 &3050643902786663124
 RelativeJoint2D:
@@ -973,3 +1015,15 @@ DistanceJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 2.5
   m_MaxDistanceOnly: 1
+--- !u!114 &4128735782705804455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8926620771722852601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24b7712419340d945ac9bd45b544884e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
