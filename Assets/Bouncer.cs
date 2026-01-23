@@ -10,17 +10,18 @@ public class Bouncer : MonoBehaviour
         if (collision.transform.CompareTag("Bone"))
         {
             GameObject player = collision.transform.parent.gameObject;
+            /*ApplyBounce(player.GetComponent<Rigidbody2D>());*/
 
             foreach (PlayerController.Bone bone in player.GetComponent<PlayerController>().bones)
             {
-                ApplyBounce(bone);
+                ApplyBounce(bone.rigidbody2D);
             }
         }
 
     }
 
-    private void ApplyBounce(PlayerController.Bone bone)
+    private void ApplyBounce(Rigidbody2D rb)
     {
-        bone.rigidbody2D.AddForce(Vector2.up * bounceForce, ForceMode2D.Impulse);
+        rb.AddForce(Vector2.up * bounceForce, ForceMode2D.Impulse);
     }
 }

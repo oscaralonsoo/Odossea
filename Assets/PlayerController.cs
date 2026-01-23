@@ -46,8 +46,11 @@ public class PlayerController : MonoBehaviour
         int groundedNum = 0;
         foreach (Bone bone in bones)
         {
-            bone.grounded = bone.collider2D.IsTouchingLayers(groundLayer);
-            if (bone.grounded) groundedNum++;
+            if (bone.collider2D)
+            {
+                bone.grounded = bone.collider2D.IsTouchingLayers(groundLayer);
+                if (bone.grounded) groundedNum++;
+            }
         }
 
         foreach (Bone bone in bones)
