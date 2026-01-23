@@ -27,6 +27,12 @@ public class PlayerController : MonoBehaviour
     private Vector2 inputDirection;
     private bool jumpRequested = false;
 
+    //Para el Animator
+    public bool IsGrounded { get; private set; }
+    public float AverageVerticalVelocity { get; private set; }
+
+    float verticalVelocitySum;
+
     // Métodos que llamará el PlayerInput por "Broadcast Messages" o "Player Input Events"
     public void OnMove(InputValue value)
     {
@@ -44,6 +50,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         int groundedNum = 0;
+        verticalVelocitySum = 0f;
         foreach (Bone bone in bones)
         {
             if (bone.collider2D)
@@ -52,6 +59,8 @@ public class PlayerController : MonoBehaviour
                 if (bone.grounded) groundedNum++;
             }
         }
+
+        IsGrounded = groundedNum > 0;
 
         foreach (Bone bone in bones)
         {
@@ -86,7 +95,9 @@ public class PlayerController : MonoBehaviour
                 float limitedY = Mathf.Sign(bone.rigidbody2D.linearVelocity.y) * maxYSpeed;
                 bone.rigidbody2D.linearVelocity = new Vector2(bone.rigidbody2D.linearVelocity.x, limitedY);
             }
+            verticalVelocitySum += bone.rigidbody2D.linearVelocity.y;
         }
+        AverageVerticalVelocity = verticalVelocitySum / bones.Count;
 
         jumpRequested = false;
     }

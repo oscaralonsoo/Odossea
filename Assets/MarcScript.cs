@@ -10,11 +10,11 @@ public class MarcScript : MonoBehaviour
     {
         public Rigidbody2D rigidbody2D;
         public Collider2D collider2D;
-        public bool grounded = false;
+        [HideInInspector] public bool grounded;
     }
 
     [Header("Bones & Joints")]
-    [SerializeField] List<Bone> bones;
+    [SerializeField] public List<Bone> bones;
     [SerializeField] RelativeJoint2D[] relativesJoints2D;
     [SerializeField] DistanceJoint2D[] distanceJoints2D;
 
@@ -30,26 +30,20 @@ public class MarcScript : MonoBehaviour
     [SerializeField] float scaleFactor = 1.2f;
     [SerializeField] float scaleSpeed = 5f;
     public int growNum = 1;
-
-    [Header("Animator (child)")]
-    [SerializeField] private Animator faceAnimator; // arrastra aquí tu Face Animator o se buscará automáticamente
+    public bool IsGrounded { get; private set; }
+    public float AverageVerticalVelocity { get; private set; }
 
     private Vector3 targetScale = Vector3.one;
     private Vector2 inputDirection;
-    private bool jumpRequested = false;
+    private bool jumpRequested;
 
-    private bool blockLeftMove = false;
-    private bool blockRightMove = false;
+    private bool blockLeftMove;
+    private bool blockRightMove;
 
     private void Awake()
     {
-        relativesJoints2D = transform.GetComponentsInChildren<RelativeJoint2D>();
-        distanceJoints2D = transform.GetComponentsInChildren<DistanceJoint2D>();
-
-        if (faceAnimator == null)
-            faceAnimator = GetComponentInChildren<Animator>();
-
-        
+        relativesJoints2D = GetComponentsInChildren<RelativeJoint2D>();
+        distanceJoints2D = GetComponentsInChildren<DistanceJoint2D>();
         InitScale();
     }
 
@@ -66,106 +60,107 @@ public class MarcScript : MonoBehaviour
     {
         for (int i = 0; i < growNumber; i++)
         {
-            targetScale = targetScale * scaleFactor;
+            targetScale *= scaleFactor;
             growNum++;
         }
     }
 
     private void FixedUpdate()
     {
-        // ------------------- 1️⃣ Escala -------------------
         ApplyScale();
 
-        // ------------------- 2️⃣ Detección de suelo global -------------------
-        int groundedNum = 0;
-        foreach (Bone bone in bones)
+        // ---------- Ground check ----------
+        int groundedCount = 0;
+        foreach (var bone in bones)
         {
             bone.grounded = bone.collider2D.IsTouchingLayers(groundLayer);
-            if (bone.grounded) groundedNum++;
+            if (bone.grounded) groundedCount++;
         }
 
-        // ------------------- 3️⃣ FILTRO DE INPUT GLOBAL -------------------
-        float finalMoveX = inputDirection.x;
-        if (blockLeftMove && finalMoveX < 0) finalMoveX = 0;
-        if (blockRightMove && finalMoveX > 0) finalMoveX = 0;
+        IsGrounded = groundedCount > 0;
 
-        // ------------------- 4️⃣ Aplicar fuerzas a cada hueso -------------------
-        foreach (Bone bone in bones)
+        // ---------- Input filtering ----------
+        float moveX = inputDirection.x;
+        if (blockLeftMove && moveX < 0) moveX = 0;
+        if (blockRightMove && moveX > 0) moveX = 0;
+
+        float verticalVelSum = 0f;
+
+        foreach (var bone in bones)
         {
-            Rigidbody2D rb = bone.rigidbody2D;
+            var rb = bone.rigidbody2D;
 
-            // Gravedad extra si no hay suficientes puntos de apoyo
-            if (bone.grounded && groundedNum < 3)
+            if (bone.grounded && groundedCount < 3)
                 rb.AddForce(Vector2.down * downForce);
 
-            // Movimiento Horizontal (input filtrado)
-            if ((bone.grounded || groundedNum == 0) && finalMoveX != 0)
-            {
-                rb.AddForce(Vector2.right * finalMoveX * force);
-            }
+            if ((bone.grounded || groundedCount == 0) && moveX != 0)
+                rb.AddForce(Vector2.right * moveX * force);
 
-            // Salto
-            if (groundedNum != 0 && jumpRequested)
-            {
+            if (IsGrounded && jumpRequested)
                 rb.AddForce(Vector2.up * jumpForce);
-            }
 
-            // Limitador de velocidad
             Vector2 vel = rb.linearVelocity;
             vel.x = Mathf.Clamp(vel.x, -maxXSpeed, maxXSpeed);
             vel.y = Mathf.Clamp(vel.y, -maxYSpeed, maxYSpeed);
             rb.linearVelocity = vel;
+
+            verticalVelSum += vel.y;
         }
 
+        AverageVerticalVelocity = verticalVelSum / bones.Count;
         jumpRequested = false;
-
-        // ------------------- 5️⃣ Actualizar Animator -------------------
-        if (faceAnimator != null)
-        {
-            // Estado global de suelo
-            bool isGroundedGlobal = groundedNum > 0;
-
-            // Velocidad vertical promedio
-            float avgVerticalVelocity = 0f;
-            foreach (var bone in bones)
-                avgVerticalVelocity += bone.rigidbody2D.linearVelocity.y;
-            avgVerticalVelocity /= bones.Count;
-
-            // Suavizado opcional de la velocidad vertical para animaciones más fluidas
-            float smoothVelocity = Mathf.Lerp(faceAnimator.GetFloat("VerticalVelocity"), avgVerticalVelocity, 0.1f);
-
-            faceAnimator.SetBool("isGrounded", isGroundedGlobal);
-            faceAnimator.SetFloat("VerticalVelocity", smoothVelocity);
-        }
     }
 
+    // ---------- Scaling ----------
     private void InitScale()
     {
         targetScale = transform.localScale;
         for (int i = 1; i < growNum; i++)
-        {
-            targetScale = targetScale * scaleFactor;
-        }
+            targetScale *= scaleFactor;
 
-        Vector3 lastScale = transform.localScale;
-        Vector3 newScale = targetScale;
-        transform.localScale = newScale;
-        float changeRatio = newScale.magnitude / lastScale.magnitude;
-        foreach (DistanceJoint2D dj in distanceJoints2D) { dj.autoConfigureDistance = false; dj.distance *= changeRatio; }
-        foreach (RelativeJoint2D rj in relativesJoints2D) { rj.autoConfigureOffset = false; rj.linearOffset *= changeRatio; }
+        ApplyScaleInstant();
     }
 
     private void ApplyScale()
     {
         Vector3 lastScale = transform.localScale;
-        Vector3 newScale = Vector3.Lerp(transform.localScale, targetScale, Time.fixedDeltaTime * scaleSpeed);
+        Vector3 newScale = Vector3.Lerp(lastScale, targetScale, Time.fixedDeltaTime * scaleSpeed);
 
-        if (newScale.magnitude > 0.1f)
+        if (newScale.magnitude < 0.1f) return;
+
+        transform.localScale = newScale;
+        float ratio = newScale.magnitude / lastScale.magnitude;
+
+        foreach (var dj in distanceJoints2D)
         {
-            transform.localScale = newScale;
-            float changeRatio = newScale.magnitude / lastScale.magnitude;
-            foreach (DistanceJoint2D dj in distanceJoints2D) { dj.autoConfigureDistance = false; dj.distance *= changeRatio; }
-            foreach (RelativeJoint2D rj in relativesJoints2D) { rj.autoConfigureOffset = false; rj.linearOffset *= changeRatio; }
+            dj.autoConfigureDistance = false;
+            dj.distance *= ratio;
+        }
+
+        foreach (var rj in relativesJoints2D)
+        {
+            rj.autoConfigureOffset = false;
+            rj.linearOffset *= ratio;
+        }
+    }
+
+    private void ApplyScaleInstant()
+    {
+        Vector3 lastScale = transform.localScale;
+        transform.localScale = targetScale;
+
+        float ratio = targetScale.magnitude / lastScale.magnitude;
+
+        foreach (var dj in distanceJoints2D)
+        {
+            dj.autoConfigureDistance = false;
+            dj.distance *= ratio;
+        }
+
+        foreach (var rj in relativesJoints2D)
+        {
+            rj.autoConfigureOffset = false;
+            rj.linearOffset *= ratio;
         }
     }
 }

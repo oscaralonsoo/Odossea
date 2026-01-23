@@ -16,21 +16,27 @@ public class FaceController : MonoBehaviour
     {
         if (bones == null || bones.Count == 0) return;
 
-        // ---- 1️⃣ Calcular posición promedio de los huesos ----
+        // Posición promedio de los huesos
         Vector3 avgPos = Vector3.zero;
+
         foreach (var bone in bones)
         {
             avgPos += (Vector3)bone.position;
         }
+
         avgPos /= bones.Count;
 
-        // ---- 2️⃣ Aplicar posición al Face con offset ----
+        // Offset base
         Vector3 targetPos = avgPos + localOffset;
 
-        // La cara sigue suavemente pero sin rotación
-        transform.position = Vector3.Lerp(transform.position, targetPos, smoothSpeed * Time.deltaTime);
+        // Suavizado
+        transform.position = Vector3.Lerp(
+            transform.position,
+            targetPos,
+            smoothSpeed * Time.deltaTime
+        );
 
-        // Fijar rotación a cero (opcional, por si alguna transformación previa la giró)
+        // Bloquear rotación
         transform.rotation = Quaternion.identity;
     }
 }
