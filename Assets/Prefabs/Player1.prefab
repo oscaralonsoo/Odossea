@@ -33,6 +33,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6988095588547840803}
   - {fileID: 2811671019735786206}
   - {fileID: 3913209683309838302}
   - {fileID: 8402317209649052729}
@@ -82,7 +83,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: -8794698323247294114, guid: 110d5ef98f3d7df419285677f6980f32, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -148,9 +149,8 @@ MonoBehaviour:
   force: 300
   downForce: 300
   jumpForce: 1300
-  notGroundedJumpForce: 600
-  crouchForce: 170
-  maxSpeed: 10
+  maxXSpeed: 10
+  maxYSpeed: 15
 --- !u!114 &6939336854410997272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,6 +181,113 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!1 &6647892887254288196
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6988095588547840803}
+  - component: {fileID: 552462624630526722}
+  - component: {fileID: 5267173661913518042}
+  m_Layer: 0
+  m_Name: Face
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6988095588547840803
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6647892887254288196}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1493561728920390374}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &552462624630526722
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6647892887254288196}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 21300000, guid: 7dff2fde81364fa4497e3ad3df67aeff, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 5, y: 5}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &5267173661913518042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6647892887254288196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2e08b4792e2fc048b1b2655f91b9479, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bones:
+  - {fileID: 2272509633788790789}
+  - {fileID: 2925912987104548702}
+  - {fileID: 4245146712099311777}
+  - {fileID: 6106078510713588295}
+  localOffset: {x: 0, y: 0, z: 0}
+  smoothSpeed: 100
 --- !u!1 &7097084314270401298
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,7 +384,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
@@ -299,7 +406,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -1.3000001, y: 0.00000013411045}
+  m_LinearOffset: {x: -1.3, y: 0}
   m_AngularOffset: 0
 --- !u!254 &1510775932245891663
 RelativeJoint2D:
@@ -319,7 +426,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.00000013411045, y: 1.3000001}
+  m_LinearOffset: {x: 0, y: 1.3000002}
   m_AngularOffset: 0
 --- !u!254 &4817220661359434434
 RelativeJoint2D:
@@ -457,7 +564,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
@@ -479,7 +586,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 1.3000001, y: -0.00000013411045}
+  m_LinearOffset: {x: 1.3, y: 0}
   m_AngularOffset: 0
 --- !u!254 &6587465173228614004
 RelativeJoint2D:
@@ -499,7 +606,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 1.3000002, y: 1.3}
+  m_LinearOffset: {x: 1.3, y: 1.3000002}
   m_AngularOffset: 0
 --- !u!254 &4860089405381752005
 RelativeJoint2D:
@@ -519,7 +626,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.00000013411045, y: 1.3000001}
+  m_LinearOffset: {x: 0, y: 1.3000002}
   m_AngularOffset: 0
 --- !u!232 &8648412548748905665
 DistanceJoint2D:
@@ -637,7 +744,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
@@ -679,7 +786,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 1.3000001, y: -0.00000013411045}
+  m_LinearOffset: {x: 1.3, y: 0}
   m_AngularOffset: 0
 --- !u!254 &7436016991920661652
 RelativeJoint2D:
@@ -699,7 +806,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.00000013411045, y: -1.3000001}
+  m_LinearOffset: {x: 0, y: -1.3000002}
   m_AngularOffset: 0
 --- !u!232 &7273816154692691291
 DistanceJoint2D:
@@ -817,7 +924,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
@@ -839,7 +946,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.00000013411045, y: -1.3000001}
+  m_LinearOffset: {x: 0, y: -1.3000002}
   m_AngularOffset: 0
 --- !u!254 &4513702713880756057
 RelativeJoint2D:
@@ -859,7 +966,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -1.3000001, y: 0.00000013411045}
+  m_LinearOffset: {x: -1.3, y: 0}
   m_AngularOffset: 0
 --- !u!254 &5599406554546071412
 RelativeJoint2D:
@@ -879,7 +986,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -1.3000002, y: -1.3}
+  m_LinearOffset: {x: -1.3, y: -1.3000002}
   m_AngularOffset: 0
 --- !u!232 &977738593528981518
 DistanceJoint2D:

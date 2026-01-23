@@ -18,8 +18,8 @@ public class MarcScript : MonoBehaviour
     [SerializeField] float force;
     [SerializeField] float downForce;
     [SerializeField] float jumpForce;
-    [SerializeField] float maxXSpeed;
-    [SerializeField] float maxYSpeed;
+    [SerializeField] float maxXSpeed = 10;
+    [SerializeField] float maxYSpeed =15;
 
     private Vector2 inputDirection;
     private bool jumpRequested = false;
