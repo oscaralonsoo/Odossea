@@ -6,7 +6,7 @@ public class SceneTransitionManager : MonoBehaviour
 {
     public static SceneTransitionManager Instance;
 
-    [SerializeField] private Animator animator; // Animator del SceneTransition
+    private Animator animator;
     private string sceneToLoad;
 
     void Awake()
@@ -18,7 +18,14 @@ public class SceneTransitionManager : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(gameObject); // Esto hace que todo hijo persista
+        DontDestroyOnLoad(gameObject); 
+
+        // Tomar referencia al Animator del mismo GameObject
+        animator = GetComponent<Animator>();
+        if (animator == null)
+        {
+            Debug.LogError("No se encontró un Animator en el mismo GameObject de SceneTransitionManager");
+        }
     }
 
     public void LoadScene(string sceneName)
@@ -37,8 +44,6 @@ public class SceneTransitionManager : MonoBehaviour
     {
         // Carga la escena
         SceneManager.LoadScene(sceneToLoad);
-
-        // Espera un frame para que Unity termine de destruir/crear
         yield return null;
 
         // Dispara FadeIn
