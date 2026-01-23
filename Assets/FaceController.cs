@@ -1,5 +1,6 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
+
 public class FaceController : MonoBehaviour
 {
     [Header("Player Bones")]
@@ -13,9 +14,9 @@ public class FaceController : MonoBehaviour
 
     private void LateUpdate()
     {
-        if(bones == null || bones.Count == 0) return;
+        if (bones == null || bones.Count == 0) return;
 
-        //Calculate bone position
+        // ---- 1️⃣ Calcular posición promedio de los huesos ----
         Vector3 avgPos = Vector3.zero;
         foreach (var bone in bones)
         {
@@ -23,12 +24,13 @@ public class FaceController : MonoBehaviour
         }
         avgPos /= bones.Count;
 
-        //Calculate bone rotation 
-      
-
-        //Apply position & rotation to face with offset
+        // ---- 2️⃣ Aplicar posición al Face con offset ----
         Vector3 targetPos = avgPos + localOffset;
 
+        // La cara sigue suavemente pero sin rotación
         transform.position = Vector3.Lerp(transform.position, targetPos, smoothSpeed * Time.deltaTime);
+
+        // Fijar rotación a cero (opcional, por si alguna transformación previa la giró)
+        transform.rotation = Quaternion.identity;
     }
 }

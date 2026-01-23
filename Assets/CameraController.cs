@@ -10,7 +10,7 @@ public class CameraController2D : MonoBehaviour
     [Header("Movement")]
     public float smoothTime = 0.15f;
     public Vector2 padding = new Vector2(2f, 1f);
-    public float playerRadius = 0.5f; // Para que no se corte el cuerpo al borde
+    public float playerRadius = 0.5f; // Para que los bones no se corten al borde
 
     [Header("Zoom")]
     public float minZoom = 5f;
@@ -24,97 +24,163 @@ public class CameraController2D : MonoBehaviour
     private Vector3 velocity;
     private Vector3 rawPosition;
 
-    private Rigidbody2D rb1;
-    private Rigidbody2D rb2;
-
     void Start()
     {
         cam = GetComponent<Camera>();
         rawPosition = transform.position;
-
-        // Caché de Rigidbodies para evitar deformaciones en los huesos
-        if (player1) rb1 = player1.GetComponent<Rigidbody2D>();
-        if (player2) rb2 = player2.GetComponent<Rigidbody2D>();
     }
 
     void LateUpdate()
     {
         if (!player1 || !player2) return;
 
-        HandleMovement();
-        HandleZoom();
+        // Calculamos bounds de todos los bones
+        Bounds bounds1 = GetPlayerBounds(player1);
+        Bounds bounds2 = GetPlayerBounds(player2);
+
+        // Calculamos el rectángulo que contiene ambos jugadores
+        Vector2 min = Vector2.Min(bounds1.min, bounds2.min);
+        Vector2 max = Vector2.Max(bounds1.max, bounds2.max);
+
+        // Añadimos padding
+        min -= padding;
+        max += padding;
+
+        // Centro de la cámara
+        Vector3 targetPos = (min + max) / 2f;
+
+        // Suavizado
+        rawPosition = Vector3.SmoothDamp(rawPosition, targetPos, ref velocity, smoothTime);
+
+        // Zoom dinámico según tamaño del rectángulo
+        float distanceX = max.x - min.x;
+        float distanceY = max.y - min.y;
+        float targetZoomHeight = Mathf.Max(distanceY / 2f, distanceX / (2f * cam.aspect));
+        float targetZoom = Mathf.Clamp(targetZoomHeight, minZoom, maxZoom);
+        cam.orthographicSize = Mathf.Round(Mathf.Lerp(cam.orthographicSize, targetZoom, Time.deltaTime * zoomSpeed) * pixelsPerUnit) / pixelsPerUnit;
+
+        // Pixel-perfect
         ApplyPixelPerfectPosition();
     }
+
 
     void FixedUpdate()
     {
         if (!player1 || !player2) return;
 
-        // Restringimos la física después de que la cámara ha decidido su posición
-        ClampPlayerPhysically(rb1);
-        ClampPlayerPhysically(rb2);
+        ClampPlayerPhysically(player1);
+        ClampPlayerPhysically(player2);
     }
+
+    #region Camera Logic
 
     void HandleMovement()
     {
-        // Punto medio entre ambos jugadores
-        Vector3 midpoint = (player1.position + player2.position) / 2f;
+        Bounds bounds1 = GetPlayerBounds(player1);
+        Bounds bounds2 = GetPlayerBounds(player2);
 
-        // Suavizado de la posición "cruda" antes del pixel perfect
+        // Centro entre ambos jugadores
+        Vector3 midpoint = (bounds1.center + bounds2.center) / 2f;
+
+        // Suavizado
         rawPosition = Vector3.SmoothDamp(rawPosition, midpoint, ref velocity, smoothTime);
     }
 
     void HandleZoom()
     {
-        float distanceX = Mathf.Abs(player1.position.x - player2.position.x) + padding.x;
-        float distanceY = Mathf.Abs(player1.position.y - player2.position.y) + padding.y;
+        Bounds bounds1 = GetPlayerBounds(player1);
+        Bounds bounds2 = GetPlayerBounds(player2);
 
-        // Calcular zoom basado en el aspecto de la cámara
+        // Distancia total incluyendo padding
+        float distanceX = Mathf.Max(bounds1.max.x, bounds2.max.x) - Mathf.Min(bounds1.min.x, bounds2.min.x) + padding.x;
+        float distanceY = Mathf.Max(bounds1.max.y, bounds2.max.y) - Mathf.Min(bounds1.min.y, bounds2.min.y) + padding.y;
+
         float targetZoomHeight = Mathf.Max(distanceY / 2f, (distanceX / cam.aspect) / 2f);
         float targetZoom = Mathf.Clamp(targetZoomHeight, minZoom, maxZoom);
 
-        // Interpolación suave del tamaño ortográfico
         float zoom = Mathf.Lerp(cam.orthographicSize, targetZoom, Time.deltaTime * zoomSpeed);
         cam.orthographicSize = Mathf.Round(zoom * pixelsPerUnit) / pixelsPerUnit;
     }
 
-    void ClampPlayerPhysically(Rigidbody2D rb)
-    {
-        if (rb == null) return;
-
-        // Calculamos los límites del Viewport en coordenadas de mundo
-        float camHeight = cam.orthographicSize;
-        float camWidth = camHeight * cam.aspect;
-
-        // Definimos los bordes usando la posición actual de la cámara
-        float minX = transform.position.x - camWidth + playerRadius;
-        float maxX = transform.position.x + camWidth - playerRadius;
-        float minY = transform.position.y - camHeight + playerRadius;
-        float maxY = transform.position.y + camHeight - playerRadius;
-
-        Vector2 currentPos = rb.position;
-        Vector2 clampedPos = new Vector2(
-            Mathf.Clamp(currentPos.x, minX, maxX),
-            Mathf.Clamp(currentPos.y, minY, maxY)
-        );
-
-        // Si el jugador está intentando salir, lo movemos físicamente
-        if (currentPos != clampedPos)
-        {
-            // MovePosition es la clave para no romper los huesos (Skinning)
-            rb.MovePosition(clampedPos);
-
-            // Opcional: Matar la velocidad si choca contra el borde para evitar rebotes visuales
-            if (Mathf.Abs(currentPos.x - clampedPos.x) > 0.01f)
-                rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
-        }
-    }
-
     void ApplyPixelPerfectPosition()
     {
-        // Redondeo a la rejilla de píxeles para evitar jitter visual en el fondo
         float x = Mathf.Round(rawPosition.x * pixelsPerUnit) / pixelsPerUnit;
         float y = Mathf.Round(rawPosition.y * pixelsPerUnit) / pixelsPerUnit;
         transform.position = new Vector3(x, y, -10f);
     }
+
+    #endregion
+
+    #region Player Bounds & Clamping
+
+    Bounds GetPlayerBounds(Transform player)
+    {
+        Rigidbody2D[] bones = player.GetComponentsInChildren<Rigidbody2D>();
+        if (bones.Length == 0) return new Bounds(player.position, Vector3.zero);
+
+        Vector2 min = bones[0].position;
+        Vector2 max = bones[0].position;
+
+        foreach (var bone in bones)
+        {
+            Vector2 pos = bone.position;
+            min = Vector2.Min(min, pos);
+            max = Vector2.Max(max, pos);
+        }
+
+        Bounds bounds = new Bounds();
+        bounds.SetMinMax(min, max);
+        return bounds;
+    }
+
+   void ClampPlayerPhysically(Transform player)
+{
+    Rigidbody2D[] bones = player.GetComponentsInChildren<Rigidbody2D>();
+    if (bones.Length == 0) return;
+
+    float camHeight = cam.orthographicSize;
+    float camWidth = camHeight * cam.aspect;
+
+    // Calculamos los límites actuales de la cámara
+    float minX = transform.position.x - camWidth + playerRadius;
+    float maxX = transform.position.x + camWidth - playerRadius;
+    float minY = transform.position.y - camHeight + playerRadius;
+    float maxY = transform.position.y + camHeight - playerRadius;
+
+    foreach (var rb in bones)
+    {
+        Vector2 pos = rb.position;
+        Vector2 vel = rb.linearVelocity;
+        bool modified = false;
+
+        // Solo actuamos si el hueso se sale de los bordes
+        if (pos.x < minX) {
+            pos.x = minX;
+            if (vel.x < 0) vel.x = 0;
+            modified = true;
+        } else if (pos.x > maxX) {
+            pos.x = maxX;
+            if (vel.x > 0) vel.x = 0;
+            modified = true;
+        }
+
+        if (pos.y < minY) {
+            pos.y = minY;
+            if (vel.y < 0) vel.y = 0;
+            modified = true;
+        } else if (pos.y > maxY) {
+            pos.y = maxY;
+            if (vel.y > 0) vel.y = 0;
+            modified = true;
+        }
+
+        // IMPORTANTE: Solo aplicamos cambios si realmente hubo una colisión con el borde
+        if (modified) {
+            rb.linearVelocity = vel;
+            rb.position = pos; // Usar .position directamente en FixedUpdate es más limpio para "clamping"
+        }
+    }
+}
+
+    #endregion
 }
