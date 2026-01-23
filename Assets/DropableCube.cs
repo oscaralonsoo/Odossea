@@ -29,16 +29,23 @@ public class DropableCube : MonoBehaviour
     RelativeJoint2D[] relativesJoints2D;
     DistanceJoint2D[] distanceJoints2D;
 
+    public int growNum;
+
     private void Awake()
     {
         relativesJoints2D = transform.GetComponentsInChildren<RelativeJoint2D>();
         distanceJoints2D = transform.GetComponentsInChildren<DistanceJoint2D>();
         targetScale = transform.localScale;
+        growNum = 1;
     }
 
-    public void Grow()
+    public void Grow(int growNumber)
     {
-        targetScale = targetScale * scaleFactor;
+        for (int i = 0; i < growNumber; i++)
+        {
+            targetScale = targetScale * scaleFactor;
+            growNum++;
+        }
     }
 
     private void FixedUpdate()

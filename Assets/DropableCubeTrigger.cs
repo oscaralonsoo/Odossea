@@ -18,10 +18,20 @@ public class DropableCubeTrigger : MonoBehaviour
         
         if (collision.gameObject.tag == "CubeTrigger")
         {
-            if (rigidbody.linearVelocity.magnitude < collision.attachedRigidbody.linearVelocity.magnitude)
+            DropableCube otherDropableCube = collision.transform.parent.GetComponent<DropableCube>();
+            Rigidbody2D otherRigidbody = otherDropableCube.GetComponent<Rigidbody2D>();
+
+            if (!dropableCube || !rigidbody || !otherDropableCube || !otherRigidbody) return;
+
+            if (dropableCube.growNum > otherDropableCube.growNum)
             {
-                dropableCube.Grow();
-                collision.transform.parent.gameObject.SetActive(false);
+                dropableCube.Grow(otherDropableCube.growNum);
+                Destroy(collision.transform.parent.gameObject);
+            }
+            else if (dropableCube.growNum == otherDropableCube.growNum && rigidbody.linearVelocity.magnitude < otherRigidbody.linearVelocity.magnitude)
+            {
+                dropableCube.Grow(otherDropableCube.growNum);
+                Destroy(collision.transform.parent.gameObject);
             }
         }
     }
