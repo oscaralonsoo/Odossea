@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,20 +15,45 @@ public class MarcScript : MonoBehaviour
     }
 
     [SerializeField] List<Bone> bones;
+    [SerializeField] RelativeJoint2D[] relativesJoints2D;
+    [SerializeField] DistanceJoint2D[] distanceJoints2D;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] float force;
     [SerializeField] float downForce;
     [SerializeField] float jumpForce;
     [SerializeField] float maxXSpeed;
     [SerializeField] float maxYSpeed;
+    [SerializeField] float scaleFactor;
+    [SerializeField] float scaleSpeed;
+
+    Vector3 targetScale = Vector3.one;
 
     private Vector2 inputDirection;
     private bool jumpRequested = false;
 
     // Métodos que llamará el PlayerInput por "Broadcast Messages" o "Player Input Events"
+    private void Awake()
+    {
+        relativesJoints2D = transform.GetComponentsInChildren<RelativeJoint2D>();
+        distanceJoints2D = transform.GetComponentsInChildren<DistanceJoint2D>();
+    }
+
     public void OnMove(InputValue value)
     {
         inputDirection = value.Get<Vector2>();
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            targetScale = targetScale * scaleFactor;
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            targetScale = targetScale / scaleFactor;
+        }
     }
 
     public void OnJump(InputValue value)
@@ -40,6 +66,29 @@ public class MarcScript : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Vector3 lastScale = transform.localScale;
+        Vector3 newScale = Vector3.Lerp(transform.localScale, targetScale, Time.fixedDeltaTime * scaleSpeed);
+
+        if (newScale.magnitude > 0.1f)
+        {
+            transform.localScale = newScale;
+            float changeRatio = newScale.magnitude / lastScale.magnitude;
+
+            foreach (DistanceJoint2D dj in distanceJoints2D)
+            {
+                dj.autoConfigureDistance = false;
+                dj.distance *= changeRatio;
+            }
+
+            foreach (RelativeJoint2D rj in relativesJoints2D)
+            {
+                rj.autoConfigureOffset = false;
+                rj.linearOffset *= changeRatio;
+            }
+        }
+
+        
+
         int groundedNum = 0;
         foreach (Bone bone in bones)
         {
