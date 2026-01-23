@@ -115,11 +115,11 @@ RelativeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
-  m_MaxForce: 50
+  m_MaxForce: 150
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.6499996, y: 0.6500001}
+  m_LinearOffset: {x: -0.31346416, y: 0.31346464}
   m_AngularOffset: 0
 --- !u!254 &6031103907538762707
 RelativeJoint2D:
@@ -139,7 +139,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -1.2999992, y: 0}
+  m_LinearOffset: {x: -0.6269283, y: 0}
   m_AngularOffset: 0
 --- !u!254 &6272575641182319960
 RelativeJoint2D:
@@ -159,7 +159,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: 1.3000002}
+  m_LinearOffset: {x: 0, y: 0.6269293}
   m_AngularOffset: 0
 --- !u!232 &2508498479487615610
 DistanceJoint2D:
@@ -179,7 +179,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
-  m_Distance: 2.5
+  m_Distance: 1.205632
   m_MaxDistanceOnly: 1
 --- !u!114 &3211586913541987693
 MonoBehaviour:
@@ -225,7 +225,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.2, y: 0.19000001, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.482253, y: 0.482253, z: 0.482253}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7115556502842486069}
@@ -320,7 +320,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3869324984545107470}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -416,7 +416,7 @@ MonoBehaviour:
   maxYSpeed: 15
   scaleFactor: 1.2
   scaleSpeed: 30
-  growNum: 1
+  growNum: 5
   faceAnimator: {fileID: 0}
 --- !u!114 &3079926095284879952
 MonoBehaviour:
@@ -563,11 +563,11 @@ RelativeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
-  m_MaxForce: 50
+  m_MaxForce: 150
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.6499996, y: -0.6500001}
+  m_LinearOffset: {x: -0.31346416, y: -0.31346464}
   m_AngularOffset: 0
 --- !u!254 &1806842226078645393
 RelativeJoint2D:
@@ -587,7 +587,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: -1.3000002}
+  m_LinearOffset: {x: 0, y: -0.6269293}
   m_AngularOffset: 0
 --- !u!254 &2922973775974257485
 RelativeJoint2D:
@@ -607,7 +607,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -1.2999992, y: 0}
+  m_LinearOffset: {x: -0.6269283, y: 0}
   m_AngularOffset: 0
 --- !u!232 &2639847110472932740
 DistanceJoint2D:
@@ -627,7 +627,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
-  m_Distance: 2.5
+  m_Distance: 1.205632
   m_MaxDistanceOnly: 1
 --- !u!114 &7919938893599092194
 MonoBehaviour:
@@ -756,11 +756,11 @@ RelativeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
-  m_MaxForce: 50
+  m_MaxForce: 150
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.6499996, y: -0.6500001}
+  m_LinearOffset: {x: 0.31346416, y: -0.31346464}
   m_AngularOffset: 0
 --- !u!254 &1953040341558597055
 RelativeJoint2D:
@@ -780,7 +780,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 1.2999992, y: 0}
+  m_LinearOffset: {x: 0.6269283, y: 0}
   m_AngularOffset: 0
 --- !u!254 &7627294569747638751
 RelativeJoint2D:
@@ -800,7 +800,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: -1.3000002}
+  m_LinearOffset: {x: 0, y: -0.6269293}
   m_AngularOffset: 0
 --- !u!232 &5510543671287423000
 DistanceJoint2D:
@@ -820,7 +820,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
-  m_Distance: 2.5
+  m_Distance: 1.205632
   m_MaxDistanceOnly: 1
 --- !u!114 &5027517502627846167
 MonoBehaviour:
@@ -949,11 +949,11 @@ RelativeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
-  m_MaxForce: 50
+  m_MaxForce: 150
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.6499996, y: 0.6500001}
+  m_LinearOffset: {x: 0.31346416, y: 0.31346464}
   m_AngularOffset: 0
 --- !u!254 &5221907397583051029
 RelativeJoint2D:
@@ -973,7 +973,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: 1.3000002}
+  m_LinearOffset: {x: 0, y: 0.6269293}
   m_AngularOffset: 0
 --- !u!254 &3050643902786663124
 RelativeJoint2D:
@@ -993,7 +993,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 1.2999992, y: 0}
+  m_LinearOffset: {x: 0.6269283, y: 0}
   m_AngularOffset: 0
 --- !u!232 &488520577996887964
 DistanceJoint2D:
@@ -1013,7 +1013,7 @@ DistanceJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
-  m_Distance: 2.5
+  m_Distance: 1.205632
   m_MaxDistanceOnly: 1
 --- !u!114 &4128735782705804455
 MonoBehaviour:

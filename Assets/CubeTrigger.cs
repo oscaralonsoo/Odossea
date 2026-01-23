@@ -9,7 +9,6 @@ public class CubeTrigger : MonoBehaviour
     {
         playerCube = transform.parent.GetComponent<MarcScript>();
         rigidbody = playerCube.GetComponent<Rigidbody2D>();
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

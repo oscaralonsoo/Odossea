@@ -49,7 +49,8 @@ public class MarcScript : MonoBehaviour
         if (faceAnimator == null)
             faceAnimator = GetComponentInChildren<Animator>();
 
-        growNum = 1;
+        
+        InitScale();
     }
 
     public void OnMove(InputValue value) => inputDirection = value.Get<Vector2>();
@@ -136,6 +137,22 @@ public class MarcScript : MonoBehaviour
             faceAnimator.SetBool("isGrounded", isGroundedGlobal);
             faceAnimator.SetFloat("VerticalVelocity", smoothVelocity);
         }
+    }
+
+    private void InitScale()
+    {
+        targetScale = transform.localScale;
+        for (int i = 1; i < growNum; i++)
+        {
+            targetScale = targetScale * scaleFactor;
+        }
+
+        Vector3 lastScale = transform.localScale;
+        Vector3 newScale = targetScale;
+        transform.localScale = newScale;
+        float changeRatio = newScale.magnitude / lastScale.magnitude;
+        foreach (DistanceJoint2D dj in distanceJoints2D) { dj.autoConfigureDistance = false; dj.distance *= changeRatio; }
+        foreach (RelativeJoint2D rj in relativesJoints2D) { rj.autoConfigureOffset = false; rj.linearOffset *= changeRatio; }
     }
 
     private void ApplyScale()
