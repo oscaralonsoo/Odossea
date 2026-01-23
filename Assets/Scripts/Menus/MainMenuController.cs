@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI; // Necesario para trabajar con Button
 
 public class MenuController : MonoBehaviour
 {
@@ -6,11 +7,20 @@ public class MenuController : MonoBehaviour
     public string newGameLevel;
     public string levelToLoad;
 
-    [SerializeField] private GameObject noSavedGameDialog = null;
+    [Header("UI Elements")]
+    [SerializeField] private Button loadGameButton = null; // Referencia al botón LoadGame
+
+    private void Start()
+    {
+        // Desactiva el botón si no hay partida guardada
+        if (!PlayerPrefs.HasKey("SavedLevel") && loadGameButton != null)
+        {
+            loadGameButton.interactable = false;
+        }
+    }
 
     public void NewGameYes()
     {
-        Debug.Log("CLICK EN NEW GAME YES");
         SceneTransitionManager.Instance.LoadScene(newGameLevel);
     }
 
@@ -21,10 +31,7 @@ public class MenuController : MonoBehaviour
             levelToLoad = PlayerPrefs.GetString("SavedLevel");
             SceneTransitionManager.Instance.LoadScene(levelToLoad);
         }
-        else
-        {
-            noSavedGameDialog.SetActive(true);
-        }
+        // Ya no necesitamos el diálogo
     }
 
     public void ExitButton()
