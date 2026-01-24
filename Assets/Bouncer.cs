@@ -7,10 +7,10 @@ public class Bouncer : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.CompareTag("Bone"))
+        if (collision.transform.CompareTag("Bone") || collision.transform.CompareTag("CubeTrigger"))
         {
             GameObject player = collision.transform.parent.gameObject;
-            /*ApplyBounce(player.GetComponent<Rigidbody2D>());*/
+            ApplyBounce(player.GetComponent<Rigidbody2D>());
 
             foreach (PlayerController.Bone bone in player.GetComponent<PlayerController>().bones)
             {
