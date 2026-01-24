@@ -12,93 +12,190 @@ public class PlayerController : MonoBehaviour
         public Collider2D collider2D;
         public DistanceJoint2D distanceJoint;
         public List<RelativeJoint2D> relativeJoints = new List<RelativeJoint2D>();
-        public bool grounded = false;
+        [HideInInspector] public bool grounded;
     }
 
-    public List<Bone> bones;
+    [Header("Bones & Joints")]
+    [SerializeField] public List<Bone> bones;
 
+    [Header("Movement")]
     [SerializeField] LayerMask groundLayer;
-    [SerializeField] float force;
-    [SerializeField] float downForce;
-    [SerializeField] float jumpForce;
-    [SerializeField] float maxXSpeed;
-    [SerializeField] float maxYSpeed;
+    [SerializeField] float force = 50f;
+    [SerializeField] float downForce = 20f;
+    [SerializeField] float jumpForce = 300f;
+    [SerializeField] float maxXSpeed = 5f;
+    [SerializeField] float maxYSpeed = 10f;
 
-    private Vector2 inputDirection;
-    private bool jumpRequested = false;
+    [Header("Scaling")]
+    [SerializeField] float scaleFactor = 1.2f;
+    [SerializeField] float scaleSpeed = 5f;
+    public int growNum = 1;
 
-    //Para el Animator
     public bool IsGrounded { get; private set; }
     public float AverageVerticalVelocity { get; private set; }
 
-    float verticalVelocitySum;
+    private Vector3 targetScale = Vector3.one;
+    private Vector2 inputDirection;
+    private bool jumpRequested;
 
-    // Métodos que llamará el PlayerInput por "Broadcast Messages" o "Player Input Events"
-    public void OnMove(InputValue value)
+    private bool blockLeftMove;
+    private bool blockRightMove;
+
+    private void Awake()
     {
-        inputDirection = value.Get<Vector2>();
+        InitScale();
     }
 
+    public void OnMove(InputValue value) => inputDirection = value.Get<Vector2>();
     public void OnJump(InputValue value)
     {
         if (value.isPressed)
-        {
             jumpRequested = true;
+    }
+
+    public void SetMovementRestriction(bool left, bool right)
+    {
+        blockLeftMove = left;
+        blockRightMove = right;
+    }
+
+    public void Grow(int growNumber)
+    {
+        for (int i = 0; i < growNumber; i++)
+        {
+            targetScale *= scaleFactor;
+            growNum++;
+        }
+    }
+
+    public void Shrink(int shrinkNumber)
+    {
+        for (int i = 0; i < shrinkNumber; i++)
+        {
+            if (growNum <= 1)
+                return;
+
+            targetScale /= scaleFactor;
+            growNum--;
         }
     }
 
     private void FixedUpdate()
     {
-        int groundedNum = 0;
-        verticalVelocitySum = 0f;
-        foreach (Bone bone in bones)
+        ApplyScale();
+
+        // ---------- Ground check ----------
+        int groundedCount = 0;
+        foreach (var bone in bones)
         {
-            if (bone.collider2D)
+            if (bone.collider2D == null)
             {
-                bone.grounded = bone.collider2D.IsTouchingLayers(groundLayer);
-                if (bone.grounded) groundedNum++;
+                bone.grounded = false;
+                continue;
             }
+            bone.grounded = bone.collider2D.IsTouchingLayers(groundLayer);
+            if (bone.grounded)
+                groundedCount++;
         }
 
-        IsGrounded = groundedNum > 0;
+        IsGrounded = groundedCount > 0;
 
-        foreach (Bone bone in bones)
+        // ---------- Input filtering ----------
+        float moveX = inputDirection.x;
+        if (blockLeftMove && moveX < 0) moveX = 0;
+        if (blockRightMove && moveX > 0) moveX = 0;
+
+        float verticalVelSum = 0f;
+
+        foreach (var bone in bones)
         {
-            if (bone.grounded && groundedNum < 3)
-                bone.rigidbody2D.AddForce(Vector2.down * downForce);
+            var rb = bone.rigidbody2D;
 
-            if (bone.grounded || groundedNum == 0)
-            {
-                if (inputDirection.x != 0)
-                {
-                    bone.rigidbody2D.AddForce(Vector2.right * inputDirection.x * force);
-                }
-            }
+            if (bone.grounded && groundedCount < 3)
+                rb.AddForce(Vector2.down * downForce);
 
+            if ((bone.grounded || groundedCount == 0) && moveX != 0)
+                rb.AddForce(Vector2.right * moveX * force);
 
-            if (groundedNum != 0)
-            {
-                if (jumpRequested)
-                {
-                    bone.rigidbody2D.AddForce(Vector2.up * jumpForce);
-                }
-            }
+            if (IsGrounded && jumpRequested)
+                rb.AddForce(Vector2.up * jumpForce);
 
-            if (Mathf.Abs(bone.rigidbody2D.linearVelocity.x) > maxXSpeed)
-            {
-                float limitedX = Mathf.Sign(bone.rigidbody2D.linearVelocity.x) * maxXSpeed;
-                bone.rigidbody2D.linearVelocity = new Vector2(limitedX, bone.rigidbody2D.linearVelocity.y);
-            }
+            Vector2 vel = rb.linearVelocity;
+            vel.x = Mathf.Clamp(vel.x, -maxXSpeed, maxXSpeed);
+            vel.y = Mathf.Clamp(vel.y, -maxYSpeed, maxYSpeed);
+            rb.linearVelocity = vel;
 
-            if (Mathf.Abs(bone.rigidbody2D.linearVelocity.y) > maxYSpeed)
-            {
-                float limitedY = Mathf.Sign(bone.rigidbody2D.linearVelocity.y) * maxYSpeed;
-                bone.rigidbody2D.linearVelocity = new Vector2(bone.rigidbody2D.linearVelocity.x, limitedY);
-            }
-            verticalVelocitySum += bone.rigidbody2D.linearVelocity.y;
+            verticalVelSum += vel.y;
         }
-        AverageVerticalVelocity = verticalVelocitySum / bones.Count;
 
+        AverageVerticalVelocity = verticalVelSum / bones.Count;
         jumpRequested = false;
+    }
+
+    // ---------- Scaling ----------
+    private void InitScale()
+    {
+        targetScale = transform.localScale;
+
+        for (int i = 1; i < growNum; i++)
+            targetScale *= scaleFactor;
+
+        ApplyScaleInstant();
+    }
+
+    private void ApplyScale()
+    {
+        Vector3 lastScale = transform.localScale;
+        Vector3 newScale = Vector3.Lerp(
+            lastScale,
+            targetScale,
+            Time.fixedDeltaTime * scaleSpeed
+        );
+
+        if (newScale.magnitude < 0.1f)
+            return;
+
+        transform.localScale = newScale;
+        float ratio = newScale.magnitude / lastScale.magnitude;
+
+        foreach (var bone in bones)
+        {
+            if (bone.distanceJoint != null)
+            {
+                bone.distanceJoint.autoConfigureDistance = false;
+                bone.distanceJoint.distance *= ratio;
+            }
+
+            foreach (var rj in bone.relativeJoints)
+            {
+                if (rj == null) continue;
+                rj.autoConfigureOffset = false;
+                rj.linearOffset *= ratio;
+            }
+        }
+    }
+
+    private void ApplyScaleInstant()
+    {
+        Vector3 lastScale = transform.localScale;
+        transform.localScale = targetScale;
+
+        float ratio = targetScale.magnitude / lastScale.magnitude;
+
+        foreach (var bone in bones)
+        {
+            if (bone.distanceJoint != null)
+            {
+                bone.distanceJoint.autoConfigureDistance = false;
+                bone.distanceJoint.distance *= ratio;
+            }
+
+            foreach (var rj in bone.relativeJoints)
+            {
+                if (rj == null) continue;
+                rj.autoConfigureOffset = false;
+                rj.linearOffset *= ratio;
+            }
+        }
     }
 }

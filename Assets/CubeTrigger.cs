@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class CubeTrigger : MonoBehaviour
 {
-    private MarcScript playerCube;
+    private PlayerController playerCube;
     private Rigidbody2D rigidbody;
 
     private void Awake()
     {
-        playerCube = transform.parent.GetComponent<MarcScript>();
+        playerCube = transform.parent.GetComponent<PlayerController>();
         rigidbody = playerCube.GetComponent<Rigidbody2D>();
     }
 

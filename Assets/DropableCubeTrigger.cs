@@ -38,6 +38,7 @@ public class DropableCubeTrigger : MonoBehaviour
                     Destroy(otherDropableCube.gameObject);
                 }
             }
+
         }
     }
 }

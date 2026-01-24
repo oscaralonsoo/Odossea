@@ -119,7 +119,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.31346416, y: 0.31346416}
+  m_LinearOffset: {x: 0.31346416, y: 0.31346464}
   m_AngularOffset: 0
 --- !u!254 &3350605236441818211
 RelativeJoint2D:
@@ -139,7 +139,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: 0.6269288}
+  m_LinearOffset: {x: 0, y: 0.6269293}
   m_AngularOffset: 0
 --- !u!254 &1239810138088807865
 RelativeJoint2D:
@@ -312,7 +312,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.31346416, y: 0.31346416}
+  m_LinearOffset: {x: -0.31346416, y: 0.31346464}
   m_AngularOffset: 0
 --- !u!254 &2559842293789812560
 RelativeJoint2D:
@@ -352,7 +352,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: 0.6269288}
+  m_LinearOffset: {x: 0, y: 0.6269293}
   m_AngularOffset: 0
 --- !u!232 &5721778623515250572
 DistanceJoint2D:
@@ -545,7 +545,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: -0.6269288}
+  m_LinearOffset: {x: 0, y: -0.6269293}
   m_AngularOffset: 0
 --- !u!232 &8223886087782480083
 DistanceJoint2D:
@@ -718,7 +718,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: -0.6269288}
+  m_LinearOffset: {x: 0, y: -0.6269293}
   m_AngularOffset: 0
 --- !u!254 &7128725364588793658
 RelativeJoint2D:
@@ -898,7 +898,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7509534449368133461}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -988,8 +988,8 @@ MonoBehaviour:
   force: 300
   downForce: 300
   jumpForce: 1500
-  maxXSpeed: 10
-  maxYSpeed: 15
+  maxXSpeed: 100
+  maxYSpeed: 100
   scaleFactor: 1.2
   scaleSpeed: 30
   growNum: 0
