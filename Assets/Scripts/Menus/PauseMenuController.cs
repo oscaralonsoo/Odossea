@@ -6,17 +6,31 @@ public class PauseMenuController : MonoBehaviour
     private const int POPUP = 1;
     private const int POPDOWN = 2;
 
-    [Header("References")]
-    [SerializeField] private Animator animator;
-    [SerializeField] private string mainMenuScene;
+    [Header("Animators")]
+    [SerializeField] private Animator pauseAnimator;
+    [SerializeField] private Animator optionsAnimator;
+
+    [Header("Containers")]
+    [SerializeField] private GameObject pauseContainer;
+    [SerializeField] private GameObject optionsContainer;
+
+    [Header("Main Menu")]
+    [SerializeField] private string mainMenuScene; // Nombre de la escena del Main Menu
 
     private bool isPaused = false;
     private bool isTransitioning = false;
 
+    private enum MenuState { Pause, Options }
+    private MenuState currentMenu = MenuState.Pause;
+
     void Awake()
     {
-        // El Animator ignora Time.timeScale
-        animator.updateMode = AnimatorUpdateMode.UnscaledTime;
+        pauseAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
+        optionsAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
+
+        // Forzar estado inicial a IDLE para ambos animators
+        pauseAnimator.SetInteger("State", IDLE);
+        optionsAnimator.SetInteger("State", IDLE);
     }
 
     void Update()
@@ -26,9 +40,14 @@ public class PauseMenuController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetButtonDown("Cancel"))
         {
-            TogglePause();
+            if (currentMenu == MenuState.Options)
+                BackFromOptions();
+            else
+                TogglePause();
         }
     }
+
+    #region Pause
 
     public void TogglePause()
     {
@@ -40,46 +59,97 @@ public class PauseMenuController : MonoBehaviour
 
     public void OpenPause()
     {
-        // ⛔ Pausa inmediata
         Time.timeScale = 0f;
 
-        animator.SetInteger("State", POPUP);
+        pauseAnimator.SetInteger("State", POPUP);
 
         isPaused = true;
         isTransitioning = true;
+        currentMenu = MenuState.Pause;
     }
 
     public void ClosePause()
     {
-        animator.SetInteger("State", POPDOWN);
+        pauseAnimator.SetInteger("State", POPDOWN);
         isTransitioning = true;
     }
 
-    // 🎬 Final de POPUP
-    public void OnPopupFinished()
+    // Callback de animación: PopUp de Pause terminado
+    public void OnPausePopupFinished()
     {
         isTransitioning = false;
     }
 
-    // 🎬 Final de POPDOWN
-    public void OnPopdownFinished()
+    // Callback de animación: PopDown de Pause terminado
+    public void OnPausePopdownFinished()
     {
-        animator.SetInteger("State", IDLE);
+        pauseAnimator.SetInteger("State", IDLE);
 
-        Time.timeScale = 1f;
-        isPaused = false;
-        isTransitioning = false;
+        if (currentMenu == MenuState.Options)
+        {
+            // Si abrimos Options, ahora POPUP de Options
+            optionsAnimator.SetInteger("State", POPUP);
+        }
+        else
+        {
+            // Cerrando Pause normal
+            Time.timeScale = 1f;
+            isPaused = false;
+            isTransitioning = false;
+        }
     }
 
-    public void Back()
-    {
-        if (!isTransitioning)
-            ClosePause();
-    }
-
-    public void Exit()
+    // Botón "Back to Main Menu"
+    public void ExitToMainMenu()
     {
         Time.timeScale = 1f;
         SceneTransitionManager.Instance.LoadScene(mainMenuScene);
     }
+
+    #endregion
+
+    #region Options
+
+    public void OpenOptions()
+    {
+        if (isTransitioning) return;
+
+        // Cambiar el estado antes de abrir Options
+        currentMenu = MenuState.Options;
+
+        // Primero hacer PopDown de Pause
+        pauseAnimator.SetInteger("State", POPDOWN);
+        isTransitioning = true;
+    }
+
+    public void CloseOptions()
+    {
+        if (isTransitioning) return;
+
+        optionsAnimator.SetInteger("State", POPDOWN);
+        isTransitioning = true;
+    }
+
+    public void BackFromOptions()
+    {
+        CloseOptions();
+    }
+
+    // Callback de animación: PopUp de Options terminado
+    public void OnOptionsPopupFinished()
+    {
+        isTransitioning = false;
+    }
+
+    // Callback de animación: PopDown de Options terminado
+    public void OnOptionsPopdownFinished()
+    {
+        optionsAnimator.SetInteger("State", IDLE);
+
+        // Volver automáticamente a Pause
+        currentMenu = MenuState.Pause;
+        pauseAnimator.SetInteger("State", POPUP);
+    }
+
+    #endregion
 }
