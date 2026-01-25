@@ -1,0 +1,87 @@
+using UnityEngine;
+
+public class InGameMenuManager : MonoBehaviour
+{
+    //PANELS
+    public UIPanel pausePanel;
+    public UIPanel optionsPanel;
+    public UIPanel soundPanel;
+    public UIPanel graphicsPanel;
+
+    UIPanel current;
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (current == soundPanel || current == graphicsPanel)
+                ShowOptions();
+            else if (current == optionsPanel)
+                ShowPause();
+            else if (current == pausePanel)
+                Resume();
+            else
+                Pause();
+        }
+    }
+
+    //PAUSE
+    public void Pause()
+    {
+        Time.timeScale = 0;
+        pausePanel.Show();
+        current = pausePanel;
+    }
+
+    public void Resume()
+    {
+        Time.timeScale = 1;
+        pausePanel.Hide();
+        current = null;
+    }
+
+    //OPTIONS
+    public void ShowOptions()
+    {
+        if (current != null)
+            current.Hide();
+
+        optionsPanel.Show();
+        current = optionsPanel;
+    }
+
+    public void ShowPause()
+    {
+        if (current != null)
+            current.Hide();
+
+        pausePanel.Show();
+        current = pausePanel;
+    }
+
+    //SOUND / GRAPHICS 
+    public void ShowSound()
+    {
+        if (current != null)
+            current.Hide();
+
+        soundPanel.Show();
+        current = soundPanel;
+    }
+
+    public void ShowGraphics()
+    {
+        if (current != null)
+            current.Hide();
+
+        graphicsPanel.Show();
+        current = graphicsPanel;
+    }
+
+    //SCENES
+    public void LoadMainMenu(string scene)
+    {
+        Time.timeScale = 1;
+        SceneTransitionManager.Instance.LoadScene(scene);
+    }
+}
