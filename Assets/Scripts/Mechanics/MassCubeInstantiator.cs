@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MassCubeInstantiator : MonoBehaviour
 {
@@ -9,19 +10,26 @@ public class MassCubeInstantiator : MonoBehaviour
     [SerializeField] private float ignoreCollisionTime = 0.3f;
     [SerializeField] private float recoilForce = 50f;
 
-    void Update()
+    private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            var player = GetComponent<PlayerController>();
-
-            if (player.growNum > 1)
-            {
-                LaunchCubeToMouse();
-                player.Shrink(1);
-            }
-        }
+        
     }
+    public void Shoot(Vector2 direction)
+    {
+        var player = GetComponent<PlayerController>();
+
+        if (player.growNum <= 1)
+            return;
+
+        if (direction == Vector2.zero)
+            return;
+
+        LaunchCube(direction, false, transform.position, launchForce);
+        ApplyRecoilForce(direction);
+        player.Shrink(1);
+    }
+
+
 
     public void LaunchCubeToMouse()
     {
@@ -123,6 +131,7 @@ public class MassCubeInstantiator : MonoBehaviour
 
     IEnumerator IgnoreCollisionTemporarily(GameObject cubeMass)
     {
+        if (cubeMass == null) yield break;
         var playerController = GetComponent<PlayerController>();
         foreach (var playerBone in playerController.bones)
         {
@@ -136,6 +145,8 @@ public class MassCubeInstantiator : MonoBehaviour
         }
 
         yield return new WaitForSeconds(ignoreCollisionTime);
+
+        if (cubeMass == null) yield break; 
 
         foreach (var playerBone in playerController.bones)
         {

@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -211,8 +211,76 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 351f2ccd-1f9f-44bf-9bec-d62ac5c5f408
+    m_ActionName: 'Player/Move[/DualShock4GamepadHID/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f1ba0d36-48eb-4cd5-b651-1c94a6531f70
+    m_ActionName: 'Player/Jump[/Keyboard/space,/Keyboard/rightShift,/DualShock4GamepadHID/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 222496283260769689}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 2546020f-7119-4c52-bea8-4aca5dfb09fd
+    m_ActionName: 'Player/Shoot[/DualShock4GamepadHID/rightTrigger,/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 68ea2ab5-a0b0-4bb0-a84a-370a32a42dd7
+    m_ActionName: 'Player/Look[/DualShock4GamepadHID/rightStick,/Mouse/position]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c95b2375-e6d9-4b88-9c4c-c5e76515df4b
+    m_ActionName: 'UI/Navigate[/DualShock4GamepadHID/leftStick/up,/DualShock4GamepadHID/rightStick/up,/DualShock4GamepadHID/leftStick/down,/DualShock4GamepadHID/rightStick/down,/DualShock4GamepadHID/leftStick/left,/DualShock4GamepadHID/rightStick/left,/DualShock4GamepadHID/leftStick/right,/DualShock4GamepadHID/rightStick/right,/DualShock4GamepadHID/dpad,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7607c7b6-cd76-4816-beef-bd0341cfe950
+    m_ActionName: 'UI/Submit[/Keyboard/enter,/DualShock4GamepadHID/buttonSouth]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 15cef263-9014-4fd5-94d9-4e4a6234a6ef
+    m_ActionName: 'UI/Cancel[/Keyboard/escape,/DualShock4GamepadHID/buttonEast]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 32b35790-4ed0-4e9a-aa41-69ac6d629449
+    m_ActionName: 'UI/Point[/Mouse/position]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3c7022bf-7922-4f7c-a998-c437916075ad
+    m_ActionName: 'UI/Click[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 44b200b1-1557-4083-816c-b22cbdf77ddf
+    m_ActionName: 'UI/RightClick[/Mouse/rightButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: dad70c86-b58c-4b17-88ad-f5e53adf419e
+    m_ActionName: 'UI/MiddleClick[/Mouse/middleButton]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0489e84a-4833-4c40-bfae-cea84b696689
+    m_ActionName: 'UI/ScrollWheel[/Mouse/scroll]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 24908448-c609-4bc3-a128-ea258674378a
+    m_ActionName: UI/TrackedDevicePosition
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
+    m_ActionName: UI/TrackedDeviceOrientation
+  m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: Teclado 1
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
@@ -290,8 +358,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a61038a1fc3ea1441bbdf5750fc537c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 8764900082671207673}
-  otherPlayer: {fileID: 2766697009033451619, guid: e18f86da13d716847ad85b007a38136a, type: 3}
+  player: {fileID: 0}
+  otherPlayer: {fileID: 0}
   boneAttractionSpeed: 14
   relativeJointMaxForce: 180
 --- !u!114 &2858181615699112322
@@ -301,14 +369,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 222496283260769689}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5cd3c801e7283af44b209baf55178d25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 7509534449368133461, guid: 4888d99aea1f4de44bcd2ff6c0333b4c, type: 3}
   launchForce: 20
+  spreadAngle: 45
   ignoreCollisionTime: 0.3
+  recoilForce: 50
 --- !u!114 &666092609815071958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,8 +391,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34b63ed3a9468a940b09f722693128b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1: {fileID: 8764900082671207673}
-  player2: {fileID: 2766697009033451619, guid: e18f86da13d716847ad85b007a38136a, type: 3}
+  player1: {fileID: 0}
+  player2: {fileID: 0}
 --- !u!1 &3214501632423353194
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,7 +513,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.3065977, y: -0.30659825}
+  m_LinearOffset: {x: 0.30659866, y: -0.30659866}
   m_AngularOffset: 0
 --- !u!254 &6795351407980129519
 RelativeJoint2D:
@@ -463,7 +533,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.6131954, y: 0}
+  m_LinearOffset: {x: 0.6131973, y: 0}
   m_AngularOffset: 0
 --- !u!254 &6484321339860985411
 RelativeJoint2D:
@@ -483,7 +553,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: -0.61319643}
+  m_LinearOffset: {x: 0, y: -0.6131973}
   m_AngularOffset: 0
 --- !u!232 &475918683694396909
 DistanceJoint2D:
@@ -517,6 +587,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b7712419340d945ac9bd45b544884e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCube: {fileID: 0}
 --- !u!114 &3619992990074397630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,6 +600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b7712419340d945ac9bd45b544884e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCube: {fileID: 0}
 --- !u!1 &3552851518031890864
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,7 +721,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.3065977, y: -0.30659825}
+  m_LinearOffset: {x: -0.30659866, y: -0.30659866}
   m_AngularOffset: 0
 --- !u!254 &3817333763871521959
 RelativeJoint2D:
@@ -669,7 +741,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: -0.61319643}
+  m_LinearOffset: {x: 0, y: -0.6131973}
   m_AngularOffset: 0
 --- !u!254 &6977266729368400284
 RelativeJoint2D:
@@ -689,7 +761,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.6131954, y: 0}
+  m_LinearOffset: {x: -0.6131973, y: 0}
   m_AngularOffset: 0
 --- !u!232 &8071351450716993090
 DistanceJoint2D:
@@ -723,6 +795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b7712419340d945ac9bd45b544884e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCube: {fileID: 0}
 --- !u!114 &3112733764833280607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -735,6 +808,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b7712419340d945ac9bd45b544884e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCube: {fileID: 0}
 --- !u!1 &3601694932032130675
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,9 +820,11 @@ GameObject:
   - component: {fileID: 2446192537253056412}
   - component: {fileID: 2083438118237287446}
   - component: {fileID: 2356528563112754011}
+  - component: {fileID: 327480294947157355}
   - component: {fileID: 5305454100029442176}
   - component: {fileID: 8178856274279764560}
   - component: {fileID: 7343765207560606828}
+  - component: {fileID: 8737908146740911873}
   m_Layer: 0
   m_Name: Face_p1
   m_TagString: Untagged
@@ -848,6 +924,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &327480294947157355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3601694932032130675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48816d55c2f2fbd45a992aaa28baa438, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 8764900082671207673}
+  animator: {fileID: 2356528563112754011}
+  verticalSmooth: 0.1
 --- !u!114 &5305454100029442176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -883,6 +974,21 @@ MonoBehaviour:
   localOffset: {x: 0, y: 0, z: 0}
   smoothSpeed: 70
 --- !u!114 &7343765207560606828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3601694932032130675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48816d55c2f2fbd45a992aaa28baa438, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 8764900082671207673}
+  animator: {fileID: 2356528563112754011}
+  verticalSmooth: 0.1
+--- !u!114 &8737908146740911873
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1017,7 +1123,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.3065977, y: 0.3065982}
+  m_LinearOffset: {x: -0.30659866, y: 0.30659866}
   m_AngularOffset: 0
 --- !u!254 &7646196438413453517
 RelativeJoint2D:
@@ -1037,7 +1143,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.6131954, y: 0}
+  m_LinearOffset: {x: -0.6131973, y: 0}
   m_AngularOffset: 0
 --- !u!254 &6702517497252714655
 RelativeJoint2D:
@@ -1057,7 +1163,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: 0.61319643}
+  m_LinearOffset: {x: 0, y: 0.6131973}
   m_AngularOffset: 0
 --- !u!232 &8357816300821027030
 DistanceJoint2D:
@@ -1091,6 +1197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b7712419340d945ac9bd45b544884e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCube: {fileID: 0}
 --- !u!114 &8454270052125790422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1103,6 +1210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b7712419340d945ac9bd45b544884e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCube: {fileID: 0}
 --- !u!1 &5597463818947845223
 GameObject:
   m_ObjectHideFlags: 0
@@ -1223,7 +1331,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.3065977, y: 0.3065982}
+  m_LinearOffset: {x: 0.30659866, y: 0.30659866}
   m_AngularOffset: 0
 --- !u!254 &387137844415917189
 RelativeJoint2D:
@@ -1243,7 +1351,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: 0.61319643}
+  m_LinearOffset: {x: 0, y: 0.6131973}
   m_AngularOffset: 0
 --- !u!254 &8373658955312589881
 RelativeJoint2D:
@@ -1263,7 +1371,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.6131954, y: 0}
+  m_LinearOffset: {x: 0.6131973, y: 0}
   m_AngularOffset: 0
 --- !u!232 &3680372967480949781
 DistanceJoint2D:
@@ -1297,6 +1405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b7712419340d945ac9bd45b544884e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCube: {fileID: 0}
 --- !u!114 &6373637959951357663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1309,3 +1418,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b7712419340d945ac9bd45b544884e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerCube: {fileID: 0}

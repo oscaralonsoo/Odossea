@@ -38,6 +38,10 @@ public class PlayerController : MonoBehaviour
     // Input
     private Vector2 inputDirection;
     private bool jumpRequested;
+    private Vector2 lookInput;
+    private bool shootRequested;
+    private Vector2 aimDirection = Vector2.right;
+    private Vector2 lastMousePosition;
 
     // Restricciones
     private bool blockLeftMove;
@@ -45,6 +49,8 @@ public class PlayerController : MonoBehaviour
 
     // Escala
     private Vector3 targetScale;
+
+
 
     private void Awake()
     {
@@ -61,6 +67,21 @@ public class PlayerController : MonoBehaviour
     {
         if (value.isPressed)
             jumpRequested = true;
+    }
+    public void OnLook(InputValue value)
+    {
+        Vector2 stick = value.Get<Vector2>();
+
+        if (stick.sqrMagnitude > 0.01f)
+        {
+            aimDirection = stick.normalized;
+        }
+    }
+
+    public void OnShoot(InputValue value)
+    {
+        if (value.isPressed)
+            shootRequested = true;
     }
 
     // -------- RESTRICCIONES --------
@@ -89,6 +110,25 @@ public class PlayerController : MonoBehaviour
 
             targetScale /= scaleFactor;
             growNum--;
+        }
+    }
+    private void Update()
+    {
+        if (Mouse.current == null || Camera.main == null)
+            return;
+
+        Vector2 mousePos = Mouse.current.position.ReadValue();
+
+        if (mousePos != lastMousePosition)
+        {
+            lastMousePosition = mousePos;
+
+            Vector3 world = Camera.main.ScreenToWorldPoint(mousePos);
+            world.z = 0f;
+
+            Vector2 dir = (world - transform.position);
+            if (dir.sqrMagnitude > 0.001f)
+                aimDirection = dir.normalized;
         }
     }
 
@@ -139,6 +179,15 @@ public class PlayerController : MonoBehaviour
 
         AverageVerticalVelocity = verticalVelocitySum / bones.Count;
         jumpRequested = false;
+
+        if (shootRequested)
+        {
+            if (aimDirection != Vector2.zero)
+            {
+                GetComponent<MassCubeInstantiator>().Shoot(aimDirection);
+            }
+            shootRequested = false;
+        }
     }
 
     // ---------- SCALE ----------

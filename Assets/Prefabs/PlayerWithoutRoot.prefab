@@ -68,7 +68,7 @@ Transform:
   m_GameObject: {fileID: 1628876054947735854}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.523401, y: -8.016598, z: 0.012632877}
+  m_LocalPosition: {x: 0.31760025, y: -0.25759757, z: 0.012632877}
   m_LocalScale: {x: 0.47168955, y: 0.47168955, z: 0.47168955}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -133,7 +133,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
@@ -155,7 +155,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.30659866, y: 0.3065977}
+  m_LinearOffset: {x: -0.30660033, y: 0.30659723}
   m_AngularOffset: 0
 --- !u!254 &1795614539723277880
 RelativeJoint2D:
@@ -264,7 +264,7 @@ Transform:
   m_GameObject: {fileID: 1743404539134923315}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.83, y: -7.71, z: 0.012632877}
+  m_LocalPosition: {x: 0.011, y: 0.049, z: 0.012632877}
   m_LocalScale: {x: 0.47168955, y: 0.47168955, z: 0.47168955}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -439,7 +439,7 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Teclado 1
+  m_DefaultControlScheme: Teclado 2
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -583,7 +583,7 @@ Transform:
   m_GameObject: {fileID: 4182273877137214357}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.136599, y: -7.403402, z: 0.012632877}
+  m_LocalPosition: {x: -0.29559708, y: 0.35559833, z: 0.012632877}
   m_LocalScale: {x: 0.47168955, y: 0.47168955, z: 0.47168955}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -648,7 +648,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
@@ -670,7 +670,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.30659866, y: -0.3065982}
+  m_LinearOffset: {x: 0.306597, y: -0.30659866}
   m_AngularOffset: 0
 --- !u!254 &8143788881782694009
 RelativeJoint2D:
@@ -939,7 +939,7 @@ Transform:
   m_GameObject: {fileID: 7875123144567164449}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -20.523401, y: -7.403402, z: 0.012632877}
+  m_LocalPosition: {x: 0.31760025, y: 0.35559833, z: 0.012632877}
   m_LocalScale: {x: 0.47168955, y: 0.47168955, z: 0.47168955}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1004,7 +1004,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
@@ -1026,7 +1026,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.30659866, y: -0.3065982}
+  m_LinearOffset: {x: -0.30660033, y: -0.30659866}
   m_AngularOffset: 0
 --- !u!254 &6272980298530917647
 RelativeJoint2D:
@@ -1133,7 +1133,7 @@ Transform:
   m_GameObject: {fileID: 8227482159499168255}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.136599, y: -8.016598, z: 0.012632877}
+  m_LocalPosition: {x: -0.29559708, y: -0.25759757, z: 0.012632877}
   m_LocalScale: {x: 0.47168955, y: 0.47168955, z: 0.47168955}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1198,7 +1198,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
@@ -1220,7 +1220,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.30659866, y: 0.3065977}
+  m_LinearOffset: {x: 0.306597, y: 0.30659723}
   m_AngularOffset: 0
 --- !u!254 &1434863304198506718
 RelativeJoint2D:
