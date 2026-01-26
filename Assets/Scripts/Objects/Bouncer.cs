@@ -17,10 +17,10 @@ public class Bouncer : MonoBehaviour
 
     private void Awake()
     {
-        originalScale = transform.localScale;
+        originalScale = transform.parent.localScale;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform.CompareTag("Bone"))
         {
@@ -47,7 +47,7 @@ public class Bouncer : MonoBehaviour
         while (t < squashTime)
         {
             t += Time.deltaTime;
-            transform.localScale = Vector3.Lerp(originalScale, targetScale, t / squashTime);
+            transform.parent.localScale = Vector3.Lerp(originalScale, targetScale, t / squashTime);
             yield return null;
         }
 
@@ -55,11 +55,11 @@ public class Bouncer : MonoBehaviour
         while (t < squashTime)
         {
             t += Time.deltaTime;
-            transform.localScale = Vector3.Lerp(targetScale, originalScale, t / squashTime);
+            transform.parent.localScale = Vector3.Lerp(targetScale, originalScale, t / squashTime);
             yield return null;
         }
 
-        transform.localScale = originalScale;
+        transform.parent.localScale = originalScale;
         isSquashing = false;
     }
 

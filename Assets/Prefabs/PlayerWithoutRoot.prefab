@@ -155,7 +155,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.30660033, y: 0.30659723}
+  m_LinearOffset: {x: -0.30660057, y: 0.30659723}
   m_AngularOffset: 0
 --- !u!254 &1795614539723277880
 RelativeJoint2D:
@@ -439,7 +439,7 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Teclado 2
+  m_DefaultControlScheme: Teclado 1
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -495,7 +495,7 @@ MonoBehaviour:
     grounded: 0
   groundLayer:
     serializedVersion: 2
-    m_Bits: 9
+    m_Bits: 8
   force: 300
   downForce: 300
   jumpForce: 1300
@@ -670,7 +670,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.306597, y: -0.30659866}
+  m_LinearOffset: {x: 0.30659676, y: -0.30659866}
   m_AngularOffset: 0
 --- !u!254 &8143788881782694009
 RelativeJoint2D:
@@ -1026,7 +1026,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.30660033, y: -0.30659866}
+  m_LinearOffset: {x: -0.30660057, y: -0.30659866}
   m_AngularOffset: 0
 --- !u!254 &6272980298530917647
 RelativeJoint2D:
@@ -1220,7 +1220,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.306597, y: 0.30659723}
+  m_LinearOffset: {x: 0.30659676, y: 0.30659723}
   m_AngularOffset: 0
 --- !u!254 &1434863304198506718
 RelativeJoint2D:
