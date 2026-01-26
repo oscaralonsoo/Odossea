@@ -42,9 +42,9 @@ Material:
     m_Ints: []
     m_Floats:
     - _EnableExternalAlpha: 0
-    - _MaxHeight: -1.1
-    - _MinHeight: -24.3
-    - _Smoothness: 0.91
+    - _MaxHeight: -0.47
+    - _MinHeight: -15.67
+    - _Smoothness: 0.37
     - _ZWrite: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
