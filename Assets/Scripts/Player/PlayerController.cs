@@ -24,11 +24,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float downForce = 20f;
     [SerializeField] float jumpForce = 300f;
     [SerializeField] float maxXSpeed = 5f;
-    [SerializeField] float maxYSpeed = 10f;
 
     [Header("Scaling")]
-    [SerializeField] float scaleFactor = 1.2f;
+    [SerializeField] float scaleAmout = 0.2f;
     [SerializeField] float scaleSpeed = 5f;
+    [SerializeField] int initialGrowNum = 0;
     public int growNum = 1;
 
     // Animator / estado
@@ -96,7 +96,11 @@ public class PlayerController : MonoBehaviour
     {
         for (int i = 0; i < growAmount; i++)
         {
-            targetScale *= scaleFactor;
+            Vector3 nextScale = targetScale;
+            nextScale.x += scaleAmout;
+            nextScale.y += scaleAmout;
+            nextScale.z += scaleAmout;
+            targetScale = nextScale;
             growNum++;
         }
     }
@@ -108,7 +112,11 @@ public class PlayerController : MonoBehaviour
             if (growNum <= 1 && limitMinSize)
                 return;
 
-            targetScale /= scaleFactor;
+            Vector3 nextScale = targetScale;
+            nextScale.x -= scaleAmout;
+            nextScale.y -= scaleAmout;
+            nextScale.z -= scaleAmout;
+            targetScale = nextScale;
             growNum--;
         }
     }
@@ -166,15 +174,16 @@ public class PlayerController : MonoBehaviour
                 rb.AddForce(Vector2.right * moveX * force);
 
             if (IsGrounded && jumpRequested)
-                rb.AddForce(Vector2.up * jumpForce);
-
+            {
+                Vector2 v = rb.linearVelocity;
+                v.y = 0;
+                rb.linearVelocity = v;
+                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            }
+                
             Vector2 vel = rb.linearVelocity;
             vel.x = Mathf.Clamp(vel.x, -maxXSpeed, maxXSpeed);
-            vel.y = Mathf.Clamp(vel.y, -maxYSpeed, maxYSpeed);
             rb.linearVelocity = vel;
-            //rb.angularVelocity = 0;
-
-            verticalVelocitySum += vel.y;
         }
 
         AverageVerticalVelocity = verticalVelocitySum / bones.Count;
@@ -194,8 +203,7 @@ public class PlayerController : MonoBehaviour
     private void InitScale()
     {
         targetScale = transform.localScale;
-        for (int i = 1; i < growNum; i++)
-            targetScale *= scaleFactor;
+        Grow(initialGrowNum);
 
         ApplyScaleInstant();
     }
@@ -261,3 +269,5 @@ public class PlayerController : MonoBehaviour
         //RespawnAtLastGround();
     }
 }
+
+

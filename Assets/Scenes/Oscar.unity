@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 156114856}
   - component: {fileID: 156114858}
   - component: {fileID: 156114857}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -846,6 +846,99 @@ MonoBehaviour:
   maxZoom: 15
   zoomSpeed: 5
   pixelsPerUnit: 10000
+--- !u!1001 &1011875664
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 237430560745478161, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LinearOffset.x
+      value: 0.30659708
+      objectReference: {fileID: 0}
+    - target: {fileID: 237430560745478161, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LinearOffset.y
+      value: -0.30659834
+      objectReference: {fileID: 0}
+    - target: {fileID: 716673003598522290, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_Name
+      value: PlayerWithoutRoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257286536295703335, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257286536295703335, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257286536295703335, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257286536295703335, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257286536295703335, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257286536295703335, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257286536295703335, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257286536295703335, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257286536295703335, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257286536295703335, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091286839837398681, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LinearOffset.x
+      value: -0.30660024
+      objectReference: {fileID: 0}
+    - target: {fileID: 2091286839837398681, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LinearOffset.y
+      value: -0.30659834
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434434350914792020, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LinearOffset.x
+      value: 0.30659708
+      objectReference: {fileID: 0}
+    - target: {fileID: 4434434350914792020, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LinearOffset.y
+      value: 0.30659756
+      objectReference: {fileID: 0}
+    - target: {fileID: 6544038512960925715, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LinearOffset.x
+      value: -0.30660024
+      objectReference: {fileID: 0}
+    - target: {fileID: 6544038512960925715, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LinearOffset.y
+      value: 0.30659756
+      objectReference: {fileID: 0}
+    - target: {fileID: 8642343474712264161, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: jumpForce
+      value: 20
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
 --- !u!1 &1191197153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,7 +1167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6687864526775355651, guid: e18f86da13d716847ad85b007a38136a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7427157240123790339, guid: e18f86da13d716847ad85b007a38136a, type: 3}
       propertyPath: m_LinearOffset.y
@@ -1109,7 +1202,7 @@ GameObject:
   - component: {fileID: 1580020806}
   - component: {fileID: 1580020805}
   - component: {fileID: 1580020807}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1246,6 +1339,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounceForce: 100
   bounceDelay: 0.05
+  squashScale: 0.85
+  squashTime: 0.08
 --- !u!1 &1697757060
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,7 +1352,7 @@ GameObject:
   - component: {fileID: 1697757063}
   - component: {fileID: 1697757062}
   - component: {fileID: 1697757061}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1528,7 +1623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 222496283260769689, guid: 958aec988d940624e9934b661b427a02, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 276250602888537607, guid: 958aec988d940624e9934b661b427a02, type: 3}
       propertyPath: m_LinearOffset.x
@@ -1700,7 +1795,7 @@ GameObject:
   - component: {fileID: 2039340897}
   - component: {fileID: 2039340896}
   - component: {fileID: 2039340895}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1935,3 +2030,4 @@ SceneRoots:
   - {fileID: 1239311270}
   - {fileID: 880856475}
   - {fileID: 625562455}
+  - {fileID: 1011875664}
