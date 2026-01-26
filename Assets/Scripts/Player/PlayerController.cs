@@ -41,6 +41,8 @@ public class PlayerController : MonoBehaviour
     private bool blockLeftMove;
     private bool blockRightMove;
 
+    private Vector3 lastGroundedPosition;
+
     private void Awake()
     {
         InitScale();
@@ -68,11 +70,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void Shrink(int shrinkNumber)
+    public void Shrink(int shrinkNumber, bool limitMinSize = true)
     {
         for (int i = 0; i < shrinkNumber; i++)
         {
-            if (growNum <= 1)
+            if (growNum <= 1 && limitMinSize)
                 return;
 
             targetScale /= scaleFactor;
@@ -84,7 +86,6 @@ public class PlayerController : MonoBehaviour
     {
         ApplyScale();
 
-        // ---------- Ground check ----------
         int groundedCount = 0;
         foreach (var bone in bones)
         {
@@ -93,6 +94,7 @@ public class PlayerController : MonoBehaviour
                 bone.grounded = false;
                 continue;
             }
+
             bone.grounded = bone.collider2D.IsTouchingLayers(groundLayer);
             if (bone.grounded)
                 groundedCount++;
@@ -100,7 +102,9 @@ public class PlayerController : MonoBehaviour
 
         IsGrounded = groundedCount > 0;
 
-        // ---------- Input filtering ----------
+        if (groundedCount > 0)
+            lastGroundedPosition = transform.position;
+
         float moveX = inputDirection.x;
         if (blockLeftMove && moveX < 0) moveX = 0;
         if (blockRightMove && moveX > 0) moveX = 0;
@@ -132,7 +136,6 @@ public class PlayerController : MonoBehaviour
         jumpRequested = false;
     }
 
-    // ---------- Scaling ----------
     private void InitScale()
     {
         targetScale = transform.localScale;
@@ -196,6 +199,25 @@ public class PlayerController : MonoBehaviour
                 rj.autoConfigureOffset = false;
                 rj.linearOffset *= ratio;
             }
+        }
+    }
+
+    public void Die()
+    {
+        gameObject.GetComponent<MassCubeInstantiator>().DisperseCubes(growNum, 0.3f, transform.position, 13.0f);
+        Shrink(10, false);
+
+        RespawnAtLastGround();
+    }
+
+    public void RespawnAtLastGround()
+    {
+        transform.position = lastGroundedPosition;
+
+        foreach (var bone in bones)
+        {
+            if (bone.rigidbody2D != null)
+                bone.rigidbody2D.linearVelocity = Vector2.zero;
         }
     }
 }

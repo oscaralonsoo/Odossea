@@ -788,7 +788,7 @@ GameObject:
   - component: {fileID: 765438319587121697}
   m_Layer: 6
   m_Name: MiniCube
-  m_TagString: Untagged
+  m_TagString: CubeTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
