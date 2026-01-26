@@ -786,9 +786,9 @@ GameObject:
   - component: {fileID: 2905889296149117456}
   - component: {fileID: 4205324779725386740}
   - component: {fileID: 765438319587121697}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: MiniCube
-  m_TagString: Untagged
+  m_TagString: CubeTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -898,7 +898,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7509534449368133461}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}

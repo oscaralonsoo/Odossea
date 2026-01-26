@@ -9,14 +9,14 @@ public class PlayerController : MonoBehaviour
     public class Bone
     {
         public Rigidbody2D rigidbody2D;
-        public Collider2D collider2D;
+        public CircleCollider2D collider2D;
         public DistanceJoint2D distanceJoint;
         public List<RelativeJoint2D> relativeJoints = new List<RelativeJoint2D>();
-        [HideInInspector] public bool grounded;
+        public bool grounded = false;
     }
 
-    [Header("Bones & Joints")]
-    [SerializeField] public List<Bone> bones;
+    [Header("Bones")]
+    public List<Bone> bones;
 
     [Header("Movement")]
     [SerializeField] LayerMask groundLayer;
@@ -31,48 +31,60 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float scaleSpeed = 5f;
     public int growNum = 1;
 
+    // Animator / estado
     public bool IsGrounded { get; private set; }
     public float AverageVerticalVelocity { get; private set; }
 
-    private Vector3 targetScale = Vector3.one;
+    // Input
     private Vector2 inputDirection;
     private bool jumpRequested;
 
+    // Restricciones
     private bool blockLeftMove;
     private bool blockRightMove;
+
+    // Escala
+    private Vector3 targetScale;
 
     private void Awake()
     {
         InitScale();
     }
 
-    public void OnMove(InputValue value) => inputDirection = value.Get<Vector2>();
+    // -------- INPUT --------
+    public void OnMove(InputValue value)
+    {
+        inputDirection = value.Get<Vector2>();
+    }
+
     public void OnJump(InputValue value)
     {
         if (value.isPressed)
             jumpRequested = true;
     }
 
+    // -------- RESTRICCIONES --------
     public void SetMovementRestriction(bool left, bool right)
     {
         blockLeftMove = left;
         blockRightMove = right;
     }
 
-    public void Grow(int growNumber)
+    // -------- GROW --------
+    public void Grow(int growAmount)
     {
-        for (int i = 0; i < growNumber; i++)
+        for (int i = 0; i < growAmount; i++)
         {
             targetScale *= scaleFactor;
             growNum++;
         }
     }
 
-    public void Shrink(int shrinkNumber)
+    public void Shrink(int shrinkNumber, bool limitMinSize = true)
     {
         for (int i = 0; i < shrinkNumber; i++)
         {
-            if (growNum <= 1)
+            if (growNum <= 1 && limitMinSize)
                 return;
 
             targetScale /= scaleFactor;
@@ -84,32 +96,28 @@ public class PlayerController : MonoBehaviour
     {
         ApplyScale();
 
-        // ---------- Ground check ----------
+        // ---------- Ground Check ----------
         int groundedCount = 0;
-        foreach (var bone in bones)
+        foreach (Bone bone in bones)
         {
-            if (bone.collider2D == null)
-            {
-                bone.grounded = false;
-                continue;
-            }
+            if (!bone.collider2D) continue;
+
             bone.grounded = bone.collider2D.IsTouchingLayers(groundLayer);
-            if (bone.grounded)
-                groundedCount++;
+            if (bone.grounded) groundedCount++;
         }
 
         IsGrounded = groundedCount > 0;
 
-        // ---------- Input filtering ----------
+        // ---------- Input filtrado ----------
         float moveX = inputDirection.x;
         if (blockLeftMove && moveX < 0) moveX = 0;
         if (blockRightMove && moveX > 0) moveX = 0;
 
-        float verticalVelSum = 0f;
+        float verticalVelocitySum = 0f;
 
-        foreach (var bone in bones)
+        foreach (Bone bone in bones)
         {
-            var rb = bone.rigidbody2D;
+            Rigidbody2D rb = bone.rigidbody2D;
 
             if (bone.grounded && groundedCount < 3)
                 rb.AddForce(Vector2.down * downForce);
@@ -124,19 +132,19 @@ public class PlayerController : MonoBehaviour
             vel.x = Mathf.Clamp(vel.x, -maxXSpeed, maxXSpeed);
             vel.y = Mathf.Clamp(vel.y, -maxYSpeed, maxYSpeed);
             rb.linearVelocity = vel;
+            //rb.angularVelocity = 0;
 
-            verticalVelSum += vel.y;
+            verticalVelocitySum += vel.y;
         }
 
-        AverageVerticalVelocity = verticalVelSum / bones.Count;
+        AverageVerticalVelocity = verticalVelocitySum / bones.Count;
         jumpRequested = false;
     }
 
-    // ---------- Scaling ----------
+    // ---------- SCALE ----------
     private void InitScale()
     {
         targetScale = transform.localScale;
-
         for (int i = 1; i < growNum; i++)
             targetScale *= scaleFactor;
 
@@ -146,29 +154,25 @@ public class PlayerController : MonoBehaviour
     private void ApplyScale()
     {
         Vector3 lastScale = transform.localScale;
-        Vector3 newScale = Vector3.Lerp(
-            lastScale,
-            targetScale,
-            Time.fixedDeltaTime * scaleSpeed
-        );
+        Vector3 newScale = Vector3.Lerp(lastScale, targetScale, Time.fixedDeltaTime * scaleSpeed);
 
-        if (newScale.magnitude < 0.1f)
-            return;
+        if (newScale.magnitude < 0.1f) return;
 
-        transform.localScale = newScale;
         float ratio = newScale.magnitude / lastScale.magnitude;
 
-        foreach (var bone in bones)
+        foreach (Bone bone in bones)
         {
-            if (bone.distanceJoint != null)
+            bone.rigidbody2D.transform.localScale *= ratio;
+
+            if (bone.distanceJoint)
             {
                 bone.distanceJoint.autoConfigureDistance = false;
                 bone.distanceJoint.distance *= ratio;
             }
 
-            foreach (var rj in bone.relativeJoints)
+            foreach (RelativeJoint2D rj in bone.relativeJoints)
             {
-                if (rj == null) continue;
+                if (!rj) continue;
                 rj.autoConfigureOffset = false;
                 rj.linearOffset *= ratio;
             }
@@ -178,24 +182,33 @@ public class PlayerController : MonoBehaviour
     private void ApplyScaleInstant()
     {
         Vector3 lastScale = transform.localScale;
-        transform.localScale = targetScale;
 
         float ratio = targetScale.magnitude / lastScale.magnitude;
 
-        foreach (var bone in bones)
+        foreach (Bone bone in bones)
         {
-            if (bone.distanceJoint != null)
+            bone.rigidbody2D.transform.localScale *= ratio;
+
+            if (bone.distanceJoint)
             {
                 bone.distanceJoint.autoConfigureDistance = false;
                 bone.distanceJoint.distance *= ratio;
             }
 
-            foreach (var rj in bone.relativeJoints)
+            foreach (RelativeJoint2D rj in bone.relativeJoints)
             {
-                if (rj == null) continue;
+                if (!rj) continue;
                 rj.autoConfigureOffset = false;
                 rj.linearOffset *= ratio;
             }
         }
+    }
+
+    public void Die()
+    {
+        gameObject.GetComponent<MassCubeInstantiator>().DisperseCubes(growNum, 0.3f, transform.position, 13.0f);
+        Shrink(10, false);
+
+        //RespawnAtLastGround();
     }
 }

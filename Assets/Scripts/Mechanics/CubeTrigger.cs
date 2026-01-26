@@ -2,18 +2,11 @@ using UnityEngine;
 
 public class CubeTrigger : MonoBehaviour
 {
-    private PlayerController playerCube;
-    private Rigidbody2D rigidbody;
-
-    private void Awake()
-    {
-        playerCube = transform.parent.GetComponent<PlayerController>();
-        rigidbody = playerCube.GetComponent<Rigidbody2D>();
-    }
+    public PlayerController playerCube;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!playerCube || !rigidbody) return;
+        if (!playerCube) return;
 
         if (collision.gameObject.tag == "CubeTrigger")
         {

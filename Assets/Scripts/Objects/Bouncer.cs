@@ -1,27 +1,73 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class Bouncer : MonoBehaviour
 {
     public float bounceForce = 10f;
+    public float bounceDelay = 0.05f;
+
+    [Header("Squash Animation")]
+    public float squashScale = 0.85f;
+    public float squashTime = 0.08f;
+
+    private Vector3 originalScale;
+    private bool isSquashing;
+
+    private void Awake()
+    {
+        originalScale = transform.localScale;
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.CompareTag("Bone") || collision.transform.CompareTag("CubeTrigger"))
+        if (collision.transform.CompareTag("Bone"))
         {
-            GameObject player = collision.transform.parent.gameObject;
-            ApplyBounce(player.GetComponent<Rigidbody2D>());
+            if (!isSquashing)
+                StartCoroutine(Squash());
 
-            foreach (PlayerController.Bone bone in player.GetComponent<PlayerController>().bones)
+            Rigidbody2D[] rigidbodies = collision.transform.parent.GetComponentsInChildren<Rigidbody2D>();
+
+            foreach (Rigidbody2D rigidbody in rigidbodies)
             {
-                ApplyBounce(bone.rigidbody2D);
+                if (rigidbody != null)
+                    StartCoroutine(ApplyBounceDelayed(rigidbody));
             }
         }
-
     }
 
-    private void ApplyBounce(Rigidbody2D rb)
+    private IEnumerator Squash()
     {
-        rb.AddForce(Vector2.up * bounceForce, ForceMode2D.Impulse);
+        isSquashing = true;
+
+        Vector3 targetScale = originalScale * squashScale;
+
+        float t = 0f;
+        while (t < squashTime)
+        {
+            t += Time.deltaTime;
+            transform.localScale = Vector3.Lerp(originalScale, targetScale, t / squashTime);
+            yield return null;
+        }
+
+        t = 0f;
+        while (t < squashTime)
+        {
+            t += Time.deltaTime;
+            transform.localScale = Vector3.Lerp(targetScale, originalScale, t / squashTime);
+            yield return null;
+        }
+
+        transform.localScale = originalScale;
+        isSquashing = false;
+    }
+
+    private IEnumerator ApplyBounceDelayed(Rigidbody2D rb)
+    {
+        yield return new WaitForSeconds(bounceDelay);
+
+        if (rb != null)
+            rb.AddForce(Vector2.up * bounceForce, ForceMode2D.Impulse);
     }
 }
