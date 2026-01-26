@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 public class Bouncer : MonoBehaviour
 {
@@ -21,21 +22,17 @@ public class Bouncer : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.transform.CompareTag("Bone") || collision.transform.CompareTag("CubeTrigger"))
+        if (collision.transform.CompareTag("Bone"))
         {
             if (!isSquashing)
                 StartCoroutine(Squash());
 
-            GameObject player = collision.transform.parent.gameObject;
+            Rigidbody2D[] rigidbodies = collision.transform.parent.GetComponentsInChildren<Rigidbody2D>();
 
-            Rigidbody2D playerRb = player.GetComponent<Rigidbody2D>();
-            if (playerRb != null)
-                StartCoroutine(ApplyBounceDelayed(playerRb));
-
-            foreach (PlayerController.Bone bone in player.GetComponent<PlayerController>().bones)
+            foreach (Rigidbody2D rigidbody in rigidbodies)
             {
-                if (bone.rigidbody2D != null)
-                    StartCoroutine(ApplyBounceDelayed(bone.rigidbody2D));
+                if (rigidbody != null)
+                    StartCoroutine(ApplyBounceDelayed(rigidbody));
             }
         }
     }

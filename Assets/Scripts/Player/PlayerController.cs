@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public class Bone
     {
         public Rigidbody2D rigidbody2D;
-        public Collider2D collider2D;
+        public CircleCollider2D collider2D;
         public DistanceJoint2D distanceJoint;
         public List<RelativeJoint2D> relativeJoints = new List<RelativeJoint2D>();
         public bool grounded = false;
@@ -158,11 +158,12 @@ public class PlayerController : MonoBehaviour
 
         if (newScale.magnitude < 0.1f) return;
 
-        transform.localScale = newScale;
         float ratio = newScale.magnitude / lastScale.magnitude;
 
         foreach (Bone bone in bones)
         {
+            bone.rigidbody2D.transform.localScale *= ratio;
+
             if (bone.distanceJoint)
             {
                 bone.distanceJoint.autoConfigureDistance = false;
@@ -181,12 +182,13 @@ public class PlayerController : MonoBehaviour
     private void ApplyScaleInstant()
     {
         Vector3 lastScale = transform.localScale;
-        transform.localScale = targetScale;
 
         float ratio = targetScale.magnitude / lastScale.magnitude;
 
         foreach (Bone bone in bones)
         {
+            bone.rigidbody2D.transform.localScale *= ratio;
+
             if (bone.distanceJoint)
             {
                 bone.distanceJoint.autoConfigureDistance = false;

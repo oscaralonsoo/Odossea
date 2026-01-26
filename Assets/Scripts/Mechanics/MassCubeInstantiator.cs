@@ -124,14 +124,14 @@ public class MassCubeInstantiator : MonoBehaviour
     IEnumerator IgnoreCollisionTemporarily(GameObject cubeMass)
     {
         var playerController = GetComponent<PlayerController>();
-
         foreach (var playerBone in playerController.bones)
         {
             Collider2D[] colliders = cubeMass.GetComponentsInChildren<Collider2D>();
 
             foreach (var cubeCol in colliders)
             {
-                Physics2D.IgnoreCollision(cubeCol, playerBone.collider2D, true);
+                if (cubeCol != null && playerBone.collider2D != null)
+                    Physics2D.IgnoreCollision(cubeCol, playerBone.collider2D, true);
             }
         }
 
