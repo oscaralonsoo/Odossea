@@ -19,8 +19,9 @@ public class PlayerController : MonoBehaviour
 
     [Header("Fusion")]
     public PlayerController otherPlayer;
-    public bool fusioned = false;
     public GameObject rope;
+    public bool IsCrouched = false;
+    private bool fusioned = false;
 
     [Header("Bones")]
     public List<Bone> bones;
@@ -205,7 +206,7 @@ public class PlayerController : MonoBehaviour
 
         // ---------- Input filtrado ----------
         float moveX = inputDirection.x;
-        bool crouch = groundedCount > 1 && crouchRequested;
+        IsCrouched = groundedCount > 1 && crouchRequested;
 
         float verticalVelocitySum = 0f;
 
@@ -213,7 +214,7 @@ public class PlayerController : MonoBehaviour
         {
             Rigidbody2D rb = bone.rigidbody2D;
 
-            if (crouch)
+            if (IsCrouched)
             {
                 rb.AddForce(Vector2.down * downForce);
                 if (moveX != 0)
@@ -227,6 +228,26 @@ public class PlayerController : MonoBehaviour
             {
                 if (bone.grounded && groundedCount < 3)
                     rb.AddForce(Vector2.down * downForce);
+
+                if (moveX != 0)
+                {
+                    if (bone.grounded)
+                        rb.AddForce(Vector2.right * moveX * force);
+                    else if (groundedCount == 0)
+                    {
+                        if (fusioned && otherPlayer.IsCrouched)
+                        {
+                            Vector2 lookAt = otherPlayer.transform.position - transform.position;
+                            Vector2 perpRight = new Vector2(lookAt.y, -lookAt.x);
+                            rb.AddForce(perpRight * moveX * force);
+                        }
+                        else
+                        {
+                            rb.AddForce(Vector2.right * moveX * force);
+                        }
+                    }
+                }
+               
 
                 if ((bone.grounded || groundedCount == 0) && moveX != 0)
                     rb.AddForce(Vector2.right * moveX * force);
@@ -242,7 +263,6 @@ public class PlayerController : MonoBehaviour
                 vel.x = Mathf.Clamp(vel.x, IsGrounded ? -maxGroundSpeed : -maxAirSpeed, IsGrounded ? maxGroundSpeed : maxAirSpeed);
                 rb.linearVelocity = vel;
             }
-              
         }
 
         AverageVerticalVelocity = verticalVelocitySum / bones.Count;
