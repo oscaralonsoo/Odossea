@@ -51,6 +51,8 @@ public class PlayerController : MonoBehaviour
     // Escala
     private Vector3 targetScale;
 
+    private ContactFilter2D groundFilter;
+
     private void Awake()
     {
         foreach(Bone b in bones)
@@ -62,6 +64,9 @@ public class PlayerController : MonoBehaviour
         }
 
         InitScale();
+
+        groundFilter.useLayerMask = true;
+        groundFilter.SetLayerMask(groundLayer);
     }
 
     // -------- INPUT --------
@@ -169,12 +174,25 @@ public class PlayerController : MonoBehaviour
 
         isGrounded = groundedCount > 0;
 
+        ContactPoint2D[] contacts = new ContactPoint2D[1];
+
         foreach (Bone bone in bones)
         {
             Rigidbody2D rb = bone.rigidbody2D;
 
             if (bone.grounded && groundedCount < 3)
-                rb.AddForce(Vector2.down * downForce);
+            {
+                int numContacts = bone.collider2D.GetContacts(groundFilter, contacts);
+                if (numContacts > 0)
+                {
+                    Vector2 groundNormal = contacts[0].normal;
+
+                    if (groundNormal.y > 0.99f)
+                    {
+                        rb.AddForce(-groundNormal * downForce);
+                    }
+                }
+            }
 
             if ((bone.grounded || groundedCount == 0) && moveX != 0)
                 rb.AddForce(Vector2.right * moveX * force);
