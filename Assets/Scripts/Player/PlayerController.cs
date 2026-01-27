@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float force = 50f;
     [SerializeField] float downForce = 20f;
     [SerializeField] float jumpForce = 300f;
+    [SerializeField] float maxCrouchSpeed = 0.1f;
     [SerializeField] float maxGroundSpeed = 10f;
     [SerializeField] float maxAirSpeed = 5f;
 
@@ -46,14 +47,11 @@ public class PlayerController : MonoBehaviour
     // Input
     private Vector2 inputDirection;
     private bool jumpRequested;
-    private Vector2 lookInput;
+    private bool crouchRequested;
     private bool shootRequested;
     private Vector2 aimDirection = Vector2.right;
     private Vector2 lastMousePosition;
 
-    // Restricciones
-    private bool blockLeftMove;
-    private bool blockRightMove;
 
     // Escala
     private Vector3 targetScale;
@@ -74,6 +72,13 @@ public class PlayerController : MonoBehaviour
         if (value.isPressed)
             jumpRequested = true;
     }
+
+    public void OnCrouch(InputValue value)
+    {
+        if (value.isPressed)
+            crouchRequested = true;
+    }
+
     public void OnLook(InputValue value)
     {
         Vector2 stick = value.Get<Vector2>();
@@ -90,12 +95,6 @@ public class PlayerController : MonoBehaviour
             shootRequested = true;
     }
 
-    // -------- RESTRICCIONES --------
-    public void SetMovementRestriction(bool left, bool right)
-    {
-        blockLeftMove = left;
-        blockRightMove = right;
-    }
 
     // -------- GROW --------
     public void Grow(int growAmount)
@@ -153,6 +152,7 @@ public class PlayerController : MonoBehaviour
                 Destroy(joint);
             }
         }
+
         rope.SetActive(fusion);
         fusioned = fusion;
     }
@@ -162,6 +162,11 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.V)) {
 
             Fusion(!fusioned);
+        }
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            crouchRequested = true;
         }
 
         if (Mouse.current == null || Camera.main == null)
@@ -200,8 +205,7 @@ public class PlayerController : MonoBehaviour
 
         // ---------- Input filtrado ----------
         float moveX = inputDirection.x;
-        if (blockLeftMove && moveX < 0) moveX = 0;
-        if (blockRightMove && moveX > 0) moveX = 0;
+        bool crouch = groundedCount > 1 && crouchRequested;
 
         float verticalVelocitySum = 0f;
 
@@ -209,36 +213,51 @@ public class PlayerController : MonoBehaviour
         {
             Rigidbody2D rb = bone.rigidbody2D;
 
-            if (bone.grounded && groundedCount < 3)
-                rb.AddForce(Vector2.down * downForce);
-
-            if ((bone.grounded || groundedCount == 0) && moveX != 0)
-                rb.AddForce(Vector2.right * moveX * force);
-
-            if (IsGrounded && jumpRequested)
+            if (crouch)
             {
-                Vector2 v = rb.linearVelocity;
-                v.y = 0;
-                rb.linearVelocity = v;
-                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                rb.AddForce(Vector2.down * downForce);
+                if (moveX != 0)
+                    rb.AddForce(Vector2.right * moveX * force);
+
+                float velX = rb.linearVelocity.x;
+                velX = Mathf.Clamp(velX, -maxCrouchSpeed, maxCrouchSpeed);
+                rb.linearVelocityX = velX;
             }
-                
-            Vector2 vel = rb.linearVelocity;
-            vel.x = Mathf.Clamp(vel.x, IsGrounded ? -maxGroundSpeed : -maxAirSpeed, IsGrounded ? maxGroundSpeed : maxAirSpeed);
-            rb.linearVelocity = vel;
+            else
+            {
+                if (bone.grounded && groundedCount < 3)
+                    rb.AddForce(Vector2.down * downForce);
+
+                if ((bone.grounded || groundedCount == 0) && moveX != 0)
+                    rb.AddForce(Vector2.right * moveX * force);
+
+                if (IsGrounded && jumpRequested)
+                {
+                    Vector2 v = rb.linearVelocity;
+                    v.y = 0;
+                    rb.linearVelocity = v;
+                    rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                }
+                Vector2 vel = rb.linearVelocity;
+                vel.x = Mathf.Clamp(vel.x, IsGrounded ? -maxGroundSpeed : -maxAirSpeed, IsGrounded ? maxGroundSpeed : maxAirSpeed);
+                rb.linearVelocity = vel;
+            }
+              
         }
 
         AverageVerticalVelocity = verticalVelocitySum / bones.Count;
-        jumpRequested = false;
-
+        
         if (shootRequested)
         {
             if (aimDirection != Vector2.zero)
             {
                 GetComponent<MassCubeInstantiator>().Shoot(aimDirection);
             }
-            shootRequested = false;
         }
+
+        crouchRequested = false;
+        jumpRequested = false;
+        shootRequested = false;
     }
 
     // ---------- SCALE ----------
