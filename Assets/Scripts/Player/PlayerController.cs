@@ -240,6 +240,13 @@ public class PlayerController : MonoBehaviour
                             Vector2 lookAt = otherPlayer.transform.position - transform.position;
                             Vector2 perpRight = new Vector2(lookAt.y, -lookAt.x);
                             rb.AddForce(perpRight * moveX * force);
+
+                            float currentMaxSpeed = IsGrounded ? maxGroundSpeed : maxAirSpeed;
+
+                            if (rb.linearVelocity.magnitude > currentMaxSpeed)
+                            {
+                                rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, currentMaxSpeed);
+                            }
                         }
                         else
                         {
