@@ -237,15 +237,22 @@ public class PlayerController : MonoBehaviour
                     {
                         if (fusioned && otherPlayer.IsCrouched)
                         {
-                            Vector2 lookAt = otherPlayer.transform.position - transform.position;
-                            Vector2 perpRight = new Vector2(lookAt.y, -lookAt.x);
+                            Vector2 myCenter = GetCenterPosition();
+                            Vector2 otherCenter = otherPlayer.GetCenterPosition();
+
+                            // 2. Vector dirección y su perpendicular
+                            Vector2 lookAt = otherCenter - myCenter;
+
+                            // Normalizamos para que la distancia no afecte a la potencia de la fuerza
+                            Vector2 perpRight = new Vector2(lookAt.y, -lookAt.x).normalized;
+
+                            // 3. Aplicamos la fuerza orbital a cada hueso
                             rb.AddForce(perpRight * moveX * force);
 
-                            float currentMaxSpeed = IsGrounded ? maxGroundSpeed : maxAirSpeed;
-
-                            if (rb.linearVelocity.magnitude > currentMaxSpeed)
+                            // 4. Limitamos la velocidad global (Magnitud)
+                            if (rb.linearVelocity.magnitude > maxAirSpeed)
                             {
-                                rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, currentMaxSpeed);
+                                rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, maxAirSpeed);
                             }
                         }
                         else
@@ -322,6 +329,21 @@ public class PlayerController : MonoBehaviour
                 rj.linearOffset *= ratio;
             }
         }
+    }
+
+    public Vector2 GetCenterPosition()
+    {
+        Vector2 center = Vector2.zero;
+        if (bones.Count == 0) return (Vector2)transform.position;
+
+        // Sumamos la posición de todos los huesos
+        for (int i = 0; i < bones.Count; i++)
+        {
+            center += (Vector2)bones[i].rigidbody2D.transform.position;
+        }
+
+        // Dividimos por el total para sacar el promedio real
+        return center / bones.Count;
     }
 
     private void ApplyScaleInstant()
