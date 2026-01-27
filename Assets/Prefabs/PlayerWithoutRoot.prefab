@@ -505,9 +505,9 @@ MonoBehaviour:
   maxCrouchSpeed: 0.1
   maxGroundSpeed: 12
   maxAirSpeed: 5
-  scaleAmout: 0.2
+  scaleAmout: 0.5
   scaleSpeed: 5
-  initialGrowNum: 5
+  initialGrowNum: 3
   growNum: 1
 --- !u!114 &3842492791255187089
 MonoBehaviour:
