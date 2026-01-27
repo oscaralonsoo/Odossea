@@ -855,24 +855,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 237430560745478161, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
-      propertyPath: m_MaxForce
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 237430560745478161, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_LinearOffset.x
       value: 0.30659708
       objectReference: {fileID: 0}
     - target: {fileID: 237430560745478161, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_LinearOffset.y
       value: -0.30659834
-      objectReference: {fileID: 0}
-    - target: {fileID: 614220908054311239, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
-      propertyPath: m_GravityScale
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 614220908054311239, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 716673003598522290, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_Name
@@ -918,9 +906,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2091286839837398681, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
-      propertyPath: m_MaxForce
-      value: 150
+    - target: {fileID: 1434863304198506718, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LinearOffset.y
+      value: 0.6131959
       objectReference: {fileID: 0}
     - target: {fileID: 2091286839837398681, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_LinearOffset.x
@@ -930,18 +918,6 @@ PrefabInstance:
       propertyPath: m_LinearOffset.y
       value: -0.30659834
       objectReference: {fileID: 0}
-    - target: {fileID: 2932015962375635215, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
-      propertyPath: m_GravityScale
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2932015962375635215, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4434434350914792020, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
-      propertyPath: m_MaxForce
-      value: 150
-      objectReference: {fileID: 0}
     - target: {fileID: 4434434350914792020, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_LinearOffset.x
       value: 0.30659708
@@ -950,25 +926,9 @@ PrefabInstance:
       propertyPath: m_LinearOffset.y
       value: 0.30659756
       objectReference: {fileID: 0}
-    - target: {fileID: 4905029140431720509, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
-      propertyPath: m_GravityScale
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4905029140431720509, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5393191487134212421, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
-      propertyPath: m_GravityScale
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5393191487134212421, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6544038512960925715, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
-      propertyPath: m_MaxForce
-      value: 150
+    - target: {fileID: 6272980298530917647, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LinearOffset.y
+      value: -0.6131959
       objectReference: {fileID: 0}
     - target: {fileID: 6544038512960925715, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_LinearOffset.x
@@ -978,25 +938,13 @@ PrefabInstance:
       propertyPath: m_LinearOffset.y
       value: 0.30659756
       objectReference: {fileID: 0}
-    - target: {fileID: 8642343474712264161, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
-      propertyPath: force
-      value: 500
+    - target: {fileID: 6591674002958067072, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LinearOffset.y
+      value: 0.6131959
       objectReference: {fileID: 0}
-    - target: {fileID: 8642343474712264161, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
-      propertyPath: jumpForce
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8642343474712264161, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
-      propertyPath: maxGroundSpeed
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 9023136691786886652, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
-      propertyPath: m_GravityScale
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 9023136691786886652, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
+    - target: {fileID: 9175156902661760444, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LinearOffset.y
+      value: -0.6131959
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
