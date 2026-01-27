@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 403b82bb22650f54fb4eb1c7c42c5e68
+guid: 73c07a25d2591734cbbbcc228ed03930
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Juicy Fruity
+  - Hydrogen Whiskey
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
