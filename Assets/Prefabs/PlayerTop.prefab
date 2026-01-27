@@ -120,7 +120,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.30659708, y: 0.25759757}
+  m_LinearOffset: {x: 0.30659723, y: 0.25759745}
   m_AngularOffset: 0
 --- !u!254 &9086414821288901534
 RelativeJoint2D:
@@ -335,7 +335,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.30660024, y: -0.35559833}
+  m_LinearOffset: {x: -0.3066001, y: -0.35559845}
   m_AngularOffset: 0
 --- !u!254 &3062174566863139655
 RelativeJoint2D:
@@ -550,7 +550,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.30659708, y: -0.35559833}
+  m_LinearOffset: {x: 0.30659723, y: -0.35559845}
   m_AngularOffset: 0
 --- !u!254 &7636905446554378171
 RelativeJoint2D:
@@ -765,7 +765,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.30660024, y: 0.25759757}
+  m_LinearOffset: {x: -0.3066001, y: 0.25759745}
   m_AngularOffset: 0
 --- !u!254 &8207348201385576690
 RelativeJoint2D:
@@ -1128,15 +1128,15 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  force: 300
-  downForce: 300
-  jumpForce: 40
-  maxGroundSpeed: 12
-  maxAirSpeed: 5
+  force: 350
+  downForce: 400
+  jumpForce: 35
+  maxGroundSpeed: 19
+  maxAirSpeed: 15
   isGrounded: 0
-  scaleAmout: 0.2
+  scaleAmout: 0.4
   scaleSpeed: 5
-  initialGrowNum: 5
+  initialGrowNum: 3
   growNum: 1
 --- !u!114 &5720160935349430621
 MonoBehaviour:
@@ -1151,7 +1151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 7509534449368133461, guid: 4888d99aea1f4de44bcd2ff6c0333b4c, type: 3}
-  launchForce: 20
+  launchForce: 23
   spreadAngle: 45
   ignoreCollisionTime: 0.3
   recoilForce: 15
