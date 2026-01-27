@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,6 +10,13 @@ public class MassCubeInstantiator : MonoBehaviour
     [SerializeField] private float spreadAngle = 45f;
     [SerializeField] private float ignoreCollisionTime = 0.3f;
     [SerializeField] private float recoilForce = 50f;
+
+    private Camera cinemachineCamera;
+
+    private void Awake()
+    {
+        cinemachineCamera = FindObjectOfType<CinemachineBrain>().OutputCamera;
+    }
 
     private void Update()
     {
@@ -24,20 +32,22 @@ public class MassCubeInstantiator : MonoBehaviour
         if (direction == Vector2.zero)
             return;
 
-        LaunchCube(direction, false, transform.position, launchForce);
+        LaunchCubeToMouse();
         ApplyRecoilForce(direction);
         player.Shrink(1);
     }
 
     public void LaunchCubeToMouse()
     {
-        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mouseWorldPos.z = 0f;
+        Vector3 mouseScreenPos = Mouse.current.position.ReadValue();
 
-        Vector2 direction = (mouseWorldPos - transform.position).normalized;
+        mouseScreenPos.z = -cinemachineCamera.transform.position.z;
 
-        LaunchCube(direction, disableCollider: false, transform.position, launchForce);
+        Vector3 mouseWorldPos = cinemachineCamera.ScreenToWorldPoint(mouseScreenPos);
 
+        Vector2 direction = ((Vector2)mouseWorldPos - (Vector2)transform.position).normalized;
+
+        LaunchCube(direction, false, transform.position, launchForce);
         ApplyRecoilForce(direction);
     }
 
