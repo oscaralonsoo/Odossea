@@ -31,6 +31,7 @@ public class Bouncer : MonoBehaviour
 
             foreach (Rigidbody2D rigidbody in rigidbodies)
             {
+                
                 if (rigidbody != null)
                     StartCoroutine(ApplyBounceDelayed(rigidbody));
             }
@@ -68,6 +69,7 @@ public class Bouncer : MonoBehaviour
         yield return new WaitForSeconds(bounceDelay);
 
         if (rb != null)
+            rb.linearVelocity = Vector2.zero;
             rb.AddForce(Vector2.up * bounceForce, ForceMode2D.Impulse);
     }
 }
