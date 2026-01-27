@@ -29,8 +29,6 @@ public class MassCubeInstantiator : MonoBehaviour
         player.Shrink(1);
     }
 
-
-
     public void LaunchCubeToMouse()
     {
         Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
