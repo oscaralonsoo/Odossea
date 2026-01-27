@@ -280,8 +280,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1743404539134923315, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
   m_PrefabInstance: {fileID: 1011875664}
   m_PrefabAsset: {fileID: 0}
---- !u!231 &158730294
-SpringJoint2D:
+--- !u!232 &158730305
+DistanceJoint2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -298,9 +298,8 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
-  m_Distance: 5
-  m_DampingRatio: 1
-  m_Frequency: 3
+  m_Distance: 8
+  m_MaxDistanceOnly: 1
 --- !u!1 &207531776
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,8 +606,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4182273877137214357, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
   m_PrefabInstance: {fileID: 1011875664}
   m_PrefabAsset: {fileID: 0}
---- !u!231 &855910243
-SpringJoint2D:
+--- !u!232 &855910252
+DistanceJoint2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -617,7 +616,7 @@ SpringJoint2D:
   m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 943002165}
+  m_ConnectedRigidBody: {fileID: 1065000228}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
@@ -625,9 +624,8 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
-  m_Distance: 5
-  m_DampingRatio: 1
-  m_Frequency: 1
+  m_Distance: 8
+  m_MaxDistanceOnly: 1
 --- !u!1 &880856473
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,11 +736,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1: {fileID: 1884452612}
   player2: {fileID: 77962947}
---- !u!50 &943002165 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 614220908054311239, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
-  m_PrefabInstance: {fileID: 1146715084}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &943988484
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,11 +905,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 237430560745478161, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_LinearOffset.x
-      value: 0.30659723
+      value: 0.306597
       objectReference: {fileID: 0}
     - target: {fileID: 237430560745478161, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_LinearOffset.y
-      value: -0.30659866
+      value: -0.30659842
       objectReference: {fileID: 0}
     - target: {fileID: 716673003598522290, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_Name
@@ -964,23 +957,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1434863304198506718, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_LinearOffset.y
-      value: 0.6131964
+      value: 0.6131959
+      objectReference: {fileID: 0}
+    - target: {fileID: 1795614539723277880, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LinearOffset.x
+      value: -0.61319727
       objectReference: {fileID: 0}
     - target: {fileID: 2091286839837398681, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_LinearOffset.x
-      value: -0.3066001
+      value: -0.30660027
       objectReference: {fileID: 0}
     - target: {fileID: 2091286839837398681, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_LinearOffset.y
-      value: -0.30659866
+      value: -0.30659842
+      objectReference: {fileID: 0}
+    - target: {fileID: 4049498593149599170, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LinearOffset.x
+      value: -0.61319727
       objectReference: {fileID: 0}
     - target: {fileID: 4434434350914792020, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_LinearOffset.x
-      value: 0.30659723
+      value: 0.306597
       objectReference: {fileID: 0}
     - target: {fileID: 4434434350914792020, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_LinearOffset.y
-      value: 0.3065977
+      value: 0.30659747
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949250432963724672, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LinearOffset.x
+      value: 0.61319727
       objectReference: {fileID: 0}
     - target: {fileID: 5538062106741593925, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_Enabled
@@ -988,23 +993,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6272980298530917647, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_LinearOffset.y
-      value: -0.6131964
+      value: -0.6131959
       objectReference: {fileID: 0}
     - target: {fileID: 6544038512960925715, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_LinearOffset.x
-      value: -0.3066001
+      value: -0.30660027
       objectReference: {fileID: 0}
     - target: {fileID: 6544038512960925715, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_LinearOffset.y
-      value: 0.3065977
+      value: 0.30659747
       objectReference: {fileID: 0}
     - target: {fileID: 6591674002958067072, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_LinearOffset.y
-      value: 0.6131964
+      value: 0.6131959
+      objectReference: {fileID: 0}
+    - target: {fileID: 8143788881782694009, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_LinearOffset.x
+      value: 0.61319727
+      objectReference: {fileID: 0}
+    - target: {fileID: 8642343474712264161, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: maxAirSpeed
+      value: 100000000
       objectReference: {fileID: 0}
     - target: {fileID: 9175156902661760444, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_LinearOffset.y
-      value: -0.6131964
+      value: -0.6131959
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1012,19 +1025,19 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1743404539134923315, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 158730294}
+      addedObject: {fileID: 158730305}
     - targetCorrespondingSourceObject: {fileID: 7875123144567164449, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1374685263}
+      addedObject: {fileID: 1374685272}
     - targetCorrespondingSourceObject: {fileID: 4182273877137214357, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 855910243}
+      addedObject: {fileID: 855910252}
     - targetCorrespondingSourceObject: {fileID: 8227482159499168255, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1741929304}
+      addedObject: {fileID: 1741929313}
     - targetCorrespondingSourceObject: {fileID: 1628876054947735854, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1803573547}
+      addedObject: {fileID: 1803573556}
   m_SourcePrefab: {fileID: 100100000, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
 --- !u!50 &1065000228 stripped
 Rigidbody2D:
@@ -1050,6 +1063,10 @@ PrefabInstance:
     - target: {fileID: 277674341409792503, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_DefaultControlScheme
       value: Gamepad
+      objectReference: {fileID: 0}
+    - target: {fileID: 614220908054311239, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_BodyType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 716673003598522290, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_Name
@@ -1107,6 +1124,10 @@ PrefabInstance:
       propertyPath: m_LinearOffset.y
       value: -0.30659866
       objectReference: {fileID: 0}
+    - target: {fileID: 2932015962375635215, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4434434350914792020, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_LinearOffset.x
       value: 0.30659676
@@ -1114,6 +1135,14 @@ PrefabInstance:
     - target: {fileID: 4434434350914792020, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_LinearOffset.y
       value: 0.3065977
+      objectReference: {fileID: 0}
+    - target: {fileID: 4905029140431720509, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_BodyType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393191487134212421, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_BodyType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6272980298530917647, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_LinearOffset.y
@@ -1130,6 +1159,10 @@ PrefabInstance:
     - target: {fileID: 6591674002958067072, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_LinearOffset.y
       value: 0.6131964
+      objectReference: {fileID: 0}
+    - target: {fileID: 9023136691786886652, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
+      propertyPath: m_BodyType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 9175156902661760444, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
       propertyPath: m_LinearOffset.y
@@ -1262,8 +1295,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7875123144567164449, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
   m_PrefabInstance: {fileID: 1011875664}
   m_PrefabAsset: {fileID: 0}
---- !u!231 &1374685263
-SpringJoint2D:
+--- !u!232 &1374685272
+DistanceJoint2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1272,7 +1305,7 @@ SpringJoint2D:
   m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 1712446133}
+  m_ConnectedRigidBody: {fileID: 1065000228}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
@@ -1281,8 +1314,7 @@ SpringJoint2D:
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
   m_Distance: 8
-  m_DampingRatio: 1
-  m_Frequency: 1
+  m_MaxDistanceOnly: 1
 --- !u!1 &1580020803
 GameObject:
   m_ObjectHideFlags: 0
@@ -1434,11 +1466,6 @@ MonoBehaviour:
   bounceDelay: 0.05
   squashScale: 0.85
   squashTime: 0.08
---- !u!50 &1712446133 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 2932015962375635215, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
-  m_PrefabInstance: {fileID: 1146715084}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1736416168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1578,8 +1605,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8227482159499168255, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
   m_PrefabInstance: {fileID: 1011875664}
   m_PrefabAsset: {fileID: 0}
---- !u!231 &1741929304
-SpringJoint2D:
+--- !u!232 &1741929313
+DistanceJoint2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1588,7 +1615,7 @@ SpringJoint2D:
   m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 1836324724}
+  m_ConnectedRigidBody: {fileID: 1065000228}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
@@ -1596,9 +1623,8 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
-  m_Distance: 5
-  m_DampingRatio: 1
-  m_Frequency: 1
+  m_Distance: 8
+  m_MaxDistanceOnly: 1
 --- !u!1 &1763762509
 GameObject:
   m_ObjectHideFlags: 0
@@ -1891,8 +1917,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1628876054947735854, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
   m_PrefabInstance: {fileID: 1011875664}
   m_PrefabAsset: {fileID: 0}
---- !u!231 &1803573547
-SpringJoint2D:
+--- !u!232 &1803573556
+DistanceJoint2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1901,7 +1927,7 @@ SpringJoint2D:
   m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 2128141683}
+  m_ConnectedRigidBody: {fileID: 1065000228}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_BreakAction: 3
@@ -1910,13 +1936,7 @@ SpringJoint2D:
   m_ConnectedAnchor: {x: 0, y: 0}
   m_AutoConfigureDistance: 0
   m_Distance: 8
-  m_DampingRatio: 1
-  m_Frequency: 1
---- !u!50 &1836324724 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 9023136691786886652, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
-  m_PrefabInstance: {fileID: 1146715084}
-  m_PrefabAsset: {fileID: 0}
+  m_MaxDistanceOnly: 1
 --- !u!114 &1884452611 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8764900082671207673, guid: 958aec988d940624e9934b661b427a02, type: 3}
@@ -2104,11 +2124,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 207531777}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &2128141683 stripped
-Rigidbody2D:
-  m_CorrespondingSourceObject: {fileID: 5393191487134212421, guid: b6faf2bba73cfe6469f3b15e165329ef, type: 3}
-  m_PrefabInstance: {fileID: 1146715084}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3735407598881545450
 PrefabInstance:
   m_ObjectHideFlags: 0
