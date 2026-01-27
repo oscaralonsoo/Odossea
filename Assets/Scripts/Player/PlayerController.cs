@@ -10,18 +10,13 @@ public class PlayerController : MonoBehaviour
     [Serializable]
     public class Bone
     {
-        public Rigidbody2D rigidbody2D;
-        public CircleCollider2D collider2D;
-        public DistanceJoint2D distanceJoint;
-        public List<RelativeJoint2D> relativeJoints = new List<RelativeJoint2D>();
-        public bool grounded = false;
+        public Transform transform;
+        [NonSerialized] public Rigidbody2D rigidbody2D = null;
+        [NonSerialized] public CircleCollider2D collider2D = null;
+        [NonSerialized] public List<DistanceJoint2D> distanceJoints = new List<DistanceJoint2D>();
+        [NonSerialized] public List<RelativeJoint2D> relativeJoints = new List<RelativeJoint2D>();
+        [NonSerialized] public bool grounded = false;
     }
-
-    [Header("Fusion")]
-    public PlayerController otherPlayer;
-    public GameObject rope;
-    public bool IsCrouched = false;
-    private bool fusioned = false;
 
     [Header("Bones")]
     public List<Bone> bones;
@@ -31,9 +26,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float force = 50f;
     [SerializeField] float downForce = 20f;
     [SerializeField] float jumpForce = 300f;
-    [SerializeField] float maxCrouchSpeed = 0.1f;
     [SerializeField] float maxGroundSpeed = 10f;
     [SerializeField] float maxAirSpeed = 5f;
+    public bool isGrounded = false;
 
     [Header("Scaling")]
     [SerializeField] float scaleAmout = 0.2f;
@@ -42,7 +37,6 @@ public class PlayerController : MonoBehaviour
     public int growNum = 1;
 
     // Animator / estado
-    public bool IsGrounded { get; private set; }
     public float AverageVerticalVelocity { get; private set; }
 
     // Input
@@ -59,6 +53,14 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        foreach(Bone b in bones)
+        {
+            b.transform.TryGetComponent<Rigidbody2D>(out b.rigidbody2D);
+            b.transform.TryGetComponent<CircleCollider2D>(out b.collider2D);
+            foreach (DistanceJoint2D dJoint in b.transform.GetComponents<DistanceJoint2D>()) b.distanceJoints.Add(dJoint);
+            foreach (RelativeJoint2D rJoint in b.transform.GetComponents<RelativeJoint2D>()) b.relativeJoints.Add(rJoint);
+        }
+
         InitScale();
     }
 
@@ -76,8 +78,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnCrouch(InputValue value)
     {
-        if (value.isPressed)
-            crouchRequested = true;
+        crouchRequested = value.isPressed;
     }
 
     public void OnLook(InputValue value)
@@ -127,49 +128,9 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void Fusion(bool fusion)
-    {
-        if (otherPlayer == null) return;
-        
-        if (fusion)
-        {
-            Bone centerBonePlayer = bones[bones.Count - 1];
-
-            foreach (Bone bone in otherPlayer.bones)
-            {
-                DistanceJoint2D joint = centerBonePlayer.rigidbody2D.gameObject.AddComponent<DistanceJoint2D>();
-                joint.connectedBody = bone.rigidbody2D;
-                joint.autoConfigureDistance = false;
-                joint.maxDistanceOnly = true;
-                joint.distance = 10f;
-            }
-        }
-        else
-        {
-            Bone centerBonePlayer = bones[bones.Count - 1];
-
-            foreach (DistanceJoint2D joint in centerBonePlayer.rigidbody2D.gameObject.GetComponents<DistanceJoint2D>())
-            {
-                Destroy(joint);
-            }
-        }
-
-        rope.SetActive(fusion);
-        fusioned = fusion;
-    }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.V)) {
-
-            Fusion(!fusioned);
-        }
-
-        if (Input.GetKey(KeyCode.S))
-        {
-            crouchRequested = true;
-        }
-
         if (Mouse.current == null || Camera.main == null)
             return;
 
@@ -202,83 +163,33 @@ public class PlayerController : MonoBehaviour
             if (bone.grounded) groundedCount++;
         }
 
-        IsGrounded = groundedCount > 0;
-
         // ---------- Input filtrado ----------
         float moveX = inputDirection.x;
-        IsCrouched = groundedCount > 1 && crouchRequested;
-
         float verticalVelocitySum = 0f;
+
+        isGrounded = groundedCount > 0;
 
         foreach (Bone bone in bones)
         {
             Rigidbody2D rb = bone.rigidbody2D;
 
-            if (IsCrouched)
-            {
+            if (bone.grounded && groundedCount < 3)
                 rb.AddForce(Vector2.down * downForce);
-                if (moveX != 0)
-                    rb.AddForce(Vector2.right * moveX * force);
 
-                float velX = rb.linearVelocity.x;
-                velX = Mathf.Clamp(velX, -maxCrouchSpeed, maxCrouchSpeed);
-                rb.linearVelocityX = velX;
-            }
-            else
+            if ((bone.grounded || groundedCount == 0) && moveX != 0)
+                rb.AddForce(Vector2.right * moveX * force);
+
+            if (isGrounded && jumpRequested)
             {
-                if (bone.grounded && groundedCount < 3)
-                    rb.AddForce(Vector2.down * downForce);
-
-                if (moveX != 0)
-                {
-                    if (bone.grounded)
-                        rb.AddForce(Vector2.right * moveX * force);
-                    else if (groundedCount == 0)
-                    {
-                        if (fusioned && otherPlayer.IsCrouched)
-                        {
-                            Vector2 myCenter = GetCenterPosition();
-                            Vector2 otherCenter = otherPlayer.GetCenterPosition();
-
-                            // 2. Vector dirección y su perpendicular
-                            Vector2 lookAt = otherCenter - myCenter;
-
-                            // Normalizamos para que la distancia no afecte a la potencia de la fuerza
-                            Vector2 perpRight = new Vector2(lookAt.y, -lookAt.x).normalized;
-
-                            // 3. Aplicamos la fuerza orbital a cada hueso
-                            rb.AddForce(perpRight.normalized * moveX * force);
-                            Debug.DrawRay(GetCenterPosition(), perpRight.normalized);
-
-                            // 4. Limitamos la velocidad global (Magnitud)
-                            if (rb.linearVelocity.magnitude > maxAirSpeed)
-                            {
-                                rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, maxAirSpeed);
-                               
-                            }
-                        }
-                        else
-                        {
-                            rb.AddForce(Vector2.right * moveX * force);
-                        }
-                    }
-                }
-               
-
-                if ((bone.grounded || groundedCount == 0) && moveX != 0)
-                    rb.AddForce(Vector2.right * moveX * force);
-
-                if (IsGrounded && jumpRequested)
-                {
-                    Vector2 v = rb.linearVelocity;
-                    v.y = 0;
-                    rb.linearVelocity = v;
-                    rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-                }
-                Vector2 vel = rb.linearVelocity;
-                vel.x = Mathf.Clamp(vel.x, IsGrounded ? -maxGroundSpeed : -maxAirSpeed, IsGrounded ? maxGroundSpeed : maxAirSpeed);
-                rb.linearVelocity = vel;
+                Vector2 v = rb.linearVelocity;
+                v.y = 0;
+                rb.linearVelocity = v;
+                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             }
+
+            Vector2 vel = rb.linearVelocity;
+            vel.x = Mathf.Clamp(vel.x, isGrounded ? -maxGroundSpeed : -maxAirSpeed, isGrounded ? maxGroundSpeed : maxAirSpeed);
+            rb.linearVelocity = vel;
         }
 
         AverageVerticalVelocity = verticalVelocitySum / bones.Count;
@@ -291,7 +202,6 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        crouchRequested = false;
         jumpRequested = false;
         shootRequested = false;
     }
@@ -318,10 +228,11 @@ public class PlayerController : MonoBehaviour
         {
             bone.rigidbody2D.transform.localScale *= ratio;
 
-            if (bone.distanceJoint)
+            foreach (DistanceJoint2D dj in bone.distanceJoints)
             {
-                bone.distanceJoint.autoConfigureDistance = false;
-                bone.distanceJoint.distance *= ratio;
+                if (!dj) continue;
+                dj.autoConfigureDistance = false;
+                dj.distance *= ratio;
             }
 
             foreach (RelativeJoint2D rj in bone.relativeJoints)
@@ -358,10 +269,11 @@ public class PlayerController : MonoBehaviour
         {
             bone.rigidbody2D.transform.localScale *= ratio;
 
-            if (bone.distanceJoint)
+            foreach (DistanceJoint2D dj in bone.distanceJoints)
             {
-                bone.distanceJoint.autoConfigureDistance = false;
-                bone.distanceJoint.distance *= ratio;
+                if (!dj) continue;
+                dj.autoConfigureDistance = false;
+                dj.distance *= ratio;
             }
 
             foreach (RelativeJoint2D rj in bone.relativeJoints)

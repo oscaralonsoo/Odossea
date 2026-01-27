@@ -29,7 +29,7 @@ public class PlayerAnimatorController : MonoBehaviour
             playerController.AverageVerticalVelocity,
             verticalSmooth
         );
-        animator.SetBool("isGrounded", playerController.IsGrounded);
+        animator.SetBool("isGrounded", playerController.isGrounded);
         animator.SetFloat("VerticalVelocity", smoothedVerticalVelocity);
     }
 }
