@@ -48100,6 +48100,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1978626160727912146, guid: 4ffbdcf323321f949a736262392dc5bf, type: 3}
+      propertyPath: jumpForce
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978626160727912146, guid: 4ffbdcf323321f949a736262392dc5bf, type: 3}
+      propertyPath: maxAirSpeed
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978626160727912146, guid: 4ffbdcf323321f949a736262392dc5bf, type: 3}
+      propertyPath: maxGroundSpeed
+      value: 18
+      objectReference: {fileID: 0}
     - target: {fileID: 2138144945273200969, guid: 4ffbdcf323321f949a736262392dc5bf, type: 3}
       propertyPath: m_LinearOffset.x
       value: 0.61320496
@@ -48143,6 +48155,14 @@ PrefabInstance:
     - target: {fileID: 4732655867712091220, guid: 4ffbdcf323321f949a736262392dc5bf, type: 3}
       propertyPath: m_LinearOffset.x
       value: -0.61320496
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720160935349430621, guid: 4ffbdcf323321f949a736262392dc5bf, type: 3}
+      propertyPath: launchForce
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720160935349430621, guid: 4ffbdcf323321f949a736262392dc5bf, type: 3}
+      propertyPath: recoilForce
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7359789446511942944, guid: 4ffbdcf323321f949a736262392dc5bf, type: 3}
       propertyPath: m_LinearOffset.y
