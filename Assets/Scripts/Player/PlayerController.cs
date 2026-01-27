@@ -247,12 +247,14 @@ public class PlayerController : MonoBehaviour
                             Vector2 perpRight = new Vector2(lookAt.y, -lookAt.x).normalized;
 
                             // 3. Aplicamos la fuerza orbital a cada hueso
-                            rb.AddForce(perpRight * moveX * force);
+                            rb.AddForce(perpRight.normalized * moveX * force);
+                            Debug.DrawRay(GetCenterPosition(), perpRight.normalized);
 
                             // 4. Limitamos la velocidad global (Magnitud)
                             if (rb.linearVelocity.magnitude > maxAirSpeed)
                             {
                                 rb.linearVelocity = Vector2.ClampMagnitude(rb.linearVelocity, maxAirSpeed);
+                               
                             }
                         }
                         else
