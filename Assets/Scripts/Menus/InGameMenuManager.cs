@@ -2,13 +2,20 @@ using UnityEngine;
 
 public class InGameMenuManager : MonoBehaviour
 {
-    //PANELS
+    // PANELS
     public UIPanel pausePanel;
     public UIPanel optionsPanel;
     public UIPanel soundPanel;
     public UIPanel graphicsPanel;
 
+    public GameObject overlayPanel;
+
     UIPanel current;
+
+    void Start()
+    {
+        overlayPanel.SetActive(false);
+    }
 
     void Update()
     {
@@ -25,10 +32,11 @@ public class InGameMenuManager : MonoBehaviour
         }
     }
 
-    //PAUSE
+    // PAUSE
     public void Pause()
     {
         Time.timeScale = 0;
+        overlayPanel.SetActive(true);  
         pausePanel.Show();
         current = pausePanel;
     }
@@ -37,10 +45,11 @@ public class InGameMenuManager : MonoBehaviour
     {
         Time.timeScale = 1;
         pausePanel.Hide();
+        overlayPanel.SetActive(false);
         current = null;
     }
 
-    //OPTIONS
+    // OPTIONS
     public void ShowOptions()
     {
         if (current != null)
@@ -59,7 +68,7 @@ public class InGameMenuManager : MonoBehaviour
         current = pausePanel;
     }
 
-    //SOUND / GRAPHICS 
+    // SOUND / GRAPHICS
     public void ShowSound()
     {
         if (current != null)
@@ -78,10 +87,11 @@ public class InGameMenuManager : MonoBehaviour
         current = graphicsPanel;
     }
 
-    //SCENES
+    // SCENES
     public void LoadMainMenu(string scene)
     {
         Time.timeScale = 1;
+        overlayPanel.SetActive(false);
         SceneTransitionManager.Instance.LoadScene(scene);
     }
 }
