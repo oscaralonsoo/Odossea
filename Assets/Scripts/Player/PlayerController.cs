@@ -23,7 +23,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float force = 50f;
     [SerializeField] float downForce = 20f;
     [SerializeField] float jumpForce = 300f;
-    [SerializeField] float maxXSpeed = 5f;
+    [SerializeField] float maxGroundSpeed = 10f;
+    [SerializeField] float maxAirSpeed = 5f;
 
     [Header("Scaling")]
     [SerializeField] float scaleAmout = 0.2f;
@@ -49,8 +50,6 @@ public class PlayerController : MonoBehaviour
 
     // Escala
     private Vector3 targetScale;
-
-
 
     private void Awake()
     {
@@ -182,7 +181,7 @@ public class PlayerController : MonoBehaviour
             }
                 
             Vector2 vel = rb.linearVelocity;
-            vel.x = Mathf.Clamp(vel.x, -maxXSpeed, maxXSpeed);
+            vel.x = Mathf.Clamp(vel.x, IsGrounded ? -maxGroundSpeed : -maxAirSpeed, IsGrounded ? maxGroundSpeed : maxAirSpeed);
             rb.linearVelocity = vel;
         }
 
