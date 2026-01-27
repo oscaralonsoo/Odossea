@@ -47,15 +47,15 @@ public class MassCubeInstantiator : MonoBehaviour
     {
         Vector2 recoilDirection = -launchDirection;
 
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        Rigidbody2D rb = transform.parent.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
             rb.AddForce(recoilDirection * recoilForce, ForceMode2D.Impulse);
         }
 
-        for (int i = 0; i < transform.childCount; i++)
+        for (int i = 0; i < transform.parent.childCount; i++)
         {
-            Rigidbody2D childRb = transform.GetChild(i).GetComponent<Rigidbody2D>();
+            Rigidbody2D childRb = transform.parent.GetChild(i).GetComponent<Rigidbody2D>();
             if (childRb != null)
             {
                 childRb.AddForce(recoilDirection * recoilForce, ForceMode2D.Impulse);
