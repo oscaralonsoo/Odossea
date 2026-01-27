@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,6 +16,11 @@ public class PlayerController : MonoBehaviour
         public List<RelativeJoint2D> relativeJoints = new List<RelativeJoint2D>();
         public bool grounded = false;
     }
+
+    [Header("Fusion")]
+    public PlayerController otherPlayer;
+    public bool fusioned = false;
+    public GameObject rope;
 
     [Header("Bones")]
     public List<Bone> bones;
@@ -119,8 +126,44 @@ public class PlayerController : MonoBehaviour
             growNum--;
         }
     }
+
+    public void Fusion(bool fusion)
+    {
+        if (otherPlayer == null) return;
+        
+        if (fusion)
+        {
+            Bone centerBonePlayer = bones[bones.Count - 1];
+
+            foreach (Bone bone in otherPlayer.bones)
+            {
+                DistanceJoint2D joint = centerBonePlayer.rigidbody2D.gameObject.AddComponent<DistanceJoint2D>();
+                joint.connectedBody = bone.rigidbody2D;
+                joint.autoConfigureDistance = false;
+                joint.maxDistanceOnly = true;
+                joint.distance = 10f;
+            }
+        }
+        else
+        {
+            Bone centerBonePlayer = bones[bones.Count - 1];
+
+            foreach (DistanceJoint2D joint in centerBonePlayer.rigidbody2D.gameObject.GetComponents<DistanceJoint2D>())
+            {
+                Destroy(joint);
+            }
+        }
+        rope.SetActive(fusion);
+        fusioned = fusion;
+    }
+
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.V)) {
+
+            Fusion(!fusioned);
+        }
+
         if (Mouse.current == null || Camera.main == null)
             return;
 

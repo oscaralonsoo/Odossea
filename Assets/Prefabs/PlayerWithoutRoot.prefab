@@ -155,7 +155,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.30660057, y: 0.3065977}
+  m_LinearOffset: {x: -0.3066001, y: 0.3065977}
   m_AngularOffset: 0
 --- !u!254 &1795614539723277880
 RelativeJoint2D:
@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 3842492791255187089}
   - component: {fileID: 6595920079672383608}
   - component: {fileID: 934364106235811597}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: bone_1_root
   m_TagString: Bone
   m_Icon: {fileID: 0}
@@ -455,6 +455,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63ac0c413e2b8804180a7996daa1cf71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  otherPlayer: {fileID: 0}
   bones:
   - rigidbody2D: {fileID: 2932015962375635215}
     collider2D: {fileID: 3126058356024344008}
@@ -545,7 +546,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1743404539134923315}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34b63ed3a9468a940b09f722693128b9, type: 3}
   m_Name: 
@@ -671,7 +672,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.30659676, y: -0.30659866}
+  m_LinearOffset: {x: 0.30659723, y: -0.30659866}
   m_AngularOffset: 0
 --- !u!254 &8143788881782694009
 RelativeJoint2D:
@@ -760,7 +761,7 @@ GameObject:
   - component: {fileID: 8491240236035493470}
   - component: {fileID: 7208172856214762140}
   - component: {fileID: 7804627852191214791}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Face_p1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1027,7 +1028,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.30660057, y: -0.30659866}
+  m_LinearOffset: {x: -0.3066001, y: -0.30659866}
   m_AngularOffset: 0
 --- !u!254 &6272980298530917647
 RelativeJoint2D:
@@ -1221,7 +1222,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.30659676, y: 0.3065977}
+  m_LinearOffset: {x: 0.30659723, y: 0.3065977}
   m_AngularOffset: 0
 --- !u!254 &1434863304198506718
 RelativeJoint2D:
