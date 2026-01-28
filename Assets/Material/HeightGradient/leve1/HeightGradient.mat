@@ -42,14 +42,14 @@ Material:
     m_Ints: []
     m_Floats:
     - _EnableExternalAlpha: 0
-    - _MaxHeight: -4
-    - _MinHeight: 25.3
-    - _Smoothness: 3
+    - _MaxHeight: -44.4
+    - _MinHeight: 47.8
+    - _Smoothness: 2.47
     - _ZWrite: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorHigh: {r: 0.58587396, g: 0.42168033, b: 0.8679245, a: 1}
-    - _ColorLow: {r: 0.2514767, g: 0.15356888, b: 0.2735849, a: 0.95686275}
+    - _ColorLow: {r: 0.22490498, g: 0.13999642, b: 0.24528301, a: 0.95686275}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
