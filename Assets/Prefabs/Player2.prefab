@@ -873,7 +873,7 @@ GameObject:
   - component: {fileID: 1308168896104237239}
   - component: {fileID: 6469770340912714208}
   m_Layer: 0
-  m_Name: PlayerTop
+  m_Name: Player2
   m_TagString: Bone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -928,7 +928,7 @@ MonoBehaviour:
   isGrounded: 0
   isDead: 0
   scaleAmout: 0.2
-  initialGrowNum: 3
+  initialGrowNum: 4
   maxGrowNum: 5
   growNum: 1
   cinemachineCamera: {fileID: 0}

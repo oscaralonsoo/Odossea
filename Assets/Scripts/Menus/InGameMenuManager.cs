@@ -7,9 +7,10 @@ public class InGameMenuManager : MonoBehaviour
     public UIPanel optionsPanel;
     public UIPanel soundPanel;
     public UIPanel graphicsPanel;
+    public UIPanel customizationPanel;
 
     public GameObject overlayPanel;
-
+    public PlayerCustomizer playerCustomizer;
     UIPanel current;
 
     void Start()
@@ -21,7 +22,7 @@ public class InGameMenuManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (current == soundPanel || current == graphicsPanel)
+            if (current == soundPanel || current == graphicsPanel || current == customizationPanel)
                 ShowOptions();
             else if (current == optionsPanel)
                 ShowPause();
@@ -36,7 +37,7 @@ public class InGameMenuManager : MonoBehaviour
     public void Pause()
     {
         Time.timeScale = 0;
-        overlayPanel.SetActive(true);  
+        overlayPanel.SetActive(true);
         pausePanel.Show();
         current = pausePanel;
     }
@@ -87,11 +88,27 @@ public class InGameMenuManager : MonoBehaviour
         current = graphicsPanel;
     }
 
+    public void ShowCustomitzation()
+    {
+        if (current != null)
+            current.Hide();
+
+        customizationPanel.Show();
+        current = customizationPanel;
+    }
+
     // SCENES
     public void LoadMainMenu(string scene)
     {
         Time.timeScale = 1;
         overlayPanel.SetActive(false);
         SceneTransitionManager.Instance.LoadScene(scene);
+    }
+    public void SelectMaterial(int index)
+    {
+        if (playerCustomizer != null)
+        {
+            playerCustomizer.SetMaterial(index);
+        }
     }
 }

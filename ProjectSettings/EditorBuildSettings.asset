@@ -12,11 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Level0.unity
     guid: d5402ec7cc8f83249985f20c27939d50
   - enabled: 1
-    path: Assets/Scenes/Toni.unity
-    guid: 2fdec9747aa767a43be42681c7edab2e
-  - enabled: 0
-    path: "Assets/Scenes/Mart\xED.unity"
-    guid: 5ccbf3f585e59a34f9855ba7d1e20592
+    path: Assets/Scenes/Level1.unity
+    guid: 33af6f19c292b0840a037992ca7ec8d1
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
