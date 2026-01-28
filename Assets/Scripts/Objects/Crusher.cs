@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Crusher : MonoBehaviour
@@ -91,5 +92,20 @@ public class Crusher : MonoBehaviour
             waiting = true;
             waitTimer = waitTimeAtBottom;
         }
+
+        if (!waiting && !returning && !waitingAtTop &&
+             (collision.gameObject.layer == LayerMask.NameToLayer("Bones")))
+        {
+            StartCoroutine(GoUpLate());
+        }
+    }
+
+    IEnumerator GoUpLate()
+    {
+        yield return new WaitForSeconds(0.3f);
+        rb.linearVelocity = Vector2.zero;
+        rb.bodyType = RigidbodyType2D.Static;
+        waiting = true;
+        waitTimer = waitTimeAtBottom;
     }
 }
