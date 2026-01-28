@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DoorBehaviour : MonoBehaviour
@@ -9,6 +10,7 @@ public class DoorBehaviour : MonoBehaviour
     [SerializeField] float speed = 10f;
 
     bool isOpen;
+    int users = 0;
 
     void Awake()
     {
@@ -24,11 +26,18 @@ public class DoorBehaviour : MonoBehaviour
 
     public void SetDoor(bool open)
     {
-        isOpen = open;
+        if (open) users++;
+        else users--;
+        isOpen = users > 0;
     }
 
     public void ToggleDoor()
     {
         isOpen = !isOpen;
+    }
+
+    public bool IsOpen()
+    {
+        return isOpen;
     }
 }
