@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
         [NonSerialized] public List<RelativeJoint2D> relativeJoints = new();
         [NonSerialized] public bool grounded = false;
         [NonSerialized] public Vector2 lastPostion = Vector2.zero;
+        [NonSerialized] public Quaternion lastRotation = Quaternion.identity;
     }
 
     [Header("Bones")]
@@ -72,6 +73,7 @@ public class PlayerController : MonoBehaviour
         foreach (Bone b in bones)
         {
             b.lastPostion = b.transform.position;
+            b.lastRotation = b.transform.rotation;
         }
         lastGrowNum = growNum;
 
@@ -314,6 +316,7 @@ public class PlayerController : MonoBehaviour
         foreach (Bone b in bones)
         {
             b.lastPostion = b.transform.position;
+            b.lastRotation = b.transform.rotation;
         }
         lastGrowNum = growNum;
     }
@@ -349,6 +352,7 @@ public class PlayerController : MonoBehaviour
         foreach (Bone bone in bones)
         {
             bone.transform.position = bone.lastPostion;
+            bone.transform.rotation = bone.lastRotation;
             bone.transform.gameObject.SetActive(true);
         }
 
