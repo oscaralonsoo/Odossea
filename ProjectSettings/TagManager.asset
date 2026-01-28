@@ -52,8 +52,12 @@ TagManager:
   - name: FrontDeco
     uniqueID: 1032293437
     locked: 0
+  - name: Preview
+    uniqueID: 1620767683
+    locked: 0
   m_RenderingLayers:
   - Default
   - Background
   - Player
   - FrontDeco
+  - Preview
