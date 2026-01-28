@@ -14,10 +14,10 @@ TagManager:
   - Water
   - UI
   - Bones
-  - Core
+  - NoCollision
   - Camera
   - CubeTrigger
-  - 
+  - PlayerBloquer
   - 
   - 
   - 
