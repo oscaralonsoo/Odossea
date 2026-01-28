@@ -366367,10 +366367,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 913417642872631363, guid: 458f173bbbbcfdd428e035713be282cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.450001
+      objectReference: {fileID: 0}
+    - target: {fileID: 913417642872631363, guid: 458f173bbbbcfdd428e035713be282cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 913417642872631363, guid: 458f173bbbbcfdd428e035713be282cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -50.304443
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044321085353727528, guid: 458f173bbbbcfdd428e035713be282cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.334824
+      objectReference: {fileID: 0}
+    - target: {fileID: 1044321085353727528, guid: 458f173bbbbcfdd428e035713be282cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -49.999996
+      objectReference: {fileID: 0}
     - target: {fileID: 2141951075617217709, guid: 458f173bbbbcfdd428e035713be282cd, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 2962474706727461241}
+    - target: {fileID: 2355737904221220530, guid: 458f173bbbbcfdd428e035713be282cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.449974
+      objectReference: {fileID: 0}
+    - target: {fileID: 2355737904221220530, guid: 458f173bbbbcfdd428e035713be282cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.8999987
+      objectReference: {fileID: 0}
     - target: {fileID: 3491844194090900309, guid: 458f173bbbbcfdd428e035713be282cd, type: 3}
       propertyPath: m_Name
       value: Cinemachine
@@ -366379,6 +366407,22 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1632381157}
+    - target: {fileID: 5904272786984048120, guid: 458f173bbbbcfdd428e035713be282cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5904272786984048120, guid: 458f173bbbbcfdd428e035713be282cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169587807187182086, guid: 458f173bbbbcfdd428e035713be282cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169587807187182086, guid: 458f173bbbbcfdd428e035713be282cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.7
+      objectReference: {fileID: 0}
     - target: {fileID: 8129132655687428794, guid: 458f173bbbbcfdd428e035713be282cd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -58.1
@@ -377199,11 +377243,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1253292162782394739, guid: 4ffbdcf323321f949a736262392dc5bf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 305.62
+      value: -50.53003
       objectReference: {fileID: 0}
     - target: {fileID: 1253292162782394739, guid: 4ffbdcf323321f949a736262392dc5bf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 25.96
+      value: 4.71
       objectReference: {fileID: 0}
     - target: {fileID: 1253292162782394739, guid: 4ffbdcf323321f949a736262392dc5bf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -378091,11 +378135,11 @@ PrefabInstance:
       objectReference: {fileID: 2081859939}
     - target: {fileID: 7819810030148527327, guid: 958aec988d940624e9934b661b427a02, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 315.7
+      value: -40.45
       objectReference: {fileID: 0}
     - target: {fileID: 7819810030148527327, guid: 958aec988d940624e9934b661b427a02, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 25.5
+      value: 4.67
       objectReference: {fileID: 0}
     - target: {fileID: 7819810030148527327, guid: 958aec988d940624e9934b661b427a02, type: 3}
       propertyPath: m_LocalPosition.z
