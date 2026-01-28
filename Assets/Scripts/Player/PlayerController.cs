@@ -57,6 +57,8 @@ public class PlayerController : MonoBehaviour
     [Header("Camera")]
     [SerializeField] Camera cinemachineCamera;
 
+    public List<DropableCube> dropableCubes;
+
     private ContactFilter2D groundFilter;
 
     private void Awake()

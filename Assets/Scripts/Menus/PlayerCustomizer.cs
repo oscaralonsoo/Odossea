@@ -3,8 +3,9 @@ using UnityEngine;
 public class PlayerCustomizer : MonoBehaviour
 {
     [Header("Settings")]
-    public SpriteRenderer playerRenderer;       // El player real
-    public SpriteRenderer previewRenderer;      // El player del menú (preview)
+    public SpriteRenderer playerRenderer;       
+    public SpriteRenderer previewRenderer;
+
     public Material[] availableMaterials;
 
     private int currentIndex = 0;
@@ -15,7 +16,6 @@ public class PlayerCustomizer : MonoBehaviour
         if (playerRenderer != null)
             originalMaterial = playerRenderer.material;
 
-        // Inicializamos el preview igual que el player
         if (previewRenderer != null)
             previewRenderer.material = originalMaterial;
     }
@@ -46,7 +46,7 @@ public class PlayerCustomizer : MonoBehaviour
     {
         if (previewRenderer != null)
         {
-            // Aplicamos el material
+
             previewRenderer.material = availableMaterials[currentIndex];
 
             previewRenderer.material.color = new Color(1.2f, 1.2f, 1.2f, 1f); 
@@ -56,9 +56,14 @@ public class PlayerCustomizer : MonoBehaviour
     public void ApplyCurrent()
     {
         if (playerRenderer != null)
+        {
             playerRenderer.material = availableMaterials[currentIndex];
-
-        originalMaterial = playerRenderer.material;
+            foreach (DropableCube cube in playerRenderer.GetComponentInParent<PlayerController>().dropableCubes)
+            {
+                cube.GetComponentInChildren<SpriteRenderer>().material = playerRenderer.material;
+            }
+        }
+            originalMaterial = playerRenderer.material;
     }
 
     public void ResetMaterial()

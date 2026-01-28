@@ -79,6 +79,14 @@ public class MassCubeInstantiator : MonoBehaviour
             Quaternion.identity
         );
 
+        cubeMass.GetComponentInChildren<SpriteRenderer>().material = player.GetComponentInChildren<SpriteRenderer>().material;
+
+        DropableCube newCubeScript = cubeMass.GetComponent<DropableCube>();
+        if (newCubeScript != null)
+        {
+            player.GetComponent<PlayerController>().dropableCubes.Add(newCubeScript);
+        }
+
         if (disableCollider)
             SetCollidersEnabled(cubeMass, false);
 

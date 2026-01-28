@@ -37,6 +37,7 @@ public class DropableCube : MonoBehaviour
 
     private void Awake()
     {
+
         foreach (Bone b in bones)
         {
             b.transform.TryGetComponent(out b.rigidbody2D);
@@ -48,7 +49,7 @@ public class DropableCube : MonoBehaviour
         collided = false;
         growNum = 1;
     }
-
+ 
     public void Grow(int growAmount)
     {
         for (int i = 0; i < growAmount; i++)
