@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HeightGradient
+  m_Name: LightBlueShader
   m_Shader: {fileID: 4800000, guid: 67e1b90b0f97b50469fdaa492df2cc79, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -42,14 +42,14 @@ Material:
     m_Ints: []
     m_Floats:
     - _EnableExternalAlpha: 0
-    - _MaxHeight: -44.4
-    - _MinHeight: 47.8
-    - _Smoothness: 2.47
+    - _MaxHeight: 6.6
+    - _MinHeight: 25.3
+    - _Smoothness: 3
     - _ZWrite: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorHigh: {r: 0.58587396, g: 0.42168033, b: 0.8679245, a: 1}
-    - _ColorLow: {r: 0.22490498, g: 0.13999642, b: 0.24528301, a: 0.95686275}
+    - _ColorHigh: {r: 0.8160377, g: 1, b: 1, a: 1}
+    - _ColorLow: {r: 0.61960787, g: 0.9803922, b: 0.9803922, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
