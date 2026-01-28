@@ -409,4 +409,9 @@ public class PlayerController : MonoBehaviour
         }
         return center /= bones.Count;
     }
+
+    public bool IsFull()
+    {
+        return growNum >= maxGrowNum;
+    }
 }

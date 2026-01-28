@@ -14,6 +14,8 @@ public class CubeTrigger : MonoBehaviour
     {
         if (!playerCube) return;
 
+        if (playerCube.IsFull()) return;
+
         if (collision.gameObject.tag == "CubeTrigger")
         {
             DropableCube dropableCube = null;
