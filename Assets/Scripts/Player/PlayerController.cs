@@ -94,7 +94,6 @@ public class PlayerController : MonoBehaviour
     // -------- AIM (Mouse + Cinemachine) --------
     private void Update()
     {
-        Debug.Log(cinemachineCamera);
         if (Mouse.current == null || cinemachineCamera == null)
             return;
 

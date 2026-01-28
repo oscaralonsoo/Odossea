@@ -12,18 +12,12 @@ public class CubeTrigger : MonoBehaviour
         {
             DropableCube dropableCube = null;
 
-            collision.transform.TryGetComponent<DropableCube>(out dropableCube);
-
-            if (dropableCube == null && collision.transform.parent != null)
-            {
-                collision.transform.parent.TryGetComponent<DropableCube>(out dropableCube);
-            }
+            dropableCube = collision.transform.parent.GetComponentInChildren<DropableCube>();
 
             if (dropableCube != null && !dropableCube.collided)
             {
                 playerCube.Grow(dropableCube.growNum);
-                dropableCube.collided = true;
-                Destroy(dropableCube.gameObject);
+                dropableCube.Collided();
             }
         }
     }

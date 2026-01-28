@@ -8,7 +8,7 @@ public class DropableCubeTrigger : MonoBehaviour
 
     private void Awake()
     {
-        dropableCube = transform.parent.GetComponent<DropableCube>();
+        dropableCube = transform.parent.GetComponentInChildren<DropableCube>();
         rigidbody = dropableCube.GetComponent<Rigidbody2D>();
     }
 
@@ -18,24 +18,28 @@ public class DropableCubeTrigger : MonoBehaviour
 
         if (collision.gameObject.tag == "CubeTrigger")
         {
-            DropableCube otherDropableCube = collision.transform.parent.GetComponent<DropableCube>();
-            Rigidbody2D otherRigidbody = otherDropableCube.GetComponent<Rigidbody2D>();
+            DropableCube otherDropableCube = null;
+            Rigidbody2D otherRigidbody = null;
 
-            if (!dropableCube || !rigidbody || !otherDropableCube || !otherRigidbody) return;
+            otherDropableCube = collision.transform.parent.GetComponentInChildren<DropableCube>();
+
+            if (otherDropableCube == null) return;
+
+            otherRigidbody = otherDropableCube.GetComponent<Rigidbody2D>();
+
+            if (otherRigidbody == null) return;
 
             if (!otherDropableCube.collided)
             {
                 if (dropableCube.growNum > otherDropableCube.growNum)
                 {
                     dropableCube.Grow(otherDropableCube.growNum);
-                    otherDropableCube.collided = true;
-                    Destroy(otherDropableCube.gameObject);
+                    otherDropableCube.Collided();
                 }
                 else if (dropableCube.growNum == otherDropableCube.growNum && rigidbody.linearVelocity.magnitude < otherRigidbody.linearVelocity.magnitude)
                 {
                     dropableCube.Grow(otherDropableCube.growNum);
-                    otherDropableCube.collided = true;
-                    Destroy(otherDropableCube.gameObject);
+                    otherDropableCube.Collided();
                 }
             }
 

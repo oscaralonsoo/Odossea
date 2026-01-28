@@ -9,9 +9,12 @@ public class DropableCube : MonoBehaviour
     [Serializable]
     public class Bone
     {
-        public Rigidbody2D rigidbody2D;
-        public Collider2D collider2D;
-        public bool grounded = false;
+        public Transform transform;
+        [NonSerialized] public Rigidbody2D rigidbody2D;
+        [NonSerialized] public Collider2D collider2D;
+        [NonSerialized] public List<DistanceJoint2D> distanceJoints = new();
+        [NonSerialized] public List<RelativeJoint2D> relativeJoints = new();
+        [NonSerialized] public bool grounded = false;
     }
 
     [SerializeField] List<Bone> bones;
@@ -22,31 +25,46 @@ public class DropableCube : MonoBehaviour
     [SerializeField] float jumpForce;
     [SerializeField] float maxXSpeed;
     [SerializeField] float maxYSpeed;
-    [SerializeField] float scaleFactor;
+    [SerializeField] float scaleAmount;
     [SerializeField] float scaleSpeed;
 
     Vector3 targetScale = Vector3.one;
     RelativeJoint2D[] relativesJoints2D;
     DistanceJoint2D[] distanceJoints2D;
 
-    public int growNum;
+    public int growNum = 1;
     [NonSerialized] public bool collided;
 
     private void Awake()
     {
-        relativesJoints2D = transform.GetComponentsInChildren<RelativeJoint2D>();
-        distanceJoints2D = transform.GetComponentsInChildren<DistanceJoint2D>();
+        foreach (Bone b in bones)
+        {
+            b.transform.TryGetComponent(out b.rigidbody2D);
+            b.transform.TryGetComponent(out b.collider2D);
+            b.distanceJoints.AddRange(b.transform.GetComponents<DistanceJoint2D>());
+            b.relativeJoints.AddRange(b.transform.GetComponents<RelativeJoint2D>());
+        }
         targetScale = transform.localScale;
-        growNum = 1;
         collided = false;
+        growNum = 1;
     }
 
-    public void Grow(int growNumber)
+    public void Grow(int growAmount)
     {
-        for (int i = 0; i < growNumber; i++)
+        for (int i = 0; i < growAmount; i++)
         {
-            targetScale = targetScale * scaleFactor;
+            targetScale += Vector3.one * scaleAmount;
             growNum++;
+        }
+    }
+
+    public void Shrink(int shrinkNumber, bool limitMinSize = true)
+    {
+        for (int i = 0; i < shrinkNumber; i++)
+        {
+            if (growNum <= 1 && limitMinSize) return;
+            targetScale -= Vector3.one * scaleAmount;
+            growNum--;
         }
     }
 
@@ -55,23 +73,7 @@ public class DropableCube : MonoBehaviour
         Vector3 lastScale = transform.localScale;
         Vector3 newScale = Vector3.Lerp(transform.localScale, targetScale, Time.fixedDeltaTime * scaleSpeed);
 
-        if (newScale.magnitude > 0.1f)
-        {
-            transform.localScale = newScale;
-            float changeRatio = newScale.magnitude / lastScale.magnitude;
-
-            foreach (DistanceJoint2D dj in distanceJoints2D)
-            {
-                dj.autoConfigureDistance = false;
-                dj.distance *= changeRatio;
-            }
-
-            foreach (RelativeJoint2D rj in relativesJoints2D)
-            {
-                rj.autoConfigureOffset = false;
-                rj.linearOffset *= changeRatio;
-            }
-        }
+        ApplyScale();
 
         int groundedNum = 0;
         foreach (Bone bone in bones)
@@ -98,5 +100,37 @@ public class DropableCube : MonoBehaviour
                 bone.rigidbody2D.linearVelocity = new Vector2(bone.rigidbody2D.linearVelocity.x, limitedY);
             }
         }
+    }
+
+    private void ApplyScale()
+    {
+        Vector3 lastScale = transform.localScale;
+        Vector3 newScale = Vector3.Lerp(lastScale, targetScale, Time.fixedDeltaTime * scaleSpeed);
+        if (newScale.magnitude < 0.1f) return;
+
+        float ratio = newScale.magnitude / lastScale.magnitude;
+
+        foreach (Bone bone in bones)
+        {
+            bone.rigidbody2D.transform.localScale *= ratio;
+
+            foreach (var dj in bone.distanceJoints)
+            {
+                dj.autoConfigureDistance = false;
+                dj.distance *= ratio;
+            }
+
+            foreach (var rj in bone.relativeJoints)
+            {
+                rj.autoConfigureOffset = false;
+                rj.linearOffset *= ratio;
+            }
+        }
+    }
+
+    public void Collided()
+    {
+        collided = true;
+        Destroy(transform.parent.gameObject);
     }
 }
