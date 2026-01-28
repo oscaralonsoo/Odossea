@@ -122,7 +122,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: c99c75e2a211f3341baca85380bdff1a, type: 2}
+  m_Material: {fileID: 6200000, guid: ee26d982dcf1cbe4faa494a14aa7a68e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -174,7 +174,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: c99c75e2a211f3341baca85380bdff1a, type: 2}
+  m_Material: {fileID: 6200000, guid: ee26d982dcf1cbe4faa494a14aa7a68e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -248,7 +248,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: c99c75e2a211f3341baca85380bdff1a, type: 2}
+  m_Material: {fileID: 6200000, guid: ee26d982dcf1cbe4faa494a14aa7a68e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -300,7 +300,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: c99c75e2a211f3341baca85380bdff1a, type: 2}
+  m_Material: {fileID: 6200000, guid: ee26d982dcf1cbe4faa494a14aa7a68e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1181,7 +1181,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: c99c75e2a211f3341baca85380bdff1a, type: 2}
+  m_Material: {fileID: 6200000, guid: ee26d982dcf1cbe4faa494a14aa7a68e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1233,7 +1233,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: c99c75e2a211f3341baca85380bdff1a, type: 2}
+  m_Material: {fileID: 6200000, guid: ee26d982dcf1cbe4faa494a14aa7a68e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1798,7 +1798,7 @@ BoxCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: c99c75e2a211f3341baca85380bdff1a, type: 2}
+  m_Material: {fileID: 6200000, guid: ee26d982dcf1cbe4faa494a14aa7a68e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -1850,7 +1850,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: c99c75e2a211f3341baca85380bdff1a, type: 2}
+  m_Material: {fileID: 6200000, guid: ee26d982dcf1cbe4faa494a14aa7a68e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

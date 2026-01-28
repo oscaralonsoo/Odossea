@@ -3,11 +3,16 @@ using UnityEngine;
 
 public class DoorBehaviour : MonoBehaviour
 {
+    // Creamos un selector para elegir la dirección
+    public enum DoorDirection { Horizontal, Vertical }
+
+    [Header("Configuración de la Puerta")]
+    [SerializeField] DoorDirection direction = DoorDirection.Vertical; // Por defecto vertical
+    [SerializeField] float openDistance = 3f; // Cuántos metros se mueve
+    [SerializeField] float speed = 10f;
+
     Vector2 closedPos;
     Vector2 openPos;
-
-    [SerializeField] float speed = 10f;
-    [SerializeField] Vector2 displacement;
 
     bool isOpen;
     int users = 0;
@@ -15,6 +20,21 @@ public class DoorBehaviour : MonoBehaviour
     void Awake()
     {
         closedPos = transform.position;
+
+        // Calculamos el desplazamiento basado en la elección del usuario
+        Vector2 displacement = Vector2.zero;
+
+        if (direction == DoorDirection.Horizontal)
+        {
+            // Se mueve en el eje X
+            displacement = new Vector2(openDistance, 0);
+        }
+        else
+        {
+            // Se mueve en el eje Y
+            displacement = new Vector2(0, openDistance);
+        }
+
         openPos = closedPos + displacement;
     }
 
@@ -28,6 +48,8 @@ public class DoorBehaviour : MonoBehaviour
     {
         if (open) users++;
         else users--;
+
+        // La puerta se mantiene abierta si hay al menos 1 usuario activándola
         isOpen = users > 0;
     }
 
