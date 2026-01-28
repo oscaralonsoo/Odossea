@@ -15,7 +15,7 @@ public class PlayerBloquer : MonoBehaviour
         var playerControlers = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
         foreach (PlayerController player in playerControlers)
         {
-            if (player != this.player)
+            if (player == this.player)
             {
                 foreach(PlayerController.Bone bone in player.bones)
                 {
