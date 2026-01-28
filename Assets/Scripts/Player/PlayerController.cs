@@ -75,6 +75,7 @@ public class PlayerController : MonoBehaviour
         {
             b.lastPostion = b.transform.position;
         }
+        lastGrowNum = growNum;
 
         groundFilter.useLayerMask = true;
         groundFilter.SetLayerMask(groundLayer);
@@ -376,5 +377,15 @@ public class PlayerController : MonoBehaviour
                 childRb.AddForce(force, ForceMode2D.Impulse);
             }
         }
+    }
+
+    public Vector2 GetCenterLastPosition()
+    {
+        Vector2 center = Vector2.zero;
+        foreach (Bone bone in bones)
+        {
+            center += (Vector2)bone.lastPostion;
+        }
+        return center /= bones.Count;
     }
 }

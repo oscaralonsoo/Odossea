@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PayerGradient
+  m_Name: Player2Gradient 1
   m_Shader: {fileID: 4800000, guid: 97fb8f4d6c359b54995e4db044125142, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -49,11 +49,11 @@ Material:
     - _Smoothness: 2.39
     - _ZWrite: 0
     m_Colors:
-    - _BottomColor: {r: 0.09422178, g: 0.509434, b: 0.0504628, a: 1}
+    - _BottomColor: {r: 0.050980378, g: 0.26916984, b: 0.50980395, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorHigh: {r: 0.5, g: 0.24999997, b: 0, a: 1}
     - _ColorLow: {r: 0.7839625, g: 1, b: 0, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
-    - _TopColor: {r: 0.49122167, g: 0.8490566, b: 0.38047346, a: 1}
+    - _TopColor: {r: 0.38039216, g: 0.6110483, b: 0.8509804, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
