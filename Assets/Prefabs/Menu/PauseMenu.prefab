@@ -1225,7 +1225,7 @@ GameObject:
   - component: {fileID: 1315855527976645940}
   - component: {fileID: 2224599616452949568}
   - component: {fileID: 1602903745901256208}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Face_p1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1267,7 +1267,7 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 4294967295
+  m_RenderingLayerMask: 16
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -1288,7 +1288,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2112005771
+  m_SortingLayerID: 1620767683
   m_SortingLayer: 3
   m_SortingOrder: 101
   m_Sprite: {fileID: 21300000, guid: 7dff2fde81364fa4497e3ad3df67aeff, type: 3}
@@ -1887,7 +1887,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 27.4, y: 6.2}
+  m_AnchoredPosition: {x: 27.400002, y: 6.2}
   m_SizeDelta: {x: 89.6189, y: 16.272}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3396982432136132967
@@ -3405,7 +3405,7 @@ Canvas:
   m_GameObject: {fileID: 2422108189230143009}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -3416,7 +3416,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: -1
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 1032293437
   m_SortingOrder: 999
   m_TargetDisplay: 0
 --- !u!114 &8377091558447935444
@@ -10235,7 +10235,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 135653119665995912}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PreviewPlayer
   m_TagString: Bone
   m_Icon: {fileID: 0}
@@ -11490,7 +11490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1874889340213750755}
   - component: {fileID: 1099542069257823409}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: bone_1_root
   m_TagString: Bone
   m_Icon: {fileID: 0}
@@ -11533,7 +11533,7 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
-  m_RenderingLayerMask: 4294967295
+  m_RenderingLayerMask: 16
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: ed77113e43ee20a4d9d4eab8fc8a1c76, type: 2}
@@ -11554,7 +11554,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2112005771
+  m_SortingLayerID: 1620767683
   m_SortingLayer: 3
   m_SortingOrder: 100
   m_Sprite: {fileID: -8794698323247294114, guid: 01768ebdd1aa1434da5d2585708df0d7, type: 3}

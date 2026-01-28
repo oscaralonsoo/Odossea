@@ -373766,10 +373766,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
-    - target: {fileID: 2422108189230143009, guid: 3b0ca145f23dd164d8dfaa6ed3b11d48, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3081774107496731164, guid: 3b0ca145f23dd164d8dfaa6ed3b11d48, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -373782,6 +373778,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3220717538867790752, guid: 3b0ca145f23dd164d8dfaa6ed3b11d48, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1339530186}
     - target: {fileID: 4245374940277256741, guid: 3b0ca145f23dd164d8dfaa6ed3b11d48, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -373862,10 +373862,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4859354196199899931, guid: 3b0ca145f23dd164d8dfaa6ed3b11d48, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.00048828125
-      objectReference: {fileID: 0}
+    - target: {fileID: 4527457663458246703, guid: 3b0ca145f23dd164d8dfaa6ed3b11d48, type: 3}
+      propertyPath: playerRenderer
+      value: 
+      objectReference: {fileID: 1145179951}
     - target: {fileID: 5567842799112409532, guid: 3b0ca145f23dd164d8dfaa6ed3b11d48, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -375050,8 +375050,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64544b1a8b2347046b4e45f3b253e169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1: {fileID: 0}
-  player2: {fileID: 0}
+  player1: {fileID: 1274664545}
+  player2: {fileID: 1632381159}
 --- !u!1 &920364034
 GameObject:
   m_ObjectHideFlags: 0
@@ -376550,6 +376550,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ffbdcf323321f949a736262392dc5bf, type: 3}
+--- !u!212 &1145179951 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2185385189613355062, guid: 4ffbdcf323321f949a736262392dc5bf, type: 3}
+  m_PrefabInstance: {fileID: 1145179950}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1148181090
 GameObject:
   m_ObjectHideFlags: 0
@@ -377771,6 +377776,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63ac0c413e2b8804180a7996daa1cf71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1274664545 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6469770340912714208, guid: 4ffbdcf323321f949a736262392dc5bf, type: 3}
+  m_PrefabInstance: {fileID: 1145179950}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1280880935
 GameObject:
   m_ObjectHideFlags: 0
@@ -378411,6 +378427,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24e6c3bef7f220c4093469f952410d25, type: 3}
+--- !u!20 &1339530186 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 4051203824254697267, guid: 458f173bbbbcfdd428e035713be282cd, type: 3}
+  m_PrefabInstance: {fileID: 128275675}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1342357501
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -380080,6 +380101,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63ac0c413e2b8804180a7996daa1cf71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1632381159 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6469770340912714208, guid: 4ffbdcf323321f949a736262392dc5bf, type: 3}
+  m_PrefabInstance: {fileID: 1916437649}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1632945172
