@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6074479493045745341}
   - component: {fileID: 3015824430968887078}
   - component: {fileID: 6570949106847080864}
+  - component: {fileID: 5523252446613020900}
   m_Layer: 9
   m_Name: bone_1_root
   m_TagString: CubeTrigger
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 3
   m_Sprite: {fileID: -8794698323247294114, guid: 01768ebdd1aa1434da5d2585708df0d7, type: 3}
-  m_Color: {r: 0.5803922, g: 0.8980392, b: 0.88296086, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -177,6 +178,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &5523252446613020900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812229231176145847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469e822a9100a344c8f12383b0f61c9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  topColor: {r: 0.38039216, g: 0.6117647, b: 0.8509804, a: 1}
+  bottomColor: {r: 0, g: 0, b: 0, a: 1}
+  minY: -0.5
+  maxY: 0.5
 --- !u!1 &2323985566862357352
 GameObject:
   m_ObjectHideFlags: 0
