@@ -120,7 +120,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.30659723, y: 0.25759745}
+  m_LinearOffset: {x: 0.2452774, y: 0.20607805}
   m_AngularOffset: 0
 --- !u!254 &9086414821288901534
 RelativeJoint2D:
@@ -140,7 +140,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: 0.6131959}
+  m_LinearOffset: {x: 0, y: 0.49055672}
   m_AngularOffset: 0
 --- !u!254 &2138144945273200969
 RelativeJoint2D:
@@ -160,7 +160,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.6131973, y: 0}
+  m_LinearOffset: {x: 0.49055862, y: 0}
   m_AngularOffset: 0
 --- !u!232 &6959017677817150002
 DistanceJoint2D:
@@ -335,7 +335,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.3066001, y: -0.35559845}
+  m_LinearOffset: {x: -0.24528122, y: -0.28447866}
   m_AngularOffset: 0
 --- !u!254 &3062174566863139655
 RelativeJoint2D:
@@ -355,7 +355,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: -0.6131959}
+  m_LinearOffset: {x: 0, y: -0.49055672}
   m_AngularOffset: 0
 --- !u!254 &4732655867712091220
 RelativeJoint2D:
@@ -375,7 +375,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.6131973, y: 0}
+  m_LinearOffset: {x: -0.49055862, y: 0}
   m_AngularOffset: 0
 --- !u!232 &951582663498002254
 DistanceJoint2D:
@@ -550,7 +550,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.30659723, y: -0.35559845}
+  m_LinearOffset: {x: 0.2452774, y: -0.28447866}
   m_AngularOffset: 0
 --- !u!254 &7636905446554378171
 RelativeJoint2D:
@@ -570,7 +570,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.6131973, y: 0}
+  m_LinearOffset: {x: 0.49055862, y: 0}
   m_AngularOffset: 0
 --- !u!254 &7359789446511942944
 RelativeJoint2D:
@@ -590,7 +590,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: -0.6131959}
+  m_LinearOffset: {x: 0, y: -0.49055672}
   m_AngularOffset: 0
 --- !u!232 &5306573411921039791
 DistanceJoint2D:
@@ -765,7 +765,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.3066001, y: 0.25759745}
+  m_LinearOffset: {x: -0.24528122, y: 0.20607805}
   m_AngularOffset: 0
 --- !u!254 &8207348201385576690
 RelativeJoint2D:
@@ -785,7 +785,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.6131973, y: 0}
+  m_LinearOffset: {x: -0.49055862, y: 0}
   m_AngularOffset: 0
 --- !u!254 &4348422380520794259
 RelativeJoint2D:
@@ -805,7 +805,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: 0.6131959}
+  m_LinearOffset: {x: 0, y: 0.49055672}
   m_AngularOffset: 0
 --- !u!232 &9202049573703723145
 DistanceJoint2D:
@@ -886,7 +886,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5463822667010390700}
@@ -1130,14 +1130,15 @@ MonoBehaviour:
     m_Bits: 8
   force: 350
   downForce: 400
-  jumpForce: 35
-  maxGroundSpeed: 19
-  maxAirSpeed: 15
+  jumpForce: 31
+  maxGroundSpeed: 18
+  maxAirSpeed: 11
   isGrounded: 0
   scaleAmout: 0.4
   scaleSpeed: 5
   initialGrowNum: 3
   growNum: 1
+  cinemachineCamera: {fileID: 0}
 --- !u!114 &5720160935349430621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1151,10 +1152,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 7509534449368133461, guid: 4888d99aea1f4de44bcd2ff6c0333b4c, type: 3}
-  launchForce: 23
+  launchForce: 25
   spreadAngle: 45
   ignoreCollisionTime: 0.3
-  recoilForce: 15
+  recoilForce: 20
 --- !u!1 &5846883991151425291
 GameObject:
   m_ObjectHideFlags: 0
