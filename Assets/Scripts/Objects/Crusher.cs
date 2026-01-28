@@ -12,6 +12,7 @@ public class Crusher : MonoBehaviour
     public float waitTimeAtTop = 1.0f;
 
     private Rigidbody2D rb;
+    private Collider2D collider;
     private Vector2 startPosition;
 
     private bool waiting = false;
@@ -21,7 +22,8 @@ public class Crusher : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponentInParent<Rigidbody2D>();
+        collider = GetComponentInParent<Collider2D>();
         startPosition = rb.position;
 
         rb.gravityScale = 0f;
@@ -81,7 +83,7 @@ public class Crusher : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (!waiting && !returning && !waitingAtTop &&
             (collision.gameObject.layer == LayerMask.NameToLayer("Ground") ||
@@ -96,13 +98,16 @@ public class Crusher : MonoBehaviour
         if (!waiting && !returning && !waitingAtTop &&
              (collision.gameObject.layer == LayerMask.NameToLayer("Bones")))
         {
+            PlayerController player = null;
+            player = collision.transform.parent.GetComponent<PlayerController>();
+            if (player != null) player.Die();
             StartCoroutine(GoUpLate());
         }
     }
 
     IEnumerator GoUpLate()
     {
-        yield return new WaitForSeconds(0.3f);
+        yield return new WaitForSeconds(0.5f);
         rb.linearVelocity = Vector2.zero;
         rb.bodyType = RigidbodyType2D.Static;
         waiting = true;

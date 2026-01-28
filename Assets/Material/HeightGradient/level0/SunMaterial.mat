@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MoonMaterial
+  m_Name: SunMaterial
   m_Shader: {fileID: 4800000, guid: 67e1b90b0f97b50469fdaa492df2cc79, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -48,8 +48,8 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _ColorHigh: {r: 0.9686275, g: 0.7725491, b: 0.6117647, a: 1}
-    - _ColorLow: {r: 0.7264151, g: 0.31551224, b: 0.2021627, a: 1}
+    - _ColorHigh: {r: 0.7311321, g: 1, b: 0.9864208, a: 1}
+    - _ColorLow: {r: 0.9669811, g: 1, b: 0.9974319, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
