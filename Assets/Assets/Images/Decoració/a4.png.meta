@@ -142,9 +142,9 @@ TextureImporter:
       name: a4_0
       rect:
         serializedVersion: 2
-        x: 172
+        x: 163
         y: 0
-        width: 166
+        width: 186
         height: 512
       alignment: 0
       pivot: {x: 0, y: 0}

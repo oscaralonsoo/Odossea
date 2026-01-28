@@ -142,10 +142,10 @@ TextureImporter:
       name: a8_0
       rect:
         serializedVersion: 2
-        x: 59
+        x: 57
         y: 0
-        width: 395
-        height: 512
+        width: 398
+        height: 497
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

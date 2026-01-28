@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
         [NonSerialized] public List<RelativeJoint2D> relativeJoints = new();
         [NonSerialized] public bool grounded = false;
         [NonSerialized] public Vector2 lastPostion = Vector2.zero;
+        [NonSerialized] public Quaternion lastRotation = Quaternion.identity;
+        [NonSerialized] public List<ContactPoint2D> contacts = new();
     }
 
     [Header("Bones")]
@@ -72,6 +74,7 @@ public class PlayerController : MonoBehaviour
         foreach (Bone b in bones)
         {
             b.lastPostion = b.transform.position;
+            b.lastRotation = b.transform.rotation;
         }
         lastGrowNum = growNum;
 
@@ -132,13 +135,28 @@ public class PlayerController : MonoBehaviour
         int groundedCount = 0;
         foreach (Bone bone in bones)
         {
+            bone.grounded = false;
             if (!bone.collider2D) continue;
+
             bone.grounded = bone.collider2D.IsTouchingLayers(groundLayer);
+            if (bone.grounded)
+            {
+                bone.collider2D.GetContacts(groundFilter, bone.contacts);
+                int numContacts = 0;
+                foreach (ContactPoint2D contactPoint in bone.contacts)
+                {
+                    if (contactPoint.normal.y > 0.60f)
+                    {
+                        numContacts++;                       
+                    }
+                }
+                if (numContacts < 1) bone.grounded = false;
+            }
             if (bone.grounded) groundedCount++;
         }
 
         isGrounded = groundedCount > 0;
-        ContactPoint2D[] contacts = new ContactPoint2D[1];
+       
 
         foreach (Bone bone in bones)
         {
@@ -146,10 +164,12 @@ public class PlayerController : MonoBehaviour
 
             if (bone.grounded && groundedCount < 3)
             {
-                int numContacts = bone.collider2D.GetContacts(groundFilter, contacts);
-                if (numContacts > 0 && contacts[0].normal.y > 0.99f)
+                foreach (ContactPoint2D contact in bone.contacts)
                 {
-                    rb.AddForce(-contacts[0].normal * downForce);
+                    if (contact.normal.y > 0.99f)
+                    {
+                        rb.AddForce(Vector2.down * downForce);
+                    }
                 }
             }
 
@@ -158,6 +178,7 @@ public class PlayerController : MonoBehaviour
 
             if (isGrounded && jumpRequested)
             {
+
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             }
@@ -314,6 +335,7 @@ public class PlayerController : MonoBehaviour
         foreach (Bone b in bones)
         {
             b.lastPostion = b.transform.position;
+            b.lastRotation = b.transform.rotation;
         }
         lastGrowNum = growNum;
     }
@@ -349,6 +371,7 @@ public class PlayerController : MonoBehaviour
         foreach (Bone bone in bones)
         {
             bone.transform.position = bone.lastPostion;
+            bone.transform.rotation = bone.lastRotation;
             bone.transform.gameObject.SetActive(true);
         }
 
