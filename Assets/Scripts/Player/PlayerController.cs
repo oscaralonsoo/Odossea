@@ -104,6 +104,8 @@ public class PlayerController : MonoBehaviour
 
     public void OnShoot(InputValue value)
     {
+        if (Time.timeScale == 0)
+            return;
         if (value.isPressed)
             shootRequested = true;
     }
