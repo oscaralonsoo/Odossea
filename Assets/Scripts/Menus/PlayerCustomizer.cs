@@ -45,7 +45,12 @@ public class PlayerCustomizer : MonoBehaviour
     void UpdatePreview()
     {
         if (previewRenderer != null)
+        {
+            // Aplicamos el material
             previewRenderer.material = availableMaterials[currentIndex];
+
+            previewRenderer.material.color = new Color(1.2f, 1.2f, 1.2f, 1f); 
+        }
     }
 
     public void ApplyCurrent()
