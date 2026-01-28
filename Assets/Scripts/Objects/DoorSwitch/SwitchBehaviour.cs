@@ -28,7 +28,7 @@ public class SwitchBehaviour : MonoBehaviour
 
     void Awake()
     {
-        upPos = transform.position;
+        upPos = button.position;
         downPos = upPos + Vector3.down * downPosY;
     }
 
