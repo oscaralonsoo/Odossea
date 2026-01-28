@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class DoorBehaviour : MonoBehaviour
 {
-    Vector3 closedPos;
-    Vector3 openPos;
+    Vector2 closedPos;
+    Vector2 openPos;
 
-    [SerializeField] float openHeight = 5f;
     [SerializeField] float speed = 10f;
+    [SerializeField] Vector2 displacement;
 
     bool isOpen;
     int users = 0;
@@ -15,7 +15,7 @@ public class DoorBehaviour : MonoBehaviour
     void Awake()
     {
         closedPos = transform.position;
-        openPos = closedPos + Vector3.up * openHeight;
+        openPos = closedPos + displacement;
     }
 
     void Update()
