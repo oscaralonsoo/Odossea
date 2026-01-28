@@ -59,8 +59,6 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        cinemachineCamera = Camera.main;
-
         foreach (Bone b in bones)
         {
             b.transform.TryGetComponent(out b.rigidbody2D);
