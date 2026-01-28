@@ -1,12 +1,17 @@
 using UnityEngine;
 
-public class InfiniteParallaxTriple : MonoBehaviour
+public class InfiniteParallaxFive : MonoBehaviour
 {
     [Range(0f, 1f)]
     public float parallaxStrength = 0.3f;
 
-    public Transform left;
-    public Transform right;
+    [Range(0f, 1f)]
+    public float parallaxY = 0.15f;
+
+    public Transform left1;
+    public Transform left2;
+    public Transform right1;
+    public Transform right2;
 
     private Camera cam;
     private Vector3 startPos;
@@ -20,30 +25,34 @@ public class InfiniteParallaxTriple : MonoBehaviour
         SpriteRenderer sr = GetComponent<SpriteRenderer>();
         spriteWidth = sr.bounds.size.x;
 
-        // Posicionar vecinos
-        left.position = startPos + Vector3.left * spriteWidth;
-        right.position = startPos + Vector3.right * spriteWidth;
+        UpdatePanels();
     }
 
     void LateUpdate()
     {
-        float camX = cam.transform.position.x;
+        Vector3 camPos = cam.transform.position;
 
-        // Parallax ABSOLUTO
-        float targetX = startPos.x + camX * parallaxStrength;
-        transform.position = new Vector3(targetX, startPos.y, transform.position.z);
+        float targetX = startPos.x + camPos.x * parallaxStrength;
+        float targetY = startPos.y + camPos.y * parallaxY;
 
-        // Mantener vecinos pegados
-        left.position = transform.position + Vector3.left * spriteWidth;
-        right.position = transform.position + Vector3.right * spriteWidth;
+        transform.position = new Vector3(targetX, targetY, transform.position.z);
 
-        // Recolocar bloque entero
-        float camDelta = camX - transform.position.x;
+        UpdatePanels();
+
+        float camDelta = camPos.x - transform.position.x;
 
         if (Mathf.Abs(camDelta) >= spriteWidth)
         {
-            float offset = Mathf.Sign(camDelta) * spriteWidth;
-            startPos.x += offset;
+            startPos.x += Mathf.Sign(camDelta) * spriteWidth;
         }
+    }
+
+    void UpdatePanels()
+    {
+        left1.position = transform.position + Vector3.left * spriteWidth;
+        left2.position = transform.position + Vector3.left * spriteWidth * 2f;
+
+        right1.position = transform.position + Vector3.right * spriteWidth;
+        right2.position = transform.position + Vector3.right * spriteWidth * 2f;
     }
 }
