@@ -120,7 +120,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.2452774, y: 0.20607805}
+  m_LinearOffset: {x: 0.39857626, y: 0.334877}
   m_AngularOffset: 0
 --- !u!254 &9086414821288901534
 RelativeJoint2D:
@@ -140,7 +140,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: 0.49055672}
+  m_LinearOffset: {x: 0, y: 0.7971549}
   m_AngularOffset: 0
 --- !u!254 &2138144945273200969
 RelativeJoint2D:
@@ -160,7 +160,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.49055862, y: 0}
+  m_LinearOffset: {x: 0.7971568, y: 0}
   m_AngularOffset: 0
 --- !u!232 &6959017677817150002
 DistanceJoint2D:
@@ -335,7 +335,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.24528122, y: -0.28447866}
+  m_LinearOffset: {x: -0.39858055, y: -0.4622779}
   m_AngularOffset: 0
 --- !u!254 &3062174566863139655
 RelativeJoint2D:
@@ -355,7 +355,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: -0.49055672}
+  m_LinearOffset: {x: 0, y: -0.7971549}
   m_AngularOffset: 0
 --- !u!254 &4732655867712091220
 RelativeJoint2D:
@@ -375,7 +375,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.49055862, y: 0}
+  m_LinearOffset: {x: -0.7971568, y: 0}
   m_AngularOffset: 0
 --- !u!232 &951582663498002254
 DistanceJoint2D:
@@ -550,7 +550,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.2452774, y: -0.28447866}
+  m_LinearOffset: {x: 0.39857626, y: -0.4622779}
   m_AngularOffset: 0
 --- !u!254 &7636905446554378171
 RelativeJoint2D:
@@ -570,7 +570,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.49055862, y: 0}
+  m_LinearOffset: {x: 0.7971568, y: 0}
   m_AngularOffset: 0
 --- !u!254 &7359789446511942944
 RelativeJoint2D:
@@ -590,7 +590,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: -0.49055672}
+  m_LinearOffset: {x: 0, y: -0.7971549}
   m_AngularOffset: 0
 --- !u!232 &5306573411921039791
 DistanceJoint2D:
@@ -765,7 +765,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.24528122, y: 0.20607805}
+  m_LinearOffset: {x: -0.39858055, y: 0.334877}
   m_AngularOffset: 0
 --- !u!254 &8207348201385576690
 RelativeJoint2D:
@@ -785,7 +785,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.49055862, y: 0}
+  m_LinearOffset: {x: -0.7971568, y: 0}
   m_AngularOffset: 0
 --- !u!254 &4348422380520794259
 RelativeJoint2D:
@@ -805,7 +805,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: 0.49055672}
+  m_LinearOffset: {x: 0, y: 0.7971549}
   m_AngularOffset: 0
 --- !u!232 &9202049573703723145
 DistanceJoint2D:
@@ -886,7 +886,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5463822667010390700}
@@ -1134,7 +1134,7 @@ MonoBehaviour:
   maxGroundSpeed: 18
   maxAirSpeed: 11
   isGrounded: 0
-  scaleAmout: 0.4
+  scaleAmout: 0.2
   scaleSpeed: 5
   initialGrowNum: 3
   growNum: 1
