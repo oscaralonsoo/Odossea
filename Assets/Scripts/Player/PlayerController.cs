@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Unity.Cinemachine;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
@@ -31,9 +32,11 @@ public class PlayerController : MonoBehaviour
 
     [Header("Scaling")]
     [SerializeField] float scaleAmout = 0.2f;
-    [SerializeField] float scaleSpeed = 5f;
-    [SerializeField] int initialGrowNum = 0;
+    [SerializeField] int initialGrowNum = 3;
+    [SerializeField] int maxGrowNum = 5;
     public int growNum = 1;
+    float currentScaleSpeed;
+    const float defaultScaleSpeed = 5f;
 
     public float AverageVerticalVelocity { get; private set; }
 
@@ -172,24 +175,46 @@ public class PlayerController : MonoBehaviour
     private void InitScale()
     {
         targetScale = transform.localScale;
-        Grow(initialGrowNum);
+        GrowToNum(initialGrowNum);
         ApplyScaleInstant();
     }
 
-    public void Grow(int growAmount)
+    public void GrowToNum(int growNum, float scaleSpeed = defaultScaleSpeed)
     {
+        Mathf.Clamp(growNum, 1, maxGrowNum);
+        if (this.growNum > growNum)
+        {
+            while (this.growNum > growNum)
+            {
+                Shrink(1, scaleSpeed);
+            }
+        }
+        else if (this.growNum < growNum) 
+        {
+            while (this.growNum < growNum)
+            {
+                Grow(1, scaleSpeed);
+            }
+        }
+    }
+
+    public void Grow(int growAmount, float scaleSpeed = defaultScaleSpeed)
+    {
+        currentScaleSpeed = scaleSpeed;
         for (int i = 0; i < growAmount; i++)
         {
+            if (growNum >= maxGrowNum) return;
             targetScale += Vector3.one * scaleAmout;
             growNum++;
         }
     }
 
-    public void Shrink(int shrinkNumber, bool limitMinSize = true)
+    public void Shrink(int shrinkNumber, float scaleSpeed = defaultScaleSpeed)
     {
+        currentScaleSpeed = scaleSpeed;
         for (int i = 0; i < shrinkNumber; i++)
         {
-            if (growNum <= 1 && limitMinSize) return;
+            if (growNum <= 1) return;
             targetScale -= Vector3.one * scaleAmout;
             growNum--;
         }
@@ -198,7 +223,7 @@ public class PlayerController : MonoBehaviour
     private void ApplyScale()
     {
         Vector3 lastScale = transform.localScale;
-        Vector3 newScale = Vector3.Lerp(lastScale, targetScale, Time.fixedDeltaTime * scaleSpeed);
+        Vector3 newScale = Vector3.Lerp(lastScale, targetScale, Time.fixedDeltaTime * currentScaleSpeed);
         if (newScale.magnitude < 0.1f) return;
 
         float ratio = newScale.magnitude / lastScale.magnitude;
@@ -249,6 +274,27 @@ public class PlayerController : MonoBehaviour
         GetComponent<MassCubeInstantiator>()
             .DisperseCubes(growNum, 0.3f, transform.position, 13f);
 
-        Shrink(10, false);
+        //Shrink(10);
+    }
+
+    public IEnumerator PausedGrowToNum(int growNum, float scaleSpeed = defaultScaleSpeed, float pauseTime = 0.3f)
+    {
+        Mathf.Clamp(growNum, 1, maxGrowNum);
+        if (this.growNum > growNum)
+        {
+            while (this.growNum > growNum)
+            {
+                yield return new WaitForSeconds(pauseTime);
+                Shrink(1, scaleSpeed);
+            }
+        }
+        else if (this.growNum < growNum)
+        {
+            while (this.growNum < growNum)
+            {
+                yield return new WaitForSeconds(pauseTime);
+                Grow(1, scaleSpeed);
+            }
+        }
     }
 }
