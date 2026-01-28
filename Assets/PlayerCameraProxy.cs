@@ -6,7 +6,7 @@ public class PlayerCameraProxy : MonoBehaviour
 
     void Start()
     {
-
+        transform.position = player.GetCenterPosition();
     }
 
     void Update()
