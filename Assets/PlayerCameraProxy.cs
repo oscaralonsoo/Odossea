@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CameraProxy : MonoBehaviour
+public class PlayerCameraProxy : MonoBehaviour
 {
     public PlayerController player;
 
@@ -11,11 +11,12 @@ public class CameraProxy : MonoBehaviour
 
     void Update()
     {
-        if (player.gameObject.activeInHierarchy)
+        if (!player.isDead)
         {
             transform.position = player.GetCenterPosition();
 
-        } else
+        } 
+        else
         {
             transform.position = player.GetCenterLastPosition();
         }
