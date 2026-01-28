@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6074479493045745341}
   - component: {fileID: 3015824430968887078}
   - component: {fileID: 6570949106847080864}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: bone_1_root
   m_TagString: CubeTrigger
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 7
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: a33fe3fc7ae284d47bc1c51a1b935951, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 3869956356563041707}
   - component: {fileID: 818779557242341985}
   - component: {fileID: 4731526487482185470}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: bone_3
   m_TagString: CubeTrigger
   m_Icon: {fileID: 0}
@@ -297,7 +297,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.39857674, y: -0.4622774}
+  m_LinearOffset: {x: 0.39857614, y: -0.4622774}
   m_AngularOffset: 0
 --- !u!254 &7126064756420843327
 RelativeJoint2D:
@@ -317,7 +317,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.79715633, y: 0}
+  m_LinearOffset: {x: 0.79715645, y: 0}
   m_AngularOffset: 0
 --- !u!254 &9044320141447599380
 RelativeJoint2D:
@@ -408,7 +408,7 @@ GameObject:
   - component: {fileID: 8194219404597556109}
   - component: {fileID: 1361347278047401332}
   - component: {fileID: 4014787061650838767}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: bone_5
   m_TagString: CubeTrigger
   m_Icon: {fileID: 0}
@@ -511,7 +511,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.3985796, y: 0.334877}
+  m_LinearOffset: {x: -0.3985803, y: 0.334877}
   m_AngularOffset: 0
 --- !u!254 &1542216113347273877
 RelativeJoint2D:
@@ -531,7 +531,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.79715633, y: 0}
+  m_LinearOffset: {x: -0.79715645, y: 0}
   m_AngularOffset: 0
 --- !u!254 &8586809311208324559
 RelativeJoint2D:
@@ -615,9 +615,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3216699794016276752}
   - component: {fileID: 8608487527040970218}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: NewCubeMass
-  m_TagString: Bone
+  m_TagString: CubeTrigger
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -688,7 +688,7 @@ GameObject:
   - component: {fileID: 4448752969837271022}
   - component: {fileID: 2558052099526329776}
   - component: {fileID: 105312849484718237}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: bone_4
   m_TagString: CubeTrigger
   m_Icon: {fileID: 0}
@@ -791,7 +791,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.39857674, y: 0.334877}
+  m_LinearOffset: {x: 0.39857614, y: 0.334877}
   m_AngularOffset: 0
 --- !u!254 &8432589456683426844
 RelativeJoint2D:
@@ -831,7 +831,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.79715633, y: 0}
+  m_LinearOffset: {x: 0.79715645, y: 0}
   m_AngularOffset: 0
 --- !u!232 &4448752969837271022
 DistanceJoint2D:
@@ -902,7 +902,7 @@ GameObject:
   - component: {fileID: 3968078660373056816}
   - component: {fileID: 6771847487584451572}
   - component: {fileID: 9128343929858541336}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: bone_2
   m_TagString: CubeTrigger
   m_Icon: {fileID: 0}
@@ -1005,7 +1005,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.3985796, y: -0.4622774}
+  m_LinearOffset: {x: -0.3985803, y: -0.4622774}
   m_AngularOffset: 0
 --- !u!254 &4334806635836907457
 RelativeJoint2D:
@@ -1045,7 +1045,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.79715633, y: 0}
+  m_LinearOffset: {x: -0.79715645, y: 0}
   m_AngularOffset: 0
 --- !u!232 &3968078660373056816
 DistanceJoint2D:
