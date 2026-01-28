@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8697687107461401790}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RoutePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6627512806343892661}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RoutePoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 7257580253849090734}
   - component: {fileID: 8657225840697336181}
   - component: {fileID: 2004886942521198291}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: MovingPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,7 +193,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95c450c1d38d78140abe27c9dfcdc765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  routePoints: []
   forward: 1
   jumpToExteme: 0
   moveSpeed: 5
@@ -201,6 +200,7 @@ MonoBehaviour:
   accelerationDistance: 0.5
   currentPoint: 0
   destinationPoint: 0
+  routePoints: []
 --- !u!61 &2004886942521198291
 BoxCollider2D:
   m_ObjectHideFlags: 0
