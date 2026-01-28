@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6074479493045745341}
   - component: {fileID: 3015824430968887078}
   - component: {fileID: 6570949106847080864}
-  - component: {fileID: 975490882939827258}
   m_Layer: 6
   m_Name: bone_1_root
   m_TagString: CubeTrigger
@@ -79,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1696453207
   m_SortingLayer: 1
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: -8794698323247294114, guid: 01768ebdd1aa1434da5d2585708df0d7, type: 3}
   m_Color: {r: 0.5803922, g: 0.8980392, b: 0.88296086, a: 1}
   m_FlipX: 0
@@ -178,35 +177,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &975490882939827258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1812229231176145847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 007ab4a2771765142b0f8af404748830, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bones:
-  - transform: {fileID: 6586151055374962192}
-  - transform: {fileID: 2054299454207677110}
-  - transform: {fileID: 5978336099436641091}
-  - transform: {fileID: 8838902527316312937}
-  - transform: {fileID: 7875557715283253759}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  force: 300
-  downForce: 300
-  jumpForce: 1500
-  maxXSpeed: 100
-  maxYSpeed: 100
-  scaleAmount: 0.2
-  scaleSpeed: 30
-  growNum: 1
 --- !u!1 &2323985566862357352
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,7 +297,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.39857614, y: -0.4622774}
+  m_LinearOffset: {x: 0.39857674, y: -0.4622774}
   m_AngularOffset: 0
 --- !u!254 &7126064756420843327
 RelativeJoint2D:
@@ -347,7 +317,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.79715645, y: 0}
+  m_LinearOffset: {x: 0.79715633, y: 0}
   m_AngularOffset: 0
 --- !u!254 &9044320141447599380
 RelativeJoint2D:
@@ -541,7 +511,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.3985803, y: 0.334877}
+  m_LinearOffset: {x: -0.3985796, y: 0.334877}
   m_AngularOffset: 0
 --- !u!254 &1542216113347273877
 RelativeJoint2D:
@@ -561,7 +531,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.79715645, y: 0}
+  m_LinearOffset: {x: -0.79715633, y: 0}
   m_AngularOffset: 0
 --- !u!254 &8586809311208324559
 RelativeJoint2D:
@@ -644,6 +614,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3216699794016276752}
+  - component: {fileID: 8608487527040970218}
   m_Layer: 0
   m_Name: NewCubeMass
   m_TagString: Bone
@@ -671,6 +642,35 @@ Transform:
   - {fileID: 7875557715283253759}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8608487527040970218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5987016154528592320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 007ab4a2771765142b0f8af404748830, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bones:
+  - transform: {fileID: 6586151055374962192}
+  - transform: {fileID: 2054299454207677110}
+  - transform: {fileID: 5978336099436641091}
+  - transform: {fileID: 8838902527316312937}
+  - transform: {fileID: 7875557715283253759}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  force: 300
+  downForce: 300
+  jumpForce: 1500
+  maxXSpeed: 100
+  maxYSpeed: 100
+  scaleAmount: 0.2
+  scaleSpeed: 30
+  growNum: 1
 --- !u!1 &7464678560702027784
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,7 +791,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.39857614, y: 0.334877}
+  m_LinearOffset: {x: 0.39857674, y: 0.334877}
   m_AngularOffset: 0
 --- !u!254 &8432589456683426844
 RelativeJoint2D:
@@ -831,7 +831,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.79715645, y: 0}
+  m_LinearOffset: {x: 0.79715633, y: 0}
   m_AngularOffset: 0
 --- !u!232 &4448752969837271022
 DistanceJoint2D:
@@ -1005,7 +1005,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.3985803, y: -0.4622774}
+  m_LinearOffset: {x: -0.3985796, y: -0.4622774}
   m_AngularOffset: 0
 --- !u!254 &4334806635836907457
 RelativeJoint2D:
@@ -1045,7 +1045,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.79715645, y: 0}
+  m_LinearOffset: {x: -0.79715633, y: 0}
   m_AngularOffset: 0
 --- !u!232 &3968078660373056816
 DistanceJoint2D:

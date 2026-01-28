@@ -4,6 +4,12 @@ public class CubeTrigger : MonoBehaviour
 {
     public PlayerController playerCube;
 
+    private void Awake()
+    {
+        playerCube = null;
+        playerCube = transform.parent.GetComponent<PlayerController>();
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (!playerCube) return;

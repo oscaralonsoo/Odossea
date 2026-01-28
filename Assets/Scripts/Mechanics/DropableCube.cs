@@ -44,7 +44,7 @@ public class DropableCube : MonoBehaviour
             b.distanceJoints.AddRange(b.transform.GetComponents<DistanceJoint2D>());
             b.relativeJoints.AddRange(b.transform.GetComponents<RelativeJoint2D>());
         }
-        targetScale = transform.localScale;
+        targetScale = bones[0].transform.localScale;
         collided = false;
         growNum = 1;
     }
@@ -70,9 +70,6 @@ public class DropableCube : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 lastScale = transform.localScale;
-        Vector3 newScale = Vector3.Lerp(transform.localScale, targetScale, Time.fixedDeltaTime * scaleSpeed);
-
         ApplyScale();
 
         int groundedNum = 0;
@@ -104,8 +101,9 @@ public class DropableCube : MonoBehaviour
 
     private void ApplyScale()
     {
-        Vector3 lastScale = transform.localScale;
-        Vector3 newScale = Vector3.Lerp(lastScale, targetScale, Time.fixedDeltaTime * scaleSpeed);
+        Vector2 lastScale = bones[0].transform.localScale; ;
+        Vector2 newScale = Vector3.Lerp(lastScale, targetScale, Time.fixedDeltaTime * scaleSpeed);
+
         if (newScale.magnitude < 0.1f) return;
 
         float ratio = newScale.magnitude / lastScale.magnitude;
@@ -131,6 +129,6 @@ public class DropableCube : MonoBehaviour
     public void Collided()
     {
         collided = true;
-        Destroy(transform.parent.gameObject);
+        Destroy(transform.gameObject);
     }
 }

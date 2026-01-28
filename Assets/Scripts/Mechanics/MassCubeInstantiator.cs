@@ -11,13 +11,16 @@ public class MassCubeInstantiator : MonoBehaviour
     [SerializeField] private float ignoreCollisionTime = 0.3f;
     [SerializeField] private float recoilForce = 50f;
 
-    private void Update()
-    {
+    private PlayerController player;
 
+    private void Awake()
+    {
+        player = GetComponent<PlayerController>();
     }
+
     public void Shoot(Vector2 direction)
     {
-        LaunchCube(direction, false, transform.position, launchForce);
+        LaunchCube(direction, false, player.GetCenterPosition(), launchForce);
         ApplyRecoilForce(direction);
     }
 
@@ -38,20 +41,9 @@ public class MassCubeInstantiator : MonoBehaviour
     {
         Vector2 recoilDirection = -launchDirection;
 
-        Rigidbody2D rb = transform.parent.GetComponent<Rigidbody2D>();
-        if (rb != null)
-        {
-            rb.AddForce(recoilDirection * recoilForce, ForceMode2D.Impulse);
-        }
+        Vector2 force = recoilDirection * recoilForce;
 
-        for (int i = 0; i < transform.parent.childCount; i++)
-        {
-            Rigidbody2D childRb = transform.parent.GetChild(i).GetComponent<Rigidbody2D>();
-            if (childRb != null)
-            {
-                childRb.AddForce(recoilDirection * recoilForce, ForceMode2D.Impulse);
-            }
-        }
+        player.ApplyForce(force);
     }
 
 

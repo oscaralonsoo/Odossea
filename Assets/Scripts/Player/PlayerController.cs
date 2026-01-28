@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
         [NonSerialized] public List<DistanceJoint2D> distanceJoints = new();
         [NonSerialized] public List<RelativeJoint2D> relativeJoints = new();
         [NonSerialized] public bool grounded = false;
+        [NonSerialized] public Vector2 lastPostion = Vector2.zero;
     }
 
     [Header("Bones")]
@@ -29,14 +30,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float maxGroundSpeed = 10f;
     [SerializeField] float maxAirSpeed = 5f;
     public bool isGrounded = false;
+    public bool isDead = false;
 
     [Header("Scaling")]
     [SerializeField] float scaleAmout = 0.2f;
     [SerializeField] int initialGrowNum = 3;
     [SerializeField] int maxGrowNum = 5;
     public int growNum = 1;
+    int lastGrowNum = 1;
     float currentScaleSpeed;
     const float defaultScaleSpeed = 5f;
+    private Vector2 targetScale;
+    private Vector2 startScale;
 
     public float AverageVerticalVelocity { get; private set; }
 
@@ -50,12 +55,12 @@ public class PlayerController : MonoBehaviour
     [Header("Camera")]
     [SerializeField] Camera cinemachineCamera;
 
-    // Escala
-    private Vector3 targetScale;
     private ContactFilter2D groundFilter;
 
     private void Awake()
     {
+        cinemachineCamera = Camera.main;
+
         foreach (Bone b in bones)
         {
             b.transform.TryGetComponent(out b.rigidbody2D);
@@ -65,6 +70,11 @@ public class PlayerController : MonoBehaviour
         }
 
         InitScale();
+
+        foreach (Bone b in bones)
+        {
+            b.lastPostion = b.transform.position;
+        }
 
         groundFilter.useLayerMask = true;
         groundFilter.SetLayerMask(groundLayer);
@@ -107,7 +117,9 @@ public class PlayerController : MonoBehaviour
 
         Vector3 mouseWorldPos = cinemachineCamera.ScreenToWorldPoint(mouseScreenPos);
 
-        Vector2 dir = (mouseWorldPos - transform.position);
+        Vector2 dir = mouseWorldPos;
+        dir -= GetCenterPosition();
+
         if (dir.sqrMagnitude > 0.001f)
             aimDirection = dir.normalized;
     }
@@ -115,6 +127,8 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         ApplyScale();
+
+        if (isDead) return;
 
         int groundedCount = 0;
         foreach (Bone bone in bones)
@@ -174,7 +188,8 @@ public class PlayerController : MonoBehaviour
     // -------- SCALE --------
     private void InitScale()
     {
-        targetScale = transform.localScale;
+        startScale = (Vector2)bones[0].transform.localScale;
+        targetScale = startScale;
         GrowToNum(initialGrowNum);
         ApplyScaleInstant();
     }
@@ -204,7 +219,7 @@ public class PlayerController : MonoBehaviour
         for (int i = 0; i < growAmount; i++)
         {
             if (growNum >= maxGrowNum) return;
-            targetScale += Vector3.one * scaleAmout;
+            targetScale += Vector2.one * scaleAmout;
             growNum++;
         }
     }
@@ -215,15 +230,15 @@ public class PlayerController : MonoBehaviour
         for (int i = 0; i < shrinkNumber; i++)
         {
             if (growNum <= 1) return;
-            targetScale -= Vector3.one * scaleAmout;
+            targetScale -= Vector2.one * scaleAmout;
             growNum--;
         }
     }
 
     private void ApplyScale()
     {
-        Vector3 lastScale = transform.localScale;
-        Vector3 newScale = Vector3.Lerp(lastScale, targetScale, Time.fixedDeltaTime * currentScaleSpeed);
+        Vector2 lastScale = (Vector2)bones[0].transform.localScale;
+        Vector2 newScale = Vector2.Lerp(lastScale, targetScale, Time.fixedDeltaTime * currentScaleSpeed);
         if (newScale.magnitude < 0.1f) return;
 
         float ratio = newScale.magnitude / lastScale.magnitude;
@@ -248,7 +263,7 @@ public class PlayerController : MonoBehaviour
 
     private void ApplyScaleInstant()
     {
-        Vector3 lastScale = transform.localScale;
+        Vector2 lastScale = (Vector2)bones[0].transform.localScale;
         float ratio = targetScale.magnitude / lastScale.magnitude;
 
         foreach (Bone bone in bones)
@@ -271,10 +286,7 @@ public class PlayerController : MonoBehaviour
 
     public void Die()
     {
-        GetComponent<MassCubeInstantiator>()
-            .DisperseCubes(growNum, 0.3f, transform.position, 13f);
-
-        //Shrink(10);
+        if (!isDead) StartCoroutine(Respawn());
     }
 
     public IEnumerator PausedGrowToNum(int growNum, float scaleSpeed = defaultScaleSpeed, float pauseTime = 0.3f)
@@ -294,6 +306,74 @@ public class PlayerController : MonoBehaviour
             {
                 yield return new WaitForSeconds(pauseTime);
                 Grow(1, scaleSpeed);
+            }
+        }
+    }
+
+    public void OnCheckPoint()
+    {
+        foreach (Bone b in bones)
+        {
+            b.lastPostion = b.transform.position;
+        }
+        lastGrowNum = growNum;
+    }
+
+    public IEnumerator Respawn()
+    {
+        GetComponent<MassCubeInstantiator>()
+            .DisperseCubes(growNum, 0.3f, GetCenterPosition(), 13f);
+
+        targetScale.x = 0.01f;
+        targetScale.y = 0.01f;
+        isDead = true;
+
+        foreach (Bone bone in bones)
+        {
+            bone.rigidbody2D.linearVelocity = Vector3.zero;
+        }
+
+        yield return new WaitForSeconds(0.4f);
+
+        foreach (Bone bone in bones)
+        {
+            bone.transform.gameObject.SetActive(false);
+        }
+
+        yield return new WaitForSeconds(2f);
+
+        targetScale = startScale;
+        growNum = 1;
+        GrowToNum(lastGrowNum);
+        ApplyScaleInstant();
+
+        foreach (Bone bone in bones)
+        {
+            bone.transform.position = bone.lastPostion;
+            bone.transform.gameObject.SetActive(true);
+        }
+
+        isDead = false;
+    }
+
+    public Vector2 GetCenterPosition()
+    {
+        Vector2 center = Vector2.zero;
+        foreach (Bone bone in bones)
+        {
+            center += (Vector2)bone.transform.position;
+        }
+        return center/=bones.Count;
+    }
+
+    public void ApplyForce(Vector2 force)
+    {
+        foreach (Bone bone in bones) 
+        {
+            Rigidbody2D childRb = bone.rigidbody2D;
+            if (childRb != null)
+            {
+                childRb.AddForce(force, ForceMode2D.Impulse);
             }
         }
     }

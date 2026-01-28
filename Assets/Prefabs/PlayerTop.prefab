@@ -120,7 +120,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.39857626, y: 0.334877}
+  m_LinearOffset: {x: 0.39857617, y: 0.33487684}
   m_AngularOffset: 0
 --- !u!254 &9086414821288901534
 RelativeJoint2D:
@@ -140,7 +140,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: 0.7971544}
+  m_LinearOffset: {x: 0, y: 0.79715466}
   m_AngularOffset: 0
 --- !u!254 &2138144945273200969
 RelativeJoint2D:
@@ -160,7 +160,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.7971568, y: 0}
+  m_LinearOffset: {x: 0.79715645, y: 0}
   m_AngularOffset: 0
 --- !u!232 &6959017677817150002
 DistanceJoint2D:
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b7712419340d945ac9bd45b544884e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCube: {fileID: 1978626160727912146}
+  playerCube: {fileID: 0}
 --- !u!232 &4483522238001275815
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -335,7 +335,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.39858055, y: -0.4622774}
+  m_LinearOffset: {x: -0.3985803, y: -0.4622778}
   m_AngularOffset: 0
 --- !u!254 &3062174566863139655
 RelativeJoint2D:
@@ -355,7 +355,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: -0.7971544}
+  m_LinearOffset: {x: 0, y: -0.79715466}
   m_AngularOffset: 0
 --- !u!254 &4732655867712091220
 RelativeJoint2D:
@@ -375,7 +375,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.7971568, y: 0}
+  m_LinearOffset: {x: -0.79715645, y: 0}
   m_AngularOffset: 0
 --- !u!232 &951582663498002254
 DistanceJoint2D:
@@ -409,7 +409,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b7712419340d945ac9bd45b544884e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCube: {fileID: 1978626160727912146}
+  playerCube: {fileID: 0}
 --- !u!232 &9073737728999733519
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -550,7 +550,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.39857626, y: -0.4622774}
+  m_LinearOffset: {x: 0.39857617, y: -0.4622778}
   m_AngularOffset: 0
 --- !u!254 &7636905446554378171
 RelativeJoint2D:
@@ -570,7 +570,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.7971568, y: 0}
+  m_LinearOffset: {x: 0.79715645, y: 0}
   m_AngularOffset: 0
 --- !u!254 &7359789446511942944
 RelativeJoint2D:
@@ -590,7 +590,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: -0.7971544}
+  m_LinearOffset: {x: 0, y: -0.79715466}
   m_AngularOffset: 0
 --- !u!232 &5306573411921039791
 DistanceJoint2D:
@@ -624,7 +624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b7712419340d945ac9bd45b544884e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCube: {fileID: 1978626160727912146}
+  playerCube: {fileID: 0}
 --- !u!232 &7791408099454311200
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -765,7 +765,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.39858055, y: 0.334877}
+  m_LinearOffset: {x: -0.3985803, y: 0.33487684}
   m_AngularOffset: 0
 --- !u!254 &8207348201385576690
 RelativeJoint2D:
@@ -785,7 +785,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.7971568, y: 0}
+  m_LinearOffset: {x: -0.79715645, y: 0}
   m_AngularOffset: 0
 --- !u!254 &4348422380520794259
 RelativeJoint2D:
@@ -805,7 +805,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: 0.7971544}
+  m_LinearOffset: {x: 0, y: 0.79715466}
   m_AngularOffset: 0
 --- !u!232 &9202049573703723145
 DistanceJoint2D:
@@ -839,7 +839,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24b7712419340d945ac9bd45b544884e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCube: {fileID: 1978626160727912146}
+  playerCube: {fileID: 0}
 --- !u!232 &5935476375211808754
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -869,6 +869,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1253292162782394739}
+  - component: {fileID: 2962474705590939223}
+  - component: {fileID: 1308168896104237239}
+  - component: {fileID: 6469770340912714208}
   m_Layer: 0
   m_Name: PlayerTop
   m_TagString: Bone
@@ -896,6 +899,86 @@ Transform:
   - {fileID: 5503517080748922320}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2962474705590939223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3972944346491745386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63ac0c413e2b8804180a7996daa1cf71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bones:
+  - transform: {fileID: 5463822667010390700}
+  - transform: {fileID: 2909417575875178978}
+  - transform: {fileID: 779621436895578884}
+  - transform: {fileID: 2856106554694203464}
+  - transform: {fileID: 5503517080748922320}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  force: 350
+  downForce: 400
+  jumpForce: 31
+  maxGroundSpeed: 18
+  maxAirSpeed: 11
+  isGrounded: 0
+  isDead: 0
+  scaleAmout: 0.2
+  initialGrowNum: 3
+  maxGrowNum: 5
+  growNum: 1
+  cinemachineCamera: {fileID: 0}
+--- !u!114 &1308168896104237239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3972944346491745386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cd3c801e7283af44b209baf55178d25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 5987016154528592320, guid: 14e142f2714f16340ac398c2fe1e1bae, type: 3}
+  launchForce: 25
+  spreadAngle: 45
+  ignoreCollisionTime: 0.3
+  recoilForce: 20
+--- !u!114 &6469770340912714208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3972944346491745386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: Teclado 1
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &5778691135240572080
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,9 +992,6 @@ GameObject:
   - component: {fileID: 351406383016942804}
   - component: {fileID: 7606487859737500959}
   - component: {fileID: 6093199717976847269}
-  - component: {fileID: 3133718991008384452}
-  - component: {fileID: 1978626160727912146}
-  - component: {fileID: 5720160935349430621}
   m_Layer: 6
   m_Name: bone_1_root
   m_TagString: Bone
@@ -1077,85 +1157,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &3133718991008384452
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5778691135240572080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Teclado 1
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!114 &1978626160727912146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5778691135240572080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63ac0c413e2b8804180a7996daa1cf71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bones:
-  - transform: {fileID: 5463822667010390700}
-  - transform: {fileID: 2909417575875178978}
-  - transform: {fileID: 779621436895578884}
-  - transform: {fileID: 2856106554694203464}
-  - transform: {fileID: 5503517080748922320}
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 8
-  force: 350
-  downForce: 400
-  jumpForce: 31
-  maxGroundSpeed: 18
-  maxAirSpeed: 11
-  isGrounded: 0
-  scaleAmout: 0.2
-  scaleSpeed: 5
-  initialGrowNum: 3
-  growNum: 1
-  cinemachineCamera: {fileID: 0}
---- !u!114 &5720160935349430621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5778691135240572080}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cd3c801e7283af44b209baf55178d25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 5987016154528592320, guid: 14e142f2714f16340ac398c2fe1e1bae, type: 3}
-  launchForce: 25
-  spreadAngle: 45
-  ignoreCollisionTime: 0.3
-  recoilForce: 20
 --- !u!1 &5846883991151425291
 GameObject:
   m_ObjectHideFlags: 0
@@ -1281,7 +1282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48816d55c2f2fbd45a992aaa28baa438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 1978626160727912146}
+  playerController: {fileID: 0}
   animator: {fileID: 8145388303122726876}
   verticalSmooth: 0.1
 --- !u!114 &6780348275536463957
@@ -1315,6 +1316,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48816d55c2f2fbd45a992aaa28baa438, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerController: {fileID: 1978626160727912146}
+  playerController: {fileID: 0}
   animator: {fileID: 8145388303122726876}
   verticalSmooth: 0.1
