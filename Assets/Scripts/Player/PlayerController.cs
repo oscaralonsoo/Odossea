@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     [Header("Movement")]
     [SerializeField] LayerMask groundLayer;
     [SerializeField] float force = 50f;
-    [SerializeField] float downForce = 20f;
+    [SerializeField] public float downForce = 20f;
     [SerializeField] float jumpForce = 300f;
     [SerializeField] float maxGroundSpeed = 10f;
     [SerializeField] float maxAirSpeed = 5f;
