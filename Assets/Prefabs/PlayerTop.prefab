@@ -120,7 +120,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.39857617, y: 0.33487684}
+  m_LinearOffset: {x: 0.39857864, y: 0.334877}
   m_AngularOffset: 0
 --- !u!254 &9086414821288901534
 RelativeJoint2D:
@@ -140,7 +140,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: 0.79715466}
+  m_LinearOffset: {x: 0, y: 0.7971549}
   m_AngularOffset: 0
 --- !u!254 &2138144945273200969
 RelativeJoint2D:
@@ -160,7 +160,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.79715645, y: 0}
+  m_LinearOffset: {x: 0.7971573, y: 0}
   m_AngularOffset: 0
 --- !u!232 &6959017677817150002
 DistanceJoint2D:
@@ -335,7 +335,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.3985803, y: -0.4622778}
+  m_LinearOffset: {x: -0.39857864, y: -0.4622779}
   m_AngularOffset: 0
 --- !u!254 &3062174566863139655
 RelativeJoint2D:
@@ -355,7 +355,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: -0.79715466}
+  m_LinearOffset: {x: 0, y: -0.7971549}
   m_AngularOffset: 0
 --- !u!254 &4732655867712091220
 RelativeJoint2D:
@@ -375,7 +375,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.79715645, y: 0}
+  m_LinearOffset: {x: -0.7971573, y: 0}
   m_AngularOffset: 0
 --- !u!232 &951582663498002254
 DistanceJoint2D:
@@ -550,7 +550,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.39857617, y: -0.4622778}
+  m_LinearOffset: {x: 0.39857864, y: -0.4622779}
   m_AngularOffset: 0
 --- !u!254 &7636905446554378171
 RelativeJoint2D:
@@ -570,7 +570,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.79715645, y: 0}
+  m_LinearOffset: {x: 0.7971573, y: 0}
   m_AngularOffset: 0
 --- !u!254 &7359789446511942944
 RelativeJoint2D:
@@ -590,7 +590,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: -0.79715466}
+  m_LinearOffset: {x: 0, y: -0.7971549}
   m_AngularOffset: 0
 --- !u!232 &5306573411921039791
 DistanceJoint2D:
@@ -765,7 +765,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.3985803, y: 0.33487684}
+  m_LinearOffset: {x: -0.39857864, y: 0.334877}
   m_AngularOffset: 0
 --- !u!254 &8207348201385576690
 RelativeJoint2D:
@@ -785,7 +785,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.79715645, y: 0}
+  m_LinearOffset: {x: -0.7971573, y: 0}
   m_AngularOffset: 0
 --- !u!254 &4348422380520794259
 RelativeJoint2D:
@@ -805,7 +805,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: 0.79715466}
+  m_LinearOffset: {x: 0, y: 0.7971549}
   m_AngularOffset: 0
 --- !u!232 &9202049573703723145
 DistanceJoint2D:
@@ -975,7 +975,7 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Teclado 1
+  m_DefaultControlScheme: Gamepad
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
@@ -1038,7 +1038,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 7
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 55e34fd50a41ba5418686a5773bcbbec, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1060,7 +1060,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -8794698323247294114, guid: 01768ebdd1aa1434da5d2585708df0d7, type: 3}
-  m_Color: {r: 0.5906634, g: 0.8962264, b: 0.57916516, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

@@ -1,19 +1,21 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class DoorBehaviour : MonoBehaviour
 {
-    Vector3 closedPos;
-    Vector3 openPos;
+    Vector2 closedPos;
+    Vector2 openPos;
 
-    [SerializeField] float openHeight = 5f;
     [SerializeField] float speed = 10f;
+    [SerializeField] Vector2 displacement;
 
     bool isOpen;
+    int users = 0;
 
     void Awake()
     {
         closedPos = transform.position;
-        openPos = closedPos + Vector3.up * openHeight;
+        openPos = closedPos + displacement;
     }
 
     void Update()
@@ -24,11 +26,18 @@ public class DoorBehaviour : MonoBehaviour
 
     public void SetDoor(bool open)
     {
-        isOpen = open;
+        if (open) users++;
+        else users--;
+        isOpen = users > 0;
     }
 
     public void ToggleDoor()
     {
         isOpen = !isOpen;
+    }
+
+    public bool IsOpen()
+    {
+        return isOpen;
     }
 }

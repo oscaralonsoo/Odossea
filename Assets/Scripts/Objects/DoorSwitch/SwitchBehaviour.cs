@@ -14,27 +14,28 @@ public class SwitchBehaviour : MonoBehaviour
     [SerializeField] DoorBehaviour door;
     [SerializeField] SwitchMode mode;
 
-    float switchSizeY;
     Vector3 upPos;
     Vector3 downPos;
 
     bool isPressed;
     int pressCount = 0;
 
+    [SerializeField] Transform button;
+
     [SerializeField] float switchSpeed = 3f;
     [SerializeField] float releaseDelay = 0.2f;
+    [SerializeField] float downPosY = 0.2f;
 
     void Awake()
     {
-        switchSizeY = transform.localScale.y / 2;
-        upPos = transform.position;
-        downPos = upPos + Vector3.down * switchSizeY;
+        upPos = button.position;
+        downPos = upPos + Vector3.down * downPosY;
     }
 
     void Update()
     {
         Vector3 target = isPressed ? downPos : upPos;
-        transform.position = Vector3.MoveTowards(transform.position, target, switchSpeed * Time.deltaTime);
+        button.position = Vector3.MoveTowards(button.position, target, switchSpeed * Time.deltaTime);
     }
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -49,11 +50,11 @@ public class SwitchBehaviour : MonoBehaviour
         switch (mode)
         {
             case SwitchMode.OpenOnly:
-                door.SetDoor(true);
+                if(!door.IsOpen())door.SetDoor(true);
                 break;
 
             case SwitchMode.CloseOnly:
-                door.SetDoor(false);
+                if (door.IsOpen()) door.SetDoor(false);
                 break;
 
             case SwitchMode.Toggle:
