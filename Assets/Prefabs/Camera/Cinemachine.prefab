@@ -66,7 +66,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 520.5, y: -7.001751}
+  m_Offset: {x: 520.5, y: 45.840157}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -76,7 +76,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1228.3, y: 144.58}
+  m_Size: {x: 1228.3, y: 183.89223}
   m_EdgeRadius: 0
 --- !u!1 &648089395875656441
 GameObject:
@@ -346,7 +346,7 @@ GameObject:
   - component: {fileID: 3590148486306934754}
   m_Layer: 8
   m_Name: CinemachineBrain
-  m_TagString: Untagged
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1273,7 +1273,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6174623518687857882}
   - component: {fileID: 4051203824254697267}
-  - component: {fileID: 2980504255765608057}
   - component: {fileID: 3897698982852155204}
   m_Layer: 0
   m_Name: UICamera
@@ -1291,7 +1290,7 @@ Transform:
   m_GameObject: {fileID: 4902785979155155503}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -95.17847}
+  m_LocalPosition: {x: 33.2, y: -49.4, z: -95.17847}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1348,14 +1347,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &2980504255765608057
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4902785979155155503}
-  m_Enabled: 1
 --- !u!114 &3897698982852155204
 MonoBehaviour:
   m_ObjectHideFlags: 0
