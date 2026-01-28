@@ -17,17 +17,8 @@ public class MassCubeInstantiator : MonoBehaviour
     }
     public void Shoot(Vector2 direction)
     {
-        var player = GetComponent<PlayerController>();
-
-        if (player.growNum <= 1)
-            return;
-
-        if (direction == Vector2.zero)
-            return;
-
         LaunchCube(direction, false, transform.position, launchForce);
         ApplyRecoilForce(direction);
-        player.Shrink(1);
     }
 
 

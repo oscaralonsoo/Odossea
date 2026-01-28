@@ -158,7 +158,11 @@ public class PlayerController : MonoBehaviour
 
         if (shootRequested && aimDirection != Vector2.zero)
         {
-            GetComponent<MassCubeInstantiator>().Shoot(aimDirection);
+            if (growNum > 1)
+            {
+                Shrink(1);
+                GetComponent<MassCubeInstantiator>().Shoot(aimDirection);
+            }
         }
 
         jumpRequested = false;
