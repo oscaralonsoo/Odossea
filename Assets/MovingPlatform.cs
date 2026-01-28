@@ -4,9 +4,7 @@ using UnityEngine;
 public class MovingPlatform : MonoBehaviour
 {
     Rigidbody2D rigidBody;
-
-    [Header("ROUTE")]
-    [SerializeField] List<Transform> routePoints;
+    
 
     [Header("PROPERTIES")]
     [SerializeField] bool forward = true;
@@ -18,25 +16,34 @@ public class MovingPlatform : MonoBehaviour
     [Header("DEBUG")]
     [SerializeField] int currentPoint = 0;
     [SerializeField] int destinationPoint = 0;
+    [SerializeField] List<Vector3> routePoints;
 
     private void Awake()
     {
         rigidBody = GetComponent<Rigidbody2D>();
-        transform.position = routePoints[0].position;
-        currentPoint = 0;
-        destinationPoint = 0;
-        CalculateNextPoint();
-
         if (accelerationDistance < 0.1f) accelerationDistance = 0.1f;
         if (brakingDistance < 0.1f) brakingDistance = 0.1f;
+        currentPoint = 0;
+        destinationPoint = 0;
+
+        foreach (Transform child in transform.GetComponentInChildren<Transform>())
+        {
+            if (child == transform) continue;
+            routePoints.Add(child.position);
+        }
+        if (routePoints.Count > 0) transform.position = routePoints[0];
+
+        CalculateNextPoint();
+
+        
     }
 
     void FixedUpdate()
     {
         if (routePoints == null || routePoints.Count <= 1) return;
 
-        Vector2 startPos = routePoints[currentPoint].position;
-        Vector2 targetPos = routePoints[destinationPoint].position;
+        Vector2 startPos = routePoints[currentPoint];
+        Vector2 targetPos = routePoints[destinationPoint];
         Vector2 currentPos = transform.position;
 
         Vector2 toTarget = targetPos - currentPos;
@@ -44,7 +51,7 @@ public class MovingPlatform : MonoBehaviour
 
         Vector2 moveDirection = (targetPos - startPos).normalized;
 
-        if (Vector2.Distance(transform.position, routePoints[destinationPoint].position) <= 0.1f)
+        if (Vector2.Distance(transform.position, routePoints[destinationPoint]) <= 0.1f)
         {
             transform.position = targetPos;
             rigidBody.linearVelocity = Vector2.zero;
