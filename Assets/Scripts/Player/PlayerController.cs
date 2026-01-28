@@ -126,6 +126,8 @@ public class PlayerController : MonoBehaviour
 
         if (dir.sqrMagnitude > 0.001f)
             aimDirection = dir.normalized;
+
+        dropableCubes.RemoveAll(cube => cube == null || cube.collided);
     }
 
     private void FixedUpdate()
@@ -202,7 +204,7 @@ public class PlayerController : MonoBehaviour
                 GetComponent<MassCubeInstantiator>().Shoot(aimDirection);
             }
         }
-
+       
         jumpRequested = false;
         shootRequested = false;
     }

@@ -130,6 +130,7 @@ public class DropableCube : MonoBehaviour
     public void Collided()
     {
         collided = true;
+        
         Destroy(transform.gameObject);
     }
 }
