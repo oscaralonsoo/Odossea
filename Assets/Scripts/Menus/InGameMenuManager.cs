@@ -59,13 +59,8 @@ public class InGameMenuManager : MonoBehaviour
 
     public bool TogglePause()
     {
-            if (current == soundPanel || current == graphicsPanel || current == customizationPanel)
-                ShowOptions();
-            else if (current == optionsPanel)
-                ShowPause();
-            else if (current == pausePanel)
+            if(Time.timeScale == 0)
             {
-            
                 Resume();
                 return false;
             }

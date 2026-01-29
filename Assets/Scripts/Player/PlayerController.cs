@@ -160,12 +160,7 @@ public class PlayerController : MonoBehaviour
         if (value.isPressed)
             menuManager.TogglePause();
     }
-    public void OnBack (InputValue value)
-    {   
-        if(Time.timeScale == 0)
-        if (value.isPressed)
-            menuManager.TogglePause();
-    }
+
     private void Update()
     {
         dropableCubes.RemoveAll(cube => cube == null || cube.collided);

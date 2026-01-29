@@ -432518,6 +432518,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9186648956539299372, guid: 458f173bbbbcfdd428e035713be282cd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1.7680664
+      objectReference: {fileID: 0}
+    - target: {fileID: 9186648956539299372, guid: 458f173bbbbcfdd428e035713be282cd, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -5.303955
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -445649,14 +445657,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2081859939}
-    - target: {fileID: 470346194845705830, guid: 4ffbdcf323321f949a736262392dc5bf, type: 3}
-      propertyPath: m_DefaultActionMap
-      value: df70fa95-8a34-4494-b137-73ab6b9c7d37
-      objectReference: {fileID: 0}
-    - target: {fileID: 470346194845705830, guid: 4ffbdcf323321f949a736262392dc5bf, type: 3}
-      propertyPath: m_NeverAutoSwitchControlSchemes
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1253292162782394739, guid: 4ffbdcf323321f949a736262392dc5bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -48.89999
@@ -446327,10 +446327,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7758548625516633171, guid: 16f1d535087ba4344b4bf9a55e28a9ee, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 76.04682
-      objectReference: {fileID: 0}
     - target: {fileID: 7758548625516633171, guid: 16f1d535087ba4344b4bf9a55e28a9ee, type: 3}
       propertyPath: m_LocalPosition.x
       value: 615.6

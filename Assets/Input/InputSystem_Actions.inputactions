@@ -60,15 +60,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Back",
-                    "type": "Button",
-                    "id": "97a694df-ca80-4c3d-aa69-2bddba8cdb42",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Navigate",
                     "type": "PassThrough",
                     "id": "6ef34c0d-cbbd-41f0-b082-be72e9a098b8",
@@ -389,34 +380,12 @@
                 },
                 {
                     "name": "",
-                    "id": "a1d06d78-5885-4a77-a853-d774b01026e5",
+                    "id": "467b25fc-61f8-469b-8c6b-da05ee46dac1",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
                     "groups": ";KeyBoard",
                     "action": "Pause",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "0731932d-dfe9-4c68-bdc5-cb4a7d32bd83",
-                    "path": "<Gamepad>/buttonEast",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "Back",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "25999535-77be-4277-93db-995de4ec8fbf",
-                    "path": "<Keyboard>/escape",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";KeyBoard",
-                    "action": "Back",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
