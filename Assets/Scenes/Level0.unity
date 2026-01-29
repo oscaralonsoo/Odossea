@@ -445584,6 +445584,18 @@ PrefabInstance:
       propertyPath: Loop
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4891323779120817883, guid: 2b4a45e35822f6f429dc8c78f229ccc5, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: cc59ca2242b44ad4cbc393cc5da77f06, type: 3}
+    - target: {fileID: 4891323779120817883, guid: 2b4a45e35822f6f429dc8c78f229ccc5, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: cc59ca2242b44ad4cbc393cc5da77f06, type: 3}
+    - target: {fileID: 4891323779120817883, guid: 2b4a45e35822f6f429dc8c78f229ccc5, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5120103426000459784, guid: 2b4a45e35822f6f429dc8c78f229ccc5, type: 3}
       propertyPath: menuMusic
       value: 
