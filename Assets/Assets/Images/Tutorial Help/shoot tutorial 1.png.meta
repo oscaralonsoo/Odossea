@@ -1,0 +1,949 @@
+fileFormatVersion: 2
+guid: ef380d5ef7dc4d64f9dd4bb3b7426dc5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7112541082041240817
+    second: shoot tutorial 1_0
+  - first:
+      213: -6887987016256889914
+    second: shoot tutorial 1_1
+  - first:
+      213: 5065384135183995284
+    second: shoot tutorial 1_2
+  - first:
+      213: -2993905211928405179
+    second: shoot tutorial 1_3
+  - first:
+      213: 3220535108128377762
+    second: shoot tutorial 1_4
+  - first:
+      213: 4998605970497402312
+    second: shoot tutorial 1_5
+  - first:
+      213: -321705827007123770
+    second: shoot tutorial 1_6
+  - first:
+      213: 4332689445368926117
+    second: shoot tutorial 1_7
+  - first:
+      213: -6844085108425210144
+    second: shoot tutorial 1_8
+  - first:
+      213: -4157928274683400083
+    second: shoot tutorial 1_9
+  - first:
+      213: 8972342829506764379
+    second: shoot tutorial 1_10
+  - first:
+      213: -5945148267812448238
+    second: shoot tutorial 1_11
+  - first:
+      213: -1865118389439235093
+    second: shoot tutorial 1_12
+  - first:
+      213: -2974239389916853037
+    second: shoot tutorial 1_13
+  - first:
+      213: 4145084857869518519
+    second: shoot tutorial 1_14
+  - first:
+      213: 312844974641968426
+    second: shoot tutorial 1_15
+  - first:
+      213: 7166641971840688971
+    second: shoot tutorial 1_16
+  - first:
+      213: -6974109245618131383
+    second: shoot tutorial 1_17
+  - first:
+      213: 194184057261752180
+    second: shoot tutorial 1_18
+  - first:
+      213: -4375161467269723710
+    second: shoot tutorial 1_19
+  - first:
+      213: 92983826475078588
+    second: shoot tutorial 1_20
+  - first:
+      213: 5912746446730957084
+    second: shoot tutorial 1_21
+  - first:
+      213: -4900724607988220115
+    second: shoot tutorial 1_22
+  - first:
+      213: -5245059023351412162
+    second: shoot tutorial 1_23
+  - first:
+      213: 2158914004442849283
+    second: shoot tutorial 1_24
+  - first:
+      213: -630873878080281385
+    second: shoot tutorial 1_25
+  - first:
+      213: -5633410322502715562
+    second: shoot tutorial 1_26
+  - first:
+      213: 4388505650199160148
+    second: shoot tutorial 1_27
+  - first:
+      213: -530884536084937283
+    second: shoot tutorial 1_28
+  - first:
+      213: 4050805107460011968
+    second: shoot tutorial 1_29
+  - first:
+      213: -7167036204166686444
+    second: shoot tutorial 1_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: shoot tutorial 1_0
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 2906
+        width: 275
+        height: 539
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f033f8ad19d2b4d90800000000000000
+      internalID: -7112541082041240817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_1
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 2906
+        width: 108
+        height: 539
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cb51868d44f860a0800000000000000
+      internalID: -6887987016256889914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_2
+      rect:
+        serializedVersion: 2
+        x: 1918
+        y: 2906
+        width: 444
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4919a8c880cdb4640800000000000000
+      internalID: 5065384135183995284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_3
+      rect:
+        serializedVersion: 2
+        x: 2638
+        y: 2750
+        width: 539
+        height: 722
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54b11d772138376d0800000000000000
+      internalID: -2993905211928405179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_4
+      rect:
+        serializedVersion: 2
+        x: 3332
+        y: 2711
+        width: 54
+        height: 797
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ab8aa22e93a1bc20800000000000000
+      internalID: 3220535108128377762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_5
+      rect:
+        serializedVersion: 2
+        x: 3530
+        y: 2805
+        width: 659
+        height: 659
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c5f4ab75ad9e5540800000000000000
+      internalID: 4998605970497402312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_6
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 1938
+        width: 278
+        height: 539
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ce211b3142198bf0800000000000000
+      internalID: -321705827007123770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_7
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 1938
+        width: 274
+        height: 539
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5af8c41581ec02c30800000000000000
+      internalID: 4332689445368926117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_8
+      rect:
+        serializedVersion: 2
+        x: 1884
+        y: 1938
+        width: 277
+        height: 539
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e646cbfadce401a0800000000000000
+      internalID: -6844085108425210144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_9
+      rect:
+        serializedVersion: 2
+        x: 2197
+        y: 1938
+        width: 277
+        height: 539
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6071f983421c46c0800000000000000
+      internalID: -4157928274683400083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_10
+      rect:
+        serializedVersion: 2
+        x: 2485
+        y: 1938
+        width: 261
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5e16c3144a248c70800000000000000
+      internalID: 8972342829506764379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_11
+      rect:
+        serializedVersion: 2
+        x: 2879
+        y: 1821
+        width: 541
+        height: 721
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 218920036279e7da0800000000000000
+      internalID: -5945148267812448238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_12
+      rect:
+        serializedVersion: 2
+        x: 3537
+        y: 1770
+        width: 54
+        height: 797
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bebfc65e4b4cd16e0800000000000000
+      internalID: -1865118389439235093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_13
+      rect:
+        serializedVersion: 2
+        x: 3751
+        y: 1897
+        width: 649
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dc0807780169b6d0800000000000000
+      internalID: -2974239389916853037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_14
+      rect:
+        serializedVersion: 2
+        x: 2092
+        y: 1348
+        width: 349
+        height: 349
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b6c92577bc468930800000000000000
+      internalID: 4145084857869518519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_15
+      rect:
+        serializedVersion: 2
+        x: 2727
+        y: 1344
+        width: 306
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a25fc4fc8d2775400800000000000000
+      internalID: 312844974641968426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_16
+      rect:
+        serializedVersion: 2
+        x: 3151
+        y: 1500
+        width: 167
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4328f327e6057360800000000000000
+      internalID: 7166641971840688971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_17
+      rect:
+        serializedVersion: 2
+        x: 3394
+        y: 1506
+        width: 166
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94ee92e679cf63f90800000000000000
+      internalID: -6974109245618131383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_18
+      rect:
+        serializedVersion: 2
+        x: 3630
+        y: 1453
+        width: 169
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47f712a0f51e1b200800000000000000
+      internalID: 194184057261752180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_19
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 1273
+        width: 86
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c9496c73dd4843c0800000000000000
+      internalID: -4375161467269723710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_20
+      rect:
+        serializedVersion: 2
+        x: 3856
+        y: 1346
+        width: 162
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb357ea2c485a4100800000000000000
+      internalID: 92983826475078588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_21
+      rect:
+        serializedVersion: 2
+        x: 4053
+        y: 1182
+        width: 140
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c111a54f09b4e0250800000000000000
+      internalID: 5912746446730957084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_22
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 1064
+        width: 86
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2fb8d62fe02dfbb0800000000000000
+      internalID: -4900724607988220115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_23
+      rect:
+        serializedVersion: 2
+        x: 2008
+        y: 199
+        width: 1710
+        height: 950
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3a8e279b9ec537b0800000000000000
+      internalID: -5245059023351412162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_24
+      rect:
+        serializedVersion: 2
+        x: 4200
+        y: 975
+        width: 105
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 300ae6f39d006fd10800000000000000
+      internalID: 2158914004442849283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_25
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 0
+        width: 798
+        height: 797
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d4a3f6ec8fae37f0800000000000000
+      internalID: -630873878080281385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_26
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 775
+        width: 86
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 657f435a82b12d1b0800000000000000
+      internalID: -5633410322502715562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_27
+      rect:
+        serializedVersion: 2
+        x: 4287
+        y: 744
+        width: 71
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4556ae633aa17ec30800000000000000
+      internalID: 4388505650199160148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_28
+      rect:
+        serializedVersion: 2
+        x: 4206
+        y: 484
+        width: 285
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db5c8e1c35be1a8f0800000000000000
+      internalID: -530884536084937283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_29
+      rect:
+        serializedVersion: 2
+        x: 4323
+        y: 571
+        width: 45
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c7fd7c78c9573830800000000000000
+      internalID: 4050805107460011968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shoot tutorial 1_30
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 94
+        width: 306
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 419d74e7b82998c90800000000000000
+      internalID: -7167036204166686444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      shoot tutorial 1_0: -7112541082041240817
+      shoot tutorial 1_1: -6887987016256889914
+      shoot tutorial 1_10: 8972342829506764379
+      shoot tutorial 1_11: -5945148267812448238
+      shoot tutorial 1_12: -1865118389439235093
+      shoot tutorial 1_13: -2974239389916853037
+      shoot tutorial 1_14: 4145084857869518519
+      shoot tutorial 1_15: 312844974641968426
+      shoot tutorial 1_16: 7166641971840688971
+      shoot tutorial 1_17: -6974109245618131383
+      shoot tutorial 1_18: 194184057261752180
+      shoot tutorial 1_19: -4375161467269723710
+      shoot tutorial 1_2: 5065384135183995284
+      shoot tutorial 1_20: 92983826475078588
+      shoot tutorial 1_21: 5912746446730957084
+      shoot tutorial 1_22: -4900724607988220115
+      shoot tutorial 1_23: -5245059023351412162
+      shoot tutorial 1_24: 2158914004442849283
+      shoot tutorial 1_25: -630873878080281385
+      shoot tutorial 1_26: -5633410322502715562
+      shoot tutorial 1_27: 4388505650199160148
+      shoot tutorial 1_28: -530884536084937283
+      shoot tutorial 1_29: 4050805107460011968
+      shoot tutorial 1_3: -2993905211928405179
+      shoot tutorial 1_30: -7167036204166686444
+      shoot tutorial 1_4: 3220535108128377762
+      shoot tutorial 1_5: 4998605970497402312
+      shoot tutorial 1_6: -321705827007123770
+      shoot tutorial 1_7: 4332689445368926117
+      shoot tutorial 1_8: -6844085108425210144
+      shoot tutorial 1_9: -4157928274683400083
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

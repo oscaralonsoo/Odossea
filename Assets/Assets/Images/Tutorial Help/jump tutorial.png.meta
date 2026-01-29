@@ -1,0 +1,1027 @@
+fileFormatVersion: 2
+guid: d6a7b14916e39b2498f6b58f72470fe7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1517403175925332321
+    second: jump tutorial_0
+  - first:
+      213: 7909672653477571642
+    second: jump tutorial_1
+  - first:
+      213: -1703275144248589870
+    second: jump tutorial_2
+  - first:
+      213: -5696000276283356322
+    second: jump tutorial_3
+  - first:
+      213: 1877282319870384821
+    second: jump tutorial_4
+  - first:
+      213: 4280378197531926718
+    second: jump tutorial_5
+  - first:
+      213: -2693472533372878029
+    second: jump tutorial_6
+  - first:
+      213: -2811401382575454987
+    second: jump tutorial_7
+  - first:
+      213: 8470014520139745173
+    second: jump tutorial_8
+  - first:
+      213: 8956226009622211933
+    second: jump tutorial_9
+  - first:
+      213: 3601191335313889028
+    second: jump tutorial_10
+  - first:
+      213: 5010679373718218780
+    second: jump tutorial_11
+  - first:
+      213: -2449265806273923517
+    second: jump tutorial_12
+  - first:
+      213: -1855950976133506224
+    second: jump tutorial_13
+  - first:
+      213: -5190345125638960204
+    second: jump tutorial_14
+  - first:
+      213: 575951522927355650
+    second: jump tutorial_15
+  - first:
+      213: -1389405627123380209
+    second: jump tutorial_16
+  - first:
+      213: 4530670052244561025
+    second: jump tutorial_17
+  - first:
+      213: -4246524712061228316
+    second: jump tutorial_18
+  - first:
+      213: -2832461814060932078
+    second: jump tutorial_19
+  - first:
+      213: 7217924546366661453
+    second: jump tutorial_20
+  - first:
+      213: 1132379963207949924
+    second: jump tutorial_21
+  - first:
+      213: 4518218164550354210
+    second: jump tutorial_22
+  - first:
+      213: -8882837879374443575
+    second: jump tutorial_23
+  - first:
+      213: -7117380629521325550
+    second: jump tutorial_24
+  - first:
+      213: -3656580102459364131
+    second: jump tutorial_25
+  - first:
+      213: 5886386725884180528
+    second: jump tutorial_26
+  - first:
+      213: 2195926044950252423
+    second: jump tutorial_27
+  - first:
+      213: -7974798953849551242
+    second: jump tutorial_28
+  - first:
+      213: -7031850633724640976
+    second: jump tutorial_29
+  - first:
+      213: -4472898142751528647
+    second: jump tutorial_30
+  - first:
+      213: 2860332487804057540
+    second: jump tutorial_31
+  - first:
+      213: 7880168149759064206
+    second: jump tutorial_32
+  - first:
+      213: -6555533075860526111
+    second: jump tutorial_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: jump tutorial_0
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 2689
+        width: 246
+        height: 506
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16934122626ee0510800000000000000
+      internalID: 1517403175925332321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_1
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 2689
+        width: 257
+        height: 506
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3ce6200f5dc4cd60800000000000000
+      internalID: 7909672653477571642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_2
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 2689
+        width: 416
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d18f48d740cc58e0800000000000000
+      internalID: -1703275144248589870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_3
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 2689
+        width: 257
+        height: 506
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5b8a9b6dedb3f0b0800000000000000
+      internalID: -5696000276283356322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_4
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 2730
+        width: 1695
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5badefad2527d0a10800000000000000
+      internalID: 1877282319870384821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_5
+      rect:
+        serializedVersion: 2
+        x: 3457
+        y: 2555
+        width: 54
+        height: 752
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb0a730da45f66b30800000000000000
+      internalID: 4280378197531926718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_6
+      rect:
+        serializedVersion: 2
+        x: 3612
+        y: 2816
+        width: 298
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 333c904600dde9ad0800000000000000
+      internalID: -2693472533372878029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_7
+      rect:
+        serializedVersion: 2
+        x: 3879
+        y: 3083
+        width: 298
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f44c868655ebf8d0800000000000000
+      internalID: -2811401382575454987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_8
+      rect:
+        serializedVersion: 2
+        x: 4145
+        y: 2816
+        width: 298
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 597845b74598b8570800000000000000
+      internalID: 8470014520139745173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_9
+      rect:
+        serializedVersion: 2
+        x: 3887
+        y: 2558
+        width: 281
+        height: 281
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5d65a78a18ea4c70800000000000000
+      internalID: 8956226009622211933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_10
+      rect:
+        serializedVersion: 2
+        x: 3171
+        y: 1974
+        width: 78
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 407599580700af130800000000000000
+      internalID: 3601191335313889028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_11
+      rect:
+        serializedVersion: 2
+        x: 3281
+        y: 1989
+        width: 77
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c18e9d9b752898540800000000000000
+      internalID: 5010679373718218780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_12
+      rect:
+        serializedVersion: 2
+        x: 3391
+        y: 1997
+        width: 69
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3463888d9b5720ed0800000000000000
+      internalID: -2449265806273923517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_13
+      rect:
+        serializedVersion: 2
+        x: 3423
+        y: 1817
+        width: 166
+        height: 393
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05bd503ab665e36e0800000000000000
+      internalID: -1855950976133506224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_14
+      rect:
+        serializedVersion: 2
+        x: 2957
+        y: 1922
+        width: 78
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bb0c9c9b9038f7b0800000000000000
+      internalID: -5190345125638960204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_15
+      rect:
+        serializedVersion: 2
+        x: 3063
+        y: 1952
+        width: 78
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2072eebcbd03ef700800000000000000
+      internalID: 575951522927355650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_16
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 1842
+        width: 77
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f00d16a81f6d7bce0800000000000000
+      internalID: -1389405627123380209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_17
+      rect:
+        serializedVersion: 2
+        x: 2853
+        y: 1886
+        width: 78
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18c9982786c20ee30800000000000000
+      internalID: 4530670052244561025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_18
+      rect:
+        serializedVersion: 2
+        x: 2558
+        y: 1736
+        width: 75
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ea2caff5405115c0800000000000000
+      internalID: -4246524712061228316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_19
+      rect:
+        serializedVersion: 2
+        x: 2653
+        y: 1792
+        width: 76
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2142a05bcf211b8d0800000000000000
+      internalID: -2832461814060932078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_20
+      rect:
+        serializedVersion: 2
+        x: 3588
+        y: 0
+        width: 1219
+        height: 1882
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d43e1c9f1283b2460800000000000000
+      internalID: 7217924546366661453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_21
+      rect:
+        serializedVersion: 2
+        x: 2467
+        y: 1674
+        width: 74
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46e97c1b39507bf00800000000000000
+      internalID: 1132379963207949924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_22
+      rect:
+        serializedVersion: 2
+        x: 2380
+        y: 1607
+        width: 72
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 225cdbb6b7fe3be30800000000000000
+      internalID: 4518218164550354210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_23
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 1535
+        width: 70
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cb80821302d9b480800000000000000
+      internalID: -8882837879374443575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_24
+      rect:
+        serializedVersion: 2
+        x: 2217
+        y: 1459
+        width: 68
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 212a226e60cf93d90800000000000000
+      internalID: -7117380629521325550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_25
+      rect:
+        serializedVersion: 2
+        x: 2141
+        y: 1379
+        width: 66
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddce52c25c7314dc0800000000000000
+      internalID: -3656580102459364131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_26
+      rect:
+        serializedVersion: 2
+        x: 2069
+        y: 1295
+        width: 65
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 038b6ee2a85a0b150800000000000000
+      internalID: 5886386725884180528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_27
+      rect:
+        serializedVersion: 2
+        x: 2002
+        y: 1209
+        width: 62
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78bc9467a1f797e10800000000000000
+      internalID: 2195926044950252423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_28
+      rect:
+        serializedVersion: 2
+        x: 1937
+        y: 1120
+        width: 60
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67604a09a92d35190800000000000000
+      internalID: -7974798953849551242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_29
+      rect:
+        serializedVersion: 2
+        x: 1877
+        y: 1028
+        width: 58
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 031cc3fda19d96e90800000000000000
+      internalID: -7031850633724640976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_30
+      rect:
+        serializedVersion: 2
+        x: 1821
+        y: 933
+        width: 56
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9396acc66d21de1c0800000000000000
+      internalID: -4472898142751528647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_31
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 7
+        width: 918
+        height: 918
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c7f1133e31f1b720800000000000000
+      internalID: 2860332487804057540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_32
+      rect:
+        serializedVersion: 2
+        x: 1769
+        y: 836
+        width: 53
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e887cb86e2bfb5d60800000000000000
+      internalID: 7880168149759064206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump tutorial_33
+      rect:
+        serializedVersion: 2
+        x: 1722
+        y: 737
+        width: 50
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eb620476611605a0800000000000000
+      internalID: -6555533075860526111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      jump tutorial_0: 1517403175925332321
+      jump tutorial_1: 7909672653477571642
+      jump tutorial_10: 3601191335313889028
+      jump tutorial_11: 5010679373718218780
+      jump tutorial_12: -2449265806273923517
+      jump tutorial_13: -1855950976133506224
+      jump tutorial_14: -5190345125638960204
+      jump tutorial_15: 575951522927355650
+      jump tutorial_16: -1389405627123380209
+      jump tutorial_17: 4530670052244561025
+      jump tutorial_18: -4246524712061228316
+      jump tutorial_19: -2832461814060932078
+      jump tutorial_2: -1703275144248589870
+      jump tutorial_20: 7217924546366661453
+      jump tutorial_21: 1132379963207949924
+      jump tutorial_22: 4518218164550354210
+      jump tutorial_23: -8882837879374443575
+      jump tutorial_24: -7117380629521325550
+      jump tutorial_25: -3656580102459364131
+      jump tutorial_26: 5886386725884180528
+      jump tutorial_27: 2195926044950252423
+      jump tutorial_28: -7974798953849551242
+      jump tutorial_29: -7031850633724640976
+      jump tutorial_3: -5696000276283356322
+      jump tutorial_30: -4472898142751528647
+      jump tutorial_31: 2860332487804057540
+      jump tutorial_32: 7880168149759064206
+      jump tutorial_33: -6555533075860526111
+      jump tutorial_4: 1877282319870384821
+      jump tutorial_5: 4280378197531926718
+      jump tutorial_6: -2693472533372878029
+      jump tutorial_7: -2811401382575454987
+      jump tutorial_8: 8470014520139745173
+      jump tutorial_9: 8956226009622211933
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
