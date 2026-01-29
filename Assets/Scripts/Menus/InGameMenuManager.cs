@@ -53,10 +53,9 @@ public class InGameMenuManager : MonoBehaviour
 
         ApplyGraphicsSettings();
     }
-    void Update()
+
+    public void TogglePause()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
             if (current == soundPanel || current == graphicsPanel || current == customizationPanel)
                 ShowOptions();
             else if (current == optionsPanel)
@@ -65,9 +64,7 @@ public class InGameMenuManager : MonoBehaviour
                 Resume();
             else
                 Pause();
-        }
     }
-
     // PAUSE
     public void Pause()
     {

@@ -67,6 +67,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public bool jumpUnlocked = true;
     [SerializeField] public bool shootUnlocked = true;
 
+    [Header("MenusManager")]
+    [SerializeField] InGameMenuManager menuManager;
     public List<DropableCube> dropableCubes;
     private PlayerInput playerInput;
     private ContactFilter2D groundFilter;
@@ -145,7 +147,16 @@ public class PlayerController : MonoBehaviour
             shootRequested = true;
         }
     }
-
+    public void OnPause (InputValue value)
+    {
+        if (value.isPressed)
+            menuManager.TogglePause();
+    }
+    public void OnBack (InputValue value)
+    {
+        if (value.isPressed)
+            menuManager.TogglePause();
+    }
     private void Update()
     {
         dropableCubes.RemoveAll(cube => cube == null || cube.collided);
