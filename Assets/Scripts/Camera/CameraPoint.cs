@@ -22,7 +22,6 @@ public class CameraPoint : MonoBehaviour
 
         if (vcam != null)
         {
-            Debug.Log("vcam");
             _camaraDentro = true;
             ApplySettings(vcam);
         }

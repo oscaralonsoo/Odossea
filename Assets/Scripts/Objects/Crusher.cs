@@ -97,11 +97,9 @@ public class Crusher : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!waiting && !returning && !waitingAtTop &&
-            (collision.gameObject.layer == LayerMask.NameToLayer("Ground") ||
-             collision.gameObject.layer == LayerMask.NameToLayer("Default")))
+        if (!waiting && !returning && !waitingAtTop && (collision.gameObject.layer == LayerMask.NameToLayer("Default") || collision.gameObject.layer == LayerMask.NameToLayer("Ground")))
         {
             rb.linearVelocity = Vector2.zero;
             rb.bodyType = RigidbodyType2D.Static;
@@ -118,6 +116,8 @@ public class Crusher : MonoBehaviour
             StartCoroutine(GoUpLate());
         }
     }
+
+
 
     IEnumerator GoUpLate()
     {
