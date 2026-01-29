@@ -1,7 +1,15 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
+
 
 public class InGameMenuManager : MonoBehaviour
 {
+    [SerializeField] GameObject pauseFirstButton;
+    [SerializeField] GameObject optionsFirstButton;
+    [SerializeField] GameObject soundFirstButton;
+    [SerializeField] GameObject graphicsFirstButton;
+    [SerializeField] GameObject customizationFirstButton;
+
     // PANELS
     public UIPanel pausePanel;
     public UIPanel optionsPanel;
@@ -72,6 +80,8 @@ public class InGameMenuManager : MonoBehaviour
         overlayPanel.SetActive(true);
         pausePanel.Show();
         current = pausePanel;
+
+        SelectUI(pauseFirstButton);
     }
 
     public void Resume()
@@ -90,6 +100,8 @@ public class InGameMenuManager : MonoBehaviour
 
         optionsPanel.Show();
         current = optionsPanel;
+
+        SelectUI(optionsFirstButton);
     }
 
     public void ShowPause()
@@ -109,6 +121,8 @@ public class InGameMenuManager : MonoBehaviour
 
         soundPanel.Show();
         current = soundPanel;
+
+        SelectUI(soundFirstButton);
     }
 
     public void ShowGraphics()
@@ -118,6 +132,8 @@ public class InGameMenuManager : MonoBehaviour
 
         graphicsPanel.Show();
         current = graphicsPanel;
+
+        SelectUI(graphicsFirstButton);
     }
 
     public void ShowCustomitzation()
@@ -127,6 +143,8 @@ public class InGameMenuManager : MonoBehaviour
 
         customizationPanel.Show();
         current = customizationPanel;
+
+        SelectUI(customizationFirstButton);
     }
 
     // SCENES
@@ -221,5 +239,22 @@ public class InGameMenuManager : MonoBehaviour
         brightnessSlider.value = defaultBrightness;
 
         ApplyGraphicsSettings();
+    }
+
+    void SelectUI(GameObject button)
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(button);
+    }
+
+    void Update()
+    {
+        if (Time.timeScale == 0)
+        {
+            if (EventSystem.current.currentSelectedGameObject == null)
+            {
+                SelectUI(pauseFirstButton);
+            }
+        }
     }
 }
