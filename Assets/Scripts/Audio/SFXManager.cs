@@ -5,9 +5,8 @@ public enum SoundType
 {
  
     SHOOT,
-    SHOOT_MISS,
-    ABSORB,
-    ADD,
+    SWITCH,
+    JUMP,
     MOVE,
     BUTTON_PRESSED
 }

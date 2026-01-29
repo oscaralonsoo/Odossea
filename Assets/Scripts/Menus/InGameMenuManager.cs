@@ -40,8 +40,8 @@ public class InGameMenuManager : MonoBehaviour
         musicSlider.value = pendingMusicVolume;
         sfxSlider.value = pendingSFXVolume;
 
-        MusicManager.Instance.SetMusicVolume(pendingMusicVolume);
-        SFXManager.SetSFXVolume(pendingSFXVolume);
+        MusicManager.Instance.SetMusicVolume(1);
+        SFXManager.SetSFXVolume(1);
 
         // GRAPHICS
         pendingFullscreen = PlayerPrefs.GetInt("Fullscreen", 1) == 1;

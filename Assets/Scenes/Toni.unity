@@ -377799,13 +377799,33 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5563289803326783425, guid: 71b9a2e518c732e468b34382bd110fc3, type: 3}
-      propertyPath: soundList.Array.data[2].clips.Array.size
-      value: 1
+      propertyPath: soundList.Array.size
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5563289803326783425, guid: 71b9a2e518c732e468b34382bd110fc3, type: 3}
-      propertyPath: 'soundList.Array.data[2].clips.Array.data[0]'
-      value: 
-      objectReference: {fileID: 8300000, guid: ab58fef02db8c494ca106b7015d87beb, type: 3}
+      propertyPath: soundList.Array.data[1].name
+      value: SHOOT_MISS
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563289803326783425, guid: 71b9a2e518c732e468b34382bd110fc3, type: 3}
+      propertyPath: soundList.Array.data[2].name
+      value: ABSORB
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563289803326783425, guid: 71b9a2e518c732e468b34382bd110fc3, type: 3}
+      propertyPath: soundList.Array.data[3].name
+      value: SWITCH
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563289803326783425, guid: 71b9a2e518c732e468b34382bd110fc3, type: 3}
+      propertyPath: soundList.Array.data[4].name
+      value: JUMP
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563289803326783425, guid: 71b9a2e518c732e468b34382bd110fc3, type: 3}
+      propertyPath: soundList.Array.data[5].name
+      value: MOVE
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563289803326783425, guid: 71b9a2e518c732e468b34382bd110fc3, type: 3}
+      propertyPath: soundList.Array.data[6].name
+      value: BUTTON_PRESSED
+      objectReference: {fileID: 0}
     - target: {fileID: 9071964214607169084, guid: 71b9a2e518c732e468b34382bd110fc3, type: 3}
       propertyPath: m_Name
       value: SFXManager

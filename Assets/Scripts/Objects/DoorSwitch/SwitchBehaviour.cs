@@ -42,7 +42,7 @@ public class SwitchBehaviour : MonoBehaviour
         if (!col.CompareTag("Bone")) return;
 
         pressCount++;
-
+        SFXManager.PlaySound(SoundType.SWITCH);
         if (pressCount > 1) return;
 
         isPressed = true;
