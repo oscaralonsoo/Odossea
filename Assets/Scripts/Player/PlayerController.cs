@@ -153,7 +153,8 @@ public class PlayerController : MonoBehaviour
             menuManager.TogglePause();
     }
     public void OnBack (InputValue value)
-    {
+    {   
+        if(Time.timeScale == 0)
         if (value.isPressed)
             menuManager.TogglePause();
     }
