@@ -75,12 +75,16 @@ public class PlayerController : MonoBehaviour
 
     [Header("Mira")]
     public Transform mira;
+
+    [Header("Animations")]
+    private Animator animator; // Referencia al Animator
+    [SerializeField] private string verticalVelocityParam = "VerticalVelocity";
     public float AverageVerticalVelocity { get; private set; }
 
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
-
+        animator = GetComponentInChildren<Animator>();
         var playerControlers = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
         foreach (PlayerController player in playerControlers)
         {
@@ -127,7 +131,7 @@ public class PlayerController : MonoBehaviour
         Vector2 stick = value.Get<Vector2>();
         if (stick.sqrMagnitude > 0.1f)
             aimDirection = stick.normalized;
-        if (mira!=null)
+        if (mira!=null && shootUnlocked)
         {
             mira.gameObject.SetActive(stick != Vector2.zero);
             mira.transform.rotation = Quaternion.FromToRotation(Vector2.up, aimDirection);
@@ -173,10 +177,17 @@ public class PlayerController : MonoBehaviour
         if (isDead) return;
 
         int groundedCount = 0;
+        float totalVerticalVelocity = 0; 
+
         foreach (Bone bone in bones)
         {
             bone.grounded = false;
             if (!bone.collider2D) continue;
+
+            if (bone.rigidbody2D != null)
+            {
+                totalVerticalVelocity += bone.rigidbody2D.linearVelocity.y;
+            }
 
             bone.grounded = bone.collider2D.IsTouchingLayers(groundLayer);
             if (bone.grounded)
@@ -187,7 +198,7 @@ public class PlayerController : MonoBehaviour
                 {
                     if (contactPoint.normal.y > 0.60f)
                     {
-                        numContacts++;                       
+                        numContacts++;
                     }
                 }
                 if (numContacts < 1) bone.grounded = false;
@@ -196,7 +207,13 @@ public class PlayerController : MonoBehaviour
         }
 
         isGrounded = groundedCount > 0;
-       
+
+        AverageVerticalVelocity = totalVerticalVelocity / bones.Count;
+        if (animator != null)
+        {
+            animator.SetFloat("VerticalVelocity", AverageVerticalVelocity);
+            animator.SetBool("IsGrounded", isGrounded);
+        }
 
         foreach (Bone bone in bones)
         {
@@ -218,7 +235,6 @@ public class PlayerController : MonoBehaviour
 
             if (jumpUnlocked && isGrounded && jumpRequested)
             {
-
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             }
@@ -241,7 +257,7 @@ public class PlayerController : MonoBehaviour
                 SFXManager.PlaySound(SoundType.SHOOT);
             }
         }
-       
+
         jumpRequested = false;
         shootRequested = false;
     }
