@@ -54,21 +54,23 @@ public class PlayerController : MonoBehaviour
     private Vector2 targetScale;
     private Vector2 startScale;
 
-    public float AverageVerticalVelocity { get; private set; }
-
     // Input
     private Vector2 inputDirection;
     private bool jumpRequested;
-    private bool crouchRequested;
     private bool shootRequested;
     private Vector2 aimDirection = Vector2.right;
 
     [Header("Camera")]
     [SerializeField] Camera cinemachineCamera;
 
+    [Header("Unlock")]
+    [SerializeField] public bool jumpUnlocked = true;
+    [SerializeField] public bool shootUnlocked = true;
+
     public List<DropableCube> dropableCubes;
     private PlayerInput playerInput;
     private ContactFilter2D groundFilter;
+    public float AverageVerticalVelocity { get; private set; }
 
     private void Awake()
     {
@@ -113,8 +115,6 @@ public class PlayerController : MonoBehaviour
         if (value.isPressed)
             jumpRequested = true;
     }
-
-    public void OnCrouch(InputValue value) => crouchRequested = value.isPressed;
 
     public void OnLook(InputValue value)
     {
@@ -198,7 +198,7 @@ public class PlayerController : MonoBehaviour
             if ((bone.grounded || groundedCount == 0) && inputDirection.x != 0)
                 rb.AddForce(Vector2.right * inputDirection.x * force);
 
-            if (isGrounded && jumpRequested)
+            if (jumpUnlocked && isGrounded && jumpRequested)
             {
 
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
@@ -214,7 +214,7 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = vel;
         }
 
-        if (shootRequested && aimDirection != Vector2.zero)
+        if (shootUnlocked && shootRequested && aimDirection != Vector2.zero)
         {
             if (growNum > 1)
             {
