@@ -67,11 +67,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Camera cinemachineCamera;
 
     public List<DropableCube> dropableCubes;
-    public PlayerInput playerInput;
+    private PlayerInput playerInput;
     private ContactFilter2D groundFilter;
 
     private void Awake()
     {
+        playerInput = GetComponent<PlayerInput>();
+
         var playerControlers = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
         foreach (PlayerController player in playerControlers)
         {
@@ -116,9 +118,16 @@ public class PlayerController : MonoBehaviour
 
     public void OnLook(InputValue value)
     {
-        if (playerInput.currentControlScheme == "Keyboard&Mouse")
+        Vector2 stick = value.Get<Vector2>();
+        if (stick.sqrMagnitude > 0.1f)
+            aimDirection = stick.normalized;
+    }
+
+    public void OnShoot(InputValue value)
+    {
+        if (playerInput.actions["Shoot"].activeControl.device is Mouse)
         {
-            Vector2 mouseScreenPos = value.Get<Vector2>();
+            Vector2 mouseScreenPos = Mouse.current.position.value;
 
             float zDist = -cinemachineCamera.transform.position.z;
             Vector3 mouseWorldPos = cinemachineCamera.ScreenToWorldPoint(new Vector3(mouseScreenPos.x, mouseScreenPos.y, zDist));
@@ -127,16 +136,7 @@ public class PlayerController : MonoBehaviour
             if (dir.sqrMagnitude > 0.01f)
                 aimDirection = dir.normalized;
         }
-        else
-        {
-            Vector2 stick = value.Get<Vector2>();
-            if (stick.sqrMagnitude > 0.1f)
-                aimDirection = stick.normalized;
-        }
-    }
 
-    public void OnShoot(InputValue value)
-    {
         if (Time.timeScale == 0)
             return;
         if (value.isPressed)
