@@ -72,6 +72,9 @@ public class PlayerController : MonoBehaviour
     public List<DropableCube> dropableCubes;
     private PlayerInput playerInput;
     private ContactFilter2D groundFilter;
+
+    [Header("Mira")]
+    public Transform mira;
     public float AverageVerticalVelocity { get; private set; }
 
     private void Awake()
@@ -124,6 +127,11 @@ public class PlayerController : MonoBehaviour
         Vector2 stick = value.Get<Vector2>();
         if (stick.sqrMagnitude > 0.1f)
             aimDirection = stick.normalized;
+        if (mira!=null)
+        {
+            mira.gameObject.SetActive(stick != Vector2.zero);
+            mira.transform.rotation = Quaternion.FromToRotation(Vector2.up, aimDirection);
+        }
     }
 
     public void OnShoot(InputValue value)
