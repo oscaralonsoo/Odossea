@@ -1,0 +1,7501 @@
+fileFormatVersion: 2
+guid: 752a01c5fe910b746a3c10e9314a1ee4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5465744886260663335
+    second: stars low_0
+  - first:
+      213: 3911315252676589467
+    second: stars low_1
+  - first:
+      213: -2026239061397907548
+    second: stars low_2
+  - first:
+      213: -7054216329234695086
+    second: stars low_3
+  - first:
+      213: -3341982168510199863
+    second: stars low_4
+  - first:
+      213: -2287237389592335318
+    second: stars low_5
+  - first:
+      213: 2133492983762855062
+    second: stars low_6
+  - first:
+      213: 208898124872299387
+    second: stars low_7
+  - first:
+      213: 3719348427435466119
+    second: stars low_8
+  - first:
+      213: 1337494363429606622
+    second: stars low_9
+  - first:
+      213: 7424493972388725439
+    second: stars low_10
+  - first:
+      213: -5099130861026746686
+    second: stars low_11
+  - first:
+      213: -4038461221087252900
+    second: stars low_12
+  - first:
+      213: 5285140583202223006
+    second: stars low_13
+  - first:
+      213: -7544375004089528965
+    second: stars low_14
+  - first:
+      213: -5335201714375493033
+    second: stars low_15
+  - first:
+      213: -3946734847658169292
+    second: stars low_16
+  - first:
+      213: -7604006751592553252
+    second: stars low_17
+  - first:
+      213: -2224524859498651762
+    second: stars low_18
+  - first:
+      213: 449286684451823906
+    second: stars low_19
+  - first:
+      213: -855227106107037604
+    second: stars low_20
+  - first:
+      213: 3422610402290312900
+    second: stars low_21
+  - first:
+      213: 7857210592459386215
+    second: stars low_22
+  - first:
+      213: -5463444581425336387
+    second: stars low_23
+  - first:
+      213: 5861237374228828022
+    second: stars low_24
+  - first:
+      213: 3169872754541687462
+    second: stars low_25
+  - first:
+      213: -142268383749810317
+    second: stars low_26
+  - first:
+      213: -3040859108375771614
+    second: stars low_27
+  - first:
+      213: 8447400845843664940
+    second: stars low_28
+  - first:
+      213: -3245874401775412708
+    second: stars low_29
+  - first:
+      213: 2373360221599312078
+    second: stars low_30
+  - first:
+      213: 2132723391653281018
+    second: stars low_31
+  - first:
+      213: -779277546302321685
+    second: stars low_32
+  - first:
+      213: -7746471008307364109
+    second: stars low_33
+  - first:
+      213: 8514890920457851312
+    second: stars low_34
+  - first:
+      213: -7252744325169580161
+    second: stars low_35
+  - first:
+      213: 1324673789255550289
+    second: stars low_36
+  - first:
+      213: -8085958437617067474
+    second: stars low_37
+  - first:
+      213: 1609081475828334954
+    second: stars low_38
+  - first:
+      213: 3787703629158560184
+    second: stars low_39
+  - first:
+      213: -6717694072370728654
+    second: stars low_40
+  - first:
+      213: -7784406835267707250
+    second: stars low_41
+  - first:
+      213: -2871813815530669095
+    second: stars low_42
+  - first:
+      213: -4847310015088860039
+    second: stars low_43
+  - first:
+      213: 8214087623527309068
+    second: stars low_44
+  - first:
+      213: 891779034681578723
+    second: stars low_45
+  - first:
+      213: 1814884977769814527
+    second: stars low_46
+  - first:
+      213: 7499314864321131509
+    second: stars low_47
+  - first:
+      213: -8725696455260835718
+    second: stars low_48
+  - first:
+      213: -4795260899944553239
+    second: stars low_49
+  - first:
+      213: -2866812985714625423
+    second: stars low_50
+  - first:
+      213: -2740702442742205616
+    second: stars low_51
+  - first:
+      213: -4973931939728261993
+    second: stars low_52
+  - first:
+      213: -7201316306868621937
+    second: stars low_53
+  - first:
+      213: -726013937643896489
+    second: stars low_54
+  - first:
+      213: 1061852892125392112
+    second: stars low_55
+  - first:
+      213: 7246097802025961245
+    second: stars low_56
+  - first:
+      213: -6056945256252845387
+    second: stars low_57
+  - first:
+      213: 4562715498914028935
+    second: stars low_58
+  - first:
+      213: 1300571501196221321
+    second: stars low_59
+  - first:
+      213: 8484969876807001075
+    second: stars low_60
+  - first:
+      213: -5309826389498911089
+    second: stars low_61
+  - first:
+      213: -7780114348454960717
+    second: stars low_62
+  - first:
+      213: 8144066739555108434
+    second: stars low_63
+  - first:
+      213: 1085736999873840803
+    second: stars low_64
+  - first:
+      213: -2565427233369398388
+    second: stars low_65
+  - first:
+      213: 3991160689582393646
+    second: stars low_66
+  - first:
+      213: -1995997766884188102
+    second: stars low_67
+  - first:
+      213: 4136692970825320412
+    second: stars low_68
+  - first:
+      213: -7034852336748493105
+    second: stars low_69
+  - first:
+      213: -3319219689640215581
+    second: stars low_70
+  - first:
+      213: -9122588085204775255
+    second: stars low_71
+  - first:
+      213: -4752974798665020193
+    second: stars low_72
+  - first:
+      213: -2988809798609158895
+    second: stars low_73
+  - first:
+      213: -4597187190571563291
+    second: stars low_74
+  - first:
+      213: -2271206799862143295
+    second: stars low_75
+  - first:
+      213: -896719057652632748
+    second: stars low_76
+  - first:
+      213: 9222157245657503306
+    second: stars low_77
+  - first:
+      213: -8648109547521495676
+    second: stars low_78
+  - first:
+      213: -545392851319096995
+    second: stars low_79
+  - first:
+      213: 5372731749614000534
+    second: stars low_80
+  - first:
+      213: -6129595273409771542
+    second: stars low_81
+  - first:
+      213: 7601949420873457006
+    second: stars low_82
+  - first:
+      213: -1965882216328093598
+    second: stars low_83
+  - first:
+      213: 7879813383769511048
+    second: stars low_84
+  - first:
+      213: 9136343755399798951
+    second: stars low_85
+  - first:
+      213: -7546247348418980548
+    second: stars low_86
+  - first:
+      213: -8194179649262183017
+    second: stars low_87
+  - first:
+      213: -294902879352316161
+    second: stars low_88
+  - first:
+      213: -1337705856580457845
+    second: stars low_89
+  - first:
+      213: 1978768256313370908
+    second: stars low_90
+  - first:
+      213: -8283979360790269400
+    second: stars low_91
+  - first:
+      213: 5977240030821603065
+    second: stars low_92
+  - first:
+      213: -2453024567245933654
+    second: stars low_93
+  - first:
+      213: -3897041061054505981
+    second: stars low_94
+  - first:
+      213: -2368152768105628816
+    second: stars low_95
+  - first:
+      213: -3931047505422852995
+    second: stars low_96
+  - first:
+      213: -5683557713546786684
+    second: stars low_97
+  - first:
+      213: -7844688523309889134
+    second: stars low_98
+  - first:
+      213: -7333567164265788267
+    second: stars low_99
+  - first:
+      213: -112843229300460734
+    second: stars low_100
+  - first:
+      213: 622878905947375559
+    second: stars low_101
+  - first:
+      213: 2240876310144332568
+    second: stars low_102
+  - first:
+      213: -5967806715596793281
+    second: stars low_103
+  - first:
+      213: 1263827698030758623
+    second: stars low_104
+  - first:
+      213: -1502609752233334106
+    second: stars low_105
+  - first:
+      213: 8930753848985807430
+    second: stars low_106
+  - first:
+      213: 3311182522661354698
+    second: stars low_107
+  - first:
+      213: 8266917701709494519
+    second: stars low_108
+  - first:
+      213: 8046395993642895036
+    second: stars low_109
+  - first:
+      213: -1124020988229709674
+    second: stars low_110
+  - first:
+      213: 78467018530598160
+    second: stars low_111
+  - first:
+      213: -4256581414700387351
+    second: stars low_112
+  - first:
+      213: -9139474972444145058
+    second: stars low_113
+  - first:
+      213: -7473695537741645594
+    second: stars low_114
+  - first:
+      213: -8487930686580899166
+    second: stars low_115
+  - first:
+      213: 196849916401691749
+    second: stars low_116
+  - first:
+      213: 2445490123635335135
+    second: stars low_117
+  - first:
+      213: -1141400446971481202
+    second: stars low_118
+  - first:
+      213: -1126181486893181903
+    second: stars low_119
+  - first:
+      213: 1975933687025374091
+    second: stars low_120
+  - first:
+      213: 1611390692791918175
+    second: stars low_121
+  - first:
+      213: 8865604822451597280
+    second: stars low_122
+  - first:
+      213: -4256991532250371938
+    second: stars low_123
+  - first:
+      213: -877220049037285121
+    second: stars low_124
+  - first:
+      213: 2292312301808837444
+    second: stars low_125
+  - first:
+      213: 8126979012019988255
+    second: stars low_126
+  - first:
+      213: -3520213655073012381
+    second: stars low_127
+  - first:
+      213: -2481070706980118070
+    second: stars low_128
+  - first:
+      213: -4433565046153289747
+    second: stars low_129
+  - first:
+      213: 4198932373437396940
+    second: stars low_130
+  - first:
+      213: 6391923333558734278
+    second: stars low_131
+  - first:
+      213: -3899072199189354193
+    second: stars low_132
+  - first:
+      213: 7165460088224449354
+    second: stars low_133
+  - first:
+      213: -6610127734092862666
+    second: stars low_134
+  - first:
+      213: -897776193020571415
+    second: stars low_135
+  - first:
+      213: -7148348840336841304
+    second: stars low_136
+  - first:
+      213: 8544804617175384388
+    second: stars low_137
+  - first:
+      213: 4305917682311547238
+    second: stars low_138
+  - first:
+      213: -8385212070009780087
+    second: stars low_139
+  - first:
+      213: -1030682514599805085
+    second: stars low_140
+  - first:
+      213: -4381118121626288490
+    second: stars low_141
+  - first:
+      213: 558758498776431931
+    second: stars low_142
+  - first:
+      213: 8518284374375177041
+    second: stars low_143
+  - first:
+      213: -2296357123186648760
+    second: stars low_144
+  - first:
+      213: -5778645130977222904
+    second: stars low_145
+  - first:
+      213: 3488415440095766702
+    second: stars low_146
+  - first:
+      213: 1893041573940289327
+    second: stars low_147
+  - first:
+      213: -5303755444991436991
+    second: stars low_148
+  - first:
+      213: 1177014183231130743
+    second: stars low_149
+  - first:
+      213: 880541143662198009
+    second: stars low_150
+  - first:
+      213: 4144503525948896505
+    second: stars low_151
+  - first:
+      213: 1539377722259384855
+    second: stars low_152
+  - first:
+      213: -7635173845031324145
+    second: stars low_153
+  - first:
+      213: -4970340169861378011
+    second: stars low_154
+  - first:
+      213: 6491638619032806304
+    second: stars low_155
+  - first:
+      213: 8617356617354810032
+    second: stars low_156
+  - first:
+      213: 1244523392930799288
+    second: stars low_157
+  - first:
+      213: -8773825405211345839
+    second: stars low_158
+  - first:
+      213: 3876900678899883309
+    second: stars low_159
+  - first:
+      213: 6430930130148922304
+    second: stars low_160
+  - first:
+      213: -6993956184790881989
+    second: stars low_161
+  - first:
+      213: 624750775638757399
+    second: stars low_162
+  - first:
+      213: -7303396830348773113
+    second: stars low_163
+  - first:
+      213: 1829772117007865221
+    second: stars low_164
+  - first:
+      213: 4324569460413932478
+    second: stars low_165
+  - first:
+      213: 6211554525273694288
+    second: stars low_166
+  - first:
+      213: -5760055516649482235
+    second: stars low_167
+  - first:
+      213: -7527720731567532361
+    second: stars low_168
+  - first:
+      213: -8635018125651226493
+    second: stars low_169
+  - first:
+      213: 9061929827415637511
+    second: stars low_170
+  - first:
+      213: -7275829439657799380
+    second: stars low_171
+  - first:
+      213: 1131811859139675907
+    second: stars low_172
+  - first:
+      213: 4767532463867342910
+    second: stars low_173
+  - first:
+      213: 7881853758837033225
+    second: stars low_174
+  - first:
+      213: 3659705267722478344
+    second: stars low_175
+  - first:
+      213: 4660211868998931458
+    second: stars low_176
+  - first:
+      213: 5759369502171805582
+    second: stars low_177
+  - first:
+      213: -7232508449224938970
+    second: stars low_178
+  - first:
+      213: 2052139393569461481
+    second: stars low_179
+  - first:
+      213: -5523363355169250224
+    second: stars low_180
+  - first:
+      213: -500686615212982949
+    second: stars low_181
+  - first:
+      213: -2421869109897866832
+    second: stars low_182
+  - first:
+      213: 6704927834473202767
+    second: stars low_183
+  - first:
+      213: -3515443268971656986
+    second: stars low_184
+  - first:
+      213: 8274914188145842540
+    second: stars low_185
+  - first:
+      213: 4082671760999187013
+    second: stars low_186
+  - first:
+      213: -778697778567368872
+    second: stars low_187
+  - first:
+      213: 9117306492240447718
+    second: stars low_188
+  - first:
+      213: -8718973990374702425
+    second: stars low_189
+  - first:
+      213: -8743938374365183180
+    second: stars low_190
+  - first:
+      213: -5979264945415490748
+    second: stars low_191
+  - first:
+      213: -8111926692432684375
+    second: stars low_192
+  - first:
+      213: 2178570062079894893
+    second: stars low_193
+  - first:
+      213: 4720968177603602377
+    second: stars low_194
+  - first:
+      213: 1398252175266348966
+    second: stars low_195
+  - first:
+      213: -8984096411327983698
+    second: stars low_196
+  - first:
+      213: -5685105571508365720
+    second: stars low_197
+  - first:
+      213: 3993913410104725403
+    second: stars low_198
+  - first:
+      213: 2234558851124527954
+    second: stars low_199
+  - first:
+      213: 2546464247212572937
+    second: stars low_200
+  - first:
+      213: 103279967584288639
+    second: stars low_201
+  - first:
+      213: 7033650100777145639
+    second: stars low_202
+  - first:
+      213: 985383866375134836
+    second: stars low_203
+  - first:
+      213: -4923727161322284519
+    second: stars low_204
+  - first:
+      213: 4007345360793520049
+    second: stars low_205
+  - first:
+      213: -7233745213963115231
+    second: stars low_206
+  - first:
+      213: 6803194681786377450
+    second: stars low_207
+  - first:
+      213: -5852855651803924073
+    second: stars low_208
+  - first:
+      213: 5071824077880374540
+    second: stars low_209
+  - first:
+      213: -4899161377494554751
+    second: stars low_210
+  - first:
+      213: 5022404483520253957
+    second: stars low_211
+  - first:
+      213: -2186575528123200960
+    second: stars low_212
+  - first:
+      213: 8048342056617237095
+    second: stars low_213
+  - first:
+      213: 5196470601847295910
+    second: stars low_214
+  - first:
+      213: 2002838765629814085
+    second: stars low_215
+  - first:
+      213: -8625651104900479156
+    second: stars low_216
+  - first:
+      213: 608346946846101412
+    second: stars low_217
+  - first:
+      213: 1085799037882420418
+    second: stars low_218
+  - first:
+      213: 1645745624242500575
+    second: stars low_219
+  - first:
+      213: -2892140215777564085
+    second: stars low_220
+  - first:
+      213: 6184615415762381279
+    second: stars low_221
+  - first:
+      213: -2248036320655567968
+    second: stars low_222
+  - first:
+      213: -2715787345326586160
+    second: stars low_223
+  - first:
+      213: -1053942073951121860
+    second: stars low_224
+  - first:
+      213: 6903129344718597656
+    second: stars low_225
+  - first:
+      213: -8162038423036450391
+    second: stars low_226
+  - first:
+      213: -3400870694015794631
+    second: stars low_227
+  - first:
+      213: 5233840550928995074
+    second: stars low_228
+  - first:
+      213: 3763223120807542894
+    second: stars low_229
+  - first:
+      213: 7665116329914946136
+    second: stars low_230
+  - first:
+      213: -4964396057276138092
+    second: stars low_231
+  - first:
+      213: -6639544001378809610
+    second: stars low_232
+  - first:
+      213: -1484265260443841233
+    second: stars low_233
+  - first:
+      213: -5229199796696237801
+    second: stars low_234
+  - first:
+      213: -3646196554980420654
+    second: stars low_235
+  - first:
+      213: 2904793518300387141
+    second: stars low_236
+  - first:
+      213: 642632771058038613
+    second: stars low_237
+  - first:
+      213: -2879194941385991471
+    second: stars low_238
+  - first:
+      213: -8737798382245939122
+    second: stars low_239
+  - first:
+      213: 7208078120226986110
+    second: stars low_240
+  - first:
+      213: 3835787495946775125
+    second: stars low_241
+  - first:
+      213: -1077420464400618446
+    second: stars low_242
+  - first:
+      213: -5058747269450583871
+    second: stars low_243
+  - first:
+      213: 8056087376481773848
+    second: stars low_244
+  - first:
+      213: 8394437574007563314
+    second: stars low_245
+  - first:
+      213: 6682262167047344673
+    second: stars low_246
+  - first:
+      213: -4422777978986009648
+    second: stars low_247
+  - first:
+      213: -3401849422720189016
+    second: stars low_248
+  - first:
+      213: -4038639361698343046
+    second: stars low_249
+  - first:
+      213: 4360023825922687901
+    second: stars low_250
+  - first:
+      213: -7656748344685607194
+    second: stars low_251
+  - first:
+      213: -8814419843969512928
+    second: stars low_252
+  - first:
+      213: 9156240194962733669
+    second: stars low_253
+  - first:
+      213: 1045949409381395880
+    second: stars low_254
+  - first:
+      213: 2434446931538502839
+    second: stars low_255
+  - first:
+      213: -1164974308138209661
+    second: stars low_256
+  - first:
+      213: -886683739284006237
+    second: stars low_257
+  - first:
+      213: -1114326738512338248
+    second: stars low_258
+  - first:
+      213: 3917761561549535298
+    second: stars low_259
+  - first:
+      213: 7771530442817873202
+    second: stars low_260
+  - first:
+      213: 7417087428602147400
+    second: stars low_261
+  - first:
+      213: 7884793153558139284
+    second: stars low_262
+  - first:
+      213: -3360165114458970475
+    second: stars low_263
+  - first:
+      213: -6501602256640953858
+    second: stars low_264
+  - first:
+      213: 6923113799759469289
+    second: stars low_265
+  - first:
+      213: -3472639789186622860
+    second: stars low_266
+  - first:
+      213: -5173030068602588688
+    second: stars low_267
+  - first:
+      213: 3523055417970337255
+    second: stars low_268
+  - first:
+      213: -1972956242528218559
+    second: stars low_269
+  - first:
+      213: 5516166241209824895
+    second: stars low_270
+  - first:
+      213: -6272633982462969058
+    second: stars low_271
+  - first:
+      213: -4960873297831892958
+    second: stars low_272
+  - first:
+      213: -3482775159805464984
+    second: stars low_273
+  - first:
+      213: -7207418381869865757
+    second: stars low_274
+  - first:
+      213: -4135721034985983091
+    second: stars low_275
+  - first:
+      213: -2411108037852206662
+    second: stars low_276
+  - first:
+      213: -4291765888502617523
+    second: stars low_277
+  - first:
+      213: 5000457233681447762
+    second: stars low_278
+  - first:
+      213: -3641370917885665360
+    second: stars low_279
+  - first:
+      213: -743357439403808873
+    second: stars low_280
+  - first:
+      213: -6982700326389184999
+    second: stars low_281
+  - first:
+      213: -767788134028352483
+    second: stars low_282
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: stars low_0
+      rect:
+        serializedVersion: 2
+        x: 3683
+        y: 3469
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9db76851cf5c524b0800000000000000
+      internalID: -5465744886260663335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_1
+      rect:
+        serializedVersion: 2
+        x: 2802
+        y: 3451
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b97fa50df78c74630800000000000000
+      internalID: 3911315252676589467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_2
+      rect:
+        serializedVersion: 2
+        x: 3025
+        y: 3451
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a75b532f4a51e3e0800000000000000
+      internalID: -2026239061397907548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_3
+      rect:
+        serializedVersion: 2
+        x: 3160
+        y: 3451
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25cb4379f936a1e90800000000000000
+      internalID: -7054216329234695086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_4
+      rect:
+        serializedVersion: 2
+        x: 3452
+        y: 3451
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c78240ace4ee91d0800000000000000
+      internalID: -3341982168510199863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_5
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 3430
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2c6b5466b91240e0800000000000000
+      internalID: -2287237389592335318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_6
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 3419
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69429f3a090bb9d10800000000000000
+      internalID: 2133492983762855062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_7
+      rect:
+        serializedVersion: 2
+        x: 1921
+        y: 3404
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b73324fdcb726e200800000000000000
+      internalID: 208898124872299387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_8
+      rect:
+        serializedVersion: 2
+        x: 2453
+        y: 3414
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78dd23550b7cd9330800000000000000
+      internalID: 3719348427435466119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_9
+      rect:
+        serializedVersion: 2
+        x: 4013
+        y: 3414
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed41f45890cbf8210800000000000000
+      internalID: 1337494363429606622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_10
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 3404
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb242456ee9190760800000000000000
+      internalID: 7424493972388725439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_11
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 3388
+        width: 31
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ced44d8f7f3c39b0800000000000000
+      internalID: -5099130861026746686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_12
+      rect:
+        serializedVersion: 2
+        x: 1796
+        y: 3402
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5e67e58ae084f7c0800000000000000
+      internalID: -4038461221087252900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_13
+      rect:
+        serializedVersion: 2
+        x: 4642
+        y: 3409
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e93f4c9cb57985940800000000000000
+      internalID: 5285140583202223006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_14
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 3373
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7d48e4d7eefc4790800000000000000
+      internalID: -7544375004089528965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_15
+      rect:
+        serializedVersion: 2
+        x: 2357
+        y: 3386
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75af791de4e85f5b0800000000000000
+      internalID: -5335201714375493033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_16
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 3349
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43ceda611916a39c0800000000000000
+      internalID: -3946734847658169292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_17
+      rect:
+        serializedVersion: 2
+        x: 3267
+        y: 3339
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd467ada524297690800000000000000
+      internalID: -7604006751592553252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_18
+      rect:
+        serializedVersion: 2
+        x: 3769
+        y: 3341
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8f9e832d66e021e0800000000000000
+      internalID: -2224524859498651762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_19
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 3315
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 221601debdf2c3600800000000000000
+      internalID: 449286684451823906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_20
+      rect:
+        serializedVersion: 2
+        x: 2342
+        y: 3297
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c58643a6a7f9124f0800000000000000
+      internalID: -855227106107037604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_21
+      rect:
+        serializedVersion: 2
+        x: 2755
+        y: 3310
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c62211f60e8f7f20800000000000000
+      internalID: 3422610402290312900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_22
+      rect:
+        serializedVersion: 2
+        x: 1725
+        y: 3289
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76d6af0976b6a0d60800000000000000
+      internalID: 7857210592459386215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_23
+      rect:
+        serializedVersion: 2
+        x: 3493
+        y: 3289
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbf2c1a8912fd24b0800000000000000
+      internalID: -5463444581425336387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_24
+      rect:
+        serializedVersion: 2
+        x: 4358
+        y: 3283
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67f0723765c475150800000000000000
+      internalID: 5861237374228828022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_25
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 3237
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a275adb976adfb20800000000000000
+      internalID: 3169872754541687462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_26
+      rect:
+        serializedVersion: 2
+        x: 3004
+        y: 3248
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 377d2d3a8af860ef0800000000000000
+      internalID: -142268383749810317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_27
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 3211
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 226404980c2bcc5d0800000000000000
+      internalID: -3040859108375771614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_28
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 3222
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2098d320523b3570800000000000000
+      internalID: 8447400845843664940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_29
+      rect:
+        serializedVersion: 2
+        x: 2053
+        y: 3211
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1a94a0dd6654f2d0800000000000000
+      internalID: -3245874401775412708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_30
+      rect:
+        serializedVersion: 2
+        x: 3358
+        y: 3222
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec828740c8edfe020800000000000000
+      internalID: 2373360221599312078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_31
+      rect:
+        serializedVersion: 2
+        x: 3982
+        y: 3222
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afcf8a300a4f89d10800000000000000
+      internalID: 2132723391653281018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_32
+      rect:
+        serializedVersion: 2
+        x: 4741
+        y: 3206
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beb463f43337f25f0800000000000000
+      internalID: -779277546302321685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_33
+      rect:
+        serializedVersion: 2
+        x: 453
+        y: 3192
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fe3af619a10f7490800000000000000
+      internalID: -7746471008307364109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_34
+      rect:
+        serializedVersion: 2
+        x: 2992
+        y: 3188
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b1d617ad28fa2670800000000000000
+      internalID: 8514890920457851312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_35
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 3123
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7779838673195b90800000000000000
+      internalID: -7252744325169580161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_36
+      rect:
+        serializedVersion: 2
+        x: 1806
+        y: 3136
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15509dbfacf226210800000000000000
+      internalID: 1324673789255550289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_37
+      rect:
+        serializedVersion: 2
+        x: 3553
+        y: 3126
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2a134964a7e8cf80800000000000000
+      internalID: -8085958437617067474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_38
+      rect:
+        serializedVersion: 2
+        x: 3247
+        y: 3068
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a61c865b31b945610800000000000000
+      internalID: 1609081475828334954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_39
+      rect:
+        serializedVersion: 2
+        x: 4281
+        y: 3089
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b13472f160a09430800000000000000
+      internalID: 3787703629158560184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_40
+      rect:
+        serializedVersion: 2
+        x: 2768
+        y: 3032
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 231789245d4f5c2a0800000000000000
+      internalID: -6717694072370728654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_41
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 3045
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8edeb41a3b38f390800000000000000
+      internalID: -7784406835267707250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_42
+      rect:
+        serializedVersion: 2
+        x: 3231
+        y: 3032
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9db3c30ec844528d0800000000000000
+      internalID: -2871813815530669095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_43
+      rect:
+        serializedVersion: 2
+        x: 3821
+        y: 3046
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9746f623935eabcb0800000000000000
+      internalID: -4847310015088860039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_44
+      rect:
+        serializedVersion: 2
+        x: 4594
+        y: 3045
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0f174a6c2d4ef170800000000000000
+      internalID: 8214087623527309068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_45
+      rect:
+        serializedVersion: 2
+        x: 1772
+        y: 3024
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e41654ae4c306c00800000000000000
+      internalID: 891779034681578723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_46
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 2987
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff999288544cf2910800000000000000
+      internalID: 1814884977769814527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_47
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 3001
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f3faa2d22be21860800000000000000
+      internalID: 7499314864321131509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_48
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 2955
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a70fa4efd4918e680800000000000000
+      internalID: -8725696455260835718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_49
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 2956
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e42c7d2e9fc37db0800000000000000
+      internalID: -4795260899944553239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_50
+      rect:
+        serializedVersion: 2
+        x: 2283
+        y: 2942
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 174b00d47c80738d0800000000000000
+      internalID: -2866812985714625423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_51
+      rect:
+        serializedVersion: 2
+        x: 2807
+        y: 2961
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0533e4136a117f9d0800000000000000
+      internalID: -2740702442742205616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_52
+      rect:
+        serializedVersion: 2
+        x: 2427
+        y: 2936
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79cf68bf04b09fab0800000000000000
+      internalID: -4973931939728261993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_53
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 2878
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8d2edd19f8cf0c90800000000000000
+      internalID: -7201316306868621937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_54
+      rect:
+        serializedVersion: 2
+        x: 2833
+        y: 2888
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 751c0c89b2eace5f0800000000000000
+      internalID: -726013937643896489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_55
+      rect:
+        serializedVersion: 2
+        x: 3091
+        y: 2886
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fcead654957cbe00800000000000000
+      internalID: 1061852892125392112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_56
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 2888
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d170f793f8f4f8460800000000000000
+      internalID: 7246097802025961245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_57
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 2842
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b2df09616861fba0800000000000000
+      internalID: -6056945256252845387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_58
+      rect:
+        serializedVersion: 2
+        x: 701
+        y: 2857
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d90fb6295025f30800000000000000
+      internalID: 4562715498914028935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_59
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 2852
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98b1ccdb3ee8c0210800000000000000
+      internalID: 1300571501196221321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_60
+      rect:
+        serializedVersion: 2
+        x: 3877
+        y: 2833
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f3a8fcc52ba0c570800000000000000
+      internalID: 8484969876807001075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_61
+      rect:
+        serializedVersion: 2
+        x: 1590
+        y: 2784
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f862cea0805bf46b0800000000000000
+      internalID: -5309826389498911089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_62
+      rect:
+        serializedVersion: 2
+        x: 1995
+        y: 2782
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b12c6c883b770490800000000000000
+      internalID: -7780114348454960717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_63
+      rect:
+        serializedVersion: 2
+        x: 3111
+        y: 2777
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 256814eec89850170800000000000000
+      internalID: 8144066739555108434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_64
+      rect:
+        serializedVersion: 2
+        x: 3429
+        y: 2795
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a68af48c00511f00800000000000000
+      internalID: 1085736999873840803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_65
+      rect:
+        serializedVersion: 2
+        x: 4663
+        y: 2779
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8367e10685c56cd0800000000000000
+      internalID: -2565427233369398388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_66
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 2758
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e29cf084083736730800000000000000
+      internalID: 3991160689582393646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_67
+      rect:
+        serializedVersion: 2
+        x: 4410
+        y: 2758
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3025643b9acc44e0800000000000000
+      internalID: -1995997766884188102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_68
+      rect:
+        serializedVersion: 2
+        x: 4780
+        y: 2750
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd706eef65c786930800000000000000
+      internalID: 4136692970825320412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_69
+      rect:
+        serializedVersion: 2
+        x: 2469
+        y: 2738
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc687cc621f2f5e90800000000000000
+      internalID: -7034852336748493105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_70
+      rect:
+        serializedVersion: 2
+        x: 4065
+        y: 2727
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3eb338b3743cfe1d0800000000000000
+      internalID: -3319219689640215581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_71
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 2701
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ae8825587e066180800000000000000
+      internalID: -9122588085204775255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_72
+      rect:
+        serializedVersion: 2
+        x: 1135
+        y: 2688
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdc003b5a9a0a0eb0800000000000000
+      internalID: -4752974798665020193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_73
+      rect:
+        serializedVersion: 2
+        x: 3576
+        y: 2693
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11db1b4d25d9586d0800000000000000
+      internalID: -2988809798609158895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_74
+      rect:
+        serializedVersion: 2
+        x: 4325
+        y: 2696
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e6810c6b928330c0800000000000000
+      internalID: -4597187190571563291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_75
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 2680
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c6e3cae27d0b70e0800000000000000
+      internalID: -2271206799862143295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_76
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 2670
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 453ba41a4c63e83f0800000000000000
+      internalID: -896719057652632748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_77
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 2673
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a46d532672fabff70800000000000000
+      internalID: 9222157245657503306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_78
+      rect:
+        serializedVersion: 2
+        x: 2651
+        y: 2670
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48d2159af2ebbf780800000000000000
+      internalID: -8648109547521495676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_79
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 2644
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d59761267106e68f0800000000000000
+      internalID: -545392851319096995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_80
+      rect:
+        serializedVersion: 2
+        x: 2961
+        y: 2642
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69994317f07cf8a40800000000000000
+      internalID: 5372731749614000534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_81
+      rect:
+        serializedVersion: 2
+        x: 3800
+        y: 2659
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae74f77239d4feaa0800000000000000
+      internalID: -6129595273409771542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_82
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 2616
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6d16afa8bc8f7960800000000000000
+      internalID: 7601949420873457006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_83
+      rect:
+        serializedVersion: 2
+        x: 4214
+        y: 2626
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 260a1893a88c7b4e0800000000000000
+      internalID: -1965882216328093598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_84
+      rect:
+        serializedVersion: 2
+        x: 4809
+        y: 2587
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88453f30688ba5d60800000000000000
+      internalID: 7879813383769511048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_85
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 2529
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a0a6763d30dace70800000000000000
+      internalID: 9136343755399798951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_86
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 2535
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c35d042b408564790800000000000000
+      internalID: -7546247348418980548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_87
+      rect:
+        serializedVersion: 2
+        x: 3145
+        y: 2524
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79d1efb060d684e80800000000000000
+      internalID: -8194179649262183017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_88
+      rect:
+        serializedVersion: 2
+        x: 4013
+        y: 2529
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffe17f8c46b48ebf0800000000000000
+      internalID: -294902879352316161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_89
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 2493
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8aef846c938f6de0800000000000000
+      internalID: -1337705856580457845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_90
+      rect:
+        serializedVersion: 2
+        x: 2110
+        y: 2462
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c19a062ce3ff57b10800000000000000
+      internalID: 1978768256313370908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_91
+      rect:
+        serializedVersion: 2
+        x: 2573
+        y: 2456
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 822bd6969a4690d80800000000000000
+      internalID: -8283979360790269400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_92
+      rect:
+        serializedVersion: 2
+        x: 3462
+        y: 2472
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f6dd56a32c63f250800000000000000
+      internalID: 5977240030821603065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_93
+      rect:
+        serializedVersion: 2
+        x: 3769
+        y: 2462
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa3fffb172b15fdd0800000000000000
+      internalID: -2453024567245933654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_94
+      rect:
+        serializedVersion: 2
+        x: 4377
+        y: 2462
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30c1cb86dcdeae9c0800000000000000
+      internalID: -3897041061054505981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_95
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 2441
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07bb43bba91a22fd0800000000000000
+      internalID: -2368152768105628816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_96
+      rect:
+        serializedVersion: 2
+        x: 1663
+        y: 2451
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7cd5141f1d1279c0800000000000000
+      internalID: -3931047505422852995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_97
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 2410
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 488cc9f4f52ff11b0800000000000000
+      internalID: -5683557713546786684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_98
+      rect:
+        serializedVersion: 2
+        x: 3583
+        y: 2417
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 299c78ad951122390800000000000000
+      internalID: -7844688523309889134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_99
+      rect:
+        serializedVersion: 2
+        x: 4903
+        y: 2420
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59c087dd48fe93a90800000000000000
+      internalID: -7333567164265788267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_100
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 2379
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 243fc3a4ea91f6ef0800000000000000
+      internalID: -112843229300460734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_101
+      rect:
+        serializedVersion: 2
+        x: 2484
+        y: 2394
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c7c3179019e4a800800000000000000
+      internalID: 622878905947375559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_102
+      rect:
+        serializedVersion: 2
+        x: 3314
+        y: 2353
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 813bdb3a121391f10800000000000000
+      internalID: 2240876310144332568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_103
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 2316
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3a99a439671e2da0800000000000000
+      internalID: -5967806715596793281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_104
+      rect:
+        serializedVersion: 2
+        x: 1819
+        y: 2326
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fda4c6668940a8110800000000000000
+      internalID: 1263827698030758623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_105
+      rect:
+        serializedVersion: 2
+        x: 4570
+        y: 2295
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aa281a3468a52be0800000000000000
+      internalID: -1502609752233334106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_106
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 2243
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64a6049fe4960fb70800000000000000
+      internalID: 8930753848985807430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_107
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 2251
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acc36b106fea3fd20800000000000000
+      internalID: 3311182522661354698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_108
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 2257
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f878c589ddf9b270800000000000000
+      internalID: 8266917701709494519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_109
+      rect:
+        serializedVersion: 2
+        x: 2118
+        y: 2251
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb6063b468a8aaf60800000000000000
+      internalID: 8046395993642895036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_110
+      rect:
+        serializedVersion: 2
+        x: 3270
+        y: 2254
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6901c74dddca660f0800000000000000
+      internalID: -1124020988229709674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_111
+      rect:
+        serializedVersion: 2
+        x: 3358
+        y: 2243
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01da91e6655c61100800000000000000
+      internalID: 78467018530598160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_112
+      rect:
+        serializedVersion: 2
+        x: 3935
+        y: 2259
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e3f04371c59de4c0800000000000000
+      internalID: -4256581414700387351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_113
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 2207
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5ac4e18fef0a2180800000000000000
+      internalID: -9139474972444145058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_114
+      rect:
+        serializedVersion: 2
+        x: 1788
+        y: 2207
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e8bc797189184890800000000000000
+      internalID: -7473695537741645594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_115
+      rect:
+        serializedVersion: 2
+        x: 2141
+        y: 2217
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a24534f200d43a80800000000000000
+      internalID: -8487930686580899166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_116
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 2156
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56c203db4f95bb200800000000000000
+      internalID: 196849916401691749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_117
+      rect:
+        serializedVersion: 2
+        x: 4840
+        y: 2134
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdf92098f4020f120800000000000000
+      internalID: 2445490123635335135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_118
+      rect:
+        serializedVersion: 2
+        x: 2392
+        y: 2110
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e83fac3475ee820f0800000000000000
+      internalID: -1141400446971481202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_119
+      rect:
+        serializedVersion: 2
+        x: 4684
+        y: 2091
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1345c1987effe50f0800000000000000
+      internalID: -1126181486893181903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_120
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 2066
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8310ea283deb6b10800000000000000
+      internalID: 1975933687025374091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_121
+      rect:
+        serializedVersion: 2
+        x: 1952
+        y: 2074
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5e9b3e2c4fcc5610800000000000000
+      internalID: 1611390692791918175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_122
+      rect:
+        serializedVersion: 2
+        x: 2706
+        y: 2072
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0efa7313d94f80b70800000000000000
+      internalID: 8865604822451597280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_123
+      rect:
+        serializedVersion: 2
+        x: 2797
+        y: 2054
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e98ee5481c02ce4c0800000000000000
+      internalID: -4256991532250371938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_124
+      rect:
+        serializedVersion: 2
+        x: 2968
+        y: 2084
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff8284b530d73d3f0800000000000000
+      internalID: -877220049037285121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_125
+      rect:
+        serializedVersion: 2
+        x: 3832
+        y: 2084
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 443e29fa4edefcf10800000000000000
+      internalID: 2292312301808837444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_126
+      rect:
+        serializedVersion: 2
+        x: 4091
+        y: 2077
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f17a1845a54d8c070800000000000000
+      internalID: 8126979012019988255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_127
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 2046
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 365c4e3e450b52fc0800000000000000
+      internalID: -3520213655073012381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_128
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 2052
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac1a2d75657719dd0800000000000000
+      internalID: -2481070706980118070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_129
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 2051
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: defd17f9410d872c0800000000000000
+      internalID: -4433565046153289747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_130
+      rect:
+        serializedVersion: 2
+        x: 2450
+        y: 2052
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc7bf9a2fba954a30800000000000000
+      internalID: 4198932373437396940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_131
+      rect:
+        serializedVersion: 2
+        x: 3124
+        y: 2051
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cd8c40f76ca4b850800000000000000
+      internalID: 6391923333558734278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_132
+      rect:
+        serializedVersion: 2
+        x: 4255
+        y: 2052
+        width: 32
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f29a7b53e76b3e9c0800000000000000
+      internalID: -3899072199189354193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_133
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 2004
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a438bda6cf3d07360800000000000000
+      internalID: 7165460088224449354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_134
+      rect:
+        serializedVersion: 2
+        x: 3930
+        y: 2004
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63bef6909db1444a0800000000000000
+      internalID: -6610127734092862666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_135
+      rect:
+        serializedVersion: 2
+        x: 3436
+        y: 1983
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e0d43f1f457a83f0800000000000000
+      internalID: -897776193020571415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_136
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 1884
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a5a5217a96fbcc90800000000000000
+      internalID: -7148348840336841304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_137
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 1868
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4414bd9e68e359670800000000000000
+      internalID: 8544804617175384388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_138
+      rect:
+        serializedVersion: 2
+        x: 2123
+        y: 1866
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 669c04e7151b1cb30800000000000000
+      internalID: 4305917682311547238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_139
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 1842
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 988cfb09c0eb1ab80800000000000000
+      internalID: -8385212070009780087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_140
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 1832
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36f7219b6b742b1f0800000000000000
+      internalID: -1030682514599805085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_141
+      rect:
+        serializedVersion: 2
+        x: 1822
+        y: 1816
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69e3071d7442333c0800000000000000
+      internalID: -4381118121626288490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_142
+      rect:
+        serializedVersion: 2
+        x: 2994
+        y: 1793
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3dbccae4eb11c700800000000000000
+      internalID: 558758498776431931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_143
+      rect:
+        serializedVersion: 2
+        x: 4133
+        y: 1806
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15b9466b186073670800000000000000
+      internalID: 8518284374375177041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_144
+      rect:
+        serializedVersion: 2
+        x: 3301
+        y: 1790
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8499503fc53b120e0800000000000000
+      internalID: -2296357123186648760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_145
+      rect:
+        serializedVersion: 2
+        x: 4003
+        y: 1780
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80fdf05bed02ecfa0800000000000000
+      internalID: -5778645130977222904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_146
+      rect:
+        serializedVersion: 2
+        x: 2699
+        y: 1758
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea865ef3c57596030800000000000000
+      internalID: 3488415440095766702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_147
+      rect:
+        serializedVersion: 2
+        x: 3724
+        y: 1745
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2fd1cf184f654a10800000000000000
+      internalID: 1893041573940289327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_148
+      rect:
+        serializedVersion: 2
+        x: 4791
+        y: 1762
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 147ddb5f5864566b0800000000000000
+      internalID: -5303755444991436991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_149
+      rect:
+        serializedVersion: 2
+        x: 2853
+        y: 1726
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77c861fd928955010800000000000000
+      internalID: 1177014183231130743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_150
+      rect:
+        serializedVersion: 2
+        x: 3202
+        y: 1712
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fcf91e318f483c00800000000000000
+      internalID: 880541143662198009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_151
+      rect:
+        serializedVersion: 2
+        x: 4216
+        y: 1717
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f4b9829ffb348930800000000000000
+      internalID: 4144503525948896505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_152
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 1681
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71aab66e1e7fc5510800000000000000
+      internalID: 1539377722259384855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_153
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 1691
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f06fd8047d96a0690800000000000000
+      internalID: -7635173845031324145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_154
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 1679
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 520de8213fdc50bb0800000000000000
+      internalID: -4970340169861378011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_155
+      rect:
+        serializedVersion: 2
+        x: 2219
+        y: 1697
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a368a90eeee61a50800000000000000
+      internalID: 6491638619032806304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_156
+      rect:
+        serializedVersion: 2
+        x: 4500
+        y: 1689
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b29b40df20079770800000000000000
+      internalID: 8617356617354810032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_157
+      rect:
+        serializedVersion: 2
+        x: 4658
+        y: 1691
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bedd4e9e6f654110800000000000000
+      internalID: 1244523392930799288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_158
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 1676
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15c7419974c1d3680800000000000000
+      internalID: -8773825405211345839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_159
+      rect:
+        serializedVersion: 2
+        x: 2193
+        y: 1655
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2d5c4370a48dc530800000000000000
+      internalID: 3876900678899883309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_160
+      rect:
+        serializedVersion: 2
+        x: 4830
+        y: 1645
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c312ee71e04f3950800000000000000
+      internalID: 6430930130148922304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_161
+      rect:
+        serializedVersion: 2
+        x: 2450
+        y: 1611
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b39a4eec7e970fe90800000000000000
+      internalID: -6993956184790881989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_162
+      rect:
+        serializedVersion: 2
+        x: 3972
+        y: 1619
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7101917358f8ba800800000000000000
+      internalID: 624750775638757399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_163
+      rect:
+        serializedVersion: 2
+        x: 2672
+        y: 1566
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 709f851274f15aa90800000000000000
+      internalID: -7303396830348773113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_164
+      rect:
+        serializedVersion: 2
+        x: 3743
+        y: 1579
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5851b2ebb08a46910800000000000000
+      internalID: 1829772117007865221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_165
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 1551
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb3a97ef205f30c30800000000000000
+      internalID: 4324569460413932478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_166
+      rect:
+        serializedVersion: 2
+        x: 3634
+        y: 1553
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 050a8e53eefd33650800000000000000
+      internalID: 6211554525273694288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_167
+      rect:
+        serializedVersion: 2
+        x: 4408
+        y: 1540
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5081493960c2010b0800000000000000
+      internalID: -5760055516649482235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_168
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 1520
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b6d292d0e9288790800000000000000
+      internalID: -7527720731567532361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_169
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 1508
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 380df77d3c04a2880800000000000000
+      internalID: -8635018125651226493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_170
+      rect:
+        serializedVersion: 2
+        x: 1715
+        y: 1516
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70e30a67a2172cd70800000000000000
+      internalID: 9061929827415637511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_171
+      rect:
+        serializedVersion: 2
+        x: 2441
+        y: 1512
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c211ed27caf070b90800000000000000
+      internalID: -7275829439657799380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_172
+      rect:
+        serializedVersion: 2
+        x: 2072
+        y: 1495
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3074898a3e005bf00800000000000000
+      internalID: 1131811859139675907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_173
+      rect:
+        serializedVersion: 2
+        x: 4229
+        y: 1483
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e30b4f3348da92240800000000000000
+      internalID: 4767532463867342910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_174
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 1462
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9090f0bdb38f16d60800000000000000
+      internalID: 7881853758837033225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_175
+      rect:
+        serializedVersion: 2
+        x: 3431
+        y: 1473
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80369311d82e9c230800000000000000
+      internalID: 3659705267722478344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_176
+      rect:
+        serializedVersion: 2
+        x: 3977
+        y: 1468
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2049db501066ca040800000000000000
+      internalID: 4660211868998931458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_177
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1425
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e873b2b3c046def40800000000000000
+      internalID: 5759369502171805582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_178
+      rect:
+        serializedVersion: 2
+        x: 2354
+        y: 1436
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62aafe882e7f0ab90800000000000000
+      internalID: -7232508449224938970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_179
+      rect:
+        serializedVersion: 2
+        x: 2866
+        y: 1425
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e41b4fd7e9aa7c10800000000000000
+      internalID: 2052139393569461481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_180
+      rect:
+        serializedVersion: 2
+        x: 4736
+        y: 1416
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0542ab1ea421953b0800000000000000
+      internalID: -5523363355169250224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_181
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 1395
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5dff6c1d243d09f0800000000000000
+      internalID: -500686615212982949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_182
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 1356
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b1db0c40eac36ed0800000000000000
+      internalID: -2421869109897866832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_183
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 1325
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f44876a5750bc0d50800000000000000
+      internalID: 6704927834473202767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_184
+      rect:
+        serializedVersion: 2
+        x: 3322
+        y: 1311
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e808e4f8f2a63fc0800000000000000
+      internalID: -3515443268971656986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_185
+      rect:
+        serializedVersion: 2
+        x: 4594
+        y: 1323
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c69d54b9c9666d270800000000000000
+      internalID: 8274914188145842540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_186
+      rect:
+        serializedVersion: 2
+        x: 2270
+        y: 1284
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54200e0f55098a830800000000000000
+      internalID: 4082671760999187013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_187
+      rect:
+        serializedVersion: 2
+        x: 3967
+        y: 1272
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85f2b110f728135f0800000000000000
+      internalID: -778697778567368872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_188
+      rect:
+        serializedVersion: 2
+        x: 3468
+        y: 1246
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e8ca5af2fd278e70800000000000000
+      internalID: 9117306492240447718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_189
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 1220
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a288d1d95bfff680800000000000000
+      internalID: -8718973990374702425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_190
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 1223
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4338e0a306a47a680800000000000000
+      internalID: -8743938374365183180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_191
+      rect:
+        serializedVersion: 2
+        x: 2063
+        y: 1197
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 443709e2632650da0800000000000000
+      internalID: -5979264945415490748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_192
+      rect:
+        serializedVersion: 2
+        x: 4825
+        y: 1201
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aa5a8de6a5ac6f80800000000000000
+      internalID: -8111926692432684375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_193
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 1176
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d65a29ccde5db3e10800000000000000
+      internalID: 2178570062079894893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_194
+      rect:
+        serializedVersion: 2
+        x: 3654
+        y: 1181
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c76cf57b8f348140800000000000000
+      internalID: 4720968177603602377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_195
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1119
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6affa25f1f6976310800000000000000
+      internalID: 1398252175266348966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_196
+      rect:
+        serializedVersion: 2
+        x: 2706
+        y: 1131
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaf0fe6e9e3125380800000000000000
+      internalID: -8984096411327983698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_197
+      rect:
+        serializedVersion: 2
+        x: 4127
+        y: 1131
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86656ab8a927a11b0800000000000000
+      internalID: -5685105571508365720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_198
+      rect:
+        serializedVersion: 2
+        x: 4607
+        y: 1111
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9f06f8f51b3d6730800000000000000
+      internalID: 3993913410104725403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_199
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 1103
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2538bf69f6fb20f10800000000000000
+      internalID: 2234558851124527954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_200
+      rect:
+        serializedVersion: 2
+        x: 1983
+        y: 1091
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9018658bdbbd65320800000000000000
+      internalID: 2546464247212572937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_201
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 1059
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7f7644559cee6100800000000000000
+      internalID: 103279967584288639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_202
+      rect:
+        serializedVersion: 2
+        x: 3129
+        y: 1042
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7255633308b8c9160800000000000000
+      internalID: 7033650100777145639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_203
+      rect:
+        serializedVersion: 2
+        x: 4242
+        y: 1047
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47ed0bad769ccad00800000000000000
+      internalID: 985383866375134836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_204
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 994
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91a517adb386babb0800000000000000
+      internalID: -4923727161322284519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_205
+      rect:
+        serializedVersion: 2
+        x: 2662
+        y: 1010
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b74862bf53fc9730800000000000000
+      internalID: 4007345360793520049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_206
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 973
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 125eb0ecd039c9b90800000000000000
+      internalID: -7233745213963115231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_207
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 990
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae424b9a48dc96e50800000000000000
+      internalID: 6803194681786377450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_208
+      rect:
+        serializedVersion: 2
+        x: 2264
+        y: 983
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 799f6906bca76cea0800000000000000
+      internalID: -5852855651803924073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_209
+      rect:
+        serializedVersion: 2
+        x: 1546
+        y: 945
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c05355d802db26640800000000000000
+      internalID: 5071824077880374540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_210
+      rect:
+        serializedVersion: 2
+        x: 4633
+        y: 939
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 187af1d1faea20cb0800000000000000
+      internalID: -4899161377494554751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_211
+      rect:
+        serializedVersion: 2
+        x: 2183
+        y: 911
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 500dd86944a23b540800000000000000
+      internalID: 5022404483520253957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_212
+      rect:
+        serializedVersion: 2
+        x: 3628
+        y: 926
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04a87a36429b7a1e0800000000000000
+      internalID: -2186575528123200960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_213
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 885
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76ad183657471bf60800000000000000
+      internalID: 8048342056617237095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_214
+      rect:
+        serializedVersion: 2
+        x: 2648
+        y: 868
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6af4ed4fa729d1840800000000000000
+      internalID: 5196470601847295910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_215
+      rect:
+        serializedVersion: 2
+        x: 4421
+        y: 868
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5453fbfee338bcb10800000000000000
+      internalID: 2002838765629814085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_216
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 843
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4783ff45088b4880800000000000000
+      internalID: -8625651104900479156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_217
+      rect:
+        serializedVersion: 2
+        x: 3922
+        y: 849
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4af84f23358417800800000000000000
+      internalID: 608346946846101412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_218
+      rect:
+        serializedVersion: 2
+        x: 4012
+        y: 855
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cc417ed878811f00800000000000000
+      internalID: 1085799037882420418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_219
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 807
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd3b0abfcecd6d610800000000000000
+      internalID: 1645745624242500575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_220
+      rect:
+        serializedVersion: 2
+        x: 2399
+        y: 817
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4ae4f50ccd0dd7d0800000000000000
+      internalID: -2892140215777564085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_221
+      rect:
+        serializedVersion: 2
+        x: 3083
+        y: 823
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd9ebe004fa24d550800000000000000
+      internalID: 6184615415762381279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_222
+      rect:
+        serializedVersion: 2
+        x: 4819
+        y: 801
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a3162180ee5dc0e0800000000000000
+      internalID: -2248036320655567968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_223
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 778
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d6ce4c5cc59f4ad0800000000000000
+      internalID: -2715787345326586160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_224
+      rect:
+        serializedVersion: 2
+        x: 4050
+        y: 781
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3e0e4c8445af51f0800000000000000
+      internalID: -1053942073951121860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_225
+      rect:
+        serializedVersion: 2
+        x: 1595
+        y: 713
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81ee68e8097dccf50800000000000000
+      internalID: 6903129344718597656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_226
+      rect:
+        serializedVersion: 2
+        x: 2078
+        y: 727
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a9a2df6c4d9abe80800000000000000
+      internalID: -8162038423036450391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_227
+      rect:
+        serializedVersion: 2
+        x: 2926
+        y: 713
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93207245f1eadc0d0800000000000000
+      internalID: -3400870694015794631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_228
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 674
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2035821404652a840800000000000000
+      internalID: 5233840550928995074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_229
+      rect:
+        serializedVersion: 2
+        x: 2936
+        y: 695
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e60454e6d77a93430800000000000000
+      internalID: 3763223120807542894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_230
+      rect:
+        serializedVersion: 2
+        x: 3602
+        y: 644
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85250a6c0b6ff5a60800000000000000
+      internalID: 7665116329914946136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_231
+      rect:
+        serializedVersion: 2
+        x: 1522
+        y: 619
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49db4b1a61cea1bb0800000000000000
+      internalID: -4964396057276138092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_232
+      rect:
+        serializedVersion: 2
+        x: 2123
+        y: 619
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f88d3798e99bd3a0800000000000000
+      internalID: -6639544001378809610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_233
+      rect:
+        serializedVersion: 2
+        x: 3871
+        y: 619
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2dcace0c94d66be0800000000000000
+      internalID: -1484265260443841233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_234
+      rect:
+        serializedVersion: 2
+        x: 4741
+        y: 599
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 719306a8d762e67b0800000000000000
+      internalID: -5229199796696237801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_235
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 555
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d393273d8b166dc0800000000000000
+      internalID: -3646196554980420654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_236
+      rect:
+        serializedVersion: 2
+        x: 2443
+        y: 557
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 547d62c8056ef4820800000000000000
+      internalID: 2904793518300387141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_237
+      rect:
+        serializedVersion: 2
+        x: 3322
+        y: 562
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55770f7b9171be800800000000000000
+      internalID: 642632771058038613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_238
+      rect:
+        serializedVersion: 2
+        x: 3608
+        y: 574
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1da1697947b0b08d0800000000000000
+      internalID: -2879194941385991471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_239
+      rect:
+        serializedVersion: 2
+        x: 4325
+        y: 555
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e487f3b8aaa1db680800000000000000
+      internalID: -8737798382245939122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_240
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 546
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e78156d3cdc380460800000000000000
+      internalID: 7208078120226986110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_241
+      rect:
+        serializedVersion: 2
+        x: 1054
+        y: 520
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55aeac997647b3530800000000000000
+      internalID: 3835787495946775125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_242
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 505
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23c2aa9cbcb3c01f0800000000000000
+      internalID: -1077420464400618446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_243
+      rect:
+        serializedVersion: 2
+        x: 3992
+        y: 522
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c0bbeb2928bbc9b0800000000000000
+      internalID: -5058747269450583871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_244
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 500
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81964b239c8fccf60800000000000000
+      internalID: 8056087376481773848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_245
+      rect:
+        serializedVersion: 2
+        x: 4197
+        y: 484
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 234a9e77f780f7470800000000000000
+      internalID: 8394437574007563314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_246
+      rect:
+        serializedVersion: 2
+        x: 4622
+        y: 484
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12293ea690a2cbc50800000000000000
+      internalID: 6682262167047344673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_247
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 465
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0db6e1a6cd22f92c0800000000000000
+      internalID: -4422777978986009648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_248
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 478
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ad356b49f33ac0d0800000000000000
+      internalID: -3401849422720189016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_249
+      rect:
+        serializedVersion: 2
+        x: 3391
+        y: 478
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a775f0ee5eed3f7c0800000000000000
+      internalID: -4038639361698343046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_250
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 420
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d938c5cb19ae18c30800000000000000
+      internalID: 4360023825922687901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_251
+      rect:
+        serializedVersion: 2
+        x: 2578
+        y: 407
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e6447c92f3cdb590800000000000000
+      internalID: -7656748344685607194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_252
+      rect:
+        serializedVersion: 2
+        x: 2885
+        y: 407
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02a0b0b4ad3eca580800000000000000
+      internalID: -8814419843969512928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_253
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 388
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56a38ea02ff711f70800000000000000
+      internalID: 9156240194962733669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_254
+      rect:
+        serializedVersion: 2
+        x: 2258
+        y: 382
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ad25373275f38e00800000000000000
+      internalID: 1045949409381395880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_255
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 324
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b464e20694e8c120800000000000000
+      internalID: 2434446931538502839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_256
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 298
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38e27fef90e25dfe0800000000000000
+      internalID: -1164974308138209661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_257
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 292
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aa9cd346ddd1b3f0800000000000000
+      internalID: -886683739284006237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_258
+      rect:
+        serializedVersion: 2
+        x: 3685
+        y: 254
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b2a04b3cbd1980f0800000000000000
+      internalID: -1114326738512338248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_259
+      rect:
+        serializedVersion: 2
+        x: 4461
+        y: 261
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 248f6de026fae5630800000000000000
+      internalID: 3917761561549535298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_260
+      rect:
+        serializedVersion: 2
+        x: 4722
+        y: 273
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2352b4d23c50adb60800000000000000
+      internalID: 7771530442817873202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_261
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 223
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 842b8d908b9cee660800000000000000
+      internalID: 7417087428602147400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_262
+      rect:
+        serializedVersion: 2
+        x: 1880
+        y: 222
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 491d34509996c6d60800000000000000
+      internalID: 7884793153558139284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_263
+      rect:
+        serializedVersion: 2
+        x: 2411
+        y: 222
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 596630e91ab4e51d0800000000000000
+      internalID: -3360165114458970475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_264
+      rect:
+        serializedVersion: 2
+        x: 1950
+        y: 190
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef1b90ec13ba5c5a0800000000000000
+      internalID: -6501602256640953858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_265
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 202
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ea94461257d31060800000000000000
+      internalID: 6923113799759469289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_266
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 202
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47ad4a4b284becfc0800000000000000
+      internalID: -3472639789186622860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_267
+      rect:
+        serializedVersion: 2
+        x: 2571
+        y: 158
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f1378c7f84b538b0800000000000000
+      internalID: -5173030068602588688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_268
+      rect:
+        serializedVersion: 2
+        x: 3219
+        y: 172
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e523289c3864e030800000000000000
+      internalID: 3523055417970337255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_269
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 158
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14257b620c6ae94e0800000000000000
+      internalID: -1972956242528218559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_270
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 106
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f76305178fb5d8c40800000000000000
+      internalID: 5516166241209824895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_271
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 126
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1b304570a023f8a0800000000000000
+      internalID: -6272633982462969058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_272
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 126
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 228620bf400772bb0800000000000000
+      internalID: -4960873297831892958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_273
+      rect:
+        serializedVersion: 2
+        x: 4287
+        y: 106
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86ead37d172baafc0800000000000000
+      internalID: -3482775159805464984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_274
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 94
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e4a6011b2b1afb90800000000000000
+      internalID: -7207418381869865757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_275
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 88
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d83bc8371a7fa96c0800000000000000
+      internalID: -4135721034985983091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_276
+      rect:
+        serializedVersion: 2
+        x: 3416
+        y: 81
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab9eab0a3060a8ed0800000000000000
+      internalID: -2411108037852206662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_277
+      rect:
+        serializedVersion: 2
+        x: 3999
+        y: 81
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4aa9a4c9a59074c0800000000000000
+      internalID: -4291765888502617523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_278
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 49
+        width: 20
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25b7d184c51356540800000000000000
+      internalID: 5000457233681447762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_279
+      rect:
+        serializedVersion: 2
+        x: 2527
+        y: 68
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bf9cf76170477dc0800000000000000
+      internalID: -3641370917885665360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_280
+      rect:
+        serializedVersion: 2
+        x: 2879
+        y: 49
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 797213be8501fa5f0800000000000000
+      internalID: -743357439403808873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_281
+      rect:
+        serializedVersion: 2
+        x: 4805
+        y: 42
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91681909c07781f90800000000000000
+      internalID: -6982700326389184999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: stars low_282
+      rect:
+        serializedVersion: 2
+        x: 2015
+        y: 17
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d14ea7092c44855f0800000000000000
+      internalID: -767788134028352483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      stars low_0: -5465744886260663335
+      stars low_1: 3911315252676589467
+      stars low_10: 7424493972388725439
+      stars low_100: -112843229300460734
+      stars low_101: 622878905947375559
+      stars low_102: 2240876310144332568
+      stars low_103: -5967806715596793281
+      stars low_104: 1263827698030758623
+      stars low_105: -1502609752233334106
+      stars low_106: 8930753848985807430
+      stars low_107: 3311182522661354698
+      stars low_108: 8266917701709494519
+      stars low_109: 8046395993642895036
+      stars low_11: -5099130861026746686
+      stars low_110: -1124020988229709674
+      stars low_111: 78467018530598160
+      stars low_112: -4256581414700387351
+      stars low_113: -9139474972444145058
+      stars low_114: -7473695537741645594
+      stars low_115: -8487930686580899166
+      stars low_116: 196849916401691749
+      stars low_117: 2445490123635335135
+      stars low_118: -1141400446971481202
+      stars low_119: -1126181486893181903
+      stars low_12: -4038461221087252900
+      stars low_120: 1975933687025374091
+      stars low_121: 1611390692791918175
+      stars low_122: 8865604822451597280
+      stars low_123: -4256991532250371938
+      stars low_124: -877220049037285121
+      stars low_125: 2292312301808837444
+      stars low_126: 8126979012019988255
+      stars low_127: -3520213655073012381
+      stars low_128: -2481070706980118070
+      stars low_129: -4433565046153289747
+      stars low_13: 5285140583202223006
+      stars low_130: 4198932373437396940
+      stars low_131: 6391923333558734278
+      stars low_132: -3899072199189354193
+      stars low_133: 7165460088224449354
+      stars low_134: -6610127734092862666
+      stars low_135: -897776193020571415
+      stars low_136: -7148348840336841304
+      stars low_137: 8544804617175384388
+      stars low_138: 4305917682311547238
+      stars low_139: -8385212070009780087
+      stars low_14: -7544375004089528965
+      stars low_140: -1030682514599805085
+      stars low_141: -4381118121626288490
+      stars low_142: 558758498776431931
+      stars low_143: 8518284374375177041
+      stars low_144: -2296357123186648760
+      stars low_145: -5778645130977222904
+      stars low_146: 3488415440095766702
+      stars low_147: 1893041573940289327
+      stars low_148: -5303755444991436991
+      stars low_149: 1177014183231130743
+      stars low_15: -5335201714375493033
+      stars low_150: 880541143662198009
+      stars low_151: 4144503525948896505
+      stars low_152: 1539377722259384855
+      stars low_153: -7635173845031324145
+      stars low_154: -4970340169861378011
+      stars low_155: 6491638619032806304
+      stars low_156: 8617356617354810032
+      stars low_157: 1244523392930799288
+      stars low_158: -8773825405211345839
+      stars low_159: 3876900678899883309
+      stars low_16: -3946734847658169292
+      stars low_160: 6430930130148922304
+      stars low_161: -6993956184790881989
+      stars low_162: 624750775638757399
+      stars low_163: -7303396830348773113
+      stars low_164: 1829772117007865221
+      stars low_165: 4324569460413932478
+      stars low_166: 6211554525273694288
+      stars low_167: -5760055516649482235
+      stars low_168: -7527720731567532361
+      stars low_169: -8635018125651226493
+      stars low_17: -7604006751592553252
+      stars low_170: 9061929827415637511
+      stars low_171: -7275829439657799380
+      stars low_172: 1131811859139675907
+      stars low_173: 4767532463867342910
+      stars low_174: 7881853758837033225
+      stars low_175: 3659705267722478344
+      stars low_176: 4660211868998931458
+      stars low_177: 5759369502171805582
+      stars low_178: -7232508449224938970
+      stars low_179: 2052139393569461481
+      stars low_18: -2224524859498651762
+      stars low_180: -5523363355169250224
+      stars low_181: -500686615212982949
+      stars low_182: -2421869109897866832
+      stars low_183: 6704927834473202767
+      stars low_184: -3515443268971656986
+      stars low_185: 8274914188145842540
+      stars low_186: 4082671760999187013
+      stars low_187: -778697778567368872
+      stars low_188: 9117306492240447718
+      stars low_189: -8718973990374702425
+      stars low_19: 449286684451823906
+      stars low_190: -8743938374365183180
+      stars low_191: -5979264945415490748
+      stars low_192: -8111926692432684375
+      stars low_193: 2178570062079894893
+      stars low_194: 4720968177603602377
+      stars low_195: 1398252175266348966
+      stars low_196: -8984096411327983698
+      stars low_197: -5685105571508365720
+      stars low_198: 3993913410104725403
+      stars low_199: 2234558851124527954
+      stars low_2: -2026239061397907548
+      stars low_20: -855227106107037604
+      stars low_200: 2546464247212572937
+      stars low_201: 103279967584288639
+      stars low_202: 7033650100777145639
+      stars low_203: 985383866375134836
+      stars low_204: -4923727161322284519
+      stars low_205: 4007345360793520049
+      stars low_206: -7233745213963115231
+      stars low_207: 6803194681786377450
+      stars low_208: -5852855651803924073
+      stars low_209: 5071824077880374540
+      stars low_21: 3422610402290312900
+      stars low_210: -4899161377494554751
+      stars low_211: 5022404483520253957
+      stars low_212: -2186575528123200960
+      stars low_213: 8048342056617237095
+      stars low_214: 5196470601847295910
+      stars low_215: 2002838765629814085
+      stars low_216: -8625651104900479156
+      stars low_217: 608346946846101412
+      stars low_218: 1085799037882420418
+      stars low_219: 1645745624242500575
+      stars low_22: 7857210592459386215
+      stars low_220: -2892140215777564085
+      stars low_221: 6184615415762381279
+      stars low_222: -2248036320655567968
+      stars low_223: -2715787345326586160
+      stars low_224: -1053942073951121860
+      stars low_225: 6903129344718597656
+      stars low_226: -8162038423036450391
+      stars low_227: -3400870694015794631
+      stars low_228: 5233840550928995074
+      stars low_229: 3763223120807542894
+      stars low_23: -5463444581425336387
+      stars low_230: 7665116329914946136
+      stars low_231: -4964396057276138092
+      stars low_232: -6639544001378809610
+      stars low_233: -1484265260443841233
+      stars low_234: -5229199796696237801
+      stars low_235: -3646196554980420654
+      stars low_236: 2904793518300387141
+      stars low_237: 642632771058038613
+      stars low_238: -2879194941385991471
+      stars low_239: -8737798382245939122
+      stars low_24: 5861237374228828022
+      stars low_240: 7208078120226986110
+      stars low_241: 3835787495946775125
+      stars low_242: -1077420464400618446
+      stars low_243: -5058747269450583871
+      stars low_244: 8056087376481773848
+      stars low_245: 8394437574007563314
+      stars low_246: 6682262167047344673
+      stars low_247: -4422777978986009648
+      stars low_248: -3401849422720189016
+      stars low_249: -4038639361698343046
+      stars low_25: 3169872754541687462
+      stars low_250: 4360023825922687901
+      stars low_251: -7656748344685607194
+      stars low_252: -8814419843969512928
+      stars low_253: 9156240194962733669
+      stars low_254: 1045949409381395880
+      stars low_255: 2434446931538502839
+      stars low_256: -1164974308138209661
+      stars low_257: -886683739284006237
+      stars low_258: -1114326738512338248
+      stars low_259: 3917761561549535298
+      stars low_26: -142268383749810317
+      stars low_260: 7771530442817873202
+      stars low_261: 7417087428602147400
+      stars low_262: 7884793153558139284
+      stars low_263: -3360165114458970475
+      stars low_264: -6501602256640953858
+      stars low_265: 6923113799759469289
+      stars low_266: -3472639789186622860
+      stars low_267: -5173030068602588688
+      stars low_268: 3523055417970337255
+      stars low_269: -1972956242528218559
+      stars low_27: -3040859108375771614
+      stars low_270: 5516166241209824895
+      stars low_271: -6272633982462969058
+      stars low_272: -4960873297831892958
+      stars low_273: -3482775159805464984
+      stars low_274: -7207418381869865757
+      stars low_275: -4135721034985983091
+      stars low_276: -2411108037852206662
+      stars low_277: -4291765888502617523
+      stars low_278: 5000457233681447762
+      stars low_279: -3641370917885665360
+      stars low_28: 8447400845843664940
+      stars low_280: -743357439403808873
+      stars low_281: -6982700326389184999
+      stars low_282: -767788134028352483
+      stars low_29: -3245874401775412708
+      stars low_3: -7054216329234695086
+      stars low_30: 2373360221599312078
+      stars low_31: 2132723391653281018
+      stars low_32: -779277546302321685
+      stars low_33: -7746471008307364109
+      stars low_34: 8514890920457851312
+      stars low_35: -7252744325169580161
+      stars low_36: 1324673789255550289
+      stars low_37: -8085958437617067474
+      stars low_38: 1609081475828334954
+      stars low_39: 3787703629158560184
+      stars low_4: -3341982168510199863
+      stars low_40: -6717694072370728654
+      stars low_41: -7784406835267707250
+      stars low_42: -2871813815530669095
+      stars low_43: -4847310015088860039
+      stars low_44: 8214087623527309068
+      stars low_45: 891779034681578723
+      stars low_46: 1814884977769814527
+      stars low_47: 7499314864321131509
+      stars low_48: -8725696455260835718
+      stars low_49: -4795260899944553239
+      stars low_5: -2287237389592335318
+      stars low_50: -2866812985714625423
+      stars low_51: -2740702442742205616
+      stars low_52: -4973931939728261993
+      stars low_53: -7201316306868621937
+      stars low_54: -726013937643896489
+      stars low_55: 1061852892125392112
+      stars low_56: 7246097802025961245
+      stars low_57: -6056945256252845387
+      stars low_58: 4562715498914028935
+      stars low_59: 1300571501196221321
+      stars low_6: 2133492983762855062
+      stars low_60: 8484969876807001075
+      stars low_61: -5309826389498911089
+      stars low_62: -7780114348454960717
+      stars low_63: 8144066739555108434
+      stars low_64: 1085736999873840803
+      stars low_65: -2565427233369398388
+      stars low_66: 3991160689582393646
+      stars low_67: -1995997766884188102
+      stars low_68: 4136692970825320412
+      stars low_69: -7034852336748493105
+      stars low_7: 208898124872299387
+      stars low_70: -3319219689640215581
+      stars low_71: -9122588085204775255
+      stars low_72: -4752974798665020193
+      stars low_73: -2988809798609158895
+      stars low_74: -4597187190571563291
+      stars low_75: -2271206799862143295
+      stars low_76: -896719057652632748
+      stars low_77: 9222157245657503306
+      stars low_78: -8648109547521495676
+      stars low_79: -545392851319096995
+      stars low_8: 3719348427435466119
+      stars low_80: 5372731749614000534
+      stars low_81: -6129595273409771542
+      stars low_82: 7601949420873457006
+      stars low_83: -1965882216328093598
+      stars low_84: 7879813383769511048
+      stars low_85: 9136343755399798951
+      stars low_86: -7546247348418980548
+      stars low_87: -8194179649262183017
+      stars low_88: -294902879352316161
+      stars low_89: -1337705856580457845
+      stars low_9: 1337494363429606622
+      stars low_90: 1978768256313370908
+      stars low_91: -8283979360790269400
+      stars low_92: 5977240030821603065
+      stars low_93: -2453024567245933654
+      stars low_94: -3897041061054505981
+      stars low_95: -2368152768105628816
+      stars low_96: -3931047505422852995
+      stars low_97: -5683557713546786684
+      stars low_98: -7844688523309889134
+      stars low_99: -7333567164265788267
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
