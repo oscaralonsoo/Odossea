@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 
 public class InGameMenuManager : MonoBehaviour
@@ -33,6 +34,9 @@ public class InGameMenuManager : MonoBehaviour
 
     [SerializeField] float defaultBrightness = 1f;
     [SerializeField] CanvasGroup brightnessOverlay;
+
+    [Header("Resume Button")]
+    [SerializeField] Button resumeButton;
     void Start()
     {
         //AUDIO
@@ -69,7 +73,6 @@ public class InGameMenuManager : MonoBehaviour
                 Pause();
                 return true;
             }
-            return true;   
     }
     // PAUSE
     public void Pause()
@@ -78,14 +81,18 @@ public class InGameMenuManager : MonoBehaviour
         overlayPanel.SetActive(true);
         pausePanel.Show();
         current = pausePanel;
+
     }
 
     public void Resume()
     {
+        resumeButton.Select();
         Time.timeScale = 1;
         pausePanel.Hide();
+        optionsPanel.Hide();
+        soundPanel.Hide();
+        customizationPanel.Hide();
         overlayPanel.SetActive(false);
-        current = null;
     }
 
     // OPTIONS

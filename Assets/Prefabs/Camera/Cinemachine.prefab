@@ -850,7 +850,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.7681274, y: -5.303894}
+  m_AnchoredPosition: {x: -1.7680664, y: -5.303955}
   m_SizeDelta: {x: 60.1115, y: 67.1835}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4598591656808951850
@@ -3931,6 +3931,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7163767775866445871, guid: 3b0ca145f23dd164d8dfaa6ed3b11d48, type: 3}
+      propertyPath: resumeButton
+      value: 
+      objectReference: {fileID: 8435235301882982151}
     - target: {fileID: 7163767775866445871, guid: 3b0ca145f23dd164d8dfaa6ed3b11d48, type: 3}
       propertyPath: brightnessOverlay
       value: 
