@@ -373,12 +373,24 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5563289803326783425, guid: 71b9a2e518c732e468b34382bd110fc3, type: 3}
+      propertyPath: soundList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563289803326783425, guid: 71b9a2e518c732e468b34382bd110fc3, type: 3}
       propertyPath: soundList.Array.data[0].name
       value: SHOOT
       objectReference: {fileID: 0}
     - target: {fileID: 5563289803326783425, guid: 71b9a2e518c732e468b34382bd110fc3, type: 3}
       propertyPath: soundList.Array.data[1].name
-      value: SHOOT_MISS
+      value: SWITCH
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563289803326783425, guid: 71b9a2e518c732e468b34382bd110fc3, type: 3}
+      propertyPath: soundList.Array.data[3].name
+      value: MOVE
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563289803326783425, guid: 71b9a2e518c732e468b34382bd110fc3, type: 3}
+      propertyPath: soundList.Array.data[4].name
+      value: BUTTON_PRESSED
       objectReference: {fileID: 0}
     - target: {fileID: 5563289803326783425, guid: 71b9a2e518c732e468b34382bd110fc3, type: 3}
       propertyPath: soundList.Array.data[5].name
@@ -395,11 +407,11 @@ PrefabInstance:
     - target: {fileID: 5563289803326783425, guid: 71b9a2e518c732e468b34382bd110fc3, type: 3}
       propertyPath: 'soundList.Array.data[0].clips.Array.data[0]'
       value: 
-      objectReference: {fileID: 8300000, guid: 5d14967d58e331047b5495b301b698bf, type: 3}
+      objectReference: {fileID: 8300000, guid: 266cbd614aefa8c47a86b9e4319c09c8, type: 3}
     - target: {fileID: 5563289803326783425, guid: 71b9a2e518c732e468b34382bd110fc3, type: 3}
       propertyPath: 'soundList.Array.data[1].clips.Array.data[0]'
       value: 
-      objectReference: {fileID: 8300000, guid: f3fc2f57a1587f2439c5c5ac0688cb8b, type: 3}
+      objectReference: {fileID: 8300000, guid: 22007ea9e4cf2454fa0e1f325461b9de, type: 3}
     - target: {fileID: 9071964214607169084, guid: 71b9a2e518c732e468b34382bd110fc3, type: 3}
       propertyPath: m_Name
       value: SFXManager

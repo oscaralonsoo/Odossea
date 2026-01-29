@@ -225,10 +225,6 @@ public class PlayerController : MonoBehaviour
                 GetComponent<MassCubeInstantiator>().Shoot(aimDirection);
                 SFXManager.PlaySound(SoundType.SHOOT);
             }
-            else
-            {
-                SFXManager.PlaySound(SoundType.SHOOT_MISS);
-            }
         }
        
         jumpRequested = false;
@@ -271,8 +267,6 @@ public class PlayerController : MonoBehaviour
             if (growNum >= maxGrowNum) return;
             targetScale += Vector2.one * scaleAmout;
             growNum++;
-
-            SFXManager.PlaySound(SoundType.ABSORB);
         }
     }
 
