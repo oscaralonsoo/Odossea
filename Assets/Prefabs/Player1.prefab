@@ -120,7 +120,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.3985901, y: 0.334877}
+  m_LinearOffset: {x: 0.39857864, y: 0.334877}
   m_AngularOffset: 0
 --- !u!254 &5387300781908831773
 RelativeJoint2D:
@@ -160,7 +160,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.79714966, y: 0}
+  m_LinearOffset: {x: 0.7971573, y: 0}
   m_AngularOffset: 0
 --- !u!232 &1578803975996535231
 DistanceJoint2D:
@@ -513,7 +513,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.39855957, y: 0.334877}
+  m_LinearOffset: {x: -0.39857864, y: 0.334877}
   m_AngularOffset: 0
 --- !u!254 &4938508158314673759
 RelativeJoint2D:
@@ -533,7 +533,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.79714966, y: 0}
+  m_LinearOffset: {x: -0.7971573, y: 0}
   m_AngularOffset: 0
 --- !u!254 &540077899508180376
 RelativeJoint2D:
@@ -890,7 +890,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.3985901, y: -0.4622774}
+  m_LinearOffset: {x: 0.39857864, y: -0.4622774}
   m_AngularOffset: 0
 --- !u!254 &7091180698133514370
 RelativeJoint2D:
@@ -910,7 +910,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.79714966, y: 0}
+  m_LinearOffset: {x: 0.7971573, y: 0}
   m_AngularOffset: 0
 --- !u!254 &8316615424660988289
 RelativeJoint2D:
@@ -1105,7 +1105,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.39855957, y: -0.4622774}
+  m_LinearOffset: {x: -0.39857864, y: -0.4622774}
   m_AngularOffset: 0
 --- !u!254 &3680143062874978422
 RelativeJoint2D:
@@ -1145,7 +1145,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.79714966, y: 0}
+  m_LinearOffset: {x: -0.7971573, y: 0}
   m_AngularOffset: 0
 --- !u!232 &2501344646510954460
 DistanceJoint2D:
@@ -1436,7 +1436,7 @@ MonoBehaviour:
     m_ActionId: 9caa3d8a-6b2f-4e8e-8bad-6ede561bd9be
     m_ActionName: UI/TrackedDeviceOrientation
   m_NeverAutoSwitchControlSchemes: 1
-  m_DefaultControlScheme: Player1
+  m_DefaultControlScheme: KeyBoard
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
