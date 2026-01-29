@@ -121,7 +121,7 @@ public class Crusher : MonoBehaviour
 
     IEnumerator GoUpLate()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.2f);
         rb.linearVelocity = Vector2.zero;
         rb.bodyType = RigidbodyType2D.Static;
         waiting = true;
