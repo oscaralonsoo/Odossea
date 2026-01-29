@@ -28,8 +28,7 @@ public class PlayerController : MonoBehaviour
         [NonSerialized] public Quaternion respawnRotation = Quaternion.identity;
     }
 
-    [Header("Player")]
-    [SerializeField] PlayerController otherPlayer;
+    PlayerController otherPlayer;
 
     [Header("Bones")]
     public List<Bone> bones;
@@ -73,6 +72,15 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        var playerControlers = FindObjectsByType<PlayerController>(FindObjectsSortMode.None);
+        foreach (PlayerController player in playerControlers)
+        {
+            if (player != this)
+            {
+                otherPlayer = player;
+            }
+        }
+
         foreach (Bone b in bones)
         {
             b.transform.TryGetComponent(out b.rigidbody2D);
