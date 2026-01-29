@@ -31,15 +31,23 @@ public class SFXManager : MonoBehaviour
 
     public static void PlaySound(SoundType sound, float volume = 1f)
     {
-        AudioClip[] clips = instance.soundList[(int)sound].Sounds;
-        AudioClip randomClip = clips[UnityEngine.Random.Range(0, clips.Length)];
+        if (instance == null) return;
 
+        AudioClip[] clips = instance.soundList[(int)sound].Sounds;
+        if (clips.Length == 0) return;
+
+        AudioClip randomClip = clips[UnityEngine.Random.Range(0, clips.Length)];
         instance.audioSource.PlayOneShot(randomClip, volume * MasterVolume);
     }
+
     public static void SetSFXVolume(float value)
     {
         MasterVolume = value;
+
+        if (instance != null && instance.audioSource != null)
+            instance.audioSource.volume = MasterVolume;
     }
+
 
 #if UNITY_EDITOR
     private void OnEnable()
@@ -47,7 +55,6 @@ public class SFXManager : MonoBehaviour
         string[] names = Enum.GetNames(typeof(SoundType));
         Array.Resize<SoundList>(ref soundList, names.Length);
 
-        // Asignamos el nombre de cada SoundList para identificarlo en el inspector
         for (int i = 0; i < soundList.Length; i++)
         {
             soundList[i].name = names[i];

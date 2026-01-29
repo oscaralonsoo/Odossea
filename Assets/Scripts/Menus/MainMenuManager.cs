@@ -26,10 +26,14 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] float defaultMusic = 1f;
     [SerializeField] float defaultSFX = 1f;
     [SerializeField] float defaultBrightness = 1f;
+
     void Start()
     {
         mainPanel.Show();
         current = mainPanel;
+
+        if (MusicManager.Instance != null)
+            MusicManager.Instance.PlayMenu();
 
         LoadSettings();
     }
@@ -50,17 +54,16 @@ public class MainMenuManager : MonoBehaviour
         ApplyGraphics();
     }
 
-    public void OnMusicSlider(float val) => pendingMusicVol = val;
-    public void OnSFXSlider(float val) => pendingSFXVol = val;
+    public void OnSFXSlider(float value)
+    {
+        pendingSFXVol = value;
+        SFXManager.SetSFXVolume(pendingSFXVol);
+    }
 
     public void ApplyAudio()
     {
         PlayerPrefs.SetFloat("MusicVol", pendingMusicVol);
         PlayerPrefs.SetFloat("SFXVol", pendingSFXVol);
-
-        if (MusicManager.Instance != null)
-            MusicManager.Instance.SetMusicVolume(pendingMusicVol);
-
         SFXManager.SetSFXVolume(pendingSFXVol);
     }
 

@@ -168,22 +168,23 @@ public class InGameMenuManager : MonoBehaviour
         PlayerPrefs.SetFloat("MusicVol", defaultMusic);
         PlayerPrefs.SetFloat("SFXVol", defaultSFX);
     }
-
     public void OnMusicSlider(float value)
     {
         pendingMusicVolume = value;
+        MusicManager.Instance.SetMusicVolume(pendingMusicVolume); // Cambia volumen al instante
     }
 
     public void OnSFXSlider(float value)
     {
-        pendingSFXVolume = value;
+        pendingSFXVolume = value;   
+        SFXManager.SetSFXVolume(pendingSFXVolume);
     }
+
 
     public void OnFullscreenToggle(bool value)
     {
         pendingFullscreen = value;
     }
-    // Cambia estas funciones en tu script:
 
     public void OnBrightnessSlider(float value)
     {
