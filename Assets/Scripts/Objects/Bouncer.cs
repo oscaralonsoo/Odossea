@@ -22,7 +22,7 @@ public class Bouncer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.transform.CompareTag("Bone"))
+        if (collision.transform.CompareTag("Bone") || collision.transform.CompareTag("CubeTrigger"))
         {
             if (!isSquashing)
                 StartCoroutine(Squash());
