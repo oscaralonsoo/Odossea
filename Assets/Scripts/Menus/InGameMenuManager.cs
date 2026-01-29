@@ -47,7 +47,6 @@ public class InGameMenuManager : MonoBehaviour
         musicSlider.value = pendingMusicVolume;
         sfxSlider.value = pendingSFXVolume;
 
-        MusicManager.Instance.SetMusicVolume(1);
         SFXManager.SetSFXVolume(1);
 
         // GRAPHICS

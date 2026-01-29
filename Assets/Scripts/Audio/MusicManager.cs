@@ -13,12 +13,7 @@ public class MusicManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else Destroy(gameObject);
+        PlayMenu();
     }
 
     // Reproducir canciones
