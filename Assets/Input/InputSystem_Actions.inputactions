@@ -15,6 +15,15 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "Submit",
+                    "type": "Button",
+                    "id": "86f857c0-7503-4997-8179-e5cffa692f21",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Jump",
                     "type": "Button",
                     "id": "f1ba0d36-48eb-4cd5-b651-1c94a6531f70",
@@ -55,6 +64,15 @@
                     "type": "Button",
                     "id": "97a694df-ca80-4c3d-aa69-2bddba8cdb42",
                     "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Navigate",
+                    "type": "PassThrough",
+                    "id": "6ef34c0d-cbbd-41f0-b082-be72e9a098b8",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -239,6 +257,17 @@
                 },
                 {
                     "name": "",
+                    "id": "d8428b90-15ae-42ed-9748-6e2e3589b9d1",
+                    "path": "*/{Submit}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad;Touch;Joystick;XR;Keyboard_1",
+                    "action": "Submit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "eb40bb66-4559-4dfa-9a2f-820438abb426",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -388,6 +417,17 @@
                     "processors": "",
                     "groups": ";KeyBoard",
                     "action": "Back",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3962a197-3838-4a40-b2ca-a2a7047eda2d",
+                    "path": "<Gamepad>/dpad",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Navigate",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
