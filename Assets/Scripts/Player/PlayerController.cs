@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Camera cinemachineCamera;
 
     public List<DropableCube> dropableCubes;
-
+    public PlayerInput playerInput;
     private ContactFilter2D groundFilter;
 
     private void Awake()
@@ -98,7 +98,6 @@ public class PlayerController : MonoBehaviour
 
     // -------- INPUT --------
     public void OnMove(InputValue value) => inputDirection = value.Get<Vector2>();
-
     public void OnJump(InputValue value)
     {
         if (value.isPressed)
@@ -109,9 +108,23 @@ public class PlayerController : MonoBehaviour
 
     public void OnLook(InputValue value)
     {
-        Vector2 stick = value.Get<Vector2>();
-        if (stick.sqrMagnitude > 0.01f)
-            aimDirection = stick.normalized;
+        if (playerInput.currentControlScheme == "Keyboard&Mouse")
+        {
+            Vector2 mouseScreenPos = value.Get<Vector2>();
+
+            float zDist = -cinemachineCamera.transform.position.z;
+            Vector3 mouseWorldPos = cinemachineCamera.ScreenToWorldPoint(new Vector3(mouseScreenPos.x, mouseScreenPos.y, zDist));
+
+            Vector2 dir = (Vector2)mouseWorldPos - GetCenterPosition();
+            if (dir.sqrMagnitude > 0.01f)
+                aimDirection = dir.normalized;
+        }
+        else
+        {
+            Vector2 stick = value.Get<Vector2>();
+            if (stick.sqrMagnitude > 0.1f)
+                aimDirection = stick.normalized;
+        }
     }
 
     public void OnShoot(InputValue value)
@@ -122,25 +135,8 @@ public class PlayerController : MonoBehaviour
             shootRequested = true;
     }
 
-    // -------- AIM (Mouse + Cinemachine) --------
     private void Update()
     {
-        if (Mouse.current == null || cinemachineCamera == null)
-            return;
-
-        Vector3 mouseScreenPos = Mouse.current.position.ReadValue();
-
-        // Distancia desde la cámara al plano Z = 0
-        mouseScreenPos.z = -cinemachineCamera.transform.position.z;
-
-        Vector3 mouseWorldPos = cinemachineCamera.ScreenToWorldPoint(mouseScreenPos);
-
-        Vector2 dir = mouseWorldPos;
-        dir -= GetCenterPosition();
-
-        if (dir.sqrMagnitude > 0.001f)
-            aimDirection = dir.normalized;
-
         dropableCubes.RemoveAll(cube => cube == null || cube.collided);
     }
 

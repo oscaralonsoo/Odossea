@@ -22,6 +22,7 @@ public class CameraPoint : MonoBehaviour
 
         if (vcam != null)
         {
+            Debug.Log("vcam");
             _camaraDentro = true;
             ApplySettings(vcam);
         }
@@ -44,6 +45,8 @@ public class CameraPoint : MonoBehaviour
 
         if (framing != null)
         {
+            Debug.Log("framing");
+
             //Save initial Settings
             _framingOffsetOriginal = framing.CenterOffset;
 
