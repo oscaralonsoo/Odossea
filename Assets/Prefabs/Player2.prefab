@@ -120,7 +120,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.39857864, y: 0.334877}
+  m_LinearOffset: {x: 0.39857674, y: 0.334877}
   m_AngularOffset: 0
 --- !u!254 &9086414821288901534
 RelativeJoint2D:
@@ -140,7 +140,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: 0.7971549}
+  m_LinearOffset: {x: 0, y: 0.7971544}
   m_AngularOffset: 0
 --- !u!254 &2138144945273200969
 RelativeJoint2D:
@@ -160,7 +160,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.7971573, y: 0}
+  m_LinearOffset: {x: 0.79715633, y: 0}
   m_AngularOffset: 0
 --- !u!232 &6959017677817150002
 DistanceJoint2D:
@@ -335,7 +335,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.39857864, y: -0.4622779}
+  m_LinearOffset: {x: -0.3985796, y: -0.4622774}
   m_AngularOffset: 0
 --- !u!254 &3062174566863139655
 RelativeJoint2D:
@@ -355,7 +355,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: -0.7971549}
+  m_LinearOffset: {x: 0, y: -0.7971544}
   m_AngularOffset: 0
 --- !u!254 &4732655867712091220
 RelativeJoint2D:
@@ -375,7 +375,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.7971573, y: 0}
+  m_LinearOffset: {x: -0.79715633, y: 0}
   m_AngularOffset: 0
 --- !u!232 &951582663498002254
 DistanceJoint2D:
@@ -550,7 +550,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.39857864, y: -0.4622779}
+  m_LinearOffset: {x: 0.39857674, y: -0.4622774}
   m_AngularOffset: 0
 --- !u!254 &7636905446554378171
 RelativeJoint2D:
@@ -570,7 +570,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.7971573, y: 0}
+  m_LinearOffset: {x: 0.79715633, y: 0}
   m_AngularOffset: 0
 --- !u!254 &7359789446511942944
 RelativeJoint2D:
@@ -590,7 +590,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: -0.7971549}
+  m_LinearOffset: {x: 0, y: -0.7971544}
   m_AngularOffset: 0
 --- !u!232 &5306573411921039791
 DistanceJoint2D:
@@ -765,7 +765,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.39857864, y: 0.334877}
+  m_LinearOffset: {x: -0.3985796, y: 0.334877}
   m_AngularOffset: 0
 --- !u!254 &8207348201385576690
 RelativeJoint2D:
@@ -785,7 +785,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.7971573, y: 0}
+  m_LinearOffset: {x: -0.79715633, y: 0}
   m_AngularOffset: 0
 --- !u!254 &4348422380520794259
 RelativeJoint2D:
@@ -805,7 +805,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: 0.7971549}
+  m_LinearOffset: {x: 0, y: 0.7971544}
   m_AngularOffset: 0
 --- !u!232 &9202049573703723145
 DistanceJoint2D:
@@ -932,6 +932,8 @@ MonoBehaviour:
   maxGrowNum: 5
   growNum: 1
   cinemachineCamera: {fileID: 0}
+  dropableCubes: []
+  playerInput: {fileID: 6469770340912714208}
 --- !u!114 &1308168896104237239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -975,7 +977,7 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: Gamepad
+  m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
