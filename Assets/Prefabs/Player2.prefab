@@ -239,7 +239,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.39857864, y: 0.334877}
+  m_LinearOffset: {x: 0.39857617, y: 0.33487684}
   m_AngularOffset: 0
 --- !u!254 &9086414821288901534
 RelativeJoint2D:
@@ -259,7 +259,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: 0.7971544}
+  m_LinearOffset: {x: 0, y: 0.79715466}
   m_AngularOffset: 0
 --- !u!254 &2138144945273200969
 RelativeJoint2D:
@@ -279,7 +279,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.7971573, y: 0}
+  m_LinearOffset: {x: 0.79715645, y: 0}
   m_AngularOffset: 0
 --- !u!232 &6959017677817150002
 DistanceJoint2D:
@@ -454,7 +454,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.39857864, y: -0.4622774}
+  m_LinearOffset: {x: -0.3985803, y: -0.4622778}
   m_AngularOffset: 0
 --- !u!254 &3062174566863139655
 RelativeJoint2D:
@@ -474,7 +474,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: -0.7971544}
+  m_LinearOffset: {x: 0, y: -0.79715466}
   m_AngularOffset: 0
 --- !u!254 &4732655867712091220
 RelativeJoint2D:
@@ -494,7 +494,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.7971573, y: 0}
+  m_LinearOffset: {x: -0.79715645, y: 0}
   m_AngularOffset: 0
 --- !u!232 &951582663498002254
 DistanceJoint2D:
@@ -669,7 +669,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.39857864, y: -0.4622774}
+  m_LinearOffset: {x: 0.39857617, y: -0.4622778}
   m_AngularOffset: 0
 --- !u!254 &7636905446554378171
 RelativeJoint2D:
@@ -689,7 +689,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.7971573, y: 0}
+  m_LinearOffset: {x: 0.79715645, y: 0}
   m_AngularOffset: 0
 --- !u!254 &7359789446511942944
 RelativeJoint2D:
@@ -709,7 +709,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: -0.7971544}
+  m_LinearOffset: {x: 0, y: -0.79715466}
   m_AngularOffset: 0
 --- !u!232 &5306573411921039791
 DistanceJoint2D:
@@ -884,7 +884,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.39857864, y: 0.334877}
+  m_LinearOffset: {x: -0.3985803, y: 0.33487684}
   m_AngularOffset: 0
 --- !u!254 &8207348201385576690
 RelativeJoint2D:
@@ -904,7 +904,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.7971573, y: 0}
+  m_LinearOffset: {x: -0.79715645, y: 0}
   m_AngularOffset: 0
 --- !u!254 &4348422380520794259
 RelativeJoint2D:
@@ -924,7 +924,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: 0.7971544}
+  m_LinearOffset: {x: 0, y: 0.79715466}
   m_AngularOffset: 0
 --- !u!232 &9202049573703723145
 DistanceJoint2D:
@@ -1056,6 +1056,7 @@ MonoBehaviour:
   menuManager: {fileID: 0}
   dropableCubes: []
   mira: {fileID: 4065933698939789801}
+  verticalVelocityParam: VerticalVelocity
 --- !u!114 &1308168896104237239
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1362,7 +1363,7 @@ SpriteRenderer:
   m_SortingLayerID: -1696453207
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 7dff2fde81364fa4497e3ad3df67aeff, type: 3}
+  m_Sprite: {fileID: 8662491262336177618, guid: 4c30f03ac9d57954eb000bf584a36d01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1381,7 +1382,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5846883991151425291}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 35a9eba01ea9c9a4b93ed3c612d3ca98, type: 2}
   m_CullingMode: 0

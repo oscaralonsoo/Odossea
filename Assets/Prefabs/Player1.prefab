@@ -140,7 +140,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: 0.7971544}
+  m_LinearOffset: {x: 0, y: 0.7971549}
   m_AngularOffset: 0
 --- !u!254 &88544052616640402
 RelativeJoint2D:
@@ -641,7 +641,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: 0.7971544}
+  m_LinearOffset: {x: 0, y: 0.7971549}
   m_AngularOffset: 0
 --- !u!232 &8927323505904008256
 DistanceJoint2D:
@@ -776,7 +776,7 @@ SpriteRenderer:
   m_SortingLayerID: -1696453207
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 7dff2fde81364fa4497e3ad3df67aeff, type: 3}
+  m_Sprite: {fileID: 8662491262336177618, guid: 4c30f03ac9d57954eb000bf584a36d01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -978,7 +978,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0.39857864, y: -0.4622774}
+  m_LinearOffset: {x: 0.39857864, y: -0.4622779}
   m_AngularOffset: 0
 --- !u!254 &7091180698133514370
 RelativeJoint2D:
@@ -1018,7 +1018,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 1
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: -0.7971544}
+  m_LinearOffset: {x: 0, y: -0.7971549}
   m_AngularOffset: 0
 --- !u!232 &9026382531246354148
 DistanceJoint2D:
@@ -1193,7 +1193,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: -0.39857864, y: -0.4622774}
+  m_LinearOffset: {x: -0.39857864, y: -0.4622779}
   m_AngularOffset: 0
 --- !u!254 &3680143062874978422
 RelativeJoint2D:
@@ -1213,7 +1213,7 @@ RelativeJoint2D:
   m_MaxTorque: 10000
   m_CorrectionScale: 0.3
   m_AutoConfigureOffset: 1
-  m_LinearOffset: {x: 0, y: -0.7971544}
+  m_LinearOffset: {x: 0, y: -0.7971549}
   m_AngularOffset: 0
 --- !u!254 &5538180749216249850
 RelativeJoint2D:
@@ -1397,6 +1397,7 @@ MonoBehaviour:
   menuManager: {fileID: 0}
   dropableCubes: []
   mira: {fileID: 3039831450394699448}
+  verticalVelocityParam: VerticalVelocity
 --- !u!114 &8055329668978817629
 MonoBehaviour:
   m_ObjectHideFlags: 0

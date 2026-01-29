@@ -59,6 +59,11 @@ public class InGameMenuManager : MonoBehaviour
         brightnessSlider.value = pendingBrightness;
 
         ApplyGraphicsSettings();
+        overlayPanel.SetActive(false);
+        pausePanel.gameObject.SetActive(false);
+        graphicsPanel.gameObject.SetActive(false);
+        soundPanel.gameObject.SetActive(false);
+        customizationPanel.gameObject.SetActive(false);
     }
 
     public bool TogglePause()
@@ -79,6 +84,10 @@ public class InGameMenuManager : MonoBehaviour
     {
         Time.timeScale = 0;
         overlayPanel.SetActive(true);
+        pausePanel.gameObject.SetActive(true);
+        graphicsPanel.gameObject.SetActive(true);
+        soundPanel.gameObject.SetActive(true);
+        customizationPanel.gameObject.SetActive(true);
         pausePanel.Show();
         current = pausePanel;
 
@@ -93,6 +102,10 @@ public class InGameMenuManager : MonoBehaviour
         soundPanel.Hide();
         customizationPanel.Hide();
         overlayPanel.SetActive(false);
+        pausePanel.gameObject.SetActive(false);
+        graphicsPanel.gameObject.SetActive(false);
+        soundPanel.gameObject.SetActive(false);
+        customizationPanel.gameObject.SetActive(false);
     }
 
     // OPTIONS
