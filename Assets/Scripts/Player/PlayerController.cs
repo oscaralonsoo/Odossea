@@ -15,11 +15,21 @@ public class PlayerController : MonoBehaviour
         [NonSerialized] public CircleCollider2D collider2D = null;
         [NonSerialized] public List<DistanceJoint2D> distanceJoints = new();
         [NonSerialized] public List<RelativeJoint2D> relativeJoints = new();
+        [NonSerialized] public List<ContactPoint2D> contacts = new();
         [NonSerialized] public bool grounded = false;
+
+        //RESPAWN
         [NonSerialized] public Vector2 lastPostion = Vector2.zero;
         [NonSerialized] public Quaternion lastRotation = Quaternion.identity;
-        [NonSerialized] public List<ContactPoint2D> contacts = new();
+        [NonSerialized] public Vector2 currentPosition = Vector2.zero;
+        [NonSerialized] public Quaternion currentRotation = Quaternion.identity;
+
+        [NonSerialized] public Vector2 respawnPosition = Vector2.zero;
+        [NonSerialized] public Quaternion respawnRotation = Quaternion.identity;
     }
+
+    [Header("Player")]
+    [SerializeField] PlayerController otherPlayer;
 
     [Header("Bones")]
     public List<Bone> bones;
@@ -77,6 +87,8 @@ public class PlayerController : MonoBehaviour
         {
             b.lastPostion = b.transform.position;
             b.lastRotation = b.transform.rotation;
+            b.currentPosition = b.transform.position;
+            b.currentRotation = b.transform.rotation;
         }
         lastGrowNum = growNum;
 
@@ -340,8 +352,10 @@ public class PlayerController : MonoBehaviour
     {
         foreach (Bone b in bones)
         {
-            b.lastPostion = b.transform.position;
-            b.lastRotation = b.transform.rotation;
+            b.lastPostion = b.currentPosition;
+            b.lastRotation = b.currentRotation;
+            b.currentPosition = b.transform.position;
+            b.currentRotation = b.transform.rotation;
         }
         lastGrowNum = growNum;
     }
@@ -362,9 +376,11 @@ public class PlayerController : MonoBehaviour
 
         yield return new WaitForSeconds(0.4f);
 
-        foreach (Bone bone in bones)
+        for (int i = 0; i < bones.Count; i++)
         {
-            bone.transform.gameObject.SetActive(false);
+            bones[i].respawnPosition = otherPlayer.bones[i].lastPostion;
+            bones[i].respawnRotation = otherPlayer.bones[i].lastRotation;
+            bones[i].transform.gameObject.SetActive(false);
         }
 
         yield return new WaitForSeconds(2f);
@@ -374,11 +390,11 @@ public class PlayerController : MonoBehaviour
         GrowToNum(lastGrowNum);
         ApplyScaleInstant();
 
-        foreach (Bone bone in bones)
+        for (int i = 0; i < bones.Count; i++)
         {
-            bone.transform.position = bone.lastPostion;
-            bone.transform.rotation = bone.lastRotation;
-            bone.transform.gameObject.SetActive(true);
+            bones[i].transform.position = bones[i].respawnPosition;
+            bones[i].transform.rotation = bones[i].respawnRotation;
+            bones[i].transform.gameObject.SetActive(true);
         }
 
         isDead = false;
