@@ -103,4 +103,9 @@ public class MusicManager : MonoBehaviour
 
         musicSource.volume = 1f;
     }
+
+    public void SetMusicVolume(float value)
+    {
+        musicSource.volume = value;
+    }
 }

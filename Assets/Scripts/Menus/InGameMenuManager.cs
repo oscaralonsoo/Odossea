@@ -13,11 +13,46 @@ public class InGameMenuManager : MonoBehaviour
     public PlayerCustomizer playerCustomizer;
     UIPanel current;
 
+    //MUSIC
+    float pendingMusicVolume = 1f;
+    float pendingSFXVolume = 1f;
+    [SerializeField] float defaultMusic = 1f;
+    [SerializeField] float defaultSFX = 1f;
+
+    [SerializeField] UnityEngine.UI.Slider musicSlider;
+    [SerializeField] UnityEngine.UI.Slider sfxSlider;
+
+    //GRAPHICS
+    [SerializeField] UnityEngine.UI.Toggle fullscreenToggle;
+    [SerializeField] UnityEngine.UI.Slider brightnessSlider;
+    bool pendingFullscreen;
+    float pendingBrightness = 1f;
+
+    [SerializeField] float defaultBrightness = 1f;
+    [SerializeField] CanvasGroup brightnessOverlay;
     void Start()
     {
+        //AUDIO
         overlayPanel.SetActive(false);
-    }
+        pendingMusicVolume = PlayerPrefs.GetFloat("MusicVol", 1f);
+        pendingSFXVolume = PlayerPrefs.GetFloat("SFXVol", 1f);
 
+        musicSlider.value = pendingMusicVolume;
+        sfxSlider.value = pendingSFXVolume;
+
+        MusicManager.Instance.SetMusicVolume(pendingMusicVolume);
+        SFXManager.SetSFXVolume(pendingSFXVolume);
+
+        // GRAPHICS
+        pendingFullscreen = PlayerPrefs.GetInt("Fullscreen", 1) == 1;
+        pendingBrightness = PlayerPrefs.GetFloat("Brightness", defaultBrightness);
+
+        fullscreenToggle.isOn = pendingFullscreen;
+
+        brightnessSlider.value = pendingBrightness;
+
+        ApplyGraphicsSettings();
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -110,5 +145,83 @@ public class InGameMenuManager : MonoBehaviour
         {
             playerCustomizer.SetMaterial(index);
         }
+    }
+    public void ApplySoundSettings()
+    {
+        MusicManager.Instance.SetMusicVolume(pendingMusicVolume);
+        SFXManager.SetSFXVolume(pendingSFXVolume);
+
+        PlayerPrefs.SetFloat("MusicVol", pendingMusicVolume);
+        PlayerPrefs.SetFloat("SFXVol", pendingSFXVolume);
+    }
+    public void ResetSoundSettings()
+    {
+        pendingMusicVolume = defaultMusic;
+        pendingSFXVolume = defaultSFX;
+
+        musicSlider.value = defaultMusic;
+        sfxSlider.value = defaultSFX;
+
+        MusicManager.Instance.SetMusicVolume(defaultMusic);
+        SFXManager.SetSFXVolume(defaultSFX);
+
+        PlayerPrefs.SetFloat("MusicVol", defaultMusic);
+        PlayerPrefs.SetFloat("SFXVol", defaultSFX);
+    }
+
+    public void OnMusicSlider(float value)
+    {
+        pendingMusicVolume = value;
+    }
+
+    public void OnSFXSlider(float value)
+    {
+        pendingSFXVolume = value;
+    }
+
+    public void OnFullscreenToggle(bool value)
+    {
+        pendingFullscreen = value;
+    }
+    // Cambia estas funciones en tu script:
+
+    public void OnBrightnessSlider(float value)
+    {
+        pendingBrightness = value;
+        UpdateBrightnessOverlay(value); // Usamos una función común
+    }
+
+    public void ApplyGraphicsSettings()
+    {
+        PlayerPrefs.SetFloat("Brightness", pendingBrightness);
+        PlayerPrefs.SetInt("Fullscreen", pendingFullscreen ? 1 : 0);
+        PlayerPrefs.Save();
+
+        Screen.fullScreen = pendingFullscreen;
+        UpdateBrightnessOverlay(pendingBrightness);
+
+        Debug.Log("Gráficos Aplicados. Brillo: " + pendingBrightness);
+    }
+
+    // Creamos esta función para que el cálculo sea SIEMPRE el mismo
+    private void UpdateBrightnessOverlay(float value)
+    {
+        if (brightnessOverlay != null)
+        {
+            float targetAlpha = 1f - value;
+            brightnessOverlay.alpha = Mathf.Clamp(targetAlpha, 0f, 0.8f);
+        }
+    }
+
+
+    public void ResetGraphicsSettings()
+    {
+        pendingFullscreen = true;
+        pendingBrightness = defaultBrightness;
+
+        fullscreenToggle.isOn = true;
+        brightnessSlider.value = defaultBrightness;
+
+        ApplyGraphicsSettings();
     }
 }

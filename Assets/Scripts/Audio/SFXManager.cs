@@ -18,7 +18,7 @@ public class SFXManager : MonoBehaviour
     [SerializeField] private SoundList[] soundList; 
     private static SFXManager instance;
     private AudioSource audioSource;
-
+    public static float MasterVolume = 1f;
     private void Awake()
     {
         instance = this;
@@ -31,33 +31,14 @@ public class SFXManager : MonoBehaviour
 
     public static void PlaySound(SoundType sound, float volume = 1f)
     {
-        // Multiple Sounds per Type & Random Selection
         AudioClip[] clips = instance.soundList[(int)sound].Sounds;
         AudioClip randomClip = clips[UnityEngine.Random.Range(0, clips.Length)];
-        instance.audioSource.PlayOneShot(randomClip, volume);
 
-        // Just One Sound per Type
-        //switch (sound)
-        //{
-        //    //case SoundType.JUMP:
-        //    //    instance.audioSource.PlayOneShot(instance.soundList[(int)sound].Sounds[0], volume);
-        //    //    break;
-        //    //case SoundType.SHOOT:
-        //    //    instance.audioSource.PlayOneShot(instance.soundList[(int)sound].Sounds[0], volume);
-        //    //    break;
-        //    //case SoundType.DIE:
-        //    //    instance.audioSource.PlayOneShot(instance.soundList[(int)sound].Sounds[0], volume);
-        //    //    break;
-        //    //case SoundType.ADD:
-        //    //    instance.audioSource.PlayOneShot(instance.soundList[(int)sound].Sounds[0], volume);
-        //    //    break;
-        //    //case SoundType.MOVE:
-        //    //    instance.audioSource.PlayOneShot(instance.soundList[(int)sound].Sounds[0], volume);
-        //    //    break;
-        //    //case SoundType.SHOOT_MISS:
-        //    //    instance.audioSource.PlayOneShot(instance.soundList[(int)sound].Sounds[0], volume);
-        //    //    break;
-        //}
+        instance.audioSource.PlayOneShot(randomClip, volume * MasterVolume);
+    }
+    public static void SetSFXVolume(float value)
+    {
+        MasterVolume = value;
     }
 
 #if UNITY_EDITOR
