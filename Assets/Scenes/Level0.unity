@@ -446590,14 +446590,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2081859939}
-    - target: {fileID: 211584520754414115, guid: 958aec988d940624e9934b661b427a02, type: 3}
-      propertyPath: m_DefaultControlScheme
-      value: KeyBoard
-      objectReference: {fileID: 0}
-    - target: {fileID: 211584520754414115, guid: 958aec988d940624e9934b661b427a02, type: 3}
-      propertyPath: m_NotificationBehavior
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2729586688905007692, guid: 958aec988d940624e9934b661b427a02, type: 3}
       propertyPath: menuManager
       value: 
