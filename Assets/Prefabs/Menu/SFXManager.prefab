@@ -147,13 +147,12 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 266cbd614aefa8c47a86b9e4319c09c8, type: 3}
     name: SHOOT
   - clips:
-    - {fileID: 8300000, guid: f3fc2f57a1587f2439c5c5ac0688cb8b, type: 3}
-    name: SHOOT_MISS
-  - clips: []
-    name: DIE
-  - clips: []
-    name: ADD
-  - clips: []
-    name: MOVE
-  - clips: []
-    name: BUTTON_PRESSED
+    - {fileID: 8300000, guid: 3d2544f0e319ed24a8c4a584323682df, type: 3}
+    name: SWITCH
+  - clips:
+    - {fileID: 8300000, guid: de0aa6c60db6ca94e98bb52b380d9971, type: 3}
+    - {fileID: 8300000, guid: d4a2a285cdba0004c84aa95b23e45666, type: 3}
+    - {fileID: 8300000, guid: 4a2ac5cf01a51ee4197d0523eee8f255, type: 3}
+    - {fileID: 8300000, guid: ce46254ae166dbb4ca96eb82c0f577d2, type: 3}
+    - {fileID: 8300000, guid: 08fdc91e6dd898841b903885bbd2cc17, type: 3}
+    name: JUMP

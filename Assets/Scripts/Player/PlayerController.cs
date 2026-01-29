@@ -114,6 +114,7 @@ public class PlayerController : MonoBehaviour
     {
         if (value.isPressed)
             jumpRequested = true;
+        SFXManager.PlaySound(SoundType.JUMP);
     }
 
     public void OnLook(InputValue value)
@@ -142,9 +143,7 @@ public class PlayerController : MonoBehaviour
         if (value.isPressed)
         {
             shootRequested = true;
-             
         }
-     
     }
 
     private void Update()
