@@ -432418,6 +432418,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2134081840003165423, guid: 458f173bbbbcfdd428e035713be282cd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2141951075617217709, guid: 458f173bbbbcfdd428e035713be282cd, type: 3}
       propertyPath: player
       value: 
@@ -432605,6 +432609,10 @@ PrefabInstance:
     - target: {fileID: 6879653418345192607, guid: 458f173bbbbcfdd428e035713be282cd, type: 3}
       propertyPath: m_Splines.Array.data[0].m_Knots.Array.data[22].Rotation.value.z
       value: 0.6456099
+      objectReference: {fileID: 0}
+    - target: {fileID: 7386411624123561719, guid: 458f173bbbbcfdd428e035713be282cd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7967010716167966858, guid: 458f173bbbbcfdd428e035713be282cd, type: 3}
       propertyPath: m_AnchorMax.x
@@ -443439,7 +443447,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 10
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
