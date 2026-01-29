@@ -14,7 +14,8 @@ public class InGameMenuManager : MonoBehaviour
     public UIPanel customizationPanel;
 
     public GameObject overlayPanel;
-    public PlayerCustomizer playerCustomizer;
+    public PlayerCustomizer playerCustomizer1;
+    public PlayerCustomizer playerCustomizer2;
     UIPanel current;
 
     //MUSIC
@@ -122,7 +123,6 @@ public class InGameMenuManager : MonoBehaviour
     {
         if (current != null)
             current.Hide();
-
         pausePanel.Show();
         current = pausePanel;
     }
@@ -164,9 +164,13 @@ public class InGameMenuManager : MonoBehaviour
     }
     public void SelectMaterial(int index)
     {
-        if (playerCustomizer != null)
+        if (playerCustomizer1 != null)
         {
-            playerCustomizer.SetMaterial(index);
+            playerCustomizer1.SetMaterial(index);
+        }
+        if (playerCustomizer2 != null)
+        {
+            playerCustomizer2.SetMaterial(index);
         }
     }
     public void ApplySoundSettings()

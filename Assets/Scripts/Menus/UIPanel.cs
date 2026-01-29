@@ -13,7 +13,7 @@ public class UIPanel : MonoBehaviour
         animator.updateMode = AnimatorUpdateMode.UnscaledTime;
         animator.SetInteger("State", IDLE);
     }
-
+    
     public void Show()
     {
         animator.SetInteger("State", POPUP);
@@ -22,6 +22,7 @@ public class UIPanel : MonoBehaviour
     public void Hide()
     {
         animator.SetInteger("State", POPDOWN);
+
     }
 
     // Animation Events
