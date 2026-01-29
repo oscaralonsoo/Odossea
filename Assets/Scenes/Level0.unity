@@ -441155,6 +441155,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 769586145}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &1264932675 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 694257028818305611, guid: 458f173bbbbcfdd428e035713be282cd, type: 3}
+  m_PrefabInstance: {fileID: 128275675}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1286880362
 GameObject:
   m_ObjectHideFlags: 0
@@ -442475,6 +442480,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EventSystem
       objectReference: {fileID: 0}
+    - target: {fileID: 8400430123625242600, guid: 1d67801861084754391482d7de9f540f, type: 3}
+      propertyPath: m_FirstSelected
+      value: 
+      objectReference: {fileID: 1264932675}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -445640,6 +445649,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2081859939}
+    - target: {fileID: 470346194845705830, guid: 4ffbdcf323321f949a736262392dc5bf, type: 3}
+      propertyPath: m_DefaultActionMap
+      value: df70fa95-8a34-4494-b137-73ab6b9c7d37
+      objectReference: {fileID: 0}
+    - target: {fileID: 470346194845705830, guid: 4ffbdcf323321f949a736262392dc5bf, type: 3}
+      propertyPath: m_NeverAutoSwitchControlSchemes
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1253292162782394739, guid: 4ffbdcf323321f949a736262392dc5bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -48.89999
@@ -446373,7 +446390,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5914574030375054060, guid: c45ece17e7d25e446903f7046490f5d3, type: 3}
       propertyPath: m_Name
-      value: Managers (1)
+      value: Managers
       objectReference: {fileID: 0}
     - target: {fileID: 7953407815521799666, guid: c45ece17e7d25e446903f7046490f5d3, type: 3}
       propertyPath: m_LocalPosition.x
