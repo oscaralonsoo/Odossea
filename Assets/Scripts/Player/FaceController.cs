@@ -14,29 +14,6 @@ public class FaceController : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (bones == null || bones.Count == 0) return;
-
-        // Posición promedio de los huesos
-        Vector3 avgPos = Vector3.zero;
-
-        foreach (var bone in bones)
-        {
-            avgPos += (Vector3)bone.position;
-        }
-
-        avgPos /= bones.Count;
-
-        // Offset base
-        Vector3 targetPos = avgPos + localOffset;
-
-        // Suavizado
-        transform.position = Vector3.Lerp(
-            transform.position,
-            targetPos,
-            smoothSpeed * Time.deltaTime
-        );
-
-        // Bloquear rotación
         transform.rotation = Quaternion.identity;
     }
 }
