@@ -140,7 +140,11 @@ public class PlayerController : MonoBehaviour
         if (Time.timeScale == 0)
             return;
         if (value.isPressed)
+        {
             shootRequested = true;
+             
+        }
+     
     }
 
     private void Update()
@@ -220,6 +224,11 @@ public class PlayerController : MonoBehaviour
             {
                 Shrink(1);
                 GetComponent<MassCubeInstantiator>().Shoot(aimDirection);
+                SFXManager.PlaySound(SoundType.SHOOT);
+            }
+            else
+            {
+                SFXManager.PlaySound(SoundType.SHOOT_MISS);
             }
         }
        
@@ -263,6 +272,8 @@ public class PlayerController : MonoBehaviour
             if (growNum >= maxGrowNum) return;
             targetScale += Vector2.one * scaleAmout;
             growNum++;
+
+            SFXManager.PlaySound(SoundType.ABSORB);
         }
     }
 
