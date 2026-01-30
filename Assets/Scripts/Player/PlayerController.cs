@@ -64,7 +64,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Camera cinemachineCamera;
 
     [Header("Unlock")]
-    [SerializeField] public bool jumpUnlocked = true;
     [SerializeField] public bool shootUnlocked = true;
 
     [Header("MenusManager")]
@@ -123,7 +122,6 @@ public class PlayerController : MonoBehaviour
     {
         if (value.isPressed)
             jumpRequested = true;
-        SFXManager.PlaySound(SoundType.JUMP);
     }
 
     public void OnLook(InputValue value)
@@ -233,10 +231,11 @@ public class PlayerController : MonoBehaviour
             if ((bone.grounded || groundedCount == 0) && inputDirection.x != 0)
                 rb.AddForce(Vector2.right * inputDirection.x * force);
 
-            if (jumpUnlocked && isGrounded && jumpRequested)
+            if (isGrounded && jumpRequested)
             {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
                 rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                SFXManager.PlaySound(SoundType.JUMP);
             }
 
             Vector2 vel = rb.linearVelocity;

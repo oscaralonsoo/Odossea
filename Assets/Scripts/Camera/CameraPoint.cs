@@ -11,7 +11,7 @@ public class CameraPoint : MonoBehaviour
 
     [Header("Is Temporal?")]
     public bool esZonaTemporal = false;
-    public Vector2 rangoZoomOriginal = new Vector2(5, 12);
+    public Vector2 rangoZoomOriginal = new Vector2(5, 36);
 
     private Vector2 _framingOffsetOriginal;
     private bool _camaraDentro = false;
@@ -44,16 +44,16 @@ public class CameraPoint : MonoBehaviour
 
         if (framing != null)
         {
-            Debug.Log("framing");
-
-            //Save initial Settings
             _framingOffsetOriginal = framing.CenterOffset;
+            rangoZoomOriginal = framing.OrthoSizeRange;
 
-            //Apply new Settings
+            float currentOrtho = framing.OrthoSizeRange.y;
+
             framing.CenterOffset = new Vector2(offsetX, offsetY);
-            framing.OrthoSizeRange = new Vector2(zoomFijo, zoomFijo);
+            framing.OrthoSizeRange = new Vector2(zoomFijo, currentOrtho);
         }
     }
+
 
     void RestoreSettings(CinemachineCamera vcam)
     {
@@ -61,7 +61,7 @@ public class CameraPoint : MonoBehaviour
 
         if (framing != null)
         {
-            //Reset Original Offset
+
             framing.CenterOffset = _framingOffsetOriginal;
 
             //Reset Original Zoom Range

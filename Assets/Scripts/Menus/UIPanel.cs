@@ -1,8 +1,9 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class UIPanel : MonoBehaviour
 {
     public Animator animator;
+    CanvasGroup canvasGroup;
 
     const int IDLE = 0;
     const int POPUP = 1;
@@ -12,17 +13,27 @@ public class UIPanel : MonoBehaviour
     {
         animator.updateMode = AnimatorUpdateMode.UnscaledTime;
         animator.SetInteger("State", IDLE);
+
+        canvasGroup = GetComponent<CanvasGroup>();
+        SetInteractable(false);
     }
-    
+
     public void Show()
     {
+        SetInteractable(true);         
         animator.SetInteger("State", POPUP);
     }
 
     public void Hide()
     {
+        SetInteractable(false);       
         animator.SetInteger("State", POPDOWN);
+    }
 
+    void SetInteractable(bool value)
+    {
+        canvasGroup.interactable = value;
+        canvasGroup.blocksRaycasts = value;
     }
 
     // Animation Events

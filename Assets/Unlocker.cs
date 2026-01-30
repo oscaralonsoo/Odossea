@@ -20,9 +20,6 @@ public class Unlocker : MonoBehaviour
             {
                 switch(unlock)
                 {
-                    case Unlock.Jump:
-                        player.jumpUnlocked = true;
-                        break;
                     case Unlock.Shoot:
                         player.shootUnlocked = true;
                         break;
