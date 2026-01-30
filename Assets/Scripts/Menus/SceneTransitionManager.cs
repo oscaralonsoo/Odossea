@@ -33,7 +33,11 @@ public class SceneTransitionManager : MonoBehaviour
         sceneToLoad = sceneName;
         animator.SetTrigger("FadeOut");
     }
-
+    public void ReloadCurrentScene()
+    {
+        sceneToLoad = SceneManager.GetActiveScene().name;
+        animator.SetTrigger("FadeOut");
+    }
     // Evento Animation Event al final de FadeOut
     public void OnFadeComplete()
     {

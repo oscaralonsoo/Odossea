@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3592444630324526854}
   - component: {fileID: 6719628495925501517}
   - component: {fileID: 3813917095234723952}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Crusher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 289313257009056059}
   - component: {fileID: 2590448410852872734}
   - component: {fileID: 3277058878554876452}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Killer
   m_TagString: Untagged
   m_Icon: {fileID: 0}

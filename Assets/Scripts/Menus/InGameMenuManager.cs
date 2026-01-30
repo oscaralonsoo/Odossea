@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
@@ -12,6 +13,7 @@ public class InGameMenuManager : MonoBehaviour
     public UIPanel soundPanel;
     public UIPanel graphicsPanel;
     public UIPanel customizationPanel;
+    public UIPanel confirmRestartPanel;
 
     public GameObject overlayPanel;
     public PlayerCustomizer playerCustomizer1;
@@ -38,6 +40,8 @@ public class InGameMenuManager : MonoBehaviour
 
     [Header("Resume Button")]
     [SerializeField] Button resumeButton;
+
+    bool isTransitioning = false;
     void Start()
     {
         //AUDIO
@@ -64,7 +68,9 @@ public class InGameMenuManager : MonoBehaviour
 
     public bool TogglePause()
     {
-            if(Time.timeScale == 0)
+        if (isTransitioning) return false;
+
+        if (Time.timeScale == 0)
             {
                 Resume();
                 return false;
@@ -78,11 +84,12 @@ public class InGameMenuManager : MonoBehaviour
     // PAUSE
     public void Pause()
     {
+        if (isTransitioning) return;
+
         Time.timeScale = 0;
         overlayPanel.SetActive(true);
         pausePanel.Show();
         current = pausePanel;
-
     }
 
     public void Resume()
@@ -94,6 +101,7 @@ public class InGameMenuManager : MonoBehaviour
         soundPanel.Hide();
         graphicsPanel.Hide();
         customizationPanel.Hide();
+        confirmRestartPanel.Hide();
 
         overlayPanel.SetActive(false);
         current = null;
@@ -136,6 +144,14 @@ public class InGameMenuManager : MonoBehaviour
         graphicsPanel.Show();
         current = graphicsPanel;
     }
+    public void ShowRestartConfirm()
+    {
+        if (current != null)
+            current.Hide();
+
+        confirmRestartPanel.Show();
+        current = confirmRestartPanel;
+    }
 
     public void ShowCustomitzation()
     {
@@ -149,9 +165,21 @@ public class InGameMenuManager : MonoBehaviour
     // SCENES
     public void LoadMainMenu(string scene)
     {
+        isTransitioning = true;
         Time.timeScale = 1;
         overlayPanel.SetActive(false);
         SceneTransitionManager.Instance.LoadScene(scene);
+    }
+    public void ConfirmRestart()
+    {
+        isTransitioning = true;
+        Time.timeScale = 1;
+
+        pausePanel.Hide();
+        confirmRestartPanel.Hide();
+        overlayPanel.SetActive(false);
+
+        SceneTransitionManager.Instance.ReloadCurrentScene();
     }
     public void SelectMaterial(int index)
     {
