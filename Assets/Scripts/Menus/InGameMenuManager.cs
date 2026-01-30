@@ -72,6 +72,7 @@ public class InGameMenuManager : MonoBehaviour
 
         if (Time.timeScale == 0)
             {
+                resumeButton.Select();
                 Resume();
                 return false;
             }

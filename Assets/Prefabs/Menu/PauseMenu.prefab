@@ -1443,6 +1443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bc34483c378b05419e2d1fd48709cb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerID: 2
   playerRenderer: {fileID: 0}
   previewRenderer: {fileID: 4869914953171571857}
   availableMaterials:
@@ -5181,6 +5182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bc34483c378b05419e2d1fd48709cb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerID: 1
   playerRenderer: {fileID: 0}
   previewRenderer: {fileID: 1099542069257823409}
   availableMaterials:

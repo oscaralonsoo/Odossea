@@ -1,7 +1,8 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerCustomizer : MonoBehaviour
 {
+    public int playerID = 1;
     [Header("Settings")]
     public SpriteRenderer playerRenderer;       
     public SpriteRenderer previewRenderer;
@@ -10,15 +11,27 @@ public class PlayerCustomizer : MonoBehaviour
 
     private int currentIndex = 0;
     private Material originalMaterial;
-
     void Start()
     {
         if (playerRenderer != null)
             originalMaterial = playerRenderer.material;
 
+        string key = "PlayerMaterial_" + playerID;
+
+        if (PlayerPrefs.HasKey(key))
+        {
+            currentIndex = PlayerPrefs.GetInt(key);
+
+            if (currentIndex >= 0 && currentIndex < availableMaterials.Length)
+            {
+                playerRenderer.material = availableMaterials[currentIndex];
+            }
+        }
+
         if (previewRenderer != null)
-            previewRenderer.material = originalMaterial;
+            previewRenderer.material = playerRenderer.material;
     }
+
 
     public void NextMaterial()
     {
@@ -58,13 +71,21 @@ public class PlayerCustomizer : MonoBehaviour
         if (playerRenderer != null)
         {
             playerRenderer.material = availableMaterials[currentIndex];
+
             foreach (DropableCube cube in playerRenderer.GetComponentInParent<PlayerController>().dropableCubes)
             {
                 cube.GetComponentInChildren<SpriteRenderer>().material = playerRenderer.material;
             }
+
+            // 🔥 GUARDAMOS POR JUGADOR
+            PlayerPrefs.SetInt("PlayerMaterial_" + playerID, currentIndex);
+            PlayerPrefs.Save();
         }
-            originalMaterial = playerRenderer.material;
+
+        originalMaterial = playerRenderer.material;
     }
+
+
 
     public void ResetMaterial()
     {

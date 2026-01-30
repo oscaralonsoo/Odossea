@@ -42,30 +42,43 @@ public class SwitchBehaviour : MonoBehaviour
         if (!col.CompareTag("Bone")) return;
 
         pressCount++;
-        SFXManager.PlaySound(SoundType.SWITCH);
-        if (pressCount > 1) return;
+        if (pressCount > 1) return; 
 
         isPressed = true;
 
         switch (mode)
         {
             case SwitchMode.OpenOnly:
-                if(!door.IsOpen())door.SetDoor(true);
+                if (!door.IsOpen())
+                {
+                    door.SetDoor(true);
+                    SFXManager.PlaySound(SoundType.SWITCH); 
+                }
                 break;
 
             case SwitchMode.CloseOnly:
-                if (door.IsOpen()) door.SetDoor(false);
+                if (door.IsOpen())
+                {
+                    door.SetDoor(false);
+                    SFXManager.PlaySound(SoundType.SWITCH);
+                }
                 break;
 
             case SwitchMode.Toggle:
                 door.ToggleDoor();
+                SFXManager.PlaySound(SoundType.SWITCH); 
                 break;
 
             case SwitchMode.PressurePlate:
-                door.SetDoor(true);
+                if (!door.IsOpen())
+                {
+                    door.SetDoor(true);
+                    SFXManager.PlaySound(SoundType.SWITCH);
+                }
                 break;
         }
     }
+
     void OnTriggerExit2D(Collider2D col)
     {
         if (!col.CompareTag("Bone")) return;
