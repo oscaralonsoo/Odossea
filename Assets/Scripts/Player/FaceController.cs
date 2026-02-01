@@ -3,17 +3,28 @@ using System.Collections.Generic;
 
 public class FaceController : MonoBehaviour
 {
-    [Header("Player Bones")]
-    public List<Rigidbody2D> bones;
-
-    [Header("Offset de la cara")]
-    public Vector3 localOffset = new Vector3(0, 0.5f, 0);
-
-    [Header("Smooth speed")]
-    public float smoothSpeed = 100f;
+    public List<Transform> bones;
 
     private void LateUpdate()
     {
+        if (bones == null || bones.Count == 0) return;
+
+        Vector3 center = Vector3.zero;
+        int validCount = 0;
+
+        foreach (Transform b in bones)
+        {
+            if (b == null) continue;
+            center += b.position;
+            validCount++;
+        }
+
+        if (validCount == 0) return;
+
+        center /= validCount;
+
+        transform.position = center;
+
         transform.rotation = Quaternion.identity;
     }
 }
