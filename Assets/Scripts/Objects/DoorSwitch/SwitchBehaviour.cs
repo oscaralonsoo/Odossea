@@ -70,11 +70,8 @@ public class SwitchBehaviour : MonoBehaviour
                 break;
 
             case SwitchMode.PressurePlate:
-                if (!door.IsOpen())
-                {
-                    door.SetDoor(true);
-                    SFXManager.PlaySound(SoundType.SWITCH);
-                }
+                door.SetDoor(true);
+                SFXManager.PlaySound(SoundType.SWITCH);
                 break;
         }
     }
