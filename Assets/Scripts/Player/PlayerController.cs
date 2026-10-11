@@ -210,7 +210,7 @@ public class PlayerController : MonoBehaviour
         if (animator != null)
         {
             animator.SetFloat("VerticalVelocity", AverageVerticalVelocity);
-            animator.SetBool("IsGrounded", isGrounded);
+            animator.SetBool("isGrounded", isGrounded);
         }
 
         foreach (Bone bone in bones)
