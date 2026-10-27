@@ -116,6 +116,26 @@ public class PlayerController : MonoBehaviour
         groundFilter.SetLayerMask(groundLayer);
     }
 
+    // -------- ONLINE --------
+    // True on the copy of the OTHER player: NetPlayerSync moves it, not the input or the physics.
+    [NonSerialized] public bool isRemote;
+    public Vector2 AimDirection => aimDirection;
+
+    public void SetRemoteAnimation(bool grounded, float verticalVelocity)
+    {
+        isGrounded = grounded;
+        AverageVerticalVelocity = verticalVelocity;
+    }
+
+    public void SetRemoteAim(bool visible, Vector2 direction)
+    {
+        aimDirection = direction;
+        if (mira == null) return;
+
+        mira.gameObject.SetActive(visible);
+        if (visible) mira.transform.rotation = Quaternion.FromToRotation(Vector2.up, direction);
+    }
+
     // -------- INPUT --------
     public void OnMove(InputValue value) => inputDirection = value.Get<Vector2>();
     public void OnJump(InputValue value)
@@ -172,7 +192,7 @@ public class PlayerController : MonoBehaviour
     {
         ApplyScale();
 
-        if (isDead) return;
+        if (isDead || isRemote) return;
 
         int groundedCount = 0;
         float totalVerticalVelocity = 0; 
@@ -362,6 +382,7 @@ public class PlayerController : MonoBehaviour
 
     public void Die()
     {
+        if (isRemote) return;   // the PC that plays this player decides when it dies
         if (!isDead) StartCoroutine(Respawn());
     }
 

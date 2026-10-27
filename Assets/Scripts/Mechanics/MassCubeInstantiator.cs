@@ -20,8 +20,16 @@ public class MassCubeInstantiator : MonoBehaviour
 
     public void Shoot(Vector2 direction)
     {
-        LaunchCube(direction, false, player.GetCenterPosition(), launchForce);
+        Vector2 origin = player.GetCenterPosition();
+        GameObject cube = LaunchCube(direction, false, origin, launchForce);
         ApplyRecoilForce(direction);
+        NetCube.OnLocalShoot(cube, origin, direction);
+    }
+
+    // The shot of the other player, rebuilt from a network event: no recoil here.
+    public GameObject ShootFromNetwork(Vector2 origin, Vector2 direction)
+    {
+        return LaunchCube(direction, false, origin, launchForce);
     }
 
 
@@ -71,7 +79,7 @@ public class MassCubeInstantiator : MonoBehaviour
         }
     }
 
-    private void LaunchCube(Vector2 direction, bool disableCollider, Vector3 spawnPosition, float forceOverride)
+    private GameObject LaunchCube(Vector2 direction, bool disableCollider, Vector3 spawnPosition, float forceOverride)
     {
         GameObject cubeMass = Instantiate(
             projectilePrefab,
@@ -97,6 +105,8 @@ public class MassCubeInstantiator : MonoBehaviour
 
         if (!disableCollider)
             StartCoroutine(IgnoreCollisionTemporarily(cubeMass));
+
+        return cubeMass;
     }
 
     private void ApplyForceToMass(GameObject cubeMass, Vector2 direction, float force)

@@ -841,8 +841,6 @@ MonoBehaviour:
   - {fileID: 7558953643174030788}
   - {fileID: 4812435077089421473}
   - {fileID: 4600776428126779121}
-  localOffset: {x: 0, y: 0, z: 0}
-  smoothSpeed: 70
 --- !u!114 &7498299842873444015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1332,6 +1330,7 @@ GameObject:
   - component: {fileID: 2729586688905007692}
   - component: {fileID: 8055329668978817629}
   - component: {fileID: 211584520754414115}
+  - component: {fileID: 6804888117249690409}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Bone
@@ -1392,7 +1391,6 @@ MonoBehaviour:
   maxGrowNum: 1000
   growNum: 1
   cinemachineCamera: {fileID: 0}
-  jumpUnlocked: 1
   shootUnlocked: 0
   menuManager: {fileID: 0}
   dropableCubes: []
@@ -1565,3 +1563,19 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &6804888117249690409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8811770571107394653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b48ed099b46600941949b9b6cee47b40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerIndex: 0
+  sendRate: 30
+  smoothing: 25
+  teleportDistance: 4

@@ -130,7 +130,15 @@ public class DropableCube : MonoBehaviour
     public void Collided()
     {
         collided = true;
+        NetCube.NotifyGone(this);
         
+        Destroy(transform.gameObject);
+    }
+
+    // The other PC already removed this cube: do the same without telling it again.
+    public void CollidedFromNetwork()
+    {
+        collided = true;
         Destroy(transform.gameObject);
     }
 }

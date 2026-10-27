@@ -12,7 +12,7 @@ public class CubeTrigger : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!playerCube) return;
+        if (!playerCube || playerCube.isRemote) return;
 
         if (playerCube.IsFull()) return;
 
