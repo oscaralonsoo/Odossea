@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,14 +20,22 @@ public class GameNet : MonoBehaviour
     public string menuSceneName = "MainMenu";
 
     public event Action<PlayerStateDTO> PlayerStateReceived;
-    public event Action<ObjectStateDTO> ObjectStateReceived;
 
     NetLink m_link;
     readonly ReliableChannel m_reliable = new ReliableChannel();
     readonly Dictionary<int, PlayerStateDTO> m_playerStates = new Dictionary<int, PlayerStateDTO>();
-    readonly Dictionary<uint, ObjectStateDTO> m_objectStates = new Dictionary<uint, ObjectStateDTO>();
     readonly List<byte[]> m_resends = new List<byte[]>();
     ushort m_sequence;
+
+    // ---- world replication (Lab 7). The host is the server, the client copies.
+    const float TickRate = 20f;                 // replication packets per second
+    public readonly NetLinkingContext Linking = new NetLinkingContext();
+    ReplicationManagerServer m_repServer;
+    ReplicationManagerClient m_repClient;
+    float m_nextTick;
+    int m_bytesThisSecond, m_bytesLastSecond, m_packetsThisSecond, m_packetsLastSecond;
+    float m_statsAt;
+    bool m_showStats;
     string m_requestedScene = "";
     string m_banner = "";
     float m_bannerUntil;
@@ -49,6 +58,8 @@ public class GameNet : MonoBehaviour
         Instance = this;
         m_link = link;
         link.Game = this;
+        m_repServer = new ReplicationManagerServer(Linking);
+        m_repClient = new ReplicationManagerClient(Linking, NetPrefabTable.Load());
         link.GameMessage += OnGameMessage;
         link.LinkClosed += OnLinkClosed;
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -71,17 +82,78 @@ public class GameNet : MonoBehaviour
 
         m_reliable.CollectResends(NetUtil.NowMs, m_resends);
         foreach (byte[] message in m_resends) m_link.SendGame(message);
+
+        if (m_link.IsHost && Time.unscaledTime >= m_nextTick)
+        {
+            m_nextTick = Time.unscaledTime + 1f / TickRate;
+            ReplicationTick();
+        }
+
+        if (UnityEngine.InputSystem.Keyboard.current != null
+            && UnityEngine.InputSystem.Keyboard.current.f3Key.wasPressedThisFrame) m_showStats = !m_showStats;
+        if (Time.unscaledTime >= m_statsAt)
+        {
+            m_statsAt = Time.unscaledTime + 1f;
+            m_bytesLastSecond = m_bytesThisSecond;
+            m_packetsLastSecond = m_packetsThisSecond;
+            m_bytesThisSecond = 0;
+            m_packetsThisSecond = 0;
+        }
+    }
+
+    // ------------------------------------------------------------ Replication ---
+    // Host, once per tick: mark what has something to say and send the packet(s).
+    void ReplicationTick()
+    {
+        foreach (int id in Linking.IdsSnapshot())
+        {
+            GameObject go = Linking.Find(id);
+            if (go == null)                     // destroyed without telling: do not leave a ghost
+            {
+                Linking.Unregister(id);
+                m_repServer.MarkDestroy(id);
+                continue;
+            }
+            NetObject obj = go.GetComponent<NetObject>();
+            if (obj != null && obj.ShouldSend()) m_repServer.MarkUpdate(id);
+        }
+
+        foreach (byte[] packet in m_repServer.WritePackets())
+        {
+            m_link.SendGame(packet);
+            m_bytesThisSecond += packet.Length;
+            m_packetsThisSecond++;
+        }
+    }
+
+    // Host: a spawned object gets a new ID and is announced.
+    public int RegisterNew(NetObject obj)
+    {
+        int id = Linking.RegisterNew(obj.gameObject);
+        obj.id = id;
+        m_repServer.MarkCreate(id);
+        return id;
+    }
+
+    // Objects that are already in the scene: the ID comes from the hierarchy, same on both PCs.
+    public void RegisterWithId(NetObject obj, int id)
+    {
+        obj.id = id;
+        Linking.Register(obj.gameObject, id);
+        if (IsHost) m_repServer.MarkCreate(id);
+    }
+
+    // NetObject.OnDestroy calls this.
+    public void NetObjectDestroyed(NetObject obj)
+    {
+        Linking.Unregister(obj.id);
+        if (IsHost) m_repServer.MarkDestroy(obj.id);
     }
 
     // ---------------------------------------------------------------- Sending ---
     public ushort NextSequence() { return ++m_sequence; }
 
     public void SendPlayerState(PlayerStateDTO dto)
-    {
-        if (m_link != null) m_link.SendGame(Serializer.Serialize(dto));
-    }
-
-    public void SendObjectState(ObjectStateDTO dto)
     {
         if (m_link != null) m_link.SendGame(Serializer.Serialize(dto));
     }
@@ -104,11 +176,6 @@ public class GameNet : MonoBehaviour
         return m_playerStates.TryGetValue(index, out dto);
     }
 
-    public bool TryGetObjectState(uint id, out ObjectStateDTO dto)
-    {
-        return m_objectStates.TryGetValue(id, out dto);
-    }
-
     void OnGameMessage(byte[] data, int sender)
     {
         try
@@ -118,8 +185,13 @@ public class GameNet : MonoBehaviour
                 case MsgType.PlayerState:
                     HandlePlayerState(Serializer.DeserializePlayerState(data), sender);
                     break;
-                case MsgType.ObjectState:
-                    HandleObjectState(Serializer.DeserializeObjectState(data));
+                case MsgType.Replication:
+                    if (!IsHost)
+                    {
+                        BinaryReader reader = new BinaryReader(new MemoryStream(data));
+                        reader.ReadByte();              // the MsgType
+                        m_repClient.ReadPacket(reader);
+                    }
                     break;
                 case MsgType.Event:
                     HandleEvent(data, sender);
@@ -146,15 +218,6 @@ public class GameNet : MonoBehaviour
 
         m_playerStates[dto.playerIndex] = dto;
         if (PlayerStateReceived != null) PlayerStateReceived(dto);
-    }
-
-    void HandleObjectState(ObjectStateDTO dto)
-    {
-        ObjectStateDTO old;
-        if (m_objectStates.TryGetValue(dto.id, out old) && !NetUtil.IsNewer(dto.sequence, old.sequence)) return;
-
-        m_objectStates[dto.id] = dto;
-        if (ObjectStateReceived != null) ObjectStateReceived(dto);
     }
 
     void HandleEvent(byte[] data, int sender)
@@ -231,14 +294,15 @@ public class GameNet : MonoBehaviour
     {
         if (m_link == null) return;         // the session already ended
         m_requestedScene = "";
-        NetCube.Clear();                    // the cubes of the old level are gone
+        Linking.Clear();                    // the objects of the old level are gone
+        m_repServer.Reset();
 
         if (scene.name == menuSceneName)
         {
             EndSession("");
             return;
         }
-        NetWorld.AttachObjectSync();
+        NetWorld.RegisterSceneObjects();
     }
 
     // ------------------------------------------------------------ End of game ---
@@ -274,5 +338,13 @@ public class GameNet : MonoBehaviour
     void OnGUI()
     {
         if (m_banner.Length > 0 && Time.unscaledTime < m_bannerUntil) StatusBox.Draw(m_banner);
+
+        // F3: how much the replication costs (the number for the Deliverable 4 report)
+        if (m_showStats && m_link != null)
+        {
+            GUI.Label(new Rect(10, 10, 420, 24),
+                (IsHost ? "HOST" : "CLIENT") + "  replication: " + m_bytesLastSecond + " B/s, "
+                + m_packetsLastSecond + " pkt/s, " + Linking.Count + " objects");
+        }
     }
 }

@@ -1,30 +1,36 @@
-using System.Collections.Generic;
 using UnityEngine;
 
-// The mass cubes a player shoots. Every PC simulates the cube by itself (it is just a physics
-// object), and two reliable events keep both PCs in agreement:
+// The mass cubes. With replication the HOST is the only one that simulates them:
 //
-//   Shoot      the shooter's PC tells the other one "a cube left from here in this direction",
-//              and the other PC spawns the same cube
-//   CubeGone   whoever absorbs or merges a cube tells the other PC, which removes its copy
+//   host shoots     the cube is created and simulated here, the replication sends it to the client
+//   client shoots   it sends a Shoot event ("I shoot from here, in this direction"), the host
+//                   creates the cube and it comes back as a Create
+//   client absorbs  it sends a CubeGone event, the host removes the cube and the Destroy comes back
 //
-// The cube gets the same id on both PCs: the first byte is who shot it, the rest a counter.
+// The two events are the one-shot things that are not "state" (Deliverable 4: events are not replicated).
 public static class NetCube
 {
-    static readonly Dictionary<uint, DropableCube> s_cubes = new Dictionary<uint, DropableCube>();
-    static uint s_counter;
+    static bool Online { get { return NetSession.IsOnline && GameNet.Instance != null; } }
 
-    // Called by MassCubeInstantiator right after the LOCAL player shot.
-    public static void OnLocalShoot(GameObject cube, Vector2 origin, Vector2 direction)
+    // HOST. Right after a cube was shot here (by the host's player or on behalf of the client).
+    public static void OnHostShoot(GameObject cube, int ownerIndex)
     {
-        if (!NetSession.IsOnline || GameNet.Instance == null || cube == null) return;
+        if (!Online || !NetSession.IsHost || cube == null) return;
 
-        uint id = ((uint)(NetSession.LocalIndex + 1) << 24) | (++s_counter & 0xFFFFFF);
-        Register(id, cube);
+        NetCubeObject obj = cube.GetComponent<NetCubeObject>();
+        if (obj == null) return;
+
+        obj.owner = (byte)ownerIndex;
+        GameNet.Instance.RegisterNew(obj);          // ID + MarkCreate
+    }
+
+    // CLIENT. The local player pressed shoot: the host will create the cube.
+    public static void RequestShoot(Vector2 origin, Vector2 direction)
+    {
+        if (!Online) return;
 
         GameEventDTO ev = new GameEventDTO();
         ev.kind = GameEventKind.Shoot;
-        ev.id = id;
         ev.x = origin.x;
         ev.y = origin.y;
         ev.dx = direction.x;
@@ -32,31 +38,35 @@ public static class NetCube
         GameNet.Instance.SendEvent(ev);
     }
 
-    // Called by DropableCube.Collided() when a cube disappears on this PC.
-    public static void NotifyGone(DropableCube cube)
+    // Called by DropableCube.Collided() first. true = "I took care of it, do not destroy it here".
+    // On the client a replicated cube is not removed by the client: the host decides.
+    public static bool InterceptCollided(DropableCube cube)
     {
-        if (!NetSession.IsOnline || GameNet.Instance == null) return;
+        if (!Online || NetSession.IsHost) return false;
 
-        NetCubeId tag = cube.GetComponent<NetCubeId>();
-        if (tag == null) return;
-        s_cubes.Remove(tag.id);
+        NetCubeObject obj = cube.GetComponentInParent<NetCubeObject>();
+        if (obj == null || !obj.IsReplica) return false;      // a cube of this PC only (dispersed ones)
 
-        GameEventDTO ev = new GameEventDTO();
-        ev.kind = GameEventKind.CubeGone;
-        ev.id = tag.id;
-        GameNet.Instance.SendEvent(ev);
+        if (obj.TryRequestGone())
+        {
+            GameEventDTO ev = new GameEventDTO();
+            ev.kind = GameEventKind.CubeGone;
+            ev.id = (uint)obj.id;
+            GameNet.Instance.SendEvent(ev);
+        }
+        return true;
     }
 
-    public static void Clear() { s_cubes.Clear(); }
-
-    // GameNet forwards here the events it does not handle itself.
+    // GameNet forwards here the events it does not handle itself. Only the host acts on them.
     public static void OnEvent(GameEventDTO ev, int sender)
     {
-        if (ev.kind == GameEventKind.Shoot) SpawnRemoteCube(ev, sender);
-        else if (ev.kind == GameEventKind.CubeGone) RemoveCube(ev.id);
+        if (!Online || !NetSession.IsHost) return;
+
+        if (ev.kind == GameEventKind.Shoot) SpawnForClient(ev, sender);
+        else if (ev.kind == GameEventKind.CubeGone) RemoveCube((int)ev.id);
     }
 
-    static void SpawnRemoteCube(GameEventDTO ev, int sender)
+    static void SpawnForClient(GameEventDTO ev, int sender)
     {
         NetPlayerSync shooter = NetPlayerSync.Find(sender);
         if (shooter == null) return;
@@ -65,27 +75,15 @@ public static class NetCube
         if (gun == null) return;
 
         GameObject cube = gun.ShootFromNetwork(new Vector2(ev.x, ev.y), new Vector2(ev.dx, ev.dy));
-        Register(ev.id, cube);
+        OnHostShoot(cube, sender);
     }
 
-    static void RemoveCube(uint id)
+    static void RemoveCube(int id)
     {
-        DropableCube cube;
-        if (!s_cubes.TryGetValue(id, out cube)) return;
+        GameObject go = GameNet.Instance.Linking.Find(id);
+        if (go == null) return;                     // already gone
 
-        s_cubes.Remove(id);
-        if (cube != null) cube.CollidedFromNetwork();      // already gone on the other PC: no new event
-    }
-
-    static void Register(uint id, GameObject cube)
-    {
-        if (cube == null) return;
-
-        DropableCube script = cube.GetComponent<DropableCube>();
-        if (script == null) return;
-
-        NetCubeId tag = cube.AddComponent<NetCubeId>();
-        tag.id = id;
-        s_cubes[id] = script;
+        DropableCube cube = go.GetComponentInChildren<DropableCube>();
+        if (cube != null) cube.Collided();          // the host destroys it, the Destroy goes to the client
     }
 }

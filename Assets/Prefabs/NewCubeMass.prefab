@@ -37,6 +37,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5123555001220687255
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -55,6 +56,8 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 7
   m_RendererPriority: 0
   m_Materials:
@@ -76,9 +79,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -1696453207
   m_SortingLayer: 1
   m_SortingOrder: 3
+  m_MaskInteraction: 0
   m_Sprite: {fileID: -8794698323247294114, guid: 01768ebdd1aa1434da5d2585708df0d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -88,7 +93,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &6074479493045745341
 MonoBehaviour:
@@ -114,6 +118,7 @@ MonoBehaviour:
     m_Extent: {x: 0.9900001, y: 0.9900001, z: 0}
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
+  m_BoundsMode: 0
 --- !u!58 &3015824430968887078
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -615,6 +620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3216699794016276752}
   - component: {fileID: 8608487527040970218}
+  - component: {fileID: 967973286698754691}
   m_Layer: 9
   m_Name: NewCubeMass
   m_TagString: CubeTrigger
@@ -671,6 +677,21 @@ MonoBehaviour:
   scaleAmount: 0.2
   scaleSpeed: 30
   growNum: 1
+--- !u!114 &967973286698754691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5987016154528592320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64c0360460917b44cabd69fb96aac9b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NetCubeObject
+  id: 0
+  type: 0
+  owner: 0
 --- !u!1 &7464678560702027784
 GameObject:
   m_ObjectHideFlags: 0
