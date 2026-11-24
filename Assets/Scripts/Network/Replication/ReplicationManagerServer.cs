@@ -4,15 +4,13 @@ using System.IO;
 using System.Linq;
 using UnityEngine;
 
-// Host side. The game says WHAT happened (MarkCreate, MarkUpdate, MarkDestroy) and once per tick
-// WritePackets() turns it into bytes. Packet:
-//
-//   [MsgType.Replication][int sequence][int count]  then 'count' entries:
-//   [int id][byte action]                      Destroy: nothing else
-//   [int id][byte action][byte type][fields]   Create / Update: the object writes its own fields
+// Host side: the game marks changes, WritePackets() turns them into bytes once per tick.
+// Packet: [MsgType][int sequence][int count] then entries
+//   Destroy:          [int id][byte action]
+//   Create / Update:  [int id][byte action][byte type][object fields]
 public class ReplicationManagerServer
 {
-    const int MaxPacketBytes = 1100;     // under ~1200: bigger and the network fragments it
+    const int MaxPacketBytes = 1100;
 
     readonly NetLinkingContext m_linking;
     readonly Dictionary<int, ReplicationAction> m_pending = new Dictionary<int, ReplicationAction>();
@@ -25,7 +23,7 @@ public class ReplicationManagerServer
     public void MarkCreate(int id)
     {
         m_pending[id] = ReplicationAction.Create;
-        m_repeat[id] = (ReplicationAction.Create, Time.unscaledTime + 1f);   // repeated for 1 s
+        m_repeat[id] = (ReplicationAction.Create, Time.unscaledTime + 1f);
     }
 
     public void MarkDestroy(int id)
@@ -36,18 +34,16 @@ public class ReplicationManagerServer
 
     public void MarkUpdate(int id)
     {
-        if (!m_pending.ContainsKey(id))                  // a Create or a Destroy wins
+        if (!m_pending.ContainsKey(id))
             m_pending[id] = ReplicationAction.Update;
     }
 
-    // New level: forget everything that was waiting. The sequence keeps growing.
     public void Reset()
     {
         m_pending.Clear();
         m_repeat.Clear();
     }
 
-    // Once per tick. Usually one packet, several if there are too many objects.
     public List<byte[]> WritePackets()
     {
         foreach (int id in m_repeat.Keys.ToList())
@@ -67,7 +63,7 @@ public class ReplicationManagerServer
             if (entry.Value != ReplicationAction.Destroy)
             {
                 GameObject go = m_linking.Find(entry.Key);
-                if (go == null) continue;                // already gone
+                if (go == null) continue;
                 obj = go.GetComponent<NetObject>();
                 if (obj == null) continue;
             }
@@ -76,8 +72,8 @@ public class ReplicationManagerServer
             writer.Write((byte)entry.Value);
             if (obj != null)
             {
-                writer.Write(obj.type);                  // its class, which prefab
-                obj.Write(writer);                       // its fields
+                writer.Write(obj.type);
+                obj.Write(writer);
             }
             count++;
 
@@ -99,7 +95,7 @@ public class ReplicationManagerServer
     {
         MemoryStream stream = new MemoryStream();
         BinaryWriter writer = new BinaryWriter(stream);
-        writer.Write((byte)MsgType.Replication);         // header, 9 bytes
+        writer.Write((byte)MsgType.Replication);
         writer.Write(m_sequence++);
         writer.Write(count);
         writer.Write(body.ToArray());

@@ -1,12 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// The list of prefabs the host can create on the client. The index in the list is the 'type'
-// byte of the packet, so the list is the same on both PCs (it is one asset in the build).
-//
-// Create it with: Project > right click > Create > Odossea > Net Prefab Table
-// It MUST be saved as  Assets/Resources/NetPrefabs.asset
-//   index 0 = the mass cube
+// Prefabs the client can create. The index is the 'type' byte. Saved as Assets/Resources/NetPrefabs.asset.
+// Index 0 = mass cube.
 [CreateAssetMenu(menuName = "Odossea/Net Prefab Table", fileName = "NetPrefabs")]
 public class NetPrefabTable : ScriptableObject
 {

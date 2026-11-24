@@ -129,7 +129,7 @@ public class DropableCube : MonoBehaviour
 
     public void Collided()
     {
-        // Online client: the host decides when a cube disappears. It will send us a Destroy.
+        // Online client: the host decides.
         if (NetCube.InterceptCollided(this)) return;
 
         collided = true;

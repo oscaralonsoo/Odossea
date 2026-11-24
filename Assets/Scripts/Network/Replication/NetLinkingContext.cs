@@ -1,15 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Network ID <-> GameObject, one per PC (Lab 6 linking context).
-//   host:    int id = linking.RegisterNew(go)       a new ID, never reused
-//            linking.Register(go, id)               an ID decided by the code (objects of the scene)
-//   client:  linking.Register(go, id)               the ID the host sent
-//   both:    Find(id) -> null if unknown, never throws
+// Network ID <-> GameObject, one per PC.
 public class NetLinkingContext
 {
     readonly Dictionary<int, GameObject> m_objects = new Dictionary<int, GameObject>();
-    int m_nextId = 1;                       // 0 means "no ID"
+    int m_nextId = 1;                       // 0 = no ID
 
     public int RegisterNew(GameObject go)
     {
@@ -28,8 +24,7 @@ public class NetLinkingContext
 
     public void Unregister(int id) { m_objects.Remove(id); }
 
-    // A new level: every object of the old one is gone. The counter is NOT reset, so an old
-    // packet can never point to a new object.
+    // The counter is not reset: an old packet never points to a new object.
     public void Clear() { m_objects.Clear(); }
 
     public int Count { get { return m_objects.Count; } }

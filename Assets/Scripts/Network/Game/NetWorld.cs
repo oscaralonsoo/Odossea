@@ -1,10 +1,6 @@
 using UnityEngine;
 
-// The part of the network that knows the game: which objects of a level belong to the world
-// the host replicates. GameNet calls it every time a level finishes loading.
-//
-// Not replicated on purpose: the crushers. They run the same cycle on both PCs and only
-// kill the player of their own PC (see the README, known bugs).
+// Registers the platforms and doors of a level for replication. Crushers are not replicated.
 public static class NetWorld
 {
     public static void RegisterSceneObjects()

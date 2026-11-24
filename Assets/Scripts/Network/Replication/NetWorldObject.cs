@@ -1,12 +1,11 @@
 using System.IO;
 using UnityEngine;
 
-// A platform or a door that is already in the scene. The host moves it, the client copies it.
-// NetWorld adds this component by code: nothing to set up in the scenes.
-// Its ID is the same on both PCs: it comes from the position of the object in the hierarchy.
+// Platform or door already in the scene: the host moves it, the client copies it.
+// Added by NetWorld. The ID comes from the position in the hierarchy.
 public class NetWorldObject : NetObject
 {
-    const float KeepAliveSeconds = 1f;      // an object that does not move is still sent once per second
+    const float KeepAliveSeconds = 1f;
     const float MoveEpsilon = 0.001f;
     const float Smoothing = 20f;
 
@@ -43,8 +42,7 @@ public class NetWorldObject : NetObject
         return obj;
     }
 
-    // FNV hash of the sibling indices (object, parent, grandparent...). Always negative, so it
-    // never collides with the small IDs the host gives to spawned objects.
+    // FNV hash of the sibling indices. Always negative: no clash with spawned object IDs.
     public static int ComputeId(Transform t)
     {
         uint hash = 2166136261;
@@ -78,7 +76,7 @@ public class NetWorldObject : NetObject
     {
         float x = r.ReadSingle();
         float y = r.ReadSingle();
-        r.ReadSingle();                      // angle: platforms and doors only slide
+        r.ReadSingle();                      // angle, unused
         m_target = new Vector2(x, y);
         m_hasTarget = true;
     }
@@ -89,7 +87,7 @@ public class NetWorldObject : NetObject
 
         float t = 1f - Mathf.Exp(-Smoothing * Time.fixedDeltaTime);
         if (m_body != null)
-            m_body.MovePosition(Vector2.Lerp(m_body.position, m_target, t));   // carries who stands on it
+            m_body.MovePosition(Vector2.Lerp(m_body.position, m_target, t));
         else
             transform.position = Vector2.Lerp(transform.position, m_target, t);
     }

@@ -4,15 +4,11 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// The network of the game scenes. The lobby creates it when the host presses Start and it lives
-// until the players go back to the menu.
-//
-//   unreliable (positions)  SendPlayerState / SendObjectState: fire and forget, ~30 and ~15 per second
-//   reliable (events)       SendEvent: kept and resent until the other PC acknowledges it
-//
-// It also decides who is allowed to change the scene: only the host. A client that asks
-// (restart, end of level...) sends a SceneRequest, and the host answers with a SceneLoad that
-// both PCs obey, so the two always end up in the same level.
+// Network of the game scenes, created by the lobby when the host presses Start.
+//   player state: unreliable, ~30 per second, each PC sends its own player
+//   replication:  unreliable, 20 per second, host to client (world state)
+//   events:       reliable, resent until acknowledged
+// Only the host changes scenes; the client asks with a SceneRequest.
 public class GameNet : MonoBehaviour
 {
     public static GameNet Instance { get; private set; }
@@ -27,8 +23,7 @@ public class GameNet : MonoBehaviour
     readonly List<byte[]> m_resends = new List<byte[]>();
     ushort m_sequence;
 
-    // ---- world replication (Lab 7). The host is the server, the client copies.
-    const float TickRate = 20f;                 // replication packets per second
+    const float TickRate = 20f;
     public readonly NetLinkingContext Linking = new NetLinkingContext();
     ReplicationManagerServer m_repServer;
     ReplicationManagerClient m_repClient;
@@ -102,13 +97,12 @@ public class GameNet : MonoBehaviour
     }
 
     // ------------------------------------------------------------ Replication ---
-    // Host, once per tick: mark what has something to say and send the packet(s).
     void ReplicationTick()
     {
         foreach (int id in Linking.IdsSnapshot())
         {
             GameObject go = Linking.Find(id);
-            if (go == null)                     // destroyed without telling: do not leave a ghost
+            if (go == null)
             {
                 Linking.Unregister(id);
                 m_repServer.MarkDestroy(id);
@@ -126,7 +120,6 @@ public class GameNet : MonoBehaviour
         }
     }
 
-    // Host: a spawned object gets a new ID and is announced.
     public int RegisterNew(NetObject obj)
     {
         int id = Linking.RegisterNew(obj.gameObject);
@@ -135,7 +128,6 @@ public class GameNet : MonoBehaviour
         return id;
     }
 
-    // Objects that are already in the scene: the ID comes from the hierarchy, same on both PCs.
     public void RegisterWithId(NetObject obj, int id)
     {
         obj.id = id;
@@ -143,7 +135,6 @@ public class GameNet : MonoBehaviour
         if (IsHost) m_repServer.MarkCreate(id);
     }
 
-    // NetObject.OnDestroy calls this.
     public void NetObjectDestroyed(NetObject obj)
     {
         Linking.Unregister(obj.id);
@@ -169,8 +160,7 @@ public class GameNet : MonoBehaviour
     }
 
     // -------------------------------------------------------------- Receiving ---
-    // Latest state received for a player / object: a scene that loads after the packet arrived
-    // (the other PC was faster) still finds it.
+    // Last state received, for a scene that loads after the packet arrived.
     public bool TryGetPlayerState(int index, out PlayerStateDTO dto)
     {
         return m_playerStates.TryGetValue(index, out dto);
@@ -189,7 +179,7 @@ public class GameNet : MonoBehaviour
                     if (!IsHost)
                     {
                         BinaryReader reader = new BinaryReader(new MemoryStream(data));
-                        reader.ReadByte();              // the MsgType
+                        reader.ReadByte();
                         m_repClient.ReadPacket(reader);
                     }
                     break;
@@ -203,14 +193,14 @@ public class GameNet : MonoBehaviour
         }
         catch (Exception e)
         {
-            // A message that cannot be read is dropped. It never takes the game down.
+            // Unreadable messages are dropped.
             Debug.LogWarning("[GameNet] mensaje ilegible: " + e.Message);
         }
     }
 
     void HandlePlayerState(PlayerStateDTO dto, int sender)
     {
-        // The host knows who really sent it: it does not trust the index inside the packet.
+        // The host does not trust the index inside the packet.
         if (IsHost) dto.playerIndex = (byte)sender;
 
         PlayerStateDTO old;
@@ -225,7 +215,7 @@ public class GameNet : MonoBehaviour
         ushort id;
         GameEventDTO ev = Serializer.DeserializeEvent(data, out id);
 
-        // Always acknowledge, even a repeated event: the previous Ack may have been lost.
+        // Acknowledge repeated events too: the Ack may have been lost.
         m_link.SendGame(Serializer.Ack(id));
         if (!m_reliable.IsNew(id)) return;
 
@@ -242,21 +232,20 @@ public class GameNet : MonoBehaviour
                 }
                 break;
             default:
-                NetCube.OnEvent(ev, sender);        // shoot, cube gone
+                NetCube.OnEvent(ev, sender);
                 break;
         }
     }
 
     // ---------------------------------------------------------- Scene changes ---
-    // SceneTransitionManager.LoadScene calls this first. Returns true when the call was
-    // handled here and the caller must NOT load the scene by itself.
+    // Returns true when the caller must not load the scene by itself.
     public bool InterceptSceneLoad(string sceneName)
     {
         if (m_link == null) return false;
 
         if (m_link.IsHost)
         {
-            // Five bones enter the same trigger: only the first one counts.
+            // Five bones enter the trigger: only the first counts.
             if (sceneName == m_requestedScene) return true;
             m_requestedScene = sceneName;
 
@@ -264,7 +253,7 @@ public class GameNet : MonoBehaviour
             ev.kind = GameEventKind.SceneLoad;
             ev.text = sceneName;
             SendEvent(ev);
-            return false;                       // the host loads it normally
+            return false;
         }
 
         if (sceneName != m_requestedScene)
@@ -275,7 +264,7 @@ public class GameNet : MonoBehaviour
             ev.text = sceneName;
             SendEvent(ev);
         }
-        return true;                            // wait for the host's order
+        return true;
     }
 
     void RequestScene(string sceneName)
@@ -292,9 +281,9 @@ public class GameNet : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (m_link == null) return;         // the session already ended
+        if (m_link == null) return;
         m_requestedScene = "";
-        Linking.Clear();                    // the objects of the old level are gone
+        Linking.Clear();
         m_repServer.Reset();
 
         if (scene.name == menuSceneName)
@@ -332,14 +321,14 @@ public class GameNet : MonoBehaviour
             m_bannerUntil = Time.unscaledTime + 5f;
             NetSession.LastMessage = reason;
         }
-        Destroy(gameObject, 5f);        // stays 5 seconds to show the reason
+        Destroy(gameObject, 5f);
     }
 
     void OnGUI()
     {
         if (m_banner.Length > 0 && Time.unscaledTime < m_bannerUntil) StatusBox.Draw(m_banner);
 
-        // F3: how much the replication costs (the number for the Deliverable 4 report)
+        // F3 toggles the replication stats
         if (m_showStats && m_link != null)
         {
             GUI.Label(new Rect(10, 10, 420, 24),

@@ -1,22 +1,19 @@
 using System.IO;
 using UnityEngine;
 
-// Every networked object writes and reads itself. The replication manager does not know what a
-// cube or a platform is, it only calls Write and Read.
-// Read must read EXACTLY what Write wrote, in the same order.
+// Base class of every replicated object. Read must read exactly what Write wrote.
 public class NetObject : MonoBehaviour
 {
-    // 'type' of the objects that already exist in the scene (platforms, doors): the client never
-    // creates them, it only finds them.
+    // Type of objects already in the scene: the client finds them, never creates them.
     public const byte SceneObject = 255;
 
-    // size in bytes of what the base Write puts: x, y, angle
+    // Bytes written by the base Write: x, y, angle.
     public const int BasePayloadSize = 12;
 
-    [HideInInspector] public int id;     // network ID, from the linking context
-    public byte type;                    // which prefab (index in NetPrefabTable)
+    [HideInInspector] public int id;
+    public byte type;                    // index in NetPrefabTable
 
-    // Host, once per tick: does this object have anything new to say?
+    // Host, once per tick: is there anything new to send?
     public virtual bool ShouldSend() { return true; }
 
     public virtual void Write(BinaryWriter w)
@@ -35,7 +32,7 @@ public class NetObject : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
     }
 
-    // Client only: right after the manager created this object from its prefab, before the first Read.
+    // Client: called after the manager creates the object, before the first Read.
     public virtual void OnReplicaCreated() { }
 
     protected virtual void OnDestroy()

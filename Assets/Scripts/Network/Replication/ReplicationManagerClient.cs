@@ -1,7 +1,7 @@
 using System.IO;
 using UnityEngine;
 
-// Client side. Copies what the host says: it never decides anything.
+// Client side: copies what the host says.
 public class ReplicationManagerClient
 {
     readonly NetLinkingContext m_linking;
@@ -18,7 +18,7 @@ public class ReplicationManagerClient
     public void ReadPacket(BinaryReader reader)
     {
         int sequence = reader.ReadInt32();
-        if (sequence <= m_lastSequence) return;          // older than what we already have
+        if (sequence <= m_lastSequence) return;
         m_lastSequence = sequence;
 
         int count = reader.ReadInt32();
@@ -26,7 +26,7 @@ public class ReplicationManagerClient
         {
             int id = reader.ReadInt32();
             ReplicationAction action = (ReplicationAction)reader.ReadByte();
-            GameObject go = m_linking.Find(id);          // null if this PC does not know it
+            GameObject go = m_linking.Find(id);
 
             if (action == ReplicationAction.Destroy)
             {
@@ -35,7 +35,7 @@ public class ReplicationManagerClient
                     m_linking.Unregister(id);
                     Object.Destroy(go);
                 }
-                continue;                                // unknown ID: already gone
+                continue;
             }
 
             byte type = reader.ReadByte();
@@ -44,7 +44,7 @@ public class ReplicationManagerClient
             {
                 if (type == NetObject.SceneObject)
                 {
-                    // an object of a scene this PC has not loaded yet: skip its bytes
+                    // scene not loaded yet: skip its bytes
                     reader.ReadBytes(NetObject.BasePayloadSize);
                     continue;
                 }
@@ -54,7 +54,7 @@ public class ReplicationManagerClient
                 if (prefab == null)
                 {
                     Debug.LogWarning("[Replication] tipo desconocido " + type + ": paquete descartado");
-                    return;                              // we cannot know how many bytes it has
+                    return;
                 }
 
                 go = Object.Instantiate(prefab);

@@ -22,7 +22,7 @@ public class MassCubeInstantiator : MonoBehaviour
     {
         Vector2 origin = player.GetCenterPosition();
 
-        // Online client: the host creates the cube (replication) and it comes back as a Create.
+        // Online client: the host creates the cube.
         if (NetSession.IsOnline && !NetSession.IsHost)
         {
             NetCube.RequestShoot(origin, direction);
@@ -32,10 +32,10 @@ public class MassCubeInstantiator : MonoBehaviour
 
         GameObject cube = LaunchCube(direction, false, origin, launchForce);
         ApplyRecoilForce(direction);
-        NetCube.OnHostShoot(cube, NetSession.LocalIndex);     // does nothing offline
+        NetCube.OnHostShoot(cube, NetSession.LocalIndex);
     }
 
-    // The shot of the client, rebuilt on the host from its Shoot event: no recoil here.
+    // Client shot rebuilt on the host: no recoil.
     public GameObject ShootFromNetwork(Vector2 origin, Vector2 direction)
     {
         return LaunchCube(direction, false, origin, launchForce);

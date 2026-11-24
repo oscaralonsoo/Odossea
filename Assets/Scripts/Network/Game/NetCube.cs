@@ -1,18 +1,13 @@
 using UnityEngine;
 
-// The mass cubes. With replication the HOST is the only one that simulates them:
-//
-//   host shoots     the cube is created and simulated here, the replication sends it to the client
-//   client shoots   it sends a Shoot event ("I shoot from here, in this direction"), the host
-//                   creates the cube and it comes back as a Create
-//   client absorbs  it sends a CubeGone event, the host removes the cube and the Destroy comes back
-//
-// The two events are the one-shot things that are not "state" (Deliverable 4: events are not replicated).
+// Mass cubes: only the host simulates them.
+//   client shoots:   Shoot event, the host creates the cube and replicates it
+//   client absorbs:  CubeGone event, the host destroys the cube and replicates the Destroy
 public static class NetCube
 {
     static bool Online { get { return NetSession.IsOnline && GameNet.Instance != null; } }
 
-    // HOST. Right after a cube was shot here (by the host's player or on behalf of the client).
+    // Host: after a cube was shot (by its own player or for the client).
     public static void OnHostShoot(GameObject cube, int ownerIndex)
     {
         if (!Online || !NetSession.IsHost || cube == null) return;
@@ -21,10 +16,10 @@ public static class NetCube
         if (obj == null) return;
 
         obj.owner = (byte)ownerIndex;
-        GameNet.Instance.RegisterNew(obj);          // ID + MarkCreate
+        GameNet.Instance.RegisterNew(obj);
     }
 
-    // CLIENT. The local player pressed shoot: the host will create the cube.
+    // Client: asks the host to create the cube.
     public static void RequestShoot(Vector2 origin, Vector2 direction)
     {
         if (!Online) return;
@@ -38,14 +33,13 @@ public static class NetCube
         GameNet.Instance.SendEvent(ev);
     }
 
-    // Called by DropableCube.Collided() first. true = "I took care of it, do not destroy it here".
-    // On the client a replicated cube is not removed by the client: the host decides.
+    // True when the client asked the host instead of destroying the cube itself.
     public static bool InterceptCollided(DropableCube cube)
     {
         if (!Online || NetSession.IsHost) return false;
 
         NetCubeObject obj = cube.GetComponentInParent<NetCubeObject>();
-        if (obj == null || !obj.IsReplica) return false;      // a cube of this PC only (dispersed ones)
+        if (obj == null || !obj.IsReplica) return false;
 
         if (obj.TryRequestGone())
         {
@@ -57,7 +51,7 @@ public static class NetCube
         return true;
     }
 
-    // GameNet forwards here the events it does not handle itself. Only the host acts on them.
+    // Only the host acts on these events.
     public static void OnEvent(GameEventDTO ev, int sender)
     {
         if (!Online || !NetSession.IsHost) return;
@@ -81,9 +75,9 @@ public static class NetCube
     static void RemoveCube(int id)
     {
         GameObject go = GameNet.Instance.Linking.Find(id);
-        if (go == null) return;                     // already gone
+        if (go == null) return;
 
         DropableCube cube = go.GetComponentInChildren<DropableCube>();
-        if (cube != null) cube.Collided();          // the host destroys it, the Destroy goes to the client
+        if (cube != null) cube.Collided();
     }
 }
